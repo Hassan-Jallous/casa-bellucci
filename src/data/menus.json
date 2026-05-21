@@ -1,0 +1,42 @@
+{
+  "breakfast": {
+    "title": { "de": "Frühstück", "en": "Breakfast", "it": "Colazione" },
+    "pdfUrl": "/menus/fruehstueck.pdf",
+    "image": "/images/menu-breakfast.jpg",
+    "highlights": [
+      { "name": "Uova alla Fiorentina", "price": "14.50" },
+      { "name": "Pancakes con Frutti di Bosco", "price": "13.00" },
+      { "name": "Avocado Toast Mediterraneo", "price": "15.00" }
+    ]
+  },
+  "lunch": {
+    "title": { "de": "Lunch", "en": "Lunch", "it": "Pranzo" },
+    "pdfUrl": "/menus/lunch.pdf",
+    "image": "/images/menu-lunch.jpg",
+    "highlights": [
+      { "name": "Tagliatelle al Tartufo", "price": "24.00" },
+      { "name": "Risotto ai Funghi Porcini", "price": "22.00" },
+      { "name": "Insalata Cesare", "price": "16.00" }
+    ]
+  },
+  "dinner": {
+    "title": { "de": "Dinner", "en": "Dinner", "it": "Cena" },
+    "pdfUrl": "/menus/dinner.pdf",
+    "image": "/images/menu-dinner.jpg",
+    "highlights": [
+      { "name": "Rinderfilet alla Griglia", "price": "38.00" },
+      { "name": "Gambas al Vino Bianco", "price": "28.00" },
+      { "name": "Pasta con Caviale", "price": "42.00" }
+    ]
+  },
+  "wines": {
+    "title": { "de": "Weine", "en": "Wines", "it": "Vini" },
+    "pdfUrl": "/menus/weine.pdf",
+    "image": "/images/menu-wines.jpg",
+    "highlights": [
+      { "name": "Nero d'Avola, Sicilia", "price": "9.00" },
+      { "name": "Vermentino di Sardegna", "price": "8.50" },
+      { "name": "Barolo DOCG", "price": "14.00" }
+    ]
+  }
+}

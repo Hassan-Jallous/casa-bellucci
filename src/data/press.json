@@ -1,0 +1,37 @@
+[
+  {
+    "outlet": "Berliner Zeitung",
+    "title": "Casa Bellucci: Italiens Seele am Kurfürstendamm",
+    "url": "",
+    "date": "2024",
+    "logo": "/images/press/bz.png"
+  },
+  {
+    "outlet": "Berliner Morgenpost",
+    "title": "Die besten italienischen Restaurants in Berlin",
+    "url": "",
+    "date": "2024",
+    "logo": "/images/press/morgenpost.png"
+  },
+  {
+    "outlet": "Tagesspiegel",
+    "title": "Neueröffnung am Kudamm: Casa Bellucci überzeugt",
+    "url": "",
+    "date": "2024",
+    "logo": "/images/press/tagesspiegel.png"
+  },
+  {
+    "outlet": "BZ",
+    "title": "Restauranttipp: Authentisch italienisch in Charlottenburg",
+    "url": "",
+    "date": "2024",
+    "logo": "/images/press/bz-berlin.png"
+  },
+  {
+    "outlet": "tip Berlin",
+    "title": "Sommerterrasse am Kudamm mit sizilianischem Flair",
+    "url": "",
+    "date": "2024",
+    "logo": "/images/press/tip.png"
+  }
+]

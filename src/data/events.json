@@ -1,0 +1,26 @@
+[
+  {
+    "title": { "de": "DJ Nights", "en": "DJ Nights", "it": "Serate DJ" },
+    "description": {
+      "de": "Jeden Freitag und Samstag ab 20 Uhr. Live DJ Sets mit italienischer und internationaler Musik.",
+      "en": "Every Friday and Saturday from 8 PM. Live DJ sets with Italian and international music.",
+      "it": "Ogni venerdì e sabato dalle 20:00. DJ set dal vivo con musica italiana e internazionale."
+    },
+    "day": "Fr & Sa",
+    "time": "20:00",
+    "image": "/images/events/dj-night.jpg",
+    "recurring": true
+  },
+  {
+    "title": { "de": "Sonntagsbrunch", "en": "Sunday Brunch", "it": "Brunch della Domenica" },
+    "description": {
+      "de": "Unser Sonntagsbrunch mit frischen Focaccia, Eierspeisen und italienischen Frühstücksklassikern.",
+      "en": "Our Sunday brunch with fresh focaccia, egg dishes and Italian breakfast classics.",
+      "it": "Il nostro brunch domenicale con focaccia fresca, piatti a base di uova e classici della colazione italiana."
+    },
+    "day": "So",
+    "time": "09:00 - 14:00",
+    "image": "/images/events/brunch.jpg",
+    "recurring": true
+  }
+]
