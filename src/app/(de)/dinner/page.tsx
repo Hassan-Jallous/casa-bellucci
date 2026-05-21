@@ -3,6 +3,7 @@ import Image from "next/image";
 import Events from "@/components/sections/Events";
 import Reservation from "@/components/sections/Reservation";
 import { generateBreadcrumbSchema } from "@/lib/schema";
+import { basePath } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Dinner & Abendessen",
@@ -73,7 +74,7 @@ export default function DinnerPage() {
 
           <div className="overflow-hidden rounded-sm">
             <Image
-              src="/images/menu-dinner.jpg"
+              src={`${basePath}/images/menu-dinner.jpg`}
               alt="Dinner Atmosphaere bei Casa Bellucci"
               width={800}
               height={600}

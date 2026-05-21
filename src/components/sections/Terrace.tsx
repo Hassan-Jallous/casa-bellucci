@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { useGsap } from '@/hooks/useGsap';
 import { useReducedMotion } from '@/hooks/useReducedMotion';
 import { getTranslation, type Locale } from '@/lib/i18n';
+import { basePath } from '@/lib/site';
 import ScrollReveal from '@/components/animations/ScrollReveal';
 
 interface TerraceProps {
@@ -38,7 +39,7 @@ export default function Terrace({ locale }: TerraceProps) {
       <div className="relative aspect-[21/9] min-h-[60vh] w-full">
         <div ref={imageRef} className="absolute inset-[-20%] h-[140%] w-full">
           <Image
-            src="/images/terrace.jpg"
+            src={`${basePath}/images/terrace.jpg`}
             alt="Sommerterrasse Casa Bellucci"
             fill
             className="object-cover"

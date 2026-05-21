@@ -6,20 +6,21 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGsap } from '@/hooks/useGsap';
 import { useReducedMotion } from '@/hooks/useReducedMotion';
 import { getTranslation, type Locale } from '@/lib/i18n';
+import { basePath } from '@/lib/site';
 
 interface GalleryProps {
   locale: Locale;
 }
 
 const galleryImages = [
-  { src: '/images/gallery/1.jpg', alt: 'Tuna Tartar' },
-  { src: '/images/gallery/2.jpg', alt: 'Pasta Rinderfilet' },
-  { src: '/images/gallery/3.jpg', alt: 'Pasta Trüffel' },
-  { src: '/images/gallery/4.jpg', alt: 'Pasta Gambas' },
-  { src: '/images/gallery/5.jpg', alt: 'Pasta mit Caviar' },
-  { src: '/images/gallery/6.jpg', alt: 'Pasta mit Caviar' },
-  { src: '/images/gallery/7.jpg', alt: 'Casa Bellucci Küche' },
-  { src: '/images/gallery/8.jpg', alt: 'Casa Bellucci Gericht' },
+  { src: `${basePath}/images/gallery/1.jpg`, alt: 'Tuna Tartar' },
+  { src: `${basePath}/images/gallery/2.jpg`, alt: 'Pasta Rinderfilet' },
+  { src: `${basePath}/images/gallery/3.jpg`, alt: 'Pasta Trüffel' },
+  { src: `${basePath}/images/gallery/4.jpg`, alt: 'Pasta Gambas' },
+  { src: `${basePath}/images/gallery/5.jpg`, alt: 'Pasta mit Caviar' },
+  { src: `${basePath}/images/gallery/6.jpg`, alt: 'Pasta mit Caviar' },
+  { src: `${basePath}/images/gallery/7.jpg`, alt: 'Casa Bellucci Küche' },
+  { src: `${basePath}/images/gallery/8.jpg`, alt: 'Casa Bellucci Gericht' },
 ];
 
 export default function Gallery({ locale }: GalleryProps) {

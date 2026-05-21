@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { useGsap } from '@/hooks/useGsap';
 import { useReducedMotion } from '@/hooks/useReducedMotion';
 import { getTranslation, type Locale } from '@/lib/i18n';
+import { basePath } from '@/lib/site';
 
 interface AboutProps {
   locale: Locale;
@@ -67,7 +68,7 @@ export default function About({ locale }: AboutProps) {
           style={{ opacity: reducedMotion ? 1 : 0 }}
         >
           <Image
-            src="/images/about.jpg"
+            src={`${basePath}/images/about.jpg`}
             alt={getTranslation(locale, 'about.title')}
             width={800}
             height={1067}

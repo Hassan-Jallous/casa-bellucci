@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Reservation from "@/components/sections/Reservation";
 import { generateBreadcrumbSchema } from "@/lib/schema";
+import { basePath } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Fruehstueck & Brunch am Kudamm",
@@ -71,7 +72,7 @@ export default function FruehstueckPage() {
 
           <div className="overflow-hidden rounded-sm">
             <Image
-              src="/images/menu-breakfast.jpg"
+              src={`${basePath}/images/menu-breakfast.jpg`}
               alt="Italienisches Fruehstueck bei Casa Bellucci"
               width={800}
               height={600}

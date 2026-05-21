@@ -5,16 +5,17 @@ import Image from 'next/image';
 import { useGsap } from '@/hooks/useGsap';
 import { useReducedMotion } from '@/hooks/useReducedMotion';
 import { getTranslation, type Locale } from '@/lib/i18n';
+import { basePath } from '@/lib/site';
 
 interface MenuSectionProps {
   locale: Locale;
 }
 
 const menuItems = [
-  { key: 'menu.breakfast' as const, image: '/images/menu-breakfast.jpg' },
-  { key: 'menu.lunch' as const, image: '/images/menu-lunch.jpg' },
-  { key: 'menu.dinner' as const, image: '/images/menu-dinner.jpg' },
-  { key: 'menu.wines' as const, image: '/images/menu-wines.jpg' },
+  { key: 'menu.breakfast' as const, image: `${basePath}/images/menu-breakfast.jpg` },
+  { key: 'menu.lunch' as const, image: `${basePath}/images/menu-lunch.jpg` },
+  { key: 'menu.dinner' as const, image: `${basePath}/images/menu-dinner.jpg` },
+  { key: 'menu.wines' as const, image: `${basePath}/images/menu-wines.jpg` },
 ];
 
 export default function MenuSection({ locale }: MenuSectionProps) {

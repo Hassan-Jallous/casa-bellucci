@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import { getTranslation, type Locale } from '@/lib/i18n';
+import { basePath } from '@/lib/site';
 import ScrollReveal from '@/components/animations/ScrollReveal';
 
 interface EventsProps {
@@ -56,7 +57,7 @@ export default function Events({ locale }: EventsProps) {
           <ScrollReveal direction="right">
             <div className="image-shine relative aspect-[4/5] w-full lg:aspect-auto lg:h-full lg:min-h-[600px]">
               <Image
-                src="/images/events-dj.jpg"
+                src={`${basePath}/images/events-dj.jpg`}
                 alt="DJ Events bei Casa Bellucci"
                 fill
                 className="object-cover"
