@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { playfair, cormorant } from "@/lib/fonts";
 import { generateRestaurantSchema, generateLocalBusinessSchema } from "@/lib/schema";
+import { basePath } from "@/lib/site";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -62,8 +63,8 @@ export default function RootLayout({
       className={`${playfair.variable} ${cormorant.variable} h-full overflow-x-hidden antialiased`}
     >
       <head>
-        <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="icon" href={`${basePath}/favicon-32x32.png`} sizes="32x32" type="image/png" />
+        <link rel="apple-touch-icon" href={`${basePath}/apple-touch-icon.png`} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

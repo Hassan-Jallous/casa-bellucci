@@ -4,6 +4,7 @@ import { useRef } from 'react';
 import { useGsap } from '@/hooks/useGsap';
 import { useReducedMotion } from '@/hooks/useReducedMotion';
 import { getTranslation, type Locale } from '@/lib/i18n';
+import { basePath } from '@/lib/site';
 
 interface VideoHeroProps {
   locale: Locale;
@@ -60,10 +61,10 @@ export default function VideoHero({ locale }: VideoHeroProps) {
         muted
         loop
         playsInline
-        poster="/images/hero-poster.jpg"
+        poster={`${basePath}/images/hero-poster.jpg`}
         className="absolute inset-0 h-full w-full object-cover md:blur-[1.5px] md:scale-[1.03]"
       >
-        <source src="/videos/hero.mp4" type="video/mp4" />
+        <source src={`${basePath}/videos/hero.mp4`} type="video/mp4" />
       </video>
 
       <div className="absolute inset-0 hidden bg-[length:200px_200px] bg-repeat opacity-[0.06] mix-blend-overlay md:block" style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E")` }} />
