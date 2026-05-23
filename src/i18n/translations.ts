@@ -17,7 +17,7 @@ export const translations = {
     },
     about: {
       title: 'Über uns',
-      text: 'Im Herzen von Charlottenburg bringen wir die Aromen Siziliens nach Berlin. Unsere Küche verbindet Familienrezepte mit saisonalen Zutaten, handgemachte Pasta und fangfrischer Fisch bestimmen unsere Karte. Im Sommer öffnet unsere Terrasse am Kurfürstendamm, umgeben von Zitronenbäumen und dem Duft frischer Kräuter.',
+      text: 'Im Herzen von Charlottenburg bringen wir die Aromen Siziliens nach Berlin. Unsere Küche verbindet Familienrezepte mit saisonalen Zutaten, handgemachte Pasta und fangfrischer Fisch bestimmen unsere Karte. Im Sommer öffnet unsere Terrasse am Kurfürstendamm, umgeben von Olivenbaum-Schatten, Kerzenlicht und frischen Kräutern.',
     },
     menu: {
       title: 'Unsere Karte',
@@ -29,7 +29,7 @@ export const translations = {
     },
     terrace: {
       title: 'Sommerterrasse',
-      text: 'Auf unserer Terrasse am Kurfürstendamm genießen Sie laue Sommerabende zwischen Zitronenbäumen und Kerzenlicht. Ein Stück Sizilien, mitten in Berlin.',
+      text: 'Auf unserer Terrasse am Kurfürstendamm genießen Sie laue Sommerabende zwischen Olivenbaum-Schatten, Kerzenlicht und mediterraner Ruhe. Ein Stück Sizilien, mitten in Berlin.',
     },
     events: {
       title: 'Events & DJ',
@@ -89,7 +89,7 @@ export const translations = {
     },
     about: {
       title: 'About Us',
-      text: 'In the heart of Charlottenburg, we bring the flavours of Sicily to Berlin. Our kitchen combines family recipes with seasonal ingredients, handmade pasta and fresh-caught fish define our menu. In summer, our terrace on Kurfürstendamm opens up, surrounded by lemon trees and the scent of fresh herbs.',
+      text: 'In the heart of Charlottenburg, we bring the flavours of Sicily to Berlin. Our kitchen combines family recipes with seasonal ingredients, handmade pasta and fresh-caught fish define our menu. In summer, our terrace on Kurfürstendamm opens up with olive-tree shade, candlelight and fresh herbs.',
     },
     menu: {
       title: 'Our Menu',
@@ -101,7 +101,7 @@ export const translations = {
     },
     terrace: {
       title: 'Summer Terrace',
-      text: 'On our terrace along Kurfürstendamm, enjoy warm summer evenings among lemon trees and candlelight. A piece of Sicily, right in Berlin.',
+      text: 'On our terrace along Kurfürstendamm, enjoy warm summer evenings among olive-tree shade, candlelight and Mediterranean calm. A piece of Sicily, right in Berlin.',
     },
     events: {
       title: 'Events & DJ',
@@ -161,7 +161,7 @@ export const translations = {
     },
     about: {
       title: 'Chi Siamo',
-      text: 'Nel cuore di Charlottenburg, portiamo i sapori della Sicilia a Berlino. La nostra cucina unisce ricette di famiglia con ingredienti di stagione, la pasta fatta a mano e il pesce fresco caratterizzano il nostro menu. In estate, la nostra terrazza sul Kurfürstendamm si apre tra alberi di limone e il profumo delle erbe aromatiche.',
+      text: 'Nel cuore di Charlottenburg, portiamo i sapori della Sicilia a Berlino. La nostra cucina unisce ricette di famiglia con ingredienti di stagione, la pasta fatta a mano e il pesce fresco caratterizzano il nostro menu. In estate, la nostra terrazza sul Kurfürstendamm si apre tra ombra di ulivi, candele ed erbe aromatiche.',
     },
     menu: {
       title: 'Il Nostro Menu',
@@ -173,7 +173,7 @@ export const translations = {
     },
     terrace: {
       title: 'Terrazza Estiva',
-      text: 'Sulla nostra terrazza lungo il Kurfürstendamm, godetevi le tiepide sere estive tra alberi di limone e lume di candela. Un angolo di Sicilia, nel cuore di Berlino.',
+      text: 'Sulla nostra terrazza lungo il Kurfürstendamm, godetevi le tiepide sere estive tra ombra di ulivi, lume di candela e calma mediterranea. Un angolo di Sicilia, nel cuore di Berlino.',
     },
     events: {
       title: 'Eventi & DJ',

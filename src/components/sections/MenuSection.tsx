@@ -52,21 +52,28 @@ export default function MenuSection({ locale }: MenuSectionProps) {
   return (
     <section
       ref={sectionRef}
-      className="bg-charcoal px-6 py-20 sm:px-12 md:px-20 md:py-32 lg:px-28"
+      className="relative overflow-hidden bg-charcoal px-6 py-20 sm:px-12 md:px-20 md:py-32 lg:px-28"
     >
-      <h2 className="mb-14 text-center font-playfair text-4xl font-bold tracking-tight text-cream sm:text-5xl">
+      <div
+        aria-hidden="true"
+        className="sicilian-tree-illustration absolute -top-24 left-1/2 h-96 w-[48rem] -translate-x-1/2 opacity-[0.12] invert"
+        style={{
+          backgroundImage: `url("${basePath}/images/illustrations/sicilian-tree-line.svg")`,
+        }}
+      />
+      <h2 className="relative z-10 mb-14 text-center font-playfair text-4xl font-bold tracking-tight text-porcelain sm:text-5xl">
         {getTranslation(locale, 'menu.title')}
       </h2>
 
       <div
         ref={cardsRef}
-        className="mx-auto grid max-w-6xl gap-6 sm:grid-cols-2"
+        className="relative z-10 mx-auto grid max-w-6xl gap-6 sm:grid-cols-2"
       >
         {menuItems.map((item) => (
           <div
             key={item.key}
             data-menu-card
-            className="group cursor-pointer overflow-hidden rounded-sm bg-charcoal transition-transform duration-300 hover:-translate-y-1"
+            className="group cursor-pointer overflow-hidden rounded-sm border border-sandstone/15 bg-charcoal/80 transition-transform duration-300 hover:-translate-y-1 hover:border-sandstone/35"
             style={{ opacity: reducedMotion ? 1 : 0 }}
           >
             <div className="image-shine">
@@ -81,13 +88,13 @@ export default function MenuSection({ locale }: MenuSectionProps) {
             </div>
 
             <div className="px-5 py-6">
-              <h3 className="font-playfair text-2xl font-semibold text-cream">
+              <h3 className="font-playfair text-2xl font-semibold text-porcelain">
                 {getTranslation(locale, item.key)}
               </h3>
 
               <button
                 type="button"
-                className="mt-3 font-cormorant text-base tracking-wider text-terracotta uppercase transition-colors duration-300 hover:text-terracotta/80"
+                className="mt-3 font-cormorant text-base tracking-wider text-sandstone uppercase transition-colors duration-300 hover:text-porcelain"
               >
                 {getTranslation(locale, 'menu.download')}
               </button>

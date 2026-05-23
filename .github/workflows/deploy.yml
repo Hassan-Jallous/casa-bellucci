@@ -14,26 +14,22 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 22
-          cache: npm
-      - run: npm ci
-      - run: npm run build
+      - name: Prepare static site
+        run: |
+          mkdir -p site
+          cp "Casa Bellucci.html" site/index.html
+          cp "Casa Bellucci.html" site/
+          cp app.jsx data.js decor.jsx effects.jsx sections.jsx styles.css tweaks-panel.jsx vivid.css site/
+          cp -R images site/images
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: out
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
+          path: site
+      - id: deployment
+        uses: actions/deploy-pages@v4
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - id: deployment
-        uses: actions/deploy-pages@v4

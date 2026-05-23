@@ -7,11 +7,11 @@ import { generateBreadcrumbSchema } from "@/lib/schema";
 export const metadata: Metadata = {
   title: "Sommerterrasse am Kudamm",
   description:
-    "Sommerterrasse am Kurfuerstendamm in Berlin Charlottenburg. Laue Abende zwischen Zitronenbaeumen und Kerzenlicht bei Casa Bellucci.",
+    "Sommerterrasse am Kurfürstendamm in Berlin Charlottenburg. Laue Abende zwischen Olivenbaum-Schatten, Kerzenlicht und mediterraner Ruhe bei Casa Bellucci.",
   openGraph: {
     title: "Sommerterrasse am Kudamm | Casa Bellucci",
     description:
-      "Ein Stueck Sizilien mitten in Berlin. Sommerterrasse am Kurfuerstendamm mit Zitronenbaeumen und Kerzenlicht.",
+      "Ein Stück Sizilien mitten in Berlin. Sommerterrasse am Kurfürstendamm mit Olivenbaum-Schatten, Kerzenlicht und mediterraner Ruhe.",
     url: "https://casabellucci.de/sommerterrasse-kudamm",
     locale: "de_DE",
   },
@@ -49,9 +49,9 @@ export default function SommerterrassePage() {
           </h1>
           <div className="mx-auto mt-4 h-px w-20 bg-olive/60" />
           <p className="mx-auto mt-6 max-w-2xl font-cormorant text-xl font-light leading-relaxed tracking-wide text-charcoal/70">
-            Ein Stueck Sizilien mitten in Berlin. Unsere Terrasse am
-            Kurfuerstendamm laedt zu langen Sommerabenden ein, umgeben von
-            Zitronenbaeumen, dem Duft frischer Kraeuter und warmem Kerzenlicht.
+            Ein Stück Sizilien mitten in Berlin. Unsere Terrasse am
+            Kurfürstendamm lädt zu langen Sommerabenden ein, umgeben von
+            Olivenbaum-Schatten, frischen Kräutern und warmem Kerzenlicht.
           </p>
         </div>
       </section>

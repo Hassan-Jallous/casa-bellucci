@@ -23,6 +23,9 @@
 # misc
 .DS_Store
 *.pem
+.firecrawl/
+.od-skills/
+.playwright-mcp/
 
 # debug
 npm-debug.log*

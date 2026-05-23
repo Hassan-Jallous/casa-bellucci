@@ -12,6 +12,13 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Claude Design prototype files are loaded by the standalone HTML via globals.
+    "app.jsx",
+    "sections.jsx",
+    "decor.jsx",
+    "effects.jsx",
+    "tweaks-panel.jsx",
+    "data.js",
   ]),
 ]);
 

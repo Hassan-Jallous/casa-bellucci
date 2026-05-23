@@ -68,9 +68,16 @@ export default function VideoHero({ locale }: VideoHeroProps) {
       </video>
 
       <div className="absolute inset-0 hidden bg-[length:200px_200px] bg-repeat opacity-[0.06] mix-blend-overlay md:block" style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E")` }} />
-      <div className="absolute inset-0 bg-gradient-to-b from-charcoal/60 via-transparent to-charcoal/40" />
-      <div className="absolute inset-0 bg-gradient-to-r from-charcoal/30 to-transparent" />
-      <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-cream/20 to-transparent" />
+      <div className="absolute inset-0 coastal-blue-wash" />
+      <div className="absolute inset-0 bg-gradient-to-r from-charcoal/55 via-charcoal/10 to-mediterranean/15" />
+      <div
+        aria-hidden="true"
+        className="sicilian-tree-illustration absolute -top-20 -left-24 hidden h-[44vh] w-[78vw] rotate-2 opacity-[0.36] invert mix-blend-screen md:block"
+        style={{
+          backgroundImage: `url("${basePath}/images/illustrations/sicilian-tree-line.svg")`,
+        }}
+      />
+      <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-charcoal/45 to-transparent" />
 
       <div className="relative z-10 flex h-full flex-col justify-end px-6 pb-28 sm:px-12 md:px-20 lg:px-28">
         <h1
@@ -91,14 +98,14 @@ export default function VideoHero({ locale }: VideoHeroProps) {
 
         <div
           ref={dividerRef}
-          className="mt-6 h-[2px] w-24 origin-left bg-terracotta"
+          className="mt-6 h-[2px] w-28 origin-left bg-sandstone"
           style={{ opacity: reducedMotion ? 1 : 0 }}
         />
 
         <a
           ref={ctaRef}
           href="#reservieren"
-          className="mt-8 inline-block w-fit rounded-sm bg-terracotta px-8 py-3 font-cormorant text-lg font-medium tracking-wider text-cream uppercase transition-colors duration-300 hover:bg-terracotta/90"
+          className="mt-8 inline-block w-fit rounded-sm bg-mediterranean px-8 py-3 font-cormorant text-lg font-medium tracking-wider text-porcelain uppercase transition-colors duration-300 hover:bg-olive"
           style={{ opacity: reducedMotion ? 1 : 0 }}
         >
           {getTranslation(locale, 'hero.cta')}

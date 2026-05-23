@@ -59,22 +59,32 @@ export default function About({ locale }: AboutProps) {
   return (
     <section
       ref={sectionRef}
-      className="bg-cream px-6 py-20 sm:px-12 md:px-20 md:py-32 lg:px-28"
+      className="mediterranean-paper relative overflow-hidden px-6 py-20 sm:px-12 md:px-20 md:py-32 lg:px-28"
     >
+      <div
+        aria-hidden="true"
+        className="sicilian-tree-illustration absolute -right-24 top-8 hidden h-80 w-[34rem] opacity-[0.13] md:block"
+        style={{
+          backgroundImage: `url("${basePath}/images/illustrations/sicilian-tree-line.svg")`,
+        }}
+      />
       <div className="mx-auto grid max-w-7xl gap-12 md:grid-cols-5 md:items-center md:gap-16">
         <div
           ref={imageRef}
-          className="image-shine md:col-span-3"
+          className="relative md:col-span-3"
           style={{ opacity: reducedMotion ? 1 : 0 }}
         >
-          <Image
-            src={`${basePath}/images/about.jpg`}
-            alt={getTranslation(locale, 'about.title')}
-            width={800}
-            height={1067}
-            unoptimized
-            className="aspect-[3/4] w-full object-cover"
-          />
+          <div className="absolute -top-5 -left-5 h-full w-full border border-mediterranean/30" />
+          <div className="image-shine relative">
+            <Image
+              src={`${basePath}/images/about.jpg`}
+              alt={getTranslation(locale, 'about.title')}
+              width={800}
+              height={1067}
+              unoptimized
+              className="aspect-[3/4] w-full object-cover"
+            />
+          </div>
         </div>
 
         <div
@@ -83,13 +93,13 @@ export default function About({ locale }: AboutProps) {
           style={{ opacity: reducedMotion ? 1 : 0 }}
         >
           <div className="flex items-center gap-4">
-            <div className="h-12 w-[3px] bg-olive" />
+            <div className="h-12 w-[3px] bg-mediterranean" />
             <h2 className="font-playfair text-4xl font-bold tracking-tight text-charcoal sm:text-5xl">
               {getTranslation(locale, 'about.title')}
             </h2>
           </div>
 
-          <p className="mt-6 font-cormorant text-lg leading-relaxed text-charcoal/80 sm:text-xl">
+          <p className="mt-6 font-cormorant text-lg leading-relaxed text-charcoal/75 sm:text-xl">
             {getTranslation(locale, 'about.text')}
           </p>
         </div>
