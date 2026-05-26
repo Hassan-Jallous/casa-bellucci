@@ -21,10 +21,13 @@ jobs:
       - name: Prepare static site
         run: |
           mkdir -p site
-          cp "Casa Bellucci.html" site/index.html
-          cp "Casa Bellucci.html" site/
-          cp app.jsx data.js decor.jsx effects.jsx sections.jsx styles.css tweaks-panel.jsx vivid.css site/
+          cp index.html site/
+          cp -R scripts site/scripts
+          cp -R styles site/styles
           cp -R images site/images
+          cp -R fonts site/fonts
+          mkdir -p site/public
+          cp -R public/menus site/public/menus
       - uses: actions/upload-pages-artifact@v3
         with:
           path: site

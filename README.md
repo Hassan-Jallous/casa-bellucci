@@ -1,36 +1,71 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Casa Bellucci Prototype
 
-## Getting Started
+## Aktueller Stand
 
-First, run the development server:
+Dieses Projekt ist aktuell ein statischer HTML/React-Prototyp. Die aktive Homepage läuft über:
+
+- `index.html`
+- `scripts/`
+- `styles/`
+- `images/`
+- `fonts/`
+- `public/menus/`
+
+Der alte Next.js-Stand ist nicht mehr die aktive Arbeitsbasis. Homepage-Arbeit passiert im Prototyp, bis die Migration ausdrücklich gestartet wird.
+
+## Quelle der Wahrheit
+
+`homepage-structure.md` definiert die Homepage-Struktur, Positionierung und die erlaubten Hauptsektionen. Keine neuen Homepage-Sektionen hinzufügen, ohne diese Datei vorher bewusst zu ändern.
+
+Aktuelle Homepage-Reihenfolge:
+
+1. Hero
+2. All-Day Concept
+3. Signature Moments / Menu
+4. Sommerterrasse
+5. Gallery / Atmosphere
+6. Reservation
+7. Contact / Location
+
+## Lokal starten
+
+Der Prototyp braucht keinen Build-Schritt. Wegen Video-, PDF- und Font-Pfaden sollte er aber über einen lokalen HTTP-Server laufen:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+python3 -m http.server 4173
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Dann öffnen:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```text
+http://localhost:4173/
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Wichtige Pfade
 
-## Learn More
+- `scripts/app.jsx`: React-Einstieg und Seitenreihenfolge
+- `scripts/sections.jsx`: Homepage-Sektionen und Navigation
+- `scripts/data.js`: Menü-, Presse- und Galerie-Daten
+- `scripts/effects.jsx`: Video-Hero und ergänzende UI-Effekte
+- `scripts/decor.jsx`: dekorative SVG-Komponenten
+- `styles/styles.css`: Basislayout und Hauptdesign
+- `styles/vivid.css`: aktuelle visuelle Override-Schicht
+- `brand-spec.md`: visuelle Richtung
+- `docs/nextjs-migration.md`: spätere Next.js-Migrationsnotizen
 
-To learn more about Next.js, take a look at the following resources:
+## Deployment
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+GitHub Pages wird über `.github/workflows/deploy.yml` gebaut. Der Workflow kopiert bewusst nur die statisch benötigten Prototyp-Artefakte nach `site/`:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- `index.html`
+- `scripts/`
+- `styles/`
+- `images/`
+- `fonts/`
+- `public/menus/`
 
-## Deploy on Vercel
+Wenn neue statische Root-Pfade eingebaut werden, muss der Workflow entsprechend erweitert werden.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Next.js später
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Die Migration wird vorbereitet, aber nicht im laufenden Prototyp versteckt begonnen. Vor Next.js-Arbeit zuerst `docs/nextjs-migration.md` lesen. Wenn wieder echtes Next.js im Projekt installiert ist, zusätzlich die lokale Dokumentation unter `node_modules/next/dist/docs/` prüfen, bevor Code geschrieben wird.

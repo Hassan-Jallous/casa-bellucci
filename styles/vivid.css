@@ -1,0 +1,309 @@
+/* ============================================
+   Casa Bellucci — Vivid & Lively Additions
+   Scroll reveals, bold sections, enhanced hovers,
+   gallery variants, mobile-first
+   ============================================ */
+
+/* ============================================
+   1. CSS SCROLL-DRIVEN REVEAL
+   No JavaScript needed — uses native CSS
+   ============================================ */
+@supports (animation-timeline: view()) {
+  .about .grid > *,
+  .about .stat-strip,
+  .about .stat-strip .stat,
+  .menu .top,
+  .menu .grid,
+  .terrace .copy,
+  .terrace .img,
+  .wine .top,
+  .wine .regions .region,
+  .gallery .top,
+  .press-cards .head,
+  .press-cards .row,
+  .contact .grid > * {
+    animation: cssReveal linear both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 35%;
+  }
+  .menu .dish {
+    animation: cssReveal linear both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 25%;
+  }
+}
+@keyframes cssReveal {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+/* Fallback: no scroll animation support = everything visible */
+@supports not (animation-timeline: view()) {
+  .about .grid > *,
+  .about .stat-strip,
+  .menu .top, .menu .grid, .menu .dish,
+  .terrace .copy, .terrace .img,
+  .wine .top, .wine .regions .region,
+  .gallery .top,
+  .press-cards .head, .press-cards .row,
+  .contact .grid > * {
+    opacity: 1; transform: none;
+  }
+}
+
+/* ============================================
+   2. VIDEO HERO
+   ============================================ */
+.video-hero {
+  position: relative;
+  min-height: 100svh;
+  height: 100svh;
+  padding: 0 !important;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  background: #1a1208;
+  color: #FFF9F0;
+}
+.video-hero-media {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  filter: saturate(1.08) brightness(1.03);
+}
+.video-hero-shade {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 26% 18%, rgba(244,208,63,0.14) 0%, transparent 54%),
+    linear-gradient(180deg, rgba(26,18,8,0.42) 0%, rgba(26,18,8,0.12) 30%, rgba(26,18,8,0.35) 54%, rgba(26,18,8,0.9) 100%);
+}
+.video-hero-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding-bottom: clamp(70px, 10vh, 118px);
+}
+.video-hero-copy {
+  max-width: 780px;
+  text-shadow: 0 4px 28px rgba(0,0,0,0.42), 0 1px 3px rgba(0,0,0,0.48);
+}
+.video-hero-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 22px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  line-height: 1.35;
+  text-transform: uppercase;
+  color: rgba(255,249,240,0.74);
+}
+.video-hero h1 {
+  max-width: 9.5ch;
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(64px, 8.8vw, 128px);
+  font-weight: 500;
+  line-height: 0.9;
+  letter-spacing: 0;
+  color: #FFF9F0;
+}
+.video-hero p {
+  max-width: 15.5em;
+  margin: 28px 0 0;
+  font-family: var(--font-body);
+  font-size: clamp(23px, 2.6vw, 36px);
+  font-weight: 300;
+  line-height: 1.32;
+  color: rgba(255,249,240,0.9);
+}
+.video-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+  margin-top: 36px;
+}
+.btn-primary.btn-on-dark {
+  color: #FFF9F0 !important;
+}
+.btn-primary.btn-on-dark::after {
+  background: var(--accent-2) !important;
+}
+.btn-primary.btn-on-dark:hover {
+  color: var(--accent-2) !important;
+}
+.btn-ghost.btn-on-dark {
+  color: rgba(255,249,240,0.62) !important;
+}
+.btn-ghost.btn-on-dark::after {
+  background: rgba(255,249,240,0.72) !important;
+}
+.btn-ghost.btn-on-dark:hover {
+  color: #FFF9F0 !important;
+}
+.video-hero-scroll {
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  z-index: 1;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(255,249,240,0.52);
+}
+.video-hero-scroll i {
+  width: 1px;
+  height: 34px;
+  background: linear-gradient(to bottom, rgba(255,249,240,0.5), transparent);
+}
+
+@media (max-width: 880px) {
+  .video-hero {
+    min-height: 760px;
+    height: 100svh;
+  }
+  .video-hero-shade {
+    background:
+      radial-gradient(ellipse at 24% 18%, rgba(244,208,63,0.12) 0%, transparent 52%),
+      linear-gradient(180deg, rgba(20,13,6,0.28) 0%, rgba(20,13,6,0.08) 30%, rgba(20,13,6,0.24) 50%, rgba(20,13,6,0.8) 72%, rgba(20,13,6,0.96) 100%);
+  }
+  .video-hero-content {
+    padding: 0 24px 92px;
+  }
+  .video-hero-eyebrow {
+    font-size: 10px;
+    letter-spacing: 0.18em;
+  }
+  .video-hero h1 {
+    font-size: clamp(58px, 17vw, 86px);
+  }
+  .video-hero p {
+    font-size: clamp(22px, 6.5vw, 32px);
+  }
+  .video-hero-actions {
+    gap: 18px;
+    margin-top: 34px;
+  }
+  .video-hero-actions .btn {
+    padding-bottom: 12px;
+    font-size: 14px;
+    letter-spacing: 0.12em;
+  }
+}
+
+/* ============================================
+   4. MAJOLIKA DIVIDER
+   ============================================ */
+.majolika-divider {
+  position: relative; overflow: hidden;
+  background: var(--surface);
+}
+.majolika-divider svg { opacity: 0.18 !important; }
+.majolika-fade-top, .majolika-fade-bottom {
+  position: absolute; left: 0; right: 0; height: 16px; z-index: 1;
+}
+.majolika-fade-top    { top: 0; background: linear-gradient(to bottom, var(--bg), transparent); }
+.majolika-fade-bottom { bottom: 0; background: linear-gradient(to top, var(--bg), transparent); }
+
+/* ============================================
+   5. ENHANCED HOVERS & MICRO-INTERACTIONS
+   ============================================ */
+/* btn-primary glow removed — typographic buttons don't need it */
+
+.dish {
+  transition: background 0.3s ease !important;
+  margin-left: -12px; margin-right: -12px;
+  padding-left: 12px !important; padding-right: 12px !important;
+  border-radius: 8px;
+}
+.dish:hover { background: var(--accent-soft); }
+
+.wine .region {
+  transition: transform 0.4s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.4s ease !important;
+}
+.wine .region:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px -16px rgba(60,40,18,0.3);
+}
+
+.about-spread .img-col .ph img {
+  transition: transform 0.8s cubic-bezier(0.25,0.46,0.45,0.94) !important;
+}
+.about-spread .img-col .ph:hover img { transform: scale(1.05); }
+.stat { transition: color 0.3s ease; cursor: default; }
+.stat:hover .n { color: var(--accent); transition: color 0.3s ease; }
+
+/* ============================================
+   6. GALLERY FILMSTRIP
+   ============================================ */
+.filmstrip-wrap {
+  overflow-x: auto;
+  overflow-y: hidden;
+  margin: 36px 0 0;
+  padding: 12px 0;
+  max-width: 100%;
+}
+.filmstrip-track {
+  display: flex; gap: 20px; padding: 0;
+  overflow-x: auto; scroll-snap-type: x mandatory;
+  scrollbar-width: none; -webkit-overflow-scrolling: touch;
+}
+.filmstrip-track::-webkit-scrollbar { display: none; }
+.filmstrip-frame {
+  flex: 0 0 300px; scroll-snap-align: start;
+  aspect-ratio: 3/4; border-radius: var(--radius);
+  overflow: hidden; position: relative; cursor: pointer;
+}
+.filmstrip-frame img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform 0.6s ease;
+}
+.filmstrip-frame:hover img { transform: scale(1.08); }
+.filmstrip-frame::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(180deg, transparent 40%, rgba(26,18,8,0.65) 100%);
+  pointer-events: none;
+}
+.filmstrip-label {
+  position: absolute; bottom: 16px; left: 16px;
+  font-family: var(--font-script); font-size: 22px;
+  color: #FFF9F0; z-index: 1;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+.filmstrip-number {
+  position: absolute; top: 14px; right: 14px;
+  font-family: var(--font-mono); font-size: 11px;
+  letter-spacing: 0.15em; color: rgba(255,249,240,0.6); z-index: 1;
+}
+
+/* ============================================
+   8. TRICOLORE ACCENT LINE
+   ============================================ */
+.tricolore-line {
+  display: flex; height: 3px; width: 100%; border-radius: 2px; overflow: hidden;
+}
+.tricolore-line > span:nth-child(1) { flex: 1; background: #008C45; }
+.tricolore-line > span:nth-child(2) { flex: 1; background: #F4F5F0; }
+.tricolore-line > span:nth-child(3) { flex: 1; background: #CD212A; }
+
+/* ============================================
+   9. MOBILE OVERRIDES
+   ============================================ */
+@media (max-width: 880px) {
+  .filmstrip-frame { flex: 0 0 260px; }
+  .filmstrip-wrap { margin: 28px 0 0; }
+  .filmstrip-track { padding: 0; gap: 14px; }
+}
+@media (max-width: 480px) {
+  .filmstrip-frame { flex: 0 0 220px; }
+}
