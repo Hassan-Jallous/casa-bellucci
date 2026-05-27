@@ -307,3 +307,1068 @@
 @media (max-width: 480px) {
   .filmstrip-frame { flex: 0 0 220px; }
 }
+
+/* ============================================
+   CODEX 4 — TERRACE CARD SYSTEM PAGE PASS
+   Bright summer magazine atmosphere based on
+   the mobile Sommerterrasse card.
+   ============================================ */
+:root {
+  --summer-page: #fffaf1;
+  --summer-cream: rgba(255, 250, 241, 0.82);
+  --summer-cream-solid: #fff8ea;
+  --summer-border: rgba(255, 249, 240, 0.76);
+  --summer-hairline: rgba(88, 62, 34, 0.13);
+  --summer-gold: rgba(230, 187, 73, 0.42);
+  --summer-gold-soft: rgba(246, 215, 120, 0.24);
+  --summer-olive: rgba(116, 137, 73, 0.18);
+  --summer-rose: rgba(224, 140, 134, 0.18);
+  --summer-shadow: 0 32px 80px -42px rgba(73, 47, 22, 0.42);
+  --summer-photo-shadow: 0 28px 74px -34px rgba(55, 35, 17, 0.5);
+}
+
+body {
+  background: var(--summer-page);
+}
+
+.all-day,
+.signature-menu,
+.gallery,
+.reservation,
+.contact {
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 82% 4%, var(--summer-gold-soft), transparent 40%),
+    radial-gradient(ellipse at 10% 34%, rgba(255, 249, 240, 0.9), transparent 38%),
+    linear-gradient(180deg, #fffaf1 0%, #fbefd0 54%, #fff7e6 100%);
+  color: var(--ink);
+}
+
+.all-day::after,
+.signature-menu::before,
+.gallery::before,
+.reservation::before,
+.contact::before {
+  content: "";
+  position: absolute;
+  inset: auto -12% -18% auto;
+  width: min(520px, 62vw);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 44% 42%, rgba(246, 212, 104, 0.28), transparent 58%),
+    radial-gradient(circle at 66% 56%, var(--summer-olive), transparent 58%);
+  filter: blur(14px);
+  pointer-events: none;
+}
+
+.all-day .wrap,
+.signature-menu .wrap,
+.gallery .wrap,
+.reservation .wrap,
+.contact .wrap {
+  position: relative;
+  z-index: 1;
+}
+
+.section-eyebrow .eyebrow,
+.video-hero-eyebrow,
+.moment-time,
+.signature-label,
+.signature-open,
+.terrace-photo figcaption span,
+.terrace-moment span,
+.reservation-line span,
+.contact .info .block .k,
+.contact .map .corner,
+.filmstrip-number,
+.site-footer h5,
+.site-footer .bottom {
+  letter-spacing: 0.24em;
+}
+
+.btn,
+.terrace-actions .btn,
+.signature-actions .btn,
+.reservation-actions .btn,
+.contact-actions .btn,
+.footer-cta .btn {
+  color: var(--ink);
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  justify-content: flex-start;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.btn-ghost {
+  color: rgba(43, 31, 18, 0.54);
+}
+
+.btn-primary::after,
+.btn-ghost::after {
+  background: var(--ink);
+}
+
+.btn-primary:hover,
+.btn-ghost:hover {
+  color: var(--ink);
+}
+
+.all-day-copy,
+.signature-list,
+.gallery .top,
+.reservation-inner > div:first-child,
+.reservation-card,
+.contact .grid > div:first-child {
+  position: relative;
+  border: 1px solid var(--summer-border);
+  border-radius: 8px;
+  background:
+    radial-gradient(circle at 86% 20%, var(--summer-gold-soft), transparent 34%),
+    radial-gradient(circle at 93% 70%, var(--summer-rose), transparent 36%),
+    rgba(255, 249, 240, 0.66);
+  box-shadow: var(--summer-shadow);
+  backdrop-filter: blur(18px) saturate(1.08);
+  -webkit-backdrop-filter: blur(18px) saturate(1.08);
+}
+
+.all-day-copy {
+  padding: clamp(28px, 4vw, 48px);
+}
+
+.all-day h2,
+.signature-menu h2,
+.gallery h2,
+.reservation h2,
+.contact h2 {
+  letter-spacing: 0;
+  color: var(--ink);
+}
+
+.all-day-copy > p,
+.signature-menu-head > p,
+.gallery .lede,
+.reservation .lede,
+.contact .lede {
+  color: rgba(43, 31, 18, 0.72);
+}
+
+.dayline {
+  border-color: var(--summer-hairline);
+}
+
+.day-moment {
+  border-color: var(--summer-hairline);
+}
+
+.day-moment::before {
+  background: rgba(43, 31, 18, 0.58);
+}
+
+.all-day-photo,
+.signature-menu-hero,
+.filmstrip-frame,
+.contact .map {
+  border: 1px solid var(--summer-border);
+  border-radius: 8px;
+  box-shadow: var(--summer-photo-shadow);
+}
+
+.all-day-photo::before,
+.signature-menu-hero::before,
+.filmstrip-frame::before,
+.contact .map::before {
+  content: "";
+  position: absolute;
+  inset: 12px;
+  z-index: 2;
+  border: 1px solid rgba(255, 249, 240, 0.72);
+  border-radius: 6px;
+  pointer-events: none;
+}
+
+.all-day-photo img,
+.signature-menu-hero img,
+.filmstrip-frame img,
+.contact .map {
+  filter: saturate(1.08) contrast(1.01) brightness(1.03);
+}
+
+.all-day-photo figcaption,
+.filmstrip-label,
+.contact .map .corner,
+.contact .map .pin .label {
+  border: 1px solid rgba(255, 249, 240, 0.66);
+  border-radius: 6px;
+  background:
+    radial-gradient(circle at 88% 42%, var(--summer-rose), transparent 40%),
+    radial-gradient(circle at 68% 36%, var(--summer-olive), transparent 34%),
+    rgba(255, 249, 240, 0.62);
+  color: var(--ink);
+  text-shadow: none;
+  backdrop-filter: blur(18px) saturate(1.08);
+  -webkit-backdrop-filter: blur(18px) saturate(1.08);
+}
+
+.all-day-photo figcaption {
+  left: 16px;
+  right: auto;
+  bottom: 16px;
+  z-index: 3;
+  padding: 10px 12px;
+  color: var(--ink);
+  text-shadow: none;
+}
+
+.all-day-photo.evening figcaption {
+  left: 22px;
+  right: 22px;
+  bottom: 22px;
+  padding: 15px 17px;
+}
+
+.signature-menu-head {
+  align-items: stretch;
+}
+
+.signature-menu-head > p {
+  align-self: end;
+  margin-bottom: clamp(22px, 3vw, 38px);
+}
+
+.signature-menu-hero {
+  min-height: 660px;
+}
+
+.signature-menu-hero::after {
+  z-index: 1;
+  background:
+    linear-gradient(180deg, transparent 30%, rgba(255, 249, 240, 0.08) 58%, rgba(43, 31, 18, 0.26) 100%);
+}
+
+.signature-menu-hero figcaption {
+  left: clamp(22px, 3vw, 34px);
+  right: clamp(22px, 3vw, 34px);
+  bottom: clamp(22px, 3vw, 34px);
+  width: auto;
+  max-width: none;
+  z-index: 3;
+  padding: clamp(18px, 2.6vw, 28px);
+  border: 1px solid rgba(255, 249, 240, 0.66);
+  border-radius: 6px;
+  background:
+    radial-gradient(circle at 86% 42%, var(--summer-rose), transparent 40%),
+    radial-gradient(circle at 70% 34%, var(--summer-olive), transparent 38%),
+    rgba(255, 249, 240, 0.62);
+  color: var(--ink);
+  text-shadow: none;
+  backdrop-filter: blur(20px) saturate(1.12);
+  -webkit-backdrop-filter: blur(20px) saturate(1.12);
+}
+
+.signature-menu-hero figcaption span {
+  color: rgba(43, 31, 18, 0.58);
+}
+
+.signature-list {
+  justify-content: center;
+  padding: clamp(18px, 3vw, 34px);
+  border-top: 1px solid var(--summer-border);
+}
+
+.signature-item {
+  border-bottom-color: var(--summer-hairline);
+}
+
+.signature-item:hover {
+  background: rgba(255, 244, 201, 0.42);
+}
+
+.signature-open {
+  color: rgba(43, 31, 18, 0.44);
+}
+
+.signature-actions,
+.reservation-actions,
+.contact-actions,
+.footer-cta {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.terrace-photo figcaption {
+  background:
+    radial-gradient(circle at 88% 48%, rgba(224, 140, 134, 0.25), transparent 38%),
+    radial-gradient(circle at 72% 38%, rgba(116, 137, 73, 0.2), transparent 34%),
+    rgba(255, 249, 240, 0.46);
+}
+
+.terrace-panel {
+  border-color: rgba(255, 249, 240, 0.7);
+  background:
+    radial-gradient(circle at 90% 12%, var(--summer-gold-soft), transparent 36%),
+    rgba(255, 249, 240, 0.82);
+  box-shadow: 0 28px 80px -42px rgba(46, 74, 39, 0.38);
+}
+
+.gallery .top {
+  padding: clamp(24px, 4vw, 40px);
+  margin-bottom: clamp(24px, 4vw, 42px);
+}
+
+.filmstrip-wrap {
+  margin-top: 0;
+  padding: 14px 0 26px;
+}
+
+.filmstrip-track {
+  gap: clamp(18px, 2.4vw, 28px);
+}
+
+.filmstrip-frame {
+  flex-basis: 340px;
+  border-radius: 8px;
+}
+
+.filmstrip-frame::after {
+  z-index: 1;
+  opacity: 1;
+  background:
+    linear-gradient(180deg, rgba(255, 249, 240, 0.03) 0%, rgba(255, 249, 240, 0.02) 48%, rgba(43, 31, 18, 0.18) 100%);
+}
+
+.filmstrip-label {
+  left: 18px;
+  right: 18px;
+  bottom: 18px;
+  z-index: 3;
+  width: auto;
+  padding: 13px 15px;
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-style: italic;
+  line-height: 1.08;
+  text-shadow: none;
+}
+
+.filmstrip-number {
+  top: 24px;
+  right: 24px;
+  z-index: 3;
+  padding: 7px 8px;
+  border-radius: 999px;
+  background: rgba(255, 249, 240, 0.56);
+  color: var(--ink);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.reservation {
+  background:
+    radial-gradient(ellipse at 22% 14%, rgba(255, 249, 240, 0.86), transparent 36%),
+    radial-gradient(ellipse at 90% 20%, var(--summer-gold), transparent 38%),
+    linear-gradient(145deg, #fffaf1 0%, #f4e1a4 58%, #ead08b 100%);
+}
+
+.reservation-inner > div:first-child,
+.reservation-card,
+.contact .grid > div:first-child {
+  padding: clamp(26px, 4vw, 42px);
+}
+
+.reservation-card {
+  overflow: hidden;
+}
+
+.reservation-line {
+  border-color: var(--summer-hairline);
+}
+
+.contact .grid > div:first-child {
+  align-self: stretch;
+}
+
+.contact .map {
+  min-height: 560px;
+  overflow: hidden;
+}
+
+.contact .map::after {
+  background:
+    linear-gradient(180deg, rgba(255, 249, 240, 0) 34%, rgba(43, 31, 18, 0.22) 100%);
+}
+
+.contact .map .corner {
+  bottom: 22px;
+  left: 22px;
+  z-index: 3;
+  padding: 12px 14px;
+}
+
+.contact .map .pin .dot {
+  background: #d8ad36;
+  border-color: #fff8ea;
+}
+
+.site-footer {
+  border-top: 1px solid rgba(255, 249, 240, 0.74);
+  background:
+    radial-gradient(circle at 82% 6%, rgba(255, 249, 240, 0.82), transparent 30%),
+    radial-gradient(circle at 14% 68%, rgba(116, 137, 73, 0.16), transparent 32%),
+    linear-gradient(135deg, #fffaf1 0%, #f7e5aa 48%, #e6bb49 100%);
+}
+
+.footer-grid {
+  border-bottom-color: rgba(43, 31, 18, 0.14);
+}
+
+.footer-socials a {
+  border-color: rgba(43, 31, 18, 0.14);
+}
+
+@media (max-width: 880px) {
+  .all-day,
+  .signature-menu,
+  .gallery,
+  .reservation,
+  .contact {
+    padding: 72px 0;
+  }
+
+  .all-day {
+    padding-top: 78px;
+  }
+
+  .signature-menu {
+    padding-top: 76px;
+  }
+
+  .all-day-grid,
+  .signature-menu-grid,
+  .reservation-inner,
+  .contact .grid {
+    gap: 28px;
+  }
+
+  .all-day-copy,
+  .signature-list,
+  .gallery .top,
+  .reservation-inner > div:first-child,
+  .reservation-card,
+  .contact .grid > div:first-child {
+    padding: 22px;
+  }
+
+  .all-day-copy {
+    max-width: none;
+  }
+
+  .all-day h2,
+  .signature-menu h2,
+  .gallery h2,
+  .reservation h2,
+  .contact h2 {
+    font-size: clamp(42px, 12vw, 62px);
+    line-height: 0.94;
+  }
+
+  .all-day-copy > p,
+  .signature-menu-head > p,
+  .gallery .lede,
+  .reservation .lede,
+  .contact .lede {
+    font-size: 16px;
+    line-height: 1.62;
+  }
+
+  .day-moment {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding: 22px 0 20px;
+  }
+
+  .day-moment::before {
+    left: 0;
+    transform: none;
+  }
+
+  .day-moment p {
+    grid-column: auto;
+  }
+
+  .all-day-media {
+    display: flex;
+    min-height: 0;
+    gap: 16px;
+    margin: 0 -20px;
+    padding: 6px 20px 22px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .all-day-media::-webkit-scrollbar {
+    display: none;
+  }
+
+  .all-day-photo,
+  .all-day-photo.morning,
+  .all-day-photo.midday,
+  .all-day-photo.evening {
+    flex: 0 0 78vw;
+    min-height: 430px;
+    aspect-ratio: 4 / 5;
+    grid-column: auto;
+    grid-row: auto;
+    scroll-snap-align: center;
+  }
+
+  .all-day-photo figcaption,
+  .all-day-photo.evening figcaption {
+    left: 18px;
+    right: 18px;
+    bottom: 18px;
+    padding: 14px 15px;
+  }
+
+  .signature-menu-head {
+    display: block;
+    margin-bottom: 26px;
+  }
+
+  .signature-menu-head > p {
+    margin: 18px 0 0;
+  }
+
+  .signature-menu-hero {
+    min-height: 470px;
+  }
+
+  .signature-menu-hero::before {
+    inset: 10px;
+  }
+
+  .signature-menu-hero figcaption {
+    left: 18px;
+    right: 18px;
+    bottom: 18px;
+    padding: 18px;
+    font-size: clamp(34px, 10vw, 48px);
+  }
+
+  .signature-list {
+    border-top: 1px solid var(--summer-border);
+  }
+
+  .signature-item {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding: 22px 0;
+  }
+
+  .signature-item:hover {
+    padding-left: 0;
+    padding-right: 0;
+    background: transparent;
+  }
+
+  .signature-open {
+    justify-self: start;
+    padding-top: 0;
+  }
+
+  .signature-actions,
+  .terrace-actions,
+  .reservation-actions,
+  .contact-actions,
+  .footer-cta {
+    justify-content: flex-start;
+    gap: 22px;
+  }
+
+  .terrace-stage {
+    padding-top: 76px;
+  }
+
+  .terrace-actions {
+    justify-self: start;
+    padding-left: 2px;
+  }
+
+  .gallery .top {
+    display: block;
+  }
+
+  .gallery .top .btn {
+    margin-top: 18px;
+  }
+
+  .filmstrip-wrap {
+    margin-left: -20px;
+    margin-right: -20px;
+    padding-left: 20px;
+  }
+
+  .filmstrip-frame {
+    flex: 0 0 82vw;
+    aspect-ratio: 4 / 5;
+  }
+
+  .filmstrip-label {
+    font-size: 24px;
+  }
+
+  .reservation-actions,
+  .contact-actions,
+  .footer-cta {
+    display: flex;
+  }
+
+  .reservation-actions .btn,
+  .contact-actions .btn,
+  .footer-cta .btn {
+    width: auto;
+    min-width: 0;
+    text-align: left;
+  }
+
+  .contact .info {
+    gap: 18px;
+  }
+
+  .contact .map {
+    min-height: 430px;
+  }
+
+  .site-footer {
+    padding-top: 44px;
+  }
+}
+
+@media (max-width: 600px) {
+  .all-day,
+  .signature-menu,
+  .gallery,
+  .reservation,
+  .contact {
+    background:
+      radial-gradient(ellipse at 80% 2%, rgba(246, 215, 120, 0.32), transparent 42%),
+      linear-gradient(180deg, #fffaf1 0%, #faeabf 54%, #fff7e6 100%);
+  }
+
+  .all-day-photo,
+  .all-day-photo.morning,
+  .all-day-photo.midday,
+  .all-day-photo.evening {
+    flex-basis: 82vw;
+    min-height: 410px;
+  }
+
+  .signature-menu-hero {
+    min-height: 430px;
+  }
+
+  .terrace-photo {
+    min-height: 430px;
+  }
+
+  .terrace-photo figcaption {
+    background:
+      radial-gradient(circle at 86% 50%, rgba(224, 140, 134, 0.28), transparent 38%),
+      radial-gradient(circle at 72% 38%, rgba(116, 137, 73, 0.2), transparent 36%),
+      rgba(255, 249, 240, 0.58);
+  }
+
+  .filmstrip-frame {
+    flex-basis: 84vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn,
+  .terrace-actions .btn,
+  .signature-actions .btn,
+  .reservation-actions .btn,
+  .contact-actions .btn,
+  .footer-cta .btn {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .all-day-copy,
+  .signature-list,
+  .gallery .top,
+  .reservation-inner > div:first-child,
+  .reservation-card,
+  .contact .grid > div:first-child {
+    padding: 20px;
+  }
+
+  .all-day-media {
+    margin-left: -18px;
+    margin-right: -18px;
+    padding-left: 18px;
+  }
+
+  .filmstrip-wrap {
+    margin-left: -18px;
+    margin-right: -18px;
+    padding-left: 18px;
+  }
+
+  .filmstrip-frame {
+    flex-basis: 86vw;
+  }
+
+  .contact .map {
+    min-height: 360px;
+  }
+}
+
+/* CODEX 4B — Mobile hero adopts the terrace-card summer system */
+@media (max-width: 880px) {
+  .video-hero {
+    background: #f7df9b;
+  }
+
+  .video-hero-shade {
+    background:
+      linear-gradient(180deg, rgba(255, 250, 241, 0.08) 0%, rgba(255, 250, 241, 0.02) 38%, rgba(246, 215, 120, 0.28) 62%, rgba(255, 250, 241, 0.72) 100%);
+  }
+
+  .video-hero-content {
+    padding: 0 16px 28px;
+  }
+
+  .video-hero-copy {
+    max-width: none;
+    padding: 22px 18px 20px;
+    border: 1px solid rgba(255, 249, 240, 0.78);
+    border-radius: 14px;
+    background:
+      radial-gradient(circle at 86% 16%, rgba(224, 140, 134, 0.18), transparent 38%),
+      radial-gradient(circle at 12% 100%, rgba(246, 215, 120, 0.26), transparent 42%),
+      rgba(255, 250, 241, 0.68);
+    box-shadow: 0 28px 70px -38px rgba(55, 35, 17, 0.55);
+    text-shadow: none;
+    backdrop-filter: blur(10px);
+  }
+
+  .video-hero-eyebrow {
+    margin-bottom: 14px;
+    color: rgba(65, 43, 22, 0.62);
+  }
+
+  .video-hero h1 {
+    color: #2b190d;
+    text-shadow: none;
+  }
+
+  .video-hero p {
+    max-width: 13.5em;
+    color: rgba(43, 25, 13, 0.76);
+    text-shadow: none;
+  }
+
+  .video-hero-actions {
+    margin-top: 26px;
+  }
+
+  .video-hero-actions .btn-on-dark {
+    color: #2b190d !important;
+    text-shadow: none;
+  }
+
+  .video-hero-actions .btn-primary.btn-on-dark::after {
+    background: rgba(175, 126, 32, 0.72) !important;
+  }
+
+  .video-hero-actions .btn-ghost.btn-on-dark {
+    color: rgba(43, 25, 13, 0.58) !important;
+  }
+
+  .video-hero-scroll {
+    display: none;
+  }
+}
+
+
+/* MOBILE HERO FINAL — variant 01 terrace image + compact sticky nav */
+@media (max-width: 880px) {
+  .site-header {
+    position: fixed;
+    padding: 7px 0;
+    background: rgba(255, 250, 241, 0.30);
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    box-shadow: 0 1px 0 rgba(65, 43, 22, 0.08);
+    color: #2b190d;
+  }
+
+  .site-header.is-scrolled {
+    padding: 7px 0;
+    background: rgba(255, 250, 241, 0.38);
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+  }
+
+  .site-header .brand,
+  .site-header.is-scrolled .brand,
+  .site-header .burger,
+  .site-header.is-scrolled .burger {
+    color: #2b190d;
+  }
+
+  .site-header .brand {
+    font-size: 22px;
+  }
+
+  .site-header .row {
+    min-height: 42px;
+  }
+
+  .site-header .burger {
+    width: 38px;
+    height: 38px;
+  }
+
+  .video-hero {
+    min-height: 100svh;
+    height: 100svh;
+    background:
+      linear-gradient(180deg, rgba(255, 250, 241, 0.02) 0%, rgba(255, 250, 241, 0.06) 45%, rgba(255, 250, 241, 0.18) 100%),
+      url("../images/hero-mobile-variants-v2/01-awning-flowers-high.jpg") center center / cover no-repeat;
+  }
+
+  .video-hero-media {
+    display: none;
+  }
+
+  .video-hero-shade {
+    background: linear-gradient(180deg, rgba(255, 250, 241, 0.00) 0%, rgba(255, 250, 241, 0.06) 54%, rgba(255, 250, 241, 0.18) 100%);
+  }
+
+  .video-hero-content {
+    padding: 0 16px 30px;
+  }
+
+  .video-hero-copy {
+    max-width: none;
+    padding: 20px 18px 18px;
+    border: 1px solid rgba(255, 255, 255, 0.72);
+    border-radius: 18px;
+    background:
+      radial-gradient(circle at 78% 0%, rgba(231,187,72,0.12), transparent 40%),
+      rgba(255, 250, 241, 0.64);
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    box-shadow: 0 24px 64px -36px rgba(62, 39, 18, 0.42);
+    text-shadow: none;
+  }
+
+  .video-hero-eyebrow {
+    gap: 12px;
+    margin-bottom: 14px;
+    font-size: 9px;
+    letter-spacing: 0.24em;
+    line-height: 1.6;
+    color: rgba(65, 43, 22, 0.62);
+  }
+
+  .video-hero h1 {
+    max-width: 8.8ch;
+    font-size: clamp(58px, 16.5vw, 88px);
+    line-height: 0.92;
+    letter-spacing: -0.052em;
+    color: #2b190d;
+    text-shadow: none;
+  }
+
+  .video-hero p {
+    max-width: 21em;
+    margin-top: 18px;
+    font-size: clamp(14px, 4vw, 17px);
+    line-height: 1.45;
+    color: rgba(43, 25, 13, 0.66);
+    text-shadow: none;
+  }
+
+  .video-hero-actions {
+    gap: 26px;
+    margin-top: 24px;
+  }
+
+  .video-hero-actions .btn {
+    padding-bottom: 10px;
+    font-size: 14px;
+    letter-spacing: 0.16em;
+  }
+
+  .video-hero-actions .btn-on-dark {
+    color: #2b190d !important;
+    text-shadow: none;
+  }
+
+  .video-hero-actions .btn-primary.btn-on-dark::after {
+    background: rgba(175, 126, 32, 0.72) !important;
+  }
+
+  .video-hero-actions .btn-ghost.btn-on-dark {
+    color: rgba(43, 25, 13, 0.56) !important;
+  }
+
+  .video-hero-scroll {
+    display: none;
+  }
+}
+
+
+/* MOBILE HERO NAV REFINEMENT — no blur, full viewport */
+@media (max-width: 880px) {
+  .video-hero {
+    min-height: 100dvh;
+    height: 100dvh;
+  }
+
+  .site-header {
+    padding: 10px 0;
+    background: transparent;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    box-shadow: none;
+    color: #2b190d;
+  }
+
+  .site-header.is-scrolled {
+    padding: 9px 0;
+    background: #fff8ea;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    box-shadow: 0 1px 0 rgba(65, 43, 22, 0.12), 0 12px 30px -26px rgba(65, 43, 22, 0.34);
+  }
+
+  .site-header .row {
+    min-height: 40px;
+  }
+
+  .site-header .brand {
+    font-size: 21px;
+    text-shadow: 0 1px 12px rgba(255, 250, 241, 0.72);
+  }
+
+  .site-header .burger {
+    width: 36px;
+    height: 36px;
+    color: #2b190d;
+    background: rgba(255, 250, 241, 0.82);
+    border: 1px solid rgba(43, 25, 13, 0.10);
+    border-radius: 999px;
+    box-shadow: 0 12px 30px -20px rgba(43, 25, 13, 0.5);
+  }
+
+  .site-header.is-scrolled .burger {
+    background: transparent;
+    border-color: transparent;
+    box-shadow: none;
+  }
+
+  .video-hero-content {
+    padding-bottom: max(24px, env(safe-area-inset-bottom));
+  }
+}
+
+
+/* MOBILE NAV FINAL — cream bar, no hamburger pill/blur */
+@media (max-width: 880px) {
+  .site-header,
+  .site-header.is-scrolled {
+    padding: 8px 0;
+    background: #fff8ea;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    box-shadow: 0 1px 0 rgba(65, 43, 22, 0.10);
+    color: #2b190d;
+  }
+
+  .site-header .row {
+    min-height: 42px;
+  }
+
+  .site-header .brand,
+  .site-header.is-scrolled .brand,
+  .site-header .burger,
+  .site-header.is-scrolled .burger {
+    color: #2b190d;
+  }
+
+  .site-header .brand {
+    font-size: 21px;
+    text-shadow: none;
+  }
+
+  .site-header .burger,
+  .site-header.is-scrolled .burger {
+    width: 38px;
+    height: 38px;
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .video-hero {
+    padding-top: 58px !important;
+  }
+}
+
+
+/* MOBILE HERO BOX — lower blur */
+@media (max-width: 880px) {
+  .video-hero-copy {
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+    background:
+      radial-gradient(circle at 78% 0%, rgba(231,187,72,0.10), transparent 40%),
+      rgba(255, 250, 241, 0.58);
+  }
+}
+
+
+/* MOBILE SIGNATURE IMAGE — real fixed height, not only min-height */
+@media (max-width: 600px) {
+  .signature-menu-hero {
+    height: 300px;
+    min-height: 0;
+    max-height: 300px;
+  }
+
+  .signature-menu-hero img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .signature-menu-hero figcaption {
+    left: 14px;
+    right: 14px;
+    bottom: 14px;
+    padding: 14px 16px;
+    border-radius: 10px;
+    font-size: clamp(28px, 8.2vw, 38px);
+    -webkit-backdrop-filter: blur(8px) saturate(1.04);
+    backdrop-filter: blur(8px) saturate(1.04);
+  }
+
+  .signature-menu-hero figcaption span {
+    margin-bottom: 8px;
+    font-size: 9px;
+    letter-spacing: 0.22em;
+  }
+}
