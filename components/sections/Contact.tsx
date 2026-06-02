@@ -14,7 +14,7 @@ export function Contact() {
             </div>
             <h2>Kontakt &amp;<br/><span className="it">Anfahrt</span></h2>
             <p className="lede">
-              Reservierungen per Telefon oder Online. Walk-ins sind bei uns immer willkommen, besonders an der Bar.
+              Besuchen Sie Casa Bellucci am Kurfürstendamm 63 in Berlin-Charlottenburg. Reservierungen per Telefon oder online, Walk-ins besonders an der Bar.
             </p>
             <div className="info">
               <div className="block">

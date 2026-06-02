@@ -34,7 +34,7 @@ export function About() {
             </div>
             <h2>Ein Tag bei <span className="it">Bellucci</span>.</h2>
             <p>
-              Vom späten Frühstück bis zum Dinner: Casa Bellucci ist kein Ort für nur einen Anlass, sondern für den ganzen Tag am Kurfürstendamm.
+              Vom späten Frühstück bis zum Dinner: Casa Bellucci ist ein italienisches Restaurant in Berlin-Charlottenburg für den ganzen Tag am Kurfürstendamm.
             </p>
             <div className="dayline" aria-label="Tagesmomente">
               {moments.map((moment, index) => (
