@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 import { PageShell } from '@/components/PageShell';
 import { QuandooWidget } from '@/components/QuandooWidget';
 import { FlagBar } from '@/components/sections/Brand';
-import { SITE } from '@/lib/site';
 
 export const metadata: Metadata = {
   title: 'Tischreservierung · Casa Bellucci',
@@ -25,38 +24,9 @@ export default function ReservierungPage() {
               <p className="lede">
                 Reserviere direkt online über unser offizielles Quandoo-Modul oder erreiche uns telefonisch für spontane Wünsche und größere Gruppen.
               </p>
-              <div className="reservation-actions">
-                <a className="btn btn-primary" href={SITE.phoneHref}>Jetzt anrufen</a>
-                <a className="btn btn-ghost" href={SITE.mapsUrl} target="_blank" rel="noreferrer">Route öffnen →</a>
-              </div>
             </div>
             <div className="reservation-card reservation-widget-card">
               <QuandooWidget />
-            </div>
-          </div>
-        </section>
-        <section className="subpage-info">
-          <div className="wrap subpage-info-grid">
-            <div>
-              <h2>So finden Sie uns</h2>
-              <p>
-                <strong>Kurfürstendamm</strong><br />
-                <a href={SITE.mapsUrl} target="_blank" rel="noreferrer">
-                  {SITE.address.street}, {SITE.address.postalCity}
-                </a>
-              </p>
-            </div>
-            <div>
-              <h2>Öffnungszeiten</h2>
-              <p>{SITE.openingHours.weekdays}</p>
-              <p>{SITE.openingHours.sunday}</p>
-            </div>
-            <div>
-              <h2>Kontakt</h2>
-              <p>
-                <a href={SITE.phoneHref}>{SITE.phone}</a><br />
-                <a href={SITE.emailHref}>{SITE.email}</a>
-              </p>
             </div>
           </div>
         </section>

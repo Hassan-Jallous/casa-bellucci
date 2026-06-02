@@ -1,7 +1,5 @@
 import { FlagBar } from './Brand';
 import { QuandooWidget } from '@/components/QuandooWidget';
-import { SITE } from '@/lib/site';
-import { routePath } from '@/lib/routes';
 
 export function Reservation() {
   return (
@@ -20,22 +18,6 @@ export function Reservation() {
         </div>
         <div className="reservation-card reservation-widget-card">
           <QuandooWidget />
-          <div className="reservation-line">
-            <span>Telefon</span>
-            <a href={SITE.phoneHref}>{SITE.phone}</a>
-          </div>
-          <div className="reservation-line">
-            <span>E-Mail</span>
-            <a href={SITE.emailHref}>{SITE.email}</a>
-          </div>
-          <div className="reservation-line">
-            <span>Öffnungszeiten</span>
-            <strong>{SITE.openingHours.weekdays}<br/>{SITE.openingHours.sunday}</strong>
-          </div>
-          <div className="reservation-actions">
-            <a className="btn btn-primary" href={SITE.phoneHref}>Jetzt anrufen</a>
-            <a className="btn btn-ghost" href={routePath('/reservierung/')}>Reservierungsseite →</a>
-          </div>
         </div>
       </div>
     </section>
