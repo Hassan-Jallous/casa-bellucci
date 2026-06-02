@@ -8,17 +8,17 @@ export function About() {
     {
       time: "Vormittag",
       title: "Frühstück & Brunch",
-      copy: "Espresso, Croissant, leichte Teller und ein ruhiger Start in den Tag.",
+      copy: "Frühstück in Charlottenburg mit Espresso und Cornetto, am Wochenende Brunch am Kurfürstendamm. Ein ruhiger Start in den Tag.",
     },
     {
       time: "Mittag",
-      title: "Lunch auf der Terrasse",
-      copy: "Pasta, Fisch und Salate für lange Gespräche zwischen City und Sonne.",
+      title: "Lunch & Mittagstisch",
+      copy: "Pasta fatta a mano, fangfrischer Fisch und Salate, mittags auch als Business Lunch auf der Sommerterrasse.",
     },
     {
       time: "Abend",
       title: "Dinner & Bar",
-      copy: "Sizilianische Küche, Aperitivo und Wein bis spät in den Abend.",
+      copy: "Sizilianische Küche, Aperitivo an der Bar, Wein vom Ätna und am Wochenende Live-DJ bis spät in den Abend.",
     },
   ];
 
@@ -32,9 +32,9 @@ export function About() {
                 <FlagBar orientation="h" /> All-Day Concept
               </span>
             </div>
-            <h2>Ein Tag bei <span className="it">Bellucci</span>.</h2>
+            <h2>Frühstück, Lunch und Dinner am <span className="it">Kurfürstendamm</span>.</h2>
             <p>
-              Vom späten Frühstück bis zum Dinner: Casa Bellucci ist ein italienisches Restaurant in Berlin-Charlottenburg für den ganzen Tag am Kurfürstendamm.
+              Ein Ort, drei Stimmungen: vom ruhigen Espresso am Vormittag über den Lunch auf der Sommerterrasse bis zum Dinner mit Live-DJ am Wochenende. Auf dem Teller Pasta fatta a mano, fangfrischer Fisch und Aperitivo an der Bar, im Glas Weine vom Ätna.
             </p>
             <div className="dayline" aria-label="Tagesmomente">
               {moments.map((moment, index) => (
@@ -48,15 +48,15 @@ export function About() {
           </div>
           <div className="all-day-media" aria-label="Atmosphäre von Frühstück, Mittag und Abend">
             <figure className="all-day-photo morning">
-              <img src={asset("images/menu-breakfast.jpg")} alt="Frühstücksmoment bei Casa Bellucci" />
+              <img src={asset("images/menu-breakfast.jpg")} alt="Frühstück bei Casa Bellucci am Kurfürstendamm in Berlin-Charlottenburg" />
               <figcaption>Frühstück</figcaption>
             </figure>
             <figure className="all-day-photo midday">
-              <img src={asset("images/menu-lunch.jpg")} alt="Mediterraner Lunch auf weißem Tisch" />
+              <img src={asset("images/menu-lunch.jpg")} alt="Lunch mit Pasta auf der Sommerterrasse in Charlottenburg" />
               <figcaption>Mittag</figcaption>
             </figure>
             <figure className="all-day-photo evening">
-              <img src={asset("images/menu-dinner.jpg")} alt="Dinnergericht mit italienischer Atmosphäre" />
+              <img src={asset("images/menu-dinner.jpg")} alt="Sizilianisches Dinner bei Casa Bellucci, italienisches Restaurant in Berlin" />
               <figcaption>Abend</figcaption>
             </figure>
           </div>

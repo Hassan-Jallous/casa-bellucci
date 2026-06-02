@@ -6,17 +6,22 @@ const SITE_URL = SITE.canonicalUrl;
 export const SEO = {
   siteUrl: SITE_URL,
   title:
-    'Casa Bellucci · Italienisches Restaurant am Kurfürstendamm in Berlin',
+    'Casa Bellucci · Italienisches & sizilianisches Restaurant Berlin',
   description:
-    'Casa Bellucci ist ein italienisches Restaurant und eine Bar am Kurfürstendamm 63 in Berlin-Charlottenburg mit Terrasse, Frühstück, Lunch, Dinner und Online-Reservierung.',
+    'Casa Bellucci ist ein italienisches und sizilianisches Restaurant mit Bar am Kurfürstendamm 63 in Berlin-Charlottenburg. Frühstück, Lunch, Dinner, Aperitivo und Sommerterrasse, mit Online-Reservierung.',
   keywords: [
     'Casa Bellucci',
     'Casa Bellucci Berlin',
     'italienisches Restaurant Berlin',
+    'sizilianisches Restaurant Berlin',
     'italienisches Restaurant Charlottenburg',
+    'Restaurant Charlottenburg',
     'Restaurant Kurfürstendamm',
-    'Bar Kurfürstendamm',
-    'Frühstück Kurfürstendamm',
+    'Bar Charlottenburg',
+    'Frühstück Charlottenburg',
+    'Brunch Charlottenburg',
+    'Weinbar Berlin',
+    'Aperitivo Berlin',
   ],
   ogImage: '/images/hero-summer-desktop.jpg',
 } as const;
@@ -107,6 +112,15 @@ export function restaurantJsonLd() {
       addressCountry: 'DE',
     },
     servesCuisine: ['Italienisch', 'Sizilianisch', 'Mediterran'],
+    priceRange: '€€€',
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: 52.5007367,
+      longitude: 13.3112327,
+    },
+    currenciesAccepted: 'EUR',
+    paymentAccepted: 'Cash, Credit Card, Debit Card, NFC Mobile Payment',
+    areaServed: ['Charlottenburg', 'Berlin-Charlottenburg', 'Berlin'],
     openingHoursSpecification: [
       {
         '@type': 'OpeningHoursSpecification',
@@ -131,10 +145,79 @@ export function restaurantJsonLd() {
     sameAs: [SITE.instagram],
     hasMap: SITE.mapsUrl,
     menu: canonicalUrl('/#menu'),
+    hasMenu: canonicalUrl('/#menu'),
     acceptsReservations: true,
+    amenityFeature: [
+      'Sommerterrasse',
+      'Bar',
+      'Frühstück',
+      'Reservierung',
+      'Rollstuhlgerecht',
+      'Vegetarische Optionen',
+      'Vegane Optionen',
+      'Hunde willkommen',
+    ].map((name) => ({
+      '@type': 'LocationFeatureSpecification',
+      name,
+      value: true,
+    })),
     potentialAction: {
       '@type': 'ReserveAction',
       target: canonicalUrl('/reservierung/'),
     },
+  };
+}
+
+export function breadcrumbJsonLd(items: { name: string; path: string }[]) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: items.map((item, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: item.name,
+      item: canonicalUrl(item.path),
+    })),
+  };
+}
+
+export function faqJsonLd(faqs: { question: string; answer: string }[]) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((faq) => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.answer,
+      },
+    })),
+  };
+}
+
+export function webPageJsonLd({
+  name,
+  description,
+  path,
+}: {
+  name: string;
+  description: string;
+  path: string;
+}) {
+  const url = canonicalUrl(path);
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    '@id': `${url}#webpage`,
+    url,
+    name,
+    description,
+    isPartOf: {
+      '@type': 'WebSite',
+      '@id': `${SITE_URL}/#website`,
+      url: SITE_URL,
+    },
+    inLanguage: 'de-DE',
   };
 }

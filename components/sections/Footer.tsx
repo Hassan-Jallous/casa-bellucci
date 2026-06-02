@@ -12,7 +12,7 @@ export function Footer() {
               <span>Bellucci</span>
             </div>
             <p>
-              Italienisches Restaurant und Bar am Kurfürstendamm.
+              Italienisches und sizilianisches Restaurant mit Bar am Kurfürstendamm in Berlin-Charlottenburg.
             </p>
             <div className="footer-cta">
               <a className="btn btn-primary" href={routePath('/reservierung/')}>Reservieren</a>

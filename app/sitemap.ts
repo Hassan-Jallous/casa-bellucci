@@ -10,6 +10,26 @@ const ROUTES = [
     changeFrequency: 'weekly',
   },
   {
+    path: '/italienisches-restaurant-berlin-charlottenburg/',
+    priority: 0.9,
+    changeFrequency: 'monthly',
+  },
+  {
+    path: '/sizilianisches-restaurant-berlin/',
+    priority: 0.9,
+    changeFrequency: 'monthly',
+  },
+  {
+    path: '/fruehstueck-brunch-kurfuerstendamm/',
+    priority: 0.8,
+    changeFrequency: 'monthly',
+  },
+  {
+    path: '/bar-aperitivo-kurfuerstendamm/',
+    priority: 0.8,
+    changeFrequency: 'monthly',
+  },
+  {
     path: '/reservierung/',
     priority: 0.8,
     changeFrequency: 'monthly',

@@ -13,7 +13,7 @@ export function Reservation() {
           </div>
           <h2>Ein Tisch für <span className="it">heute</span></h2>
           <p className="lede">
-            Frühstück, Lunch auf der Terrasse oder ein langer Abend am Kurfürstendamm. Reserviere direkt online oder erreiche uns telefonisch für spontane Wünsche.
+            Frühstück, Lunch auf der Sommerterrasse oder ein langer sizilianischer Abend am Kurfürstendamm. Reserviere direkt online oder erreiche uns telefonisch für spontane Wünsche.
           </p>
         </div>
         <div className="reservation-card reservation-widget-card">

@@ -2501,7 +2501,6 @@ section {
   .site-header .row { gap: 12px; }
   .site-header .brand .casa { font-size: 1.6em; }
   .site-header .brand .bellucci { font-size: 0.9em; letter-spacing: 0; }
-  .site-header .flag-bar { display: none; }
 
   /* Section paddings */
   section { padding: 64px 0; }

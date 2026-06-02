@@ -37,8 +37,9 @@ Die Homepage soll folgende Begriffe natürlich abdecken:
 Empfohlene Homepage-Meta:
 
 - Title: `Casa Bellucci · Italienisches Restaurant am Kurfürstendamm in Berlin`
-- H1: `Casa Bellucci`
-- Hero-Unterzeile: `Italienisches Restaurant und Bar am Kurfürstendamm 63 in Berlin-Charlottenburg`
+- H1: `Italienisches Restaurant am Kurfürstendamm`
+- Hero-Brandzeile: `Casa Bellucci · Berlin-Charlottenburg`
+- Hero-Unterzeile: `Casa Bellucci am Kurfürstendamm 63 in Berlin-Charlottenburg: Frühstück, Lunch, Dinner, Bar und Aperitivo auf der Sommerterrasse.`
 - Primäre interne Links: Reservierung, Karte, Terrasse, Kontakt
 
 Nicht auf die Homepage:
@@ -171,7 +172,8 @@ Erst sinnvoll, wenn finale Speisekarten, PDFs oder Menüinhalte stabil sind. Son
 
 1. Homepage Copy leicht justieren:
    - Kurfürstendamm 63 und Berlin-Charlottenburg früh sichtbar halten.
-   - `Italienisches Restaurant und Bar` natürlich in Hero oder Intro.
+   - `Italienisches Restaurant am Kurfürstendamm` als H1 verwenden.
+   - `Casa Bellucci` als Brand sichtbar halten, aber nicht als einzige H1 verwenden.
    - Frühstück, Lunch, Dinner, Terrasse als All-Day-Signale.
 
 2. Bestehende Metadaten prüfen:

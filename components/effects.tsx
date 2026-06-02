@@ -13,10 +13,10 @@ export function ImageHero() {
         <div className="image-hero-copy">
           <div className="image-hero-eyebrow">
             <FlagBar orientation="h" size="md" />
-            Italienisches Restaurant · Bar · Kurfürstendamm 63
+            Casa Bellucci · Berlin-Charlottenburg
           </div>
-          <h1>Casa Bellucci</h1>
-          <p>Italienisches Restaurant und Bar in Berlin-Charlottenburg: Frühstück, Lunch, Dinner und Aperitivo auf der Sommerterrasse.</p>
+          <h1>Italienisches &amp; sizilianisches Restaurant in Berlin Charlottenburg</h1>
+          <p>Casa Bellucci am Kurfürstendamm 63 in Berlin Charlottenburg: sizilianische Küche von Frühstück bis Dinner, Bar mit Aperitivo auf der Sommerterrasse und Live-DJ am Wochenende.</p>
           <div className="image-hero-actions">
             <SmoothScrollButton targetId="reservieren" className="btn btn-primary btn-on-dark">Reservieren</SmoothScrollButton>
             <a className="btn btn-ghost btn-on-dark" href="#menu">Karte ansehen →</a>
