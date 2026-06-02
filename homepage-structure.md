@@ -19,7 +19,7 @@ Content direction:
 - Primary CTA: reserve
 - Secondary CTA: view menus
 
-The video background stays. Hero copy should remain flexible because final SEO wording will be decided later.
+The hero uses a static terrace image background across breakpoints. Do not reintroduce video in the hero. Hero copy should remain flexible because final SEO wording will be decided later.
 
 ### 2. All-Day Concept
 

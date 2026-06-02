@@ -1,6 +1,15 @@
-/* Casa Bellucci — Decorative SVG (handgemalt-Stil Zitronen + Olivenzweig) */
+// Casa Bellucci, decorative SVG components (hand-painted style lemons + olive branch).
+import type { CSSProperties } from 'react';
 
-function LemonBranch({ style = {}, className = "", size = 220, rot = 0, mirror = false }) {
+interface LemonBranchProps {
+  style?: CSSProperties;
+  className?: string;
+  size?: number;
+  rot?: number;
+  mirror?: boolean;
+}
+
+export function LemonBranch({ style = {}, className = "", size = 220, rot = 0, mirror = false }: LemonBranchProps) {
   return (
     <svg
       className={className}
@@ -58,7 +67,11 @@ function LemonBranch({ style = {}, className = "", size = 220, rot = 0, mirror =
   );
 }
 
-function MajolikaPattern({ opacity = 0.06 }) {
+interface MajolikaPatternProps {
+  opacity?: number;
+}
+
+export function MajolikaPattern({ opacity = 0.06 }: MajolikaPatternProps) {
   return (
     <svg
       style={{ position: "absolute", inset: 0, width: "100%", height: "100%", opacity, pointerEvents: "none" }}
@@ -78,7 +91,13 @@ function MajolikaPattern({ opacity = 0.06 }) {
   );
 }
 
-function OliveBranch({ style = {}, size = 160, rot = 0 }) {
+interface OliveBranchProps {
+  style?: CSSProperties;
+  size?: number;
+  rot?: number;
+}
+
+export function OliveBranch({ style = {}, size = 160, rot = 0 }: OliveBranchProps) {
   return (
     <svg
       style={{ width: size, height: size * 0.4, transform: `rotate(${rot}deg)`, ...style }}
@@ -88,8 +107,8 @@ function OliveBranch({ style = {}, size = 160, rot = 0 }) {
       <path d="M 10 65 Q 80 50 160 60 Q 240 70 310 55" stroke="#5C6B3C" strokeWidth="2" fill="none" opacity="0.85" />
       {[20, 60, 100, 140, 180, 220, 260, 300].map((x, i) => (
         <g key={i}>
-          <ellipse cx={x} cy={50 - (i % 2 === 0 ? 18 : 0)} rx="16" ry="6" fill="#5C6B3C" opacity="0.8" transform={`rotate(${-20 + i*4} ${x} ${50 - (i % 2 === 0 ? 18 : 0)})`} />
-          <ellipse cx={x + 8} cy={80 + (i % 2 === 0 ? 14 : 0)} rx="14" ry="5" fill="#5C6B3C" opacity="0.7" transform={`rotate(${20 - i*3} ${x+8} ${80 + (i % 2 === 0 ? 14 : 0)})`} />
+          <ellipse cx={x} cy={50 - (i % 2 === 0 ? 18 : 0)} rx="16" ry="6" fill="#5C6B3C" opacity="0.8" transform={`rotate(${-20 + i * 4} ${x} ${50 - (i % 2 === 0 ? 18 : 0)})`} />
+          <ellipse cx={x + 8} cy={80 + (i % 2 === 0 ? 14 : 0)} rx="14" ry="5" fill="#5C6B3C" opacity="0.7" transform={`rotate(${20 - i * 3} ${x + 8} ${80 + (i % 2 === 0 ? 14 : 0)})`} />
         </g>
       ))}
       {[40, 110, 200, 280].map((x, i) => (
@@ -98,7 +117,3 @@ function OliveBranch({ style = {}, size = 160, rot = 0 }) {
     </svg>
   );
 }
-
-window.LemonBranch = LemonBranch;
-window.MajolikaPattern = MajolikaPattern;
-window.OliveBranch = OliveBranch;

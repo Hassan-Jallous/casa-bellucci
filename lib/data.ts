@@ -1,6 +1,46 @@
-/* Casa Bellucci — Menu Data + Section components */
+// Casa Bellucci, menu data and shared content.
+// Image paths are stored as raw relative strings (e.g. "images/..."). Apply
+// asset() at the consuming component, not here.
 
-const MENU = {
+export interface MenuDishItem {
+  name: string;
+  it: string;
+  price: string;
+  sig?: boolean;
+}
+
+export interface MenuDishSection {
+  title: string;
+  items: MenuDishItem[];
+}
+
+export interface MenuNote {
+  title: string;
+  text: string;
+}
+
+export interface MenuCategory {
+  label: string;
+  de: string;
+  sub: string;
+  img: string;
+  note: MenuNote;
+  sections: MenuDishSection[];
+}
+
+export type Menu = Record<string, MenuCategory>;
+
+export interface PressLogo {
+  name: string;
+  cls: string;
+}
+
+export interface GalleryImage {
+  src: string;
+  caption: string;
+}
+
+export const MENU: Menu = {
   pranzo: {
     label: "Pranzo",
     de: "Mittagskarte",
@@ -147,13 +187,13 @@ const MENU = {
   },
 };
 
-const PRESS_QUOTES = [
+export const PRESS_QUOTES: string[] = [
   "Italiens Seele am Kurfürstendamm — als hätte jemand eine Trattoria aus Taormina nach Charlottenburg verpflanzt.",
   "Eine der schönsten Sommerterrassen Berlins. Hier riecht es nach Zitronen und langem Nachmittag.",
   "Authentisch sizilianisch — von der Pasta bis zur Karte. Selten so ehrlich gegessen.",
 ];
 
-const PRESS_LOGOS = [
+export const PRESS_LOGOS: PressLogo[] = [
   { name: "Berliner Zeitung", cls: "" },
   { name: "Tagesspiegel", cls: "" },
   { name: "tip Berlin", cls: "sans" },
@@ -161,7 +201,7 @@ const PRESS_LOGOS = [
   { name: "BZ Berlin", cls: "sans" },
 ];
 
-const GALLERY = [
+export const GALLERY: GalleryImage[] = [
   { src: "images/gallery/1.jpg", caption: "Aperitivo" },
   { src: "images/gallery/2.jpg", caption: "Pasta della Casa" },
   { src: "images/gallery/3.jpg", caption: "Sala" },
@@ -171,5 +211,3 @@ const GALLERY = [
   { src: "images/gallery/7.jpg", caption: "Crudo di Mare" },
   { src: "images/gallery/8.jpg", caption: "Cantina" },
 ];
-
-Object.assign(window, { MENU, PRESS_QUOTES, PRESS_LOGOS, GALLERY });

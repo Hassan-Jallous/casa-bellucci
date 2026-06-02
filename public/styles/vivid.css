@@ -51,9 +51,9 @@
 }
 
 /* ============================================
-   2. VIDEO HERO
+   2. IMAGE HERO
    ============================================ */
-.video-hero {
+.image-hero {
   position: relative;
   min-height: 100svh;
   height: 100svh;
@@ -61,36 +61,26 @@
   overflow: hidden;
   display: flex;
   align-items: flex-end;
-  background: #1a1208;
-  color: #FFF9F0;
-}
-.video-hero-media {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center center;
-  filter: saturate(1.08) brightness(1.03);
-}
-.video-hero-shade {
-  position: absolute;
-  inset: 0;
   background:
-    radial-gradient(ellipse at 26% 18%, rgba(244,208,63,0.14) 0%, transparent 54%),
-    linear-gradient(180deg, rgba(26,18,8,0.42) 0%, rgba(26,18,8,0.12) 30%, rgba(26,18,8,0.35) 54%, rgba(26,18,8,0.9) 100%);
+    url("../images/hero-summer-desktop.jpg") center center / cover no-repeat #fff8ea;
+  color: #2b190d;
 }
-.video-hero-content {
+.image-hero-shade {
+  position: absolute;
+  inset: 0;
+  background: transparent;
+}
+.image-hero-content {
   position: relative;
   z-index: 1;
   width: 100%;
   padding-bottom: clamp(70px, 10vh, 118px);
 }
-.video-hero-copy {
-  max-width: 780px;
-  text-shadow: 0 4px 28px rgba(0,0,0,0.42), 0 1px 3px rgba(0,0,0,0.48);
+.image-hero-copy {
+  max-width: 650px;
+  text-shadow: none;
 }
-.video-hero-eyebrow {
+.image-hero-eyebrow {
   display: flex;
   align-items: center;
   gap: 12px;
@@ -100,52 +90,52 @@
   letter-spacing: 0.22em;
   line-height: 1.35;
   text-transform: uppercase;
-  color: rgba(255,249,240,0.74);
+  color: rgba(65, 43, 22, 0.62);
 }
-.video-hero h1 {
+.image-hero h1 {
   max-width: 9.5ch;
   margin: 0;
   font-family: var(--font-display);
-  font-size: clamp(64px, 8.8vw, 128px);
+  font-size: clamp(68px, 7.5vw, 116px);
   font-weight: 500;
-  line-height: 0.9;
+  line-height: 0.92;
   letter-spacing: 0;
-  color: #FFF9F0;
+  color: #2b190d;
 }
-.video-hero p {
-  max-width: 15.5em;
-  margin: 28px 0 0;
+.image-hero p {
+  max-width: 17em;
+  margin: 26px 0 0;
   font-family: var(--font-body);
-  font-size: clamp(23px, 2.6vw, 36px);
+  font-size: clamp(21px, 2.15vw, 30px);
   font-weight: 300;
-  line-height: 1.32;
-  color: rgba(255,249,240,0.9);
+  line-height: 1.38;
+  color: rgba(43, 25, 13, 0.72);
 }
-.video-hero-actions {
+.image-hero-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 22px;
   margin-top: 36px;
 }
 .btn-primary.btn-on-dark {
-  color: #FFF9F0 !important;
+  color: #2b190d !important;
 }
 .btn-primary.btn-on-dark::after {
-  background: var(--accent-2) !important;
+  background: rgba(175, 126, 32, 0.72) !important;
 }
 .btn-primary.btn-on-dark:hover {
-  color: var(--accent-2) !important;
+  color: rgba(175, 126, 32, 0.96) !important;
 }
 .btn-ghost.btn-on-dark {
-  color: rgba(255,249,240,0.62) !important;
+  color: rgba(43, 25, 13, 0.56) !important;
 }
 .btn-ghost.btn-on-dark::after {
-  background: rgba(255,249,240,0.72) !important;
+  background: rgba(43, 25, 13, 0.28) !important;
 }
 .btn-ghost.btn-on-dark:hover {
-  color: #FFF9F0 !important;
+  color: #2b190d !important;
 }
-.video-hero-scroll {
+.image-hero-scroll {
   position: absolute;
   left: 50%;
   bottom: 20px;
@@ -159,42 +149,75 @@
   font-size: 9px;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: rgba(255,249,240,0.52);
+  color: rgba(43, 25, 13, 0.44);
 }
-.video-hero-scroll i {
+.image-hero-scroll i {
   width: 1px;
   height: 34px;
-  background: linear-gradient(to bottom, rgba(255,249,240,0.5), transparent);
+  background: linear-gradient(to bottom, rgba(43, 25, 13, 0.32), transparent);
+}
+
+@media (min-width: 881px) {
+  .site-header:not(.is-scrolled) {
+    background: rgba(255, 248, 234, 0.88);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 1px 0 rgba(65, 43, 22, 0.10);
+    color: #2b190d;
+  }
+
+  .site-header:not(.is-scrolled) .brand,
+  .site-header:not(.is-scrolled) .brand .bellucci,
+  .site-header:not(.is-scrolled) .nav-links a,
+  .site-header:not(.is-scrolled) .lang-switch button.active,
+  .site-header:not(.is-scrolled) .btn.header-cta {
+    color: #2b190d;
+  }
+
+  .site-header:not(.is-scrolled) .nav-links a:hover,
+  .site-header:not(.is-scrolled) .btn.header-cta:hover {
+    color: rgba(175, 126, 32, 0.96);
+  }
+
+  .site-header:not(.is-scrolled) .lang-switch button,
+  .site-header:not(.is-scrolled) .lang-switch .sep {
+    color: rgba(43, 25, 13, 0.42);
+  }
+
+  .site-header:not(.is-scrolled) .nav-links a::after,
+  .site-header:not(.is-scrolled) .btn.header-cta::after {
+    background: rgba(175, 126, 32, 0.72);
+  }
 }
 
 @media (max-width: 880px) {
-  .video-hero {
+  .image-hero {
     min-height: 760px;
     height: 100svh;
   }
-  .video-hero-shade {
+  .image-hero-shade {
     background:
       radial-gradient(ellipse at 24% 18%, rgba(244,208,63,0.12) 0%, transparent 52%),
       linear-gradient(180deg, rgba(20,13,6,0.28) 0%, rgba(20,13,6,0.08) 30%, rgba(20,13,6,0.24) 50%, rgba(20,13,6,0.8) 72%, rgba(20,13,6,0.96) 100%);
   }
-  .video-hero-content {
+  .image-hero-content {
     padding: 0 24px 92px;
   }
-  .video-hero-eyebrow {
+  .image-hero-eyebrow {
     font-size: 10px;
     letter-spacing: 0.18em;
   }
-  .video-hero h1 {
+  .image-hero h1 {
     font-size: clamp(58px, 17vw, 86px);
   }
-  .video-hero p {
+  .image-hero p {
     font-size: clamp(22px, 6.5vw, 32px);
   }
-  .video-hero-actions {
+  .image-hero-actions {
     gap: 18px;
     margin-top: 34px;
   }
-  .video-hero-actions .btn {
+  .image-hero-actions .btn {
     padding-bottom: 12px;
     font-size: 14px;
     letter-spacing: 0.12em;
@@ -372,7 +395,7 @@ body {
 }
 
 .section-eyebrow .eyebrow,
-.video-hero-eyebrow,
+.image-hero-eyebrow,
 .moment-time,
 .signature-label,
 .signature-open,
@@ -435,7 +458,7 @@ body {
 }
 
 .all-day-copy {
-  padding: clamp(28px, 4vw, 48px);
+  padding: 30px;
 }
 
 .all-day h2,
@@ -529,17 +552,42 @@ body {
   padding: 15px 17px;
 }
 
-.signature-menu-head {
-  align-items: stretch;
-}
-
 .signature-menu-head > p {
-  align-self: end;
-  margin-bottom: clamp(22px, 3vw, 38px);
+  margin-bottom: 0;
 }
 
 .signature-menu-hero {
-  min-height: 660px;
+  min-height: 460px;
+}
+
+.signature-hero-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  opacity: 0;
+  transform: scale(1.04);
+  transition: opacity .7s cubic-bezier(.16, 1, .3, 1), transform 1.2s cubic-bezier(.16, 1, .3, 1);
+}
+
+.signature-hero-img.is-active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.signature-menu-hero:hover .signature-hero-img.is-active {
+  transform: scale(1.04);
+}
+
+.signature-menu-hero figcaption {
+  animation: signatureCaptionIn .5s cubic-bezier(.16, 1, .3, 1) both;
+}
+
+@keyframes signatureCaptionIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .signature-menu-hero::after {
@@ -549,13 +597,13 @@ body {
 }
 
 .signature-menu-hero figcaption {
-  left: clamp(22px, 3vw, 34px);
-  right: clamp(22px, 3vw, 34px);
-  bottom: clamp(22px, 3vw, 34px);
+  left: 24px;
+  right: 24px;
+  bottom: 24px;
   width: auto;
   max-width: none;
   z-index: 3;
-  padding: clamp(18px, 2.6vw, 28px);
+  padding: clamp(16px, 2vw, 22px);
   border: 1px solid rgba(255, 249, 240, 0.66);
   border-radius: 6px;
   background:
@@ -574,7 +622,7 @@ body {
 
 .signature-list {
   justify-content: center;
-  padding: clamp(18px, 3vw, 34px);
+  padding: clamp(12px, 2vw, 22px);
   border-top: 1px solid var(--summer-border);
 }
 
@@ -601,10 +649,13 @@ body {
 }
 
 .terrace-photo figcaption {
+  /* Dichtere Glasflaeche plus dunklerer Bodenverlauf sichern den Kontrast
+     fuer den dunklen Headline-Text unabhaengig vom Bildausschnitt (WCAG). */
   background:
-    radial-gradient(circle at 88% 48%, rgba(224, 140, 134, 0.25), transparent 38%),
-    radial-gradient(circle at 72% 38%, rgba(116, 137, 73, 0.2), transparent 34%),
-    rgba(255, 249, 240, 0.46);
+    linear-gradient(to top, rgba(43, 31, 18, 0.14), transparent 58%),
+    radial-gradient(circle at 88% 48%, rgba(224, 140, 134, 0.22), transparent 38%),
+    radial-gradient(circle at 72% 38%, rgba(116, 137, 73, 0.18), transparent 34%),
+    rgba(255, 249, 240, 0.64);
 }
 
 .terrace-panel {
@@ -613,6 +664,42 @@ body {
     radial-gradient(circle at 90% 12%, var(--summer-gold-soft), transparent 36%),
     rgba(255, 249, 240, 0.82);
   box-shadow: 0 28px 80px -42px rgba(46, 74, 39, 0.38);
+}
+
+/* Editorial Split: Bild ueber volle Hoehe links, Panel plus Aktionen
+   vertikal zentriert rechts. Laedt nach styles.css und gewinnt damit
+   gegen den breiteren 980px-Block fuer den Bereich ab 881px. */
+@media (min-width: 881px) {
+  .terrace-stage {
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+    grid-template-rows: 1fr auto auto 1fr;
+    grid-template-areas:
+      "photo ."
+      "photo panel"
+      "photo actions"
+      "photo .";
+    column-gap: clamp(40px, 4vw, 72px);
+    row-gap: clamp(18px, 2vw, 30px);
+    align-items: stretch;
+  }
+  /* Bild fuellt die volle Spaltenhoehe, object-fit cover regelt den Rest. */
+  .terrace-photo {
+    justify-self: stretch;
+    width: 100%;
+    height: 100%;
+  }
+  .terrace-panel {
+    justify-self: stretch;
+    width: 100%;
+  }
+  .terrace-actions {
+    justify-self: start;
+    margin-top: 0;
+  }
+  /* Kompakte Glasflaeche: Label oben, kleinere Headline darunter. */
+  .terrace-photo figcaption h2 {
+    font-size: clamp(28px, 2.6vw, 40px);
+  }
 }
 
 .gallery .top {
@@ -715,11 +802,11 @@ body {
 }
 
 .site-footer {
-  border-top: 1px solid rgba(255, 249, 240, 0.74);
+  border-top: 1px solid var(--summer-hairline);
   background:
-    radial-gradient(circle at 82% 6%, rgba(255, 249, 240, 0.82), transparent 30%),
-    radial-gradient(circle at 14% 68%, rgba(116, 137, 73, 0.16), transparent 32%),
-    linear-gradient(135deg, #fffaf1 0%, #f7e5aa 48%, #e6bb49 100%);
+    radial-gradient(circle at 84% 8%, var(--summer-gold-soft), transparent 34%),
+    radial-gradient(circle at 12% 74%, var(--summer-olive), transparent 36%),
+    linear-gradient(180deg, #fffaf1 0%, #f6ecda 100%);
 }
 
 .footer-grid {
@@ -772,7 +859,7 @@ body {
   .gallery h2,
   .reservation h2,
   .contact h2 {
-    font-size: clamp(42px, 12vw, 62px);
+    font-size: clamp(36px, 4.4vw, 60px);
     line-height: 0.94;
   }
 
@@ -854,11 +941,11 @@ body {
   }
 
   .signature-menu-hero figcaption {
-    left: 18px;
-    right: 18px;
-    bottom: 18px;
-    padding: 18px;
-    font-size: clamp(34px, 10vw, 48px);
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    padding: 16px;
+    font-size: clamp(28px, 7vw, 40px);
   }
 
   .signature-list {
@@ -978,10 +1065,12 @@ body {
   }
 
   .terrace-photo figcaption {
+    /* Mobil ebenfalls dichtere Glasflaeche plus Bodenverlauf fuer den Kontrast. */
     background:
-      radial-gradient(circle at 86% 50%, rgba(224, 140, 134, 0.28), transparent 38%),
-      radial-gradient(circle at 72% 38%, rgba(116, 137, 73, 0.2), transparent 36%),
-      rgba(255, 249, 240, 0.58);
+      linear-gradient(to top, rgba(43, 31, 18, 0.14), transparent 58%),
+      radial-gradient(circle at 86% 50%, rgba(224, 140, 134, 0.26), transparent 38%),
+      radial-gradient(circle at 72% 38%, rgba(116, 137, 73, 0.18), transparent 36%),
+      rgba(255, 249, 240, 0.66);
   }
 
   .filmstrip-frame {
@@ -1032,20 +1121,20 @@ body {
 
 /* CODEX 4B — Mobile hero adopts the terrace-card summer system */
 @media (max-width: 880px) {
-  .video-hero {
+  .image-hero {
     background: #f7df9b;
   }
 
-  .video-hero-shade {
+  .image-hero-shade {
     background:
       linear-gradient(180deg, rgba(255, 250, 241, 0.08) 0%, rgba(255, 250, 241, 0.02) 38%, rgba(246, 215, 120, 0.28) 62%, rgba(255, 250, 241, 0.72) 100%);
   }
 
-  .video-hero-content {
+  .image-hero-content {
     padding: 0 16px 28px;
   }
 
-  .video-hero-copy {
+  .image-hero-copy {
     max-width: none;
     padding: 22px 18px 20px;
     border: 1px solid rgba(255, 249, 240, 0.78);
@@ -1059,40 +1148,40 @@ body {
     backdrop-filter: blur(10px);
   }
 
-  .video-hero-eyebrow {
+  .image-hero-eyebrow {
     margin-bottom: 14px;
     color: rgba(65, 43, 22, 0.62);
   }
 
-  .video-hero h1 {
+  .image-hero h1 {
     color: #2b190d;
     text-shadow: none;
   }
 
-  .video-hero p {
+  .image-hero p {
     max-width: 13.5em;
     color: rgba(43, 25, 13, 0.76);
     text-shadow: none;
   }
 
-  .video-hero-actions {
+  .image-hero-actions {
     margin-top: 26px;
   }
 
-  .video-hero-actions .btn-on-dark {
+  .image-hero-actions .btn-on-dark {
     color: #2b190d !important;
     text-shadow: none;
   }
 
-  .video-hero-actions .btn-primary.btn-on-dark::after {
+  .image-hero-actions .btn-primary.btn-on-dark::after {
     background: rgba(175, 126, 32, 0.72) !important;
   }
 
-  .video-hero-actions .btn-ghost.btn-on-dark {
+  .image-hero-actions .btn-ghost.btn-on-dark {
     color: rgba(43, 25, 13, 0.58) !important;
   }
 
-  .video-hero-scroll {
+  .image-hero-scroll {
     display: none;
   }
 }
@@ -1137,41 +1226,37 @@ body {
     height: 38px;
   }
 
-  .video-hero {
+  .image-hero {
     min-height: 100svh;
     height: 100svh;
     background:
-      linear-gradient(180deg, rgba(255, 250, 241, 0.02) 0%, rgba(255, 250, 241, 0.06) 45%, rgba(255, 250, 241, 0.18) 100%),
+      linear-gradient(180deg, rgba(255, 250, 241, 0.00) 0%, rgba(255, 250, 241, 0.00) 45%, rgba(255, 250, 241, 0.04) 100%),
       url("../images/hero-mobile-variants-v2/01-awning-flowers-high.jpg") center center / cover no-repeat;
   }
 
-  .video-hero-media {
-    display: none;
+  .image-hero-shade {
+    background: transparent;
   }
 
-  .video-hero-shade {
-    background: linear-gradient(180deg, rgba(255, 250, 241, 0.00) 0%, rgba(255, 250, 241, 0.06) 54%, rgba(255, 250, 241, 0.18) 100%);
-  }
-
-  .video-hero-content {
+  .image-hero-content {
     padding: 0 16px 30px;
   }
 
-  .video-hero-copy {
+  .image-hero-copy {
     max-width: none;
     padding: 20px 18px 18px;
     border: 1px solid rgba(255, 255, 255, 0.72);
     border-radius: 18px;
     background:
       radial-gradient(circle at 78% 0%, rgba(231,187,72,0.12), transparent 40%),
-      rgba(255, 250, 241, 0.64);
+      rgba(255, 250, 241, 0.46);
     -webkit-backdrop-filter: blur(4px);
     backdrop-filter: blur(4px);
     box-shadow: 0 24px 64px -36px rgba(62, 39, 18, 0.42);
     text-shadow: none;
   }
 
-  .video-hero-eyebrow {
+  .image-hero-eyebrow {
     gap: 12px;
     margin-bottom: 14px;
     font-size: 9px;
@@ -1180,7 +1265,7 @@ body {
     color: rgba(65, 43, 22, 0.62);
   }
 
-  .video-hero h1 {
+  .image-hero h1 {
     max-width: 8.8ch;
     font-size: clamp(58px, 16.5vw, 88px);
     line-height: 0.92;
@@ -1189,7 +1274,7 @@ body {
     text-shadow: none;
   }
 
-  .video-hero p {
+  .image-hero p {
     max-width: 21em;
     margin-top: 18px;
     font-size: clamp(14px, 4vw, 17px);
@@ -1198,31 +1283,31 @@ body {
     text-shadow: none;
   }
 
-  .video-hero-actions {
+  .image-hero-actions {
     gap: 26px;
     margin-top: 24px;
   }
 
-  .video-hero-actions .btn {
+  .image-hero-actions .btn {
     padding-bottom: 10px;
     font-size: 14px;
     letter-spacing: 0.16em;
   }
 
-  .video-hero-actions .btn-on-dark {
+  .image-hero-actions .btn-on-dark {
     color: #2b190d !important;
     text-shadow: none;
   }
 
-  .video-hero-actions .btn-primary.btn-on-dark::after {
+  .image-hero-actions .btn-primary.btn-on-dark::after {
     background: rgba(175, 126, 32, 0.72) !important;
   }
 
-  .video-hero-actions .btn-ghost.btn-on-dark {
+  .image-hero-actions .btn-ghost.btn-on-dark {
     color: rgba(43, 25, 13, 0.56) !important;
   }
 
-  .video-hero-scroll {
+  .image-hero-scroll {
     display: none;
   }
 }
@@ -1230,7 +1315,7 @@ body {
 
 /* MOBILE HERO NAV REFINEMENT — no blur, full viewport */
 @media (max-width: 880px) {
-  .video-hero {
+  .image-hero {
     min-height: 100dvh;
     height: 100dvh;
   }
@@ -1277,7 +1362,7 @@ body {
     box-shadow: none;
   }
 
-  .video-hero-content {
+  .image-hero-content {
     padding-bottom: max(24px, env(safe-area-inset-bottom));
   }
 }
@@ -1321,7 +1406,7 @@ body {
     box-shadow: none;
   }
 
-  .video-hero {
+  .image-hero {
     padding-top: 58px !important;
   }
 }
@@ -1329,12 +1414,12 @@ body {
 
 /* MOBILE HERO BOX — lower blur */
 @media (max-width: 880px) {
-  .video-hero-copy {
+  .image-hero-copy {
     -webkit-backdrop-filter: blur(2px);
     backdrop-filter: blur(2px);
     background:
       radial-gradient(circle at 78% 0%, rgba(231,187,72,0.10), transparent 40%),
-      rgba(255, 250, 241, 0.58);
+      rgba(255, 250, 241, 0.42);
   }
 }
 
@@ -1356,12 +1441,12 @@ body {
   }
 
   .signature-menu-hero figcaption {
-    left: 14px;
-    right: 14px;
-    bottom: 14px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
     padding: 14px 16px;
     border-radius: 10px;
-    font-size: clamp(28px, 8.2vw, 38px);
+    font-size: clamp(24px, 6.6vw, 34px);
     -webkit-backdrop-filter: blur(8px) saturate(1.04);
     backdrop-filter: blur(8px) saturate(1.04);
   }

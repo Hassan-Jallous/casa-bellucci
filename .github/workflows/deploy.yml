@@ -16,23 +16,23 @@ concurrency:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Prepare static site
-        run: |
-          mkdir -p site
-          cp index.html site/
-          cp -R scripts site/scripts
-          cp -R styles site/styles
-          cp -R images site/images
-          cp -R fonts site/fonts
-          mkdir -p site/public
-          cp -R public/menus site/public/menus
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: site
-      - id: deployment
-        uses: actions/deploy-pages@v4
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '22'
+          cache: 'npm'
+      - name: Install dependencies
+        run: npm ci
+      - name: Build Next.js static export
+        run: npm run build
+        env:
+          NEXT_PUBLIC_BASE_PATH: /casa-bellucci
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: out
+      - id: deployment
+        uses: actions/deploy-pages@v5
