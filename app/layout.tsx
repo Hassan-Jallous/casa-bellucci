@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { restaurantJsonLd, SEO } from '@/lib/seo';
 
 // The prototype stylesheets use relative url() references ("../images/...",
 // "../fonts/...") that point outside the styles folder. Pulling them through
@@ -17,21 +18,57 @@ import type { Metadata } from 'next';
 const BASE = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
 
 export const metadata: Metadata = {
-  title: 'Casa Bellucci · Sizilianisches Ristorante am Kurfürstendamm',
-  description:
-    'Casa Bellucci — italienisches Ristorante & Bar mit Sommerterrasse am Kurfürstendamm 63, Berlin. Pasta fatta a mano, fangfrischer Fisch, sizilianische Weine.',
+  metadataBase: new URL(SEO.siteUrl),
+  title: {
+    default: SEO.title,
+    template: '%s · Casa Bellucci',
+  },
+  description: SEO.description,
+  applicationName: 'Casa Bellucci',
+  keywords: [...SEO.keywords],
+  alternates: {
+    canonical: '/',
+  },
   openGraph: {
-    title: 'Casa Bellucci · Sizilianisches Ristorante am Kurfürstendamm',
-    description:
-      'Casa Bellucci — italienisches Ristorante & Bar mit Sommerterrasse am Kurfürstendamm 63, Berlin. Pasta fatta a mano, fangfrischer Fisch, sizilianische Weine.',
+    title: SEO.title,
+    description: SEO.description,
+    url: SEO.siteUrl,
+    siteName: 'Casa Bellucci',
     type: 'website',
     locale: 'de_DE',
+    images: [
+      {
+        url: SEO.ogImage,
+        width: 1600,
+        height: 1067,
+        alt: 'Casa Bellucci Terrasse am Kurfürstendamm in Berlin',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: SEO.title,
+    description: SEO.description,
+    images: [SEO.ogImage],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+      'max-video-preview': -1,
+    },
   },
 };
 
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
+  const structuredData = restaurantJsonLd();
+
   return (
     <html
       lang="de"
@@ -59,7 +96,15 @@ export default function RootLayout({
         <link rel="stylesheet" href={`${BASE}/styles/styles.css`} />
         <link rel="stylesheet" href={`${BASE}/styles/vivid.css`} />
       </head>
-      <body>{children}</body>
+      <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(structuredData).replace(/</g, '\\u003c'),
+          }}
+        />
+        {children}
+      </body>
     </html>
   );
 }

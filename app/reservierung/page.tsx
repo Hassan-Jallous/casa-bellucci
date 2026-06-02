@@ -2,11 +2,14 @@ import type { Metadata } from 'next';
 import { PageShell } from '@/components/PageShell';
 import { QuandooWidget } from '@/components/QuandooWidget';
 import { FlagBar } from '@/components/sections/Brand';
+import { pageMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
-  title: 'Tischreservierung · Casa Bellucci',
-  description: 'Reserviere jetzt einen Tisch bei Casa Bellucci am Kurfürstendamm.',
-};
+export const metadata: Metadata = pageMetadata({
+  title: 'Tisch reservieren',
+  description:
+    'Reserviere online einen Tisch bei Casa Bellucci am Kurfürstendamm 63 in Berlin-Charlottenburg.',
+  path: '/reservierung/',
+});
 
 export default function ReservierungPage() {
   return (

@@ -19,4 +19,5 @@ export const SITE = {
   },
   quandooMerchantId: '104436',
   sourceUrl: 'https://casabellucci.de',
+  canonicalUrl: 'https://casabellucci.de',
 } as const;

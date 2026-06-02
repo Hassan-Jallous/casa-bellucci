@@ -1,11 +1,14 @@
 import type { Metadata } from 'next';
 import { PageShell } from '@/components/PageShell';
+import { pageMetadata } from '@/lib/seo';
 import { SITE } from '@/lib/site';
 
-export const metadata: Metadata = {
-  title: 'Danke für Ihre Reservierung · Casa Bellucci',
+export const metadata: Metadata = pageMetadata({
+  title: 'Danke für Ihre Reservierung',
   description: 'Vielen Dank für Ihre Reservierung bei Casa Bellucci.',
-};
+  path: '/danke-fuer-ihre-reservierung/',
+  index: false,
+});
 
 export default function ReservationThanksPage() {
   return (
