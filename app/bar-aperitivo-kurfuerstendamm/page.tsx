@@ -6,19 +6,20 @@ import {
   webPageJsonLd,
   breadcrumbJsonLd,
   faqJsonLd,
+  placeJsonLd,
 } from '@/lib/seo';
 
 const PATH = '/bar-aperitivo-kurfuerstendamm/';
 
-const TITLE =
-  'Bar & Aperitivo am Kurfürstendamm | Casa Bellucci in Charlottenburg';
+const TITLE = 'Bar am Kudamm | Aperitivo & Cocktails | Casa Bellucci';
 const DESCRIPTION =
-  'Bar mit Aperitivo, Cocktails und italienischem Wein am Kurfürstendamm 63 in Berlin-Charlottenburg. Sommerterrasse und Live-DJ am Wochenende.';
+  'Bar mit Aperitivo, Cocktails und italienischem Wein am Kurfürstendamm 63 in Berlin-Charlottenburg. Sommerterrasse, Live-DJ am Wochenende, Walk-ins willkommen.';
 
 export const metadata: Metadata = pageMetadata({
   title: TITLE,
   description: DESCRIPTION,
   path: PATH,
+  image: '/images/gallery/8.jpg',
 });
 
 const FAQS: BarFaq[] = [
@@ -28,14 +29,14 @@ const FAQS: BarFaq[] = [
       'Ja. Casa Bellucci ist eine Restaurant-Bar am Kurfürstendamm 63 in Berlin-Charlottenburg. Die eigene Bar serviert Aperitivo, Cocktails, Wein, Bier und Kaffee, von früh bis spät. Die Atmosphäre ist gehoben und gemütlich zugleich, casual genug für ein schnelles Glas am Tresen.',
   },
   {
-    question: 'Gibt es Aperitivo am Kurfürstendamm?',
+    question: 'Gibt es Aperitivo am Kudamm?',
     answer:
-      'Ja. Aperitivo gehört bei uns zum frühen Abend. Der Aperitivo Bellucci verbindet Bitter, Zitrus und Prosecco zu einem leicht herben, spritzigen Auftakt. Dazu passen Spritz, Negroni und offene Weine, an der Bar oder auf der Sommerterrasse am Kurfürstendamm.',
+      'Ja. Aperitivo gehört bei uns zum frühen Abend. Der Aperitivo Bellucci verbindet Bitter, Zitrus und Prosecco zu einem leicht herben, spritzigen Auftakt. Dazu passen Spritz, Negroni und offene Weine, an der Bar oder auf der Sommerterrasse am Kudamm.',
   },
   {
-    question: 'Legt am Wochenende ein DJ auf?',
+    question: 'Wo gibt es eine gute Bar am Kudamm?',
     answer:
-      'Ja. Am Wochenende legt bei uns ein Live-DJ auf, mit ruhiger Musik zum Aperitivo und am Abend. Das bleibt eine Restaurant-Bar-Stimmung und kein Club. Die Musik trägt den Abend, ohne das Gespräch zu übertönen.',
+      'Casa Bellucci ist eine Restaurant-Bar am Kurfürstendamm 63 in Berlin-Charlottenburg. An der Bar gibt es Aperitivo, Cocktails, italienischen Wein, Bier und Kaffee, von früh bis spät. Als Cocktailbar in Charlottenburg bleibt es bei klaren Klassikern wie Negroni und Spritz, am Wochenende mit ruhiger Live-Musik. Walk-ins sind besonders an der Bar willkommen.',
   },
   {
     question: 'Welche Weine gibt es an der Bar?',
@@ -52,9 +53,16 @@ const FAQS: BarFaq[] = [
 export default function BarAperitivoKurfuerstendammPage() {
   const jsonLdBlocks = [
     webPageJsonLd({ name: TITLE, description: DESCRIPTION, path: PATH }),
+    placeJsonLd({
+      type: 'BarOrPub',
+      name: 'Casa Bellucci Bar',
+      description: DESCRIPTION,
+      path: PATH,
+      servesCuisine: ['Aperitivo', 'Cocktails', 'Wein'],
+    }),
     breadcrumbJsonLd([
       { name: 'Startseite', path: '/' },
-      { name: 'Bar und Aperitivo am Kurfürstendamm', path: PATH },
+      { name: 'Bar und Aperitivo am Kudamm', path: PATH },
     ]),
     faqJsonLd(
       FAQS.map((faq) => ({ question: faq.question, answer: faq.answer })),

@@ -666,6 +666,16 @@ body {
 
 .signature-item {
   border-bottom-color: var(--summer-hairline);
+  /* Auf allen Views gestapelt wie auf Mobile: Label, Titel, Text und Karte-Link
+     untereinander statt nebeneinander, damit der Beschreibungstext die volle
+     Breite der Karte nutzt. */
+  grid-template-columns: 1fr;
+  gap: 8px;
+  align-items: start;
+}
+
+.signature-item p {
+  max-width: none;
 }
 
 .signature-item:hover {
@@ -674,6 +684,37 @@ body {
 
 .signature-open {
   color: rgba(43, 31, 18, 0.44);
+  justify-self: start;
+  padding-top: 0;
+}
+
+/* Dezente Aufmerksamkeits-Animation: "Karte oeffnen" leuchtet reihum gelb auf und
+   schiebt sich 4px nach rechts, genau wie der Hover. Reihenfolge Fruehstueck, Lunch,
+   Dinner, Bar, dann von vorne. Hover auf irgendeine Karte pausiert den Zyklus. */
+@keyframes signatureOpenCue {
+  0%   { color: rgba(43, 31, 18, 0.44); transform: translateX(0); }
+  5%   { color: var(--accent);          transform: translateX(4px); }
+  18%  { color: var(--accent);          transform: translateX(4px); }
+  25%  { color: rgba(43, 31, 18, 0.44); transform: translateX(0); }
+  100% { color: rgba(43, 31, 18, 0.44); transform: translateX(0); }
+}
+
+.signature-open {
+  animation: signatureOpenCue 8s ease-in-out infinite;
+}
+.signature-item:nth-child(1) .signature-open { animation-delay: 0s; }
+.signature-item:nth-child(2) .signature-open { animation-delay: 2s; }
+.signature-item:nth-child(3) .signature-open { animation-delay: 4s; }
+.signature-item:nth-child(4) .signature-open { animation-delay: 6s; }
+
+.signature-list:hover .signature-open {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .signature-open {
+    animation: none;
+  }
 }
 
 .signature-actions,
@@ -684,6 +725,14 @@ body {
   align-items: center;
   gap: 24px;
   flex-wrap: wrap;
+}
+
+/* Hero-CTAs in der Copy-Card immer nebeneinander (wie auf der Homepage), auch
+   wenn die Spalte im mittleren Breitenbereich schmal wird. Kompaktes Gap statt
+   Umbruch. */
+.all-day-copy .contact-actions {
+  flex-wrap: nowrap;
+  gap: clamp(14px, 1.6vw, 24px);
 }
 
 .terrace-photo figcaption {
@@ -899,6 +948,11 @@ body {
   .contact h2 {
     font-size: clamp(36px, 4.4vw, 60px);
     line-height: 0.94;
+  }
+
+  /* Titel nutzt auf Mobile die volle Breite statt schmal umzubrechen */
+  .all-day h2 {
+    max-width: none;
   }
 
   .all-day-copy > p,
@@ -1450,16 +1504,6 @@ body {
 }
 
 
-/* MOBILE HERO BOX — lower blur */
-@media (max-width: 880px) {
-  .image-hero-copy {
-    -webkit-backdrop-filter: blur(2px);
-    backdrop-filter: blur(2px);
-    background:
-      radial-gradient(circle at 78% 0%, rgba(231,187,72,0.10), transparent 40%),
-      rgba(255, 250, 241, 0.42);
-  }
-}
 
 
 /* MOBILE SIGNATURE IMAGE — real fixed height, not only min-height */
@@ -1485,13 +1529,232 @@ body {
     padding: 14px 16px;
     border-radius: 10px;
     font-size: clamp(24px, 6.6vw, 34px);
-    -webkit-backdrop-filter: blur(8px) saturate(1.04);
-    backdrop-filter: blur(8px) saturate(1.04);
+    /* Blur an die transparente Glas-Div-Sprache (Hero) angeglichen. */
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
   }
 
   .signature-menu-hero figcaption span {
     margin-bottom: 8px;
     font-size: 9px;
     letter-spacing: 0.22em;
+  }
+}
+
+
+/* ============================================================
+   GLAS-DIVS — MASTER-REGEL (eine Stelle fuer alle).
+   Alle Foto-Overlay-Glasflaechen teilen Fuellung und Blur aus den
+   --glass-* Tokens (:root in styles.css). Optik aendern: dort die
+   Variablen anpassen, nicht hier. Steht am Dateiende, damit sie die
+   verstreuten Alt-Deklarationen sicher gewinnt.
+   Scope: ab Mobile (<=880px), wo diese Panels als Glasflaeche erscheinen.
+   ============================================================ */
+@media (max-width: 880px) {
+  .image-hero-copy,
+  .terrace-photo figcaption,
+  .signature-menu-hero figcaption,
+  .all-day-photo figcaption,
+  .all-day-photo.evening figcaption,
+  .filmstrip-label,
+  .contact .map .corner,
+  .contact .map .pin .label {
+    background: var(--glass-bg);
+    -webkit-backdrop-filter: var(--glass-blur);
+    backdrop-filter: var(--glass-blur);
+  }
+}
+
+
+/* ============================================================
+   RESERVIERUNGS-WIDGET (Quandoo).
+   Das iframe hat eine feste native Groesse von 380x550px. Die Karte
+   wird daher auf diese Breite begrenzt und zentriert, mit kompaktem
+   Padding auf allen Views (sonst: leerer Raum auf Tablet/Desktop und
+   ein gestauchtes, intern scrollendes iframe auf Mobile).
+   ============================================================ */
+.reservation-card.reservation-widget-card {
+  width: 100%;
+  max-width: 412px;
+  margin-inline: auto;
+  padding: 16px;
+}
+.reservation-widget-card .quandoo-widget-shell {
+  min-height: 0;
+  background: transparent;
+}
+.reservation-widget-card #quandoo-booking-widget {
+  min-height: 0;
+  /* Quandoo rendert das iframe in einem inline-block-Wrapper. Ohne
+     line-height: 0 entsteht darunter ein Baseline-Descender-Gap (~8px),
+     der die Karte unten ungleichmaessig wirken laesst. */
+  line-height: 0;
+  font-size: 0;
+}
+.reservation-widget-card #quandoo-booking-widget > div {
+  vertical-align: bottom;
+}
+.reservation-widget-card #quandoo-booking-widget iframe {
+  display: block;
+  margin-inline: auto;
+}
+/* Das Quandoo-iframe hat eine feste Hoehe von 550px. Bei voller Breite
+   (~378px, ab Tablet) ist der Inhalt (Zeitslots + Button) hoeher als 550px
+   und das iframe scrollt intern. Daher die Hoehe so anheben, dass der
+   gesamte Inhalt sichtbar ist. Auf schmalen Phones (gestauchtes iframe)
+   reichen die 550px, dort keine Anhebung, damit kein Leerraum entsteht. */
+@media (min-width: 481px) {
+  .reservation-widget-card .quandoo-widget-shell,
+  .reservation-widget-card #quandoo-booking-widget,
+  .reservation-widget-card #quandoo-booking-widget > div,
+  .reservation-widget-card #quandoo-booking-widget iframe {
+    min-height: 620px;
+  }
+}
+
+@media (max-width: 440px) {
+  /* Auf schmalen Phones die Karte fast randlos, damit das iframe seine
+     native Breite behaelt und full view ohne Scroll passt. */
+  .reservation-card.reservation-widget-card {
+    max-width: 100%;
+    padding: 10px;
+  }
+}
+
+/* ============================================
+   ITALIENISCH-LANDINGPAGE — PROOF-SCOPE
+   Holt Homepage-Treatments (Hintergrund-Rhythmus,
+   Bild-Karten mit Caption-Overlay, Galerie-Filmstrip,
+   Script-Wasserzeichen) in die Italienisch-Seite.
+   ALLES unter .subpage-italienisch gescoped, damit
+   Homepage und andere Unterseiten unberuehrt bleiben.
+   ============================================ */
+
+/* --- 1. Hintergrund-Rhythmus: abwechselnde Sektionsflaechen --- */
+/* Heller, ruhiger Papier-Block (wie Homepage About). */
+.subpage-italienisch .ital-section--paper {
+  position: relative;
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+/* Hellere Creme-Flaeche fuer Kontrast (wie Homepage signature-menu/weiss). */
+.subpage-italienisch .ital-section--surface {
+  position: relative;
+  background:
+    radial-gradient(ellipse at 14% 8%, rgba(255, 252, 246, 0.9), transparent 42%),
+    linear-gradient(180deg, #fffdf8 0%, #fff9f0 100%);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+/* Goldener Verlauf wie die Homepage-Terrasse/Galerie. */
+.subpage-italienisch .ital-section--gold {
+  position: relative;
+  overflow: hidden;
+  border-top: 0;
+  border-bottom: 0;
+  background:
+    radial-gradient(ellipse at 82% 4%, var(--summer-gold-soft), transparent 40%),
+    radial-gradient(ellipse at 10% 34%, rgba(255, 249, 240, 0.9), transparent 38%),
+    linear-gradient(180deg, #fffaf1 0%, #fbefd0 54%, #fff7e6 100%);
+  color: var(--ink);
+}
+/* Dezentes Script-Wasserzeichen "Bellucci" auf dem Gold-Block,
+   exakt wie .terrace-bg::after auf der Homepage. */
+.subpage-italienisch .ital-section--gold::after {
+  content: "Bellucci";
+  position: absolute;
+  right: -0.06em;
+  bottom: -0.26em;
+  font-family: var(--font-script);
+  font-size: clamp(120px, 18vw, 300px);
+  line-height: 1;
+  color: rgba(255, 249, 240, 0.42);
+  pointer-events: none;
+  z-index: 0;
+}
+.subpage-italienisch .ital-section--gold .wrap {
+  position: relative;
+  z-index: 1;
+}
+
+/* --- 2. Bild-Karten mit Caption-Overlay (wie .terrace-photo figcaption) --- */
+.subpage-italienisch .ital-photo-card {
+  position: relative;
+}
+.subpage-italienisch .ital-photo-card img {
+  transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.subpage-italienisch .ital-photo-card:hover img {
+  transform: scale(1.05);
+}
+/* Innenrahmen wie auf der Terrassen-Karte der Homepage. */
+.subpage-italienisch .ital-photo-card::before {
+  content: "";
+  position: absolute;
+  inset: 14px;
+  border: 1px solid rgba(255, 249, 240, 0.72);
+  border-radius: 6px;
+  z-index: 2;
+  pointer-events: none;
+}
+.subpage-italienisch .ital-photo-card figcaption {
+  position: absolute;
+  left: 22px;
+  bottom: 22px;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+  max-width: min(80%, 320px);
+  padding: 16px 20px;
+  border: 1px solid rgba(255, 249, 240, 0.56);
+  border-radius: 6px;
+  background: rgba(255, 249, 240, 0.42);
+  -webkit-backdrop-filter: blur(22px) saturate(1.18);
+  backdrop-filter: blur(22px) saturate(1.18);
+  color: var(--ink);
+  text-shadow: 0 1px 18px rgba(255, 249, 240, 0.48);
+}
+.subpage-italienisch .ital-photo-card figcaption span {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+}
+.subpage-italienisch .ital-photo-card figcaption strong {
+  font-family: var(--font-display);
+  font-size: clamp(24px, 2.6vw, 34px);
+  font-weight: 500;
+  line-height: 0.98;
+}
+
+/* --- 3. Galerie-Sektion: identischer Rahmen wie Homepage --- */
+/* .gallery erbt bereits Gold-Verlauf + Filmstrip global. Nur Vertikalrhythmus
+   an die uebrigen Sektionen angleichen. */
+.subpage-italienisch .ital-gallery {
+  border-top: 1px solid var(--border);
+}
+
+/* --- 4. Feinschliff Spacing fuer den Kuechen-Block (.menu) --- */
+.subpage-italienisch .ital-section .grid {
+  align-items: center;
+}
+
+/* --- 5. Mobile: Caption-Karten kompakter, Wasserzeichen kleiner --- */
+@media (max-width: 980px) {
+  .subpage-italienisch .ital-photo-card {
+    aspect-ratio: 4/5;
+  }
+  .subpage-italienisch .ital-photo-card figcaption {
+    left: 16px;
+    bottom: 16px;
+    padding: 13px 16px;
+  }
+  .subpage-italienisch .ital-section--gold::after {
+    font-size: clamp(96px, 26vw, 180px);
+    opacity: 0.85;
   }
 }

@@ -43,11 +43,11 @@ export function BarLanding({ faqs }: { faqs: BarFaq[] }) {
             <div className="all-day-copy">
               <div className="section-eyebrow">
                 <span className="eyebrow" style={eyebrowStyle}>
-                  <FlagBar orientation="h" /> Bar &amp; Aperitivo am Kurfürstendamm
+                  <FlagBar orientation="h" /> Bar &amp; Aperitivo am Kudamm
                 </span>
               </div>
               <h1 id="bar-h1">
-                Bar und Aperitivo am <span className="it">Kurfürstendamm</span>
+                Bar und Aperitivo am <span className="it">Kudamm</span>
               </h1>
               <p className="lede">
                 Casa Bellucci ist eine Restaurant-Bar am Kurfürstendamm 63 in Berlin-Charlottenburg. An der Bar gibt es
@@ -55,9 +55,7 @@ export function BarLanding({ faqs }: { faqs: BarFaq[] }) {
                 der City West, am Tresen oder auf der Sommerterrasse.
               </p>
               <p>
-                Die Atmosphäre ist gehoben und gemütlich zugleich, casual genug für nach der Arbeit und schön genug für
-                den langen Abend. Am Wochenende legt ein DJ ruhige Musik auf, als Stimmung zum Aperitivo, nicht als
-                Club.
+                Gehoben und gemütlich zugleich, casual genug für nach der Arbeit und schön genug für den langen Abend.
               </p>
               <div className="contact-actions">
                 <a className="btn btn-primary" href={routePath('/reservierung/')}>
@@ -72,7 +70,7 @@ export function BarLanding({ faqs }: { faqs: BarFaq[] }) {
               <figure className="all-day-photo morning">
                 <img
                   src={asset('images/gallery/8.jpg')}
-                  alt="Aperitivo und Drinks an der Bar von Casa Bellucci am Kurfürstendamm in Berlin-Charlottenburg"
+                  alt="Aperitivo und Drinks an der Bar von Casa Bellucci am Kudamm in Berlin-Charlottenburg"
                 />
                 <figcaption>Aperitivo</figcaption>
               </figure>
@@ -86,7 +84,7 @@ export function BarLanding({ faqs }: { faqs: BarFaq[] }) {
               <figure className="all-day-photo evening">
                 <img
                   src={asset('images/terrace.jpg')}
-                  alt="Sommerterrasse von Casa Bellucci am Kurfürstendamm am Abend bei Kerzenlicht"
+                  alt="Sommerterrasse von Casa Bellucci am Kudamm am Abend bei Kerzenlicht"
                 />
                 <figcaption>Terrazza</figcaption>
               </figure>
@@ -111,7 +109,7 @@ export function BarLanding({ faqs }: { faqs: BarFaq[] }) {
               <p>
                 Aperitivo Berlin beginnt bei uns am frühen Abend. Der Aperitivo Bellucci verbindet Bitter, Zitrus und
                 Prosecco zu einem leicht herben, spritzigen Auftakt. Dazu reicht die Bar Cocktails, Wein, Bier und
-                Kaffee, also alles für den Aperitivo am Kurfürstendamm und den Drink danach.
+                Kaffee, also alles für den Aperitivo am Kudamm und den Drink danach.
               </p>
               <p>
                 Als Cocktailbar in Charlottenburg bleiben wir bei klaren Klassikern statt Show. Negroni, Spritz und
@@ -146,7 +144,7 @@ export function BarLanding({ faqs }: { faqs: BarFaq[] }) {
               <figure className="all-day-photo evening">
                 <img
                   src={asset('images/about.jpg')}
-                  alt="Cozy Bar-Atmosphäre bei Casa Bellucci am Kurfürstendamm"
+                  alt="Cozy Bar-Atmosphäre bei Casa Bellucci am Kudamm"
                 />
                 <figcaption>Bar</figcaption>
               </figure>
@@ -166,7 +164,7 @@ export function BarLanding({ faqs }: { faqs: BarFaq[] }) {
                 </span>
               </div>
               <h2 id="wein-h2">
-                Weinbar am <span className="it">Kurfürstendamm</span>
+                Weinbar am <span className="it">Kudamm</span>
               </h2>
               <p className="lede" style={{ marginTop: 14 }}>
                 Als Weinbar in Charlottenburg legen wir den Schwerpunkt auf Sizilien und Süditalien. Kuratiert von
@@ -299,7 +297,7 @@ export function BarLanding({ faqs }: { faqs: BarFaq[] }) {
                 den Abend, ohne das Gespräch zu übertönen.
               </p>
               <p>
-                So wird Casa Bellucci am Wochenende zur Bar mit DJ am Kurfürstendamm, casual und entspannt. Im Sommer
+                So wird Casa Bellucci am Wochenende zur Bar mit DJ am Kudamm, casual und entspannt. Im Sommer
                 zieht sich der Aperitivo auf die Terrasse, unter Schirme am Tag und bei Kerzenlicht am Abend. Auch als
                 Restaurant mit Musik in Berlin passt das Haus für einen langen Abend zu zweit oder in der Gruppe.
               </p>
@@ -317,7 +315,7 @@ export function BarLanding({ faqs }: { faqs: BarFaq[] }) {
               <figure className="all-day-photo morning">
                 <img
                   src={asset('images/gallery/1.jpg')}
-                  alt="Entspannter Abend mit Musik in der Bar von Casa Bellucci am Kurfürstendamm"
+                  alt="Entspannter Abend mit Musik in der Bar von Casa Bellucci am Kudamm"
                 />
                 <figcaption>Serata</figcaption>
               </figure>
@@ -331,7 +329,7 @@ export function BarLanding({ faqs }: { faqs: BarFaq[] }) {
               <figure className="all-day-photo evening">
                 <img
                   src={asset('images/terrace.jpg')}
-                  alt="Aperitivo auf der Sommerterrasse von Casa Bellucci am Kurfürstendamm bei Kerzenlicht"
+                  alt="Aperitivo auf der Sommerterrasse von Casa Bellucci am Kudamm bei Kerzenlicht"
                 />
                 <figcaption>Terrazza</figcaption>
               </figure>
@@ -351,7 +349,7 @@ export function BarLanding({ faqs }: { faqs: BarFaq[] }) {
                 </span>
               </div>
               <h2 id="reservierung-h2">
-                An die Bar am <span className="it">Kurfürstendamm</span>
+                An die Bar am <span className="it">Kudamm</span>
               </h2>
               <p className="lede">
                 Casa Bellucci liegt am Kurfürstendamm 63 in Berlin-Charlottenburg, geöffnet täglich ab 09:00 Uhr,
@@ -402,7 +400,7 @@ export function BarLanding({ faqs }: { faqs: BarFaq[] }) {
               </div>
             </div>
             <div className="map" aria-label="Lage von Casa Bellucci auf der Karte">
-              <div className="corner">Kurfürstendamm · Charlottenburg</div>
+              <div className="corner">Kudamm · Charlottenburg</div>
               <div className="pin">
                 <div className="dot"></div>
                 <div className="pulse"></div>
@@ -434,9 +432,13 @@ export function BarLanding({ faqs }: { faqs: BarFaq[] }) {
           </div>
           <p style={{ marginTop: 28 }}>
             Mehr zum Haus auf der Startseite,{' '}
-            <a href={routePath('/')}>Casa Bellucci</a>. Direkt zur{' '}
-            <a href={routePath('/#terrasse')}>Terrasse</a> oder zur{' '}
-            <a href={routePath('/reservierung/')}>Reservierung</a>.
+            <a href={routePath('/')}>Casa Bellucci</a>. Entdecken Sie unser{' '}
+            <a href={routePath('/italienisches-restaurant-berlin-charlottenburg/')}>
+              italienisches Restaurant in Charlottenburg
+            </a>
+            , das{' '}
+            <a href={routePath('/sizilianisches-restaurant-berlin/')}>sizilianische Restaurant in Berlin</a> und{' '}
+            <a href={routePath('/fruehstueck-brunch-kurfuerstendamm/')}>Frühstück und Brunch am Kudamm</a>.
           </p>
         </div>
       </section>

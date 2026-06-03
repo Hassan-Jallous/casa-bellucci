@@ -9,19 +9,20 @@ import {
   webPageJsonLd,
   breadcrumbJsonLd,
   faqJsonLd,
+  placeJsonLd,
 } from '@/lib/seo';
 
 const PATH = '/sizilianisches-restaurant-berlin/';
 
-const TITLE =
-  'Sizilianisches Restaurant Berlin | Casa Bellucci, Cucina Siciliana am Kurfürstendamm';
+const TITLE = 'Sizilianisches Restaurant Berlin | Casa Bellucci';
 const DESCRIPTION =
-  'Casa Bellucci bringt sizilianische Küche nach Berlin-Charlottenburg. Cucina Siciliana, frischer Fisch, Weine vom Ätna und Sommerterrasse am Kurfürstendamm 63.';
+  'Sizilianische Küche am Kurfürstendamm 63 in Berlin-Charlottenburg. Cucina Siciliana, frischer Fisch, Weine vom Ätna und Sommerterrasse, am Abend Fine Dining.';
 
 export const metadata: Metadata = pageMetadata({
   title: TITLE,
   description: DESCRIPTION,
   path: PATH,
+  image: '/images/gallery/7.jpg',
 });
 
 const FAQS: SizilianischFaq[] = [
@@ -43,7 +44,7 @@ const FAQS: SizilianischFaq[] = [
   {
     question: 'Wo in Berlin gibt es sizilianische Küche?',
     answer:
-      'Sizilianische Küche in Berlin gibt es bei Casa Bellucci am Kurfürstendamm 63 in Berlin-Charlottenburg. Das Restaurant liegt zentral am Ku damm und ist gut mit den Linien rund um den Kurfürstendamm erreichbar.',
+      'Sizilianische Küche in Berlin gibt es bei Casa Bellucci am Kurfürstendamm 63 in Berlin-Charlottenburg. Das Restaurant liegt zentral am Kudamm und ist gut mit den Linien rund um den Kudamm erreichbar.',
   },
   {
     question: 'Wann ist die Abendkarte verfügbar?',
@@ -55,6 +56,13 @@ const FAQS: SizilianischFaq[] = [
 export default function SizilianischesRestaurantBerlinPage() {
   const jsonLdBlocks = [
     webPageJsonLd({ name: TITLE, description: DESCRIPTION, path: PATH }),
+    placeJsonLd({
+      type: 'Restaurant',
+      name: 'Casa Bellucci',
+      description: DESCRIPTION,
+      path: PATH,
+      servesCuisine: ['Sizilianisch', 'Italienisch', 'Mediterran'],
+    }),
     breadcrumbJsonLd([
       { name: 'Startseite', path: '/' },
       { name: 'Sizilianisches Restaurant Berlin', path: PATH },

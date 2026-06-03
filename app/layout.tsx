@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { restaurantJsonLd, SEO } from '@/lib/seo';
+import { restaurantJsonLd, webSiteJsonLd, SEO } from '@/lib/seo';
 
 // The prototype stylesheets use relative url() references ("../images/...",
 // "../fonts/...") that point outside the styles folder. Pulling them through
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
         url: SEO.ogImage,
         width: 1600,
         height: 1067,
-        alt: 'Casa Bellucci Terrasse am Kurfürstendamm in Berlin',
+        alt: 'Casa Bellucci Terrasse am Kudamm in Berlin',
       },
     ],
   },
@@ -68,6 +68,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   const structuredData = restaurantJsonLd();
+  const webSiteData = webSiteJsonLd();
 
   return (
     <html
@@ -101,6 +102,12 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(structuredData).replace(/</g, '\\u003c'),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(webSiteData).replace(/</g, '\\u003c'),
           }}
         />
         {children}

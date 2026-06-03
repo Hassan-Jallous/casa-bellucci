@@ -16,7 +16,7 @@ export const SEO = {
     'sizilianisches Restaurant Berlin',
     'italienisches Restaurant Charlottenburg',
     'Restaurant Charlottenburg',
-    'Restaurant Kurfürstendamm',
+    'Restaurant Kudamm',
     'Bar Charlottenburg',
     'Frühstück Charlottenburg',
     'Brunch Charlottenburg',
@@ -36,17 +36,19 @@ export function pageMetadata({
   description,
   path = '/',
   index = true,
+  image,
 }: {
   title: string;
   description: string;
   path?: string;
   index?: boolean;
+  image?: string;
 }): Metadata {
   const url = canonicalUrl(path);
-  const imageUrl = canonicalUrl(SEO.ogImage);
+  const imageUrl = canonicalUrl(image ?? SEO.ogImage);
 
   return {
-    title,
+    title: { absolute: title },
     description,
     alternates: {
       canonical: url,
@@ -74,7 +76,7 @@ export function pageMetadata({
           url: imageUrl,
           width: 1600,
           height: 1067,
-          alt: 'Casa Bellucci Terrasse am Kurfürstendamm in Berlin',
+          alt: 'Casa Bellucci Terrasse am Kudamm in Berlin',
         },
       ],
     },
@@ -219,5 +221,59 @@ export function webPageJsonLd({
       url: SITE_URL,
     },
     inLanguage: 'de-DE',
+  };
+}
+
+export function placeJsonLd({
+  type,
+  name,
+  description,
+  path,
+  servesCuisine,
+}: {
+  type: 'Restaurant' | 'BarOrPub' | 'CafeOrCoffeeShop';
+  name: string;
+  description: string;
+  path: string;
+  servesCuisine?: string[];
+}) {
+  const url = canonicalUrl(path);
+  return {
+    '@context': 'https://schema.org',
+    '@type': type,
+    '@id': `${url}#place`,
+    name,
+    description,
+    url,
+    parentOrganization: { '@id': `${SITE_URL}/#restaurant` },
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: SITE.address.street,
+      postalCode: '10707',
+      addressLocality: 'Berlin',
+      addressRegion: 'Berlin',
+      addressCountry: 'DE',
+    },
+    telephone: SITE.phone,
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: 52.5007367,
+      longitude: 13.3112327,
+    },
+    ...(servesCuisine ? { servesCuisine } : {}),
+    priceRange: '€€€',
+    acceptsReservations: true,
+  };
+}
+
+export function webSiteJsonLd() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    '@id': `${SITE_URL}/#website`,
+    url: SITE_URL,
+    name: SITE.name,
+    inLanguage: 'de-DE',
+    publisher: { '@id': `${SITE_URL}/#restaurant` },
   };
 }

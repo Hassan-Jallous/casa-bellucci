@@ -8,7 +8,7 @@ export function About() {
     {
       time: "Vormittag",
       title: "Frühstück & Brunch",
-      copy: "Frühstück in Charlottenburg mit Espresso und Cornetto, am Wochenende Brunch am Kurfürstendamm. Ein ruhiger Start in den Tag.",
+      copy: "Frühstück in Charlottenburg mit Espresso und Cornetto, am Wochenende Brunch am Kudamm. Ein ruhiger Start in den Tag.",
     },
     {
       time: "Mittag",
@@ -32,7 +32,7 @@ export function About() {
                 <FlagBar orientation="h" /> All-Day Concept
               </span>
             </div>
-            <h2>Frühstück, Lunch und Dinner am <span className="it">Kurfürstendamm</span>.</h2>
+            <h2>Frühstück, Lunch &amp; Dinner am <span className="it">Kudamm</span>.</h2>
             <p>
               Ein Ort, drei Stimmungen: vom ruhigen Espresso am Vormittag über den Lunch auf der Sommerterrasse bis zum Dinner mit Live-DJ am Wochenende. Auf dem Teller Pasta fatta a mano, fangfrischer Fisch und Aperitivo an der Bar, im Glas Weine vom Ätna.
             </p>
@@ -48,7 +48,7 @@ export function About() {
           </div>
           <div className="all-day-media" aria-label="Atmosphäre von Frühstück, Mittag und Abend">
             <figure className="all-day-photo morning">
-              <img src={asset("images/menu-breakfast.jpg")} alt="Frühstück bei Casa Bellucci am Kurfürstendamm in Berlin-Charlottenburg" />
+              <img src={asset("images/menu-breakfast.jpg")} alt="Frühstück bei Casa Bellucci am Kudamm in Berlin-Charlottenburg" />
               <figcaption>Frühstück</figcaption>
             </figure>
             <figure className="all-day-photo midday">

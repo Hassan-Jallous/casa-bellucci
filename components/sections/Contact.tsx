@@ -36,7 +36,7 @@ export function Contact() {
             </div>
           </div>
           <div className="map" aria-label="Lage auf Karte">
-            <div className="corner">Kurfürstendamm · Charlottenburg</div>
+            <div className="corner">Kudamm · Charlottenburg</div>
             <div className="pin">
               <div className="dot"></div>
               <div className="pulse"></div>

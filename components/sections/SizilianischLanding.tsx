@@ -43,7 +43,7 @@ export function SizilianischLanding({ faqs }: { faqs: SizilianischFaq[] }) {
             <div className="all-day-copy">
               <div className="section-eyebrow">
                 <span className="eyebrow" style={eyebrowStyle}>
-                  <FlagBar orientation="h" /> Cucina Siciliana am Kurfürstendamm
+                  <FlagBar orientation="h" /> Cucina Siciliana am Kudamm
                 </span>
               </div>
               <h1 id="sizilianisch-h1">
@@ -70,7 +70,7 @@ export function SizilianischLanding({ faqs }: { faqs: SizilianischFaq[] }) {
             <div className="all-day-media" aria-label="Sizilianische Zitrone und Atmosphäre bei Casa Bellucci">
               <figure className="all-day-photo morning">
                 <img
-                  src={asset('images/sizielen zitrone.jpeg')}
+                  src={asset('images/sizilianische-zitrone.jpeg')}
                   alt="Frisch geschnittene sizilianische Zitrone, Sinnbild der Cucina Siciliana bei Casa Bellucci"
                 />
                 <figcaption>Sicilia</figcaption>
@@ -85,7 +85,7 @@ export function SizilianischLanding({ faqs }: { faqs: SizilianischFaq[] }) {
               <figure className="all-day-photo evening">
                 <img
                   src={asset('images/terrace.jpg')}
-                  alt="Sommerterrasse von Casa Bellucci am Kurfürstendamm mit warmem Abendlicht"
+                  alt="Sommerterrasse von Casa Bellucci am Kudamm mit warmem Abendlicht"
                 />
                 <figcaption>Terrazza</figcaption>
               </figure>
@@ -317,10 +317,10 @@ export function SizilianischLanding({ faqs }: { faqs: SizilianischFaq[] }) {
               </p>
               <p>
                 Für ein Date in Berlin passt die Abendkarte besonders gut. Wer es größer mag, findet an den langen
-                Tafeln Platz für Gruppen. Im Sommer öffnet die Terrasse am Kurfürstendamm bei gutem Wetter.
+                Tafeln Platz für Gruppen. Im Sommer öffnet die Terrasse am Kudamm bei gutem Wetter.
               </p>
               <blockquote className="lede" style={{ fontStyle: 'italic', margin: '6px 0 0' }}>
-                „Italiens Seele am Kurfürstendamm, als hätte jemand eine Trattoria aus Taormina nach Charlottenburg
+                „Italiens Seele am Kudamm, als hätte jemand eine Trattoria aus Taormina nach Charlottenburg
                 verpflanzt.“
               </blockquote>
               <blockquote className="lede" style={{ fontStyle: 'italic', margin: '14px 0 0' }}>
@@ -331,7 +331,7 @@ export function SizilianischLanding({ faqs }: { faqs: SizilianischFaq[] }) {
               <figure className="all-day-photo morning">
                 <img
                   src={asset('images/terrace.jpg')}
-                  alt="Sommerterrasse von Casa Bellucci am Kurfürstendamm am Abend"
+                  alt="Sommerterrasse von Casa Bellucci am Kudamm am Abend"
                 />
                 <figcaption>Terrasse</figcaption>
               </figure>
@@ -365,7 +365,7 @@ export function SizilianischLanding({ faqs }: { faqs: SizilianischFaq[] }) {
                 </span>
               </div>
               <h2 id="reservierung-h2">
-                Reservieren am <span className="it">Kurfürstendamm</span>
+                Reservieren am <span className="it">Kudamm</span>
               </h2>
               <p className="lede">
                 Casa Bellucci liegt am Kurfürstendamm 63 in Berlin-Charlottenburg. Die Abendkarte ist ab 18:00 Uhr
@@ -416,7 +416,7 @@ export function SizilianischLanding({ faqs }: { faqs: SizilianischFaq[] }) {
               </div>
             </div>
             <div className="map" aria-label="Lage von Casa Bellucci auf der Karte">
-              <div className="corner">Kurfürstendamm · Charlottenburg</div>
+              <div className="corner">Kudamm · Charlottenburg</div>
               <div className="pin">
                 <div className="dot"></div>
                 <div className="pulse"></div>
@@ -448,13 +448,13 @@ export function SizilianischLanding({ faqs }: { faqs: SizilianischFaq[] }) {
           </div>
           <p style={{ marginTop: 28 }}>
             Mehr zum Haus auf der Startseite,{' '}
-            <a href={routePath('/')}>Casa Bellucci</a>, und unter{' '}
+            <a href={routePath('/')}>Casa Bellucci</a>. Tagsüber das{' '}
             <a href={routePath('/italienisches-restaurant-berlin-charlottenburg/')}>
-              italienisches Restaurant in Charlottenburg
+              italienische Restaurant in Charlottenburg
             </a>
-            . Direkt zur{' '}
-            <a href={routePath('/#menu')}>Karte</a> oder zur{' '}
-            <a href={routePath('/#terrasse')}>Terrasse</a>.
+            , morgens{' '}
+            <a href={routePath('/fruehstueck-brunch-kurfuerstendamm/')}>Frühstück und Brunch am Kudamm</a> und abends die{' '}
+            <a href={routePath('/bar-aperitivo-kurfuerstendamm/')}>Bar mit Aperitivo am Kudamm</a>.
           </p>
         </div>
       </section>

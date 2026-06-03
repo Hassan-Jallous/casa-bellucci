@@ -14,7 +14,7 @@ export function Gallery() {
             </div>
             <h2>Einblicke in <span className="it">unser Haus</span></h2>
             <p className="lede" style={{ marginTop: 14 }}>
-              Postkarten aus dem Haus. Klicke ein Bild für die Großansicht.
+              Eindrücke aus unserem italienischen Restaurant am Kurfürstendamm. Klicke ein Bild für die Großansicht.
             </p>
           </div>
           <a className="btn btn-ghost" href="https://instagram.com" target="_blank" rel="noreferrer">@casabellucci · Instagram →</a>

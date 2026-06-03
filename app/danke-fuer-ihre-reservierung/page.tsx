@@ -19,7 +19,7 @@ export default function ReservationThanksPage() {
           <h1>Danke für Ihre Reservierung</h1>
           <article className="legal-content">
             <p>
-              Vielen Dank für Ihre Reservierung bei Casa Bellucci. Wir freuen uns darauf, Sie bald bei uns am Kurfürstendamm begrüßen zu dürfen.
+              Vielen Dank für Ihre Reservierung bei Casa Bellucci. Wir freuen uns darauf, Sie bald bei uns am Kudamm begrüßen zu dürfen.
             </p>
             <p>
               Reservierungsdetails werden über das Reservierungssystem bestätigt. Bei Rückfragen erreichen Sie uns direkt telefonisch.

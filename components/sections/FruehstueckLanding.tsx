@@ -43,7 +43,7 @@ export function FruehstueckLanding({ faqs }: { faqs: FruehstueckFaq[] }) {
             <div className="all-day-copy">
               <div className="section-eyebrow">
                 <span className="eyebrow" style={eyebrowStyle}>
-                  <FlagBar orientation="h" /> Colazione am Kurfürstendamm
+                  <FlagBar orientation="h" /> Colazione am Kudamm
                 </span>
               </div>
               <h1 id="fruehstueck-h1">
@@ -55,9 +55,8 @@ export function FruehstueckLanding({ faqs }: { faqs: FruehstueckFaq[] }) {
                 Bellucci und einer sizilianischen Note aus Amalfi-Zitronen und Tarocco-Orangen.
               </p>
               <p>
-                Frühstück gibt es täglich von 09:00 bis 12:00 Uhr, am Wochenende länger bis 14:00 Uhr als Brunch.
-                Wer in Charlottenburg-Wilmersdorf ein Frühstück am Kudamm sucht, findet hier einen Platz drinnen
-                oder auf der Sommerterrasse am Morgen.
+                Wer in Charlottenburg-Wilmersdorf ein Frühstück am Kudamm sucht, findet hier einen Platz drinnen oder
+                auf der Sommerterrasse am Morgen.
               </p>
               <div className="contact-actions">
                 <a className="btn btn-primary" href={routePath('/reservierung/')}>
@@ -79,14 +78,14 @@ export function FruehstueckLanding({ faqs }: { faqs: FruehstueckFaq[] }) {
               <figure className="all-day-photo midday">
                 <img
                   src={asset('images/gallery/2.jpg')}
-                  alt="Frühstückstisch am Kurfürstendamm bei Casa Bellucci am Morgen"
+                  alt="Frühstückstisch am Kudamm bei Casa Bellucci am Morgen"
                 />
                 <figcaption>Mattina</figcaption>
               </figure>
               <figure className="all-day-photo evening">
                 <img
                   src={asset('images/terrace.jpg')}
-                  alt="Sommerterrasse von Casa Bellucci am Kurfürstendamm im Morgenlicht"
+                  alt="Sommerterrasse von Casa Bellucci am Kudamm im Morgenlicht"
                 />
                 <figcaption>Terrazza</figcaption>
               </figure>
@@ -117,7 +116,7 @@ export function FruehstueckLanding({ faqs }: { faqs: FruehstueckFaq[] }) {
                 Wer mehr mag, wählt Uova alla Fiorentina mit pochierten Eiern, Spinat und Sauce Hollandaise, einen
                 Avocado Toast Mediterraneo oder Pancakes con Frutti di Bosco. Frisch gepresst kommt die Spremuta
                 d Arancia aus Tarocco-Orangen, dazu die Limonata Siciliana mit Amalfi-Zitronen. Das macht das
-                italienische Frühstück in Berlin zu einem ruhigen Start am Kurfürstendamm.
+                italienische Frühstück in Berlin zu einem ruhigen Start am Kudamm.
               </p>
               <div className="dayline" aria-label="Gerichte vom italienischen Frühstück">
                 {colazione.map((item, index) => (
@@ -140,7 +139,7 @@ export function FruehstueckLanding({ faqs }: { faqs: FruehstueckFaq[] }) {
               <figure className="all-day-photo midday">
                 <img
                   src={asset('images/gallery/4.jpg')}
-                  alt="Frisches Gebäck und Kaffee zum Frühstück bei Casa Bellucci am Kurfürstendamm"
+                  alt="Frisches Gebäck und Kaffee zum Frühstück bei Casa Bellucci am Kudamm"
                 />
                 <figcaption>Caffè</figcaption>
               </figure>
@@ -175,7 +174,7 @@ export function FruehstueckLanding({ faqs }: { faqs: FruehstueckFaq[] }) {
                 Vormittag in Charlottenburg.
               </p>
               <p>
-                Bei gutem Wetter öffnet die Sommerterrasse am Kurfürstendamm schon am Morgen. Brunch draußen,
+                Bei gutem Wetter öffnet die Sommerterrasse am Kudamm schon am Morgen. Brunch draußen,
                 mit Cornetto, Eiern und frisch gepresstem Orangensaft, ist ein guter Grund, das Wochenende am
                 Kudamm zu beginnen. Für einen Tisch zum Brunch empfehlen wir eine Reservierung.
               </p>
@@ -184,7 +183,7 @@ export function FruehstueckLanding({ faqs }: { faqs: FruehstueckFaq[] }) {
               <figure className="all-day-photo morning">
                 <img
                   src={asset('images/terrace.jpg')}
-                  alt="Brunch auf der Sommerterrasse von Casa Bellucci am Kurfürstendamm in Charlottenburg"
+                  alt="Brunch auf der Sommerterrasse von Casa Bellucci am Kudamm in Charlottenburg"
                 />
                 <figcaption>Terrasse</figcaption>
               </figure>
@@ -218,7 +217,7 @@ export function FruehstueckLanding({ faqs }: { faqs: FruehstueckFaq[] }) {
                 </span>
               </div>
               <h2 id="reservierung-h2">
-                Frühstück am <span className="it">Kurfürstendamm</span>
+                Frühstück am <span className="it">Kudamm</span>
               </h2>
               <p className="lede">
                 Casa Bellucci liegt am Kurfürstendamm 63 in Berlin-Charlottenburg. Frühstück gibt es täglich ab
@@ -269,7 +268,7 @@ export function FruehstueckLanding({ faqs }: { faqs: FruehstueckFaq[] }) {
               </div>
             </div>
             <div className="map" aria-label="Lage von Casa Bellucci auf der Karte">
-              <div className="corner">Kurfürstendamm · Charlottenburg</div>
+              <div className="corner">Kudamm · Charlottenburg</div>
               <div className="pin">
                 <div className="dot"></div>
                 <div className="pulse"></div>
@@ -301,16 +300,14 @@ export function FruehstueckLanding({ faqs }: { faqs: FruehstueckFaq[] }) {
           </div>
           <p style={{ marginTop: 28 }}>
             Mehr zum Haus auf der Startseite,{' '}
-            <a href={routePath('/')}>Casa Bellucci</a>, und unter{' '}
+            <a href={routePath('/')}>Casa Bellucci</a>. Tagsüber das{' '}
             <a href={routePath('/italienisches-restaurant-berlin-charlottenburg/')}>
-              italienisches Restaurant in Charlottenburg
-            </a>{' '}
-            sowie{' '}
-            <a href={routePath('/sizilianisches-restaurant-berlin/')}>
-              sizilianisches Restaurant in Berlin
+              italienische Restaurant in Charlottenburg
             </a>
-            . Direkt zur <a href={routePath('/#menu')}>Karte</a> oder zur{' '}
-            <a href={routePath('/reservierung/')}>Reservierung</a>.
+            , am Abend das{' '}
+            <a href={routePath('/sizilianisches-restaurant-berlin/')}>sizilianische Restaurant in Berlin</a> und für den
+            Drink danach unsere{' '}
+            <a href={routePath('/bar-aperitivo-kurfuerstendamm/')}>Bar mit Aperitivo am Kudamm</a>.
           </p>
         </div>
       </section>

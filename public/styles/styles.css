@@ -52,6 +52,15 @@
 
   --shadow-soft: 0 10px 30px -18px rgba(60, 40, 18, 0.25);
   --shadow-warm: 0 30px 60px -30px rgba(120, 70, 20, 0.35);
+
+  /* Glas-Divs (Foto-Overlay-Glasflaechen) — ZENTRALE OPTIK.
+     Hier einmal aendern, gilt fuer alle Glas-Panels (Hero-Box, Terrassen-,
+     Menue-, About- und Landing-Foto-Labels, Galerie, Karten-Labels).
+     Die Anwendung steckt in der Master-Regel am Ende von vivid.css. */
+  --glass-bg:
+    radial-gradient(circle at 78% 0%, rgba(231, 187, 72, 0.10), transparent 40%),
+    rgba(255, 250, 241, 0.42);
+  --glass-blur: blur(2px);
 }
 
 /* Accent palettes */
@@ -925,7 +934,9 @@ section {
   margin-bottom: clamp(42px, 6vw, 76px);
 }
 .signature-menu-title h2 {
-  max-width: 12ch;
+  /* Maximal so breit wie der Intro-Absatz darunter (dessen max-width: 50ch ~ 530px),
+     damit Headline und Fliesstext links buendig dieselbe Spaltenbreite teilen. */
+  max-width: 530px;
 }
 .signature-menu-head > p {
   max-width: 50ch;
@@ -1058,13 +1069,17 @@ section {
   place-items: center;
   padding: clamp(18px, 4vw, 56px);
   background: rgba(31,20,12,0.72);
+  -webkit-backdrop-filter: blur(0px);
+  backdrop-filter: blur(0px);
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.28s ease;
+  transition: opacity 0.34s ease, -webkit-backdrop-filter 0.34s ease, backdrop-filter 0.34s ease;
 }
 .menu-viewer.open {
   opacity: 1;
   pointer-events: auto;
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
 }
 .menu-viewer-card {
   position: relative;
@@ -1073,23 +1088,41 @@ section {
   display: flex;
   flex-direction: column;
   background: #FFF9F0;
-  border-radius: 8px;
+  border-radius: 14px;
   overflow: hidden;
   box-shadow: 0 44px 120px rgba(0,0,0,0.38);
-  transform: translateY(18px) scale(0.98);
-  transition: transform 0.34s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translateY(26px) scale(0.97);
+  opacity: 0;
+  transition: transform 0.42s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
 }
 .menu-viewer.open .menu-viewer-card {
   transform: translateY(0) scale(1);
+  opacity: 1;
+}
+.menu-viewer-head {
+  display: flex;
+  align-items: center;
+  gap: clamp(10px, 1.6vw, 18px);
+  padding: 14px clamp(16px, 2.4vw, 22px);
+  border-bottom: 1px solid rgba(43,31,18,0.10);
+  background: linear-gradient(180deg, #FFFCF6 0%, rgba(255,249,240,0.96) 100%);
+}
+.menu-viewer-eyebrow {
+  flex: none;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  padding-right: clamp(10px, 1.6vw, 18px);
+  border-right: 1px solid rgba(43,31,18,0.12);
 }
 .menu-viewer-tabs {
   display: flex;
   gap: 8px;
   flex-wrap: wrap;
-  padding: clamp(18px, 2.5vw, 24px);
-  padding-right: 64px;
-  border-bottom: 1px solid rgba(43,31,18,0.12);
-  background: rgba(255,249,240,0.96);
+  flex: 1;
+  min-width: 0;
 }
 .menu-viewer-tab {
   font-family: var(--font-mono);
@@ -1098,19 +1131,21 @@ section {
   text-transform: uppercase;
   padding: 9px 16px;
   border-radius: 999px;
-  border: 1px solid rgba(43,31,18,0.18);
+  border: 1px solid rgba(43,31,18,0.16);
   background: transparent;
   color: var(--ink-2);
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: background 0.22s ease, color 0.22s ease, border-color 0.22s ease, transform 0.22s ease;
 }
 .menu-viewer-tab:hover {
-  background: rgba(43,31,18,0.06);
+  background: rgba(43,31,18,0.05);
+  border-color: rgba(43,31,18,0.28);
 }
 .menu-viewer-tab.is-active {
   background: var(--accent);
   color: var(--ink);
   border-color: var(--accent);
+  box-shadow: 0 6px 16px rgba(224,185,46,0.32);
 }
 .menu-viewer-frame {
   flex: 1;
@@ -1136,32 +1171,50 @@ section {
   color: var(--accent);
 }
 .menu-viewer-close {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  z-index: 3;
-  width: 42px;
-  height: 42px;
-  border: 0;
+  flex: none;
+  width: 38px;
+  height: 38px;
+  border: 1px solid rgba(43,31,18,0.16);
   border-radius: 50%;
   display: grid;
   place-items: center;
-  background: rgba(255,249,240,0.86);
-  color: var(--ink);
-  font-size: 28px;
-  line-height: 1;
+  background: transparent;
+  color: var(--ink-2);
   cursor: pointer;
-  box-shadow: 0 10px 30px rgba(43,31,18,0.18);
+  transition: background 0.24s ease, color 0.24s ease, border-color 0.24s ease, transform 0.34s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.menu-viewer-close:hover {
+  background: var(--ink);
+  color: #FFF9F0;
+  border-color: var(--ink);
+  transform: rotate(90deg);
+}
+.menu-viewer-close svg {
+  display: block;
 }
 @media (max-width: 640px) {
   .menu-viewer-card {
     height: calc(100dvh - 18px);
     width: 100%;
+    border-radius: 12px;
+  }
+  .menu-viewer-head {
+    gap: 10px;
+    padding: 12px 14px;
+  }
+  .menu-viewer-eyebrow {
+    display: none;
+  }
+  .menu-viewer-tabs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
   }
   .menu-viewer-tab {
     font-size: 10px;
-    padding: 8px 12px;
+    padding: 9px 12px;
     letter-spacing: 0.12em;
+    text-align: center;
   }
 }
 
@@ -1821,6 +1874,13 @@ section {
   padding-top: 132px;
 }
 
+/* Die erste Sektion sitzt direkt unter dem fixed Header. .subpage raeumt den
+   Header bereits via padding-top frei, daher das zusaetzliche section-Top-Padding
+   (120px) kappen, damit ueber dem Hero keine ueberdimensionierte Leere entsteht. */
+.subpage > section:first-child {
+  padding-top: clamp(24px, 4vw, 44px);
+}
+
 .booking-page .reservation {
   padding-top: 52px;
 }
@@ -2313,7 +2373,7 @@ section {
 /* ------- Responsive ------- */
 @media (max-width: 980px) {
   section { padding: 80px 0; }
-  .hero-v1 .grid, .about .grid, .menu .grid, .contact .grid, .wine .regions, .reservation-inner {
+  .hero-v1 .grid, .about .grid, .menu .grid, .contact .grid, .wine .regions, .reservation-inner, .subpage-info-grid {
     grid-template-columns: 1fr;
     gap: 40px;
   }
@@ -2404,7 +2464,7 @@ section {
     margin-bottom: 32px;
   }
   .signature-menu-title h2 {
-    max-width: 10ch;
+    max-width: none;
   }
   .signature-menu-grid {
     gap: 28px;
@@ -2591,6 +2651,9 @@ section {
     left: 18px;
     right: 18px;
     bottom: 18px;
+    /* Ab Mobile nutzt die Glasflaeche die volle Bildbreite (left/right 18px),
+       daher die 84%/460px-Begrenzung aus der Basisregel hier aufheben. */
+    max-width: none;
     flex-direction: column;
     align-items: flex-start;
     gap: 0;
