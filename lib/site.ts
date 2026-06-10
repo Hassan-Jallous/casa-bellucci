@@ -20,4 +20,15 @@ export const SITE = {
   quandooMerchantId: '104436',
   sourceUrl: 'https://casabellucci.de',
   canonicalUrl: 'https://casabellucci.de',
+  // Google-Bewertung (Stand live abgefragt 2026-06-10 via Google Maps).
+  // Single Source fuer AggregateRating-Schema + Testimonials-Sektion.
+  // Bei Aenderung der echten Google-Werte hier aktualisieren.
+  rating: {
+    value: 4.4,
+    count: 268,
+    source: 'Google',
+    url: 'https://www.google.com/maps?cid=12485998686773928551',
+    reviewsUrl:
+      'https://search.google.com/local/reviews?placeid=ChIJJSICZ2hRqEcRZ2In56YtR60&hl=de',
+  },
 } as const;

@@ -364,7 +364,9 @@ export function ItalienischLanding() {
           <p className="subpage-related">
             {d.landingItalienisch.related.pre}{' '}
             <a href={routePath('/')}>{d.landingItalienisch.related.homeLink}</a>{d.landingItalienisch.related.mid2}{' '}
-            <a href={routePath('/fruehstueck-brunch-kurfuerstendamm/')}>{d.landingItalienisch.related.fruehstueckLink}</a> {d.landingItalienisch.related.mid3}{' '}
+            <a href={routePath('/fruehstueck-brunch-kurfuerstendamm/')}>{d.landingItalienisch.related.fruehstueckLink}</a>{d.landingItalienisch.related.mid3}{' '}
+            <a href={routePath('/business-lunch-mittagstisch-charlottenburg/')}>{d.landingItalienisch.related.lunchLink}</a>{d.landingItalienisch.related.mid4}{' '}
+            <a href={routePath('/terrasse-restaurant-berlin-charlottenburg/')}>{d.landingItalienisch.related.terrasseLink}</a>{d.landingItalienisch.related.mid5}{' '}
             <a href={routePath('/bar-aperitivo-kurfuerstendamm/')}>{d.landingItalienisch.related.barLink}</a>{d.landingItalienisch.related.post}
           </p>
         </div>

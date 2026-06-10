@@ -149,9 +149,13 @@ export const landingBar = {
     linkHome: 'Casa Bellucci',
     mid1: '. Discover our ',
     linkItalienisch: 'Italian restaurant in Charlottenburg',
-    mid2: ' and ',
+    mid2: '. For celebrating in a group we plan ',
+    linkEvents: 'company parties and events in Charlottenburg',
+    mid3: '. In summer the aperitivo moves to our ',
+    linkTerrasse: 'terrace on the Kudamm',
+    mid4: '. In the morning our ',
     linkFruehstueck: 'breakfast and brunch on the Kudamm',
-    post: '.',
+    post: ' awaits.',
   },
 
   faqs: [

@@ -23,10 +23,12 @@ function MobileNavA({ open, onClose }: MobileNavAProps) {
   const localizedHref = useLocalizedHref();
   const items: { href: string; label: string; scroll?: string }[] = [
     { href: localizedHref('/#menu'), label: d.mobileNav.items[0] },
-    { href: localizedHref('/#terrasse'), label: d.mobileNav.items[1] },
-    { href: localizedHref('/#galerie'), label: d.mobileNav.items[2] },
-    { href: localizedHref('/reservierung/'), label: d.mobileNav.items[3], scroll: '#reservieren' },
-    { href: localizedHref('/#kontakt'), label: d.mobileNav.items[4] },
+    { href: localizedHref('/terrasse-restaurant-berlin-charlottenburg/'), label: d.mobileNav.items[1] },
+    { href: localizedHref('/business-lunch-mittagstisch-charlottenburg/'), label: d.mobileNav.items[2] },
+    { href: localizedHref('/firmenfeier-events-charlottenburg/'), label: d.mobileNav.items[3] },
+    { href: localizedHref('/#galerie'), label: d.mobileNav.items[4] },
+    { href: localizedHref('/reservierung/'), label: d.mobileNav.items[5], scroll: '#reservieren' },
+    { href: localizedHref('/#kontakt'), label: d.mobileNav.items[6] },
   ];
 
   useEffect(() => {

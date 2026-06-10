@@ -88,7 +88,9 @@ export function MenuSection() {
             <a href={routePath('/#menu')}>{m.introParts.link2}</a>{' '}
             {m.introParts.p2}{' '}
             <a href={routePath('/bar-aperitivo-kurfuerstendamm/')}>{m.introParts.link3}</a>{' '}
-            {m.introParts.p3}
+            {m.introParts.p3}{' '}
+            <a href={routePath('/business-lunch-mittagstisch-charlottenburg/')}>{m.introParts.link4}</a>{' '}
+            {m.introParts.p4}
           </p>
         </div>
 

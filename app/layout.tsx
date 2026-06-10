@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { join } from 'node:path';
@@ -84,6 +84,11 @@ const CSS_HREFS = [
 // onload media=all). Critical-CSS ist da bereits inline, also kein FOUC.
 const ASYNC_CSS_SCRIPT = `(function(){var h=${JSON.stringify(CSS_HREFS)};for(var i=0;i<h.length;i++){var l=document.createElement('link');l.rel='stylesheet';l.media='print';l.href=h[i];l.onload=function(){this.media='all'};document.head.appendChild(l);}})();`;
 
+// Farbe der mobilen Browser-Leiste, passend zum cremefarbenen Header-Hintergrund.
+export const viewport: Viewport = {
+  themeColor: '#FFF9F0',
+};
+
 export const metadata: Metadata = {
   metadataBase: new URL(SEO.siteUrl),
   title: {
@@ -106,9 +111,9 @@ export const metadata: Metadata = {
     images: [
       {
         url: SEO.ogImage,
-        width: 1600,
-        height: 1067,
-        alt: 'Casa Bellucci Terrasse am Kudamm in Berlin',
+        width: 1200,
+        height: 630,
+        alt: 'Casa Bellucci, italienisches Restaurant am Kurfürstendamm in Berlin',
       },
     ],
   },

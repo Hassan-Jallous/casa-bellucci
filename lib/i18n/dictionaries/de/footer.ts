@@ -11,6 +11,9 @@ export const footer = {
     italienisch: 'Italienisches Restaurant',
     bar: 'Bar & Weinbar',
     fruehstueck: 'Frühstück & Brunch',
+    terrasse: 'Terrasse',
+    lunch: 'Mittagstisch & Lunch',
+    events: 'Firmenfeier & Events',
   },
   links: {
     openRoute: 'Route öffnen',

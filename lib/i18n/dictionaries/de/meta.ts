@@ -31,6 +31,21 @@ export const meta = {
     description:
       'Bar und Weinbar am Kurfürstendamm 63 in Berlin-Charlottenburg. Aperitivo, Cocktails und italienischer Wein, Sommerterrasse und Live-DJ am Wochenende.',
   },
+  terrasse: {
+    title: 'Restaurant mit Terrasse in Berlin | Casa Bellucci',
+    description:
+      'Sonnige Sommerterrasse am Kurfürstendamm: italienische Küche, Aperitivo und Wein draußen in Berlin-Charlottenburg. Jetzt Terrassentisch reservieren.',
+  },
+  lunch: {
+    title: 'Mittagstisch & Business Lunch Charlottenburg | Casa Bellucci',
+    description:
+      'Italienischer Mittagstisch und Business Lunch am Kurfürstendamm: Pasta fatta a mano, fangfrischer Fisch, schnell serviert, mittags auch auf der Terrasse.',
+  },
+  events: {
+    title: 'Firmenfeier, Events & Weihnachtsfeier Berlin | Casa Bellucci',
+    description:
+      'Eventlocation am Kurfürstendamm für Firmenfeiern, Weihnachtsfeiern, Geburtstage und private Dinner. Terrasse, Bar und italienische Küche. Jetzt anfragen.',
+  },
   reservierung: {
     title: 'Tisch reservieren',
     description:

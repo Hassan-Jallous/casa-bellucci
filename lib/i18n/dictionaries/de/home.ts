@@ -3,6 +3,7 @@
 // VERBATIM from the components. EN/IT slices re-export this until translated.
 export const home = {
   hero: {
+    tagline: 'Dolce Vita am Kudamm',
     h1: 'Italienisches Restaurant mit sizilianischem Vibe in Berlin Charlottenburg',
     lede: 'Casa Bellucci am Kurfürstendamm 63 in Berlin Charlottenburg: italienische Küche von Frühstück bis Dinner, Bar mit Aperitivo auf der Sommerterrasse und Live-DJ am Wochenende.',
     viewMenu: 'Karte ansehen →',
@@ -50,6 +51,24 @@ export const home = {
       { v: 'Lunch unter Zitronenbäumen' },
       { v: 'Aperitivo, Wein und Live-DJ' },
     ],
+    linkPre: 'Mehr Platz, mehr Sonne: ',
+    link: 'alles zur Terrasse am Kudamm',
+    linkPost: '.',
+  },
+  weekend: {
+    eyebrow: 'Wochenende & Aperitivo',
+    headingPre: 'Aperitivo und Live-DJ am ',
+    headingEm: 'Wochenende',
+    headingPost: '.',
+    p0: 'Freitag und Samstag legt ein Live-DJ auf, während der Aperitivo Bellucci aus Bitter, Zitrus und Prosecco ins Glas kommt. Es bleibt eine Restaurant-Bar-Stimmung, kein Club: die Musik trägt den Abend, ohne das Gespräch zu übertönen.',
+    p1: 'Ein Glas am Tresen, ein Spritz auf der Sommerterrasse oder ein langer Abend in der Gruppe, das Wochenende am Kudamm hat hier viele Tempi.',
+    ctaLabel: 'Zur Bar & Aperitivo →',
+    mediaLabel: 'Aperitivo und Wochenende bei Casa Bellucci',
+    photos: {
+      morning: { alt: 'Aperitivo Bellucci aus Bitter, Zitrus und Prosecco an der Bar von Casa Bellucci am Kudamm', caption: 'Aperitivo' },
+      midday: { alt: 'Klassisch gemixter Cocktail an der Bar von Casa Bellucci in Berlin-Charlottenburg', caption: 'Cocktail' },
+      evening: { alt: 'Aperitivo am Abend auf der Sommerterrasse von Casa Bellucci am Kudamm', caption: 'Terrasse' },
+    },
   },
   gallery: {
     eyebrow: 'Unsere Galerie',
@@ -58,6 +77,16 @@ export const home = {
     headingPost: '',
     lede: 'Eindrücke aus unserem italienischen Restaurant am Kurfürstendamm. Klicke ein Bild für die Großansicht.',
     instagram: '@casabellucci_berlin · Instagram →',
+  },
+  reviews: {
+    eyebrow: 'Gästestimmen',
+    headingPre: 'Was unsere ',
+    headingEm: 'Gäste sagen',
+    headingPost: '',
+    lede: 'Frühstück, Aperitivo auf der Terrasse oder Dinner mit Live-DJ: Hunderte Gäste haben Casa Bellucci am Kudamm bewertet.',
+    ratingLabel: 'Bewertungen',
+    showMore: 'mehr anzeigen',
+    ctaAll: 'Alle Bewertungen auf Google ansehen →',
   },
   reservation: {
     eyebrow: 'Reservieren',
@@ -91,7 +120,9 @@ export const home = {
       link2: 'italienische Küche',
       p2: 'und',
       link3: 'Aperitivo an der Bar',
-      p3: 'am Abend.',
+      p3: 'am Abend. Mittags lohnt sich der',
+      link4: 'Mittagstisch',
+      p4: 'in Charlottenburg.',
     },
     heroAlt: 'Gedeckter Tisch bei Casa Bellucci, italienische Speisekarte in Berlin-Charlottenburg',
     heroCaption: 'Bellucci',

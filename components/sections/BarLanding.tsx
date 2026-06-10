@@ -370,6 +370,10 @@ export function BarLanding() {
               {d.landingBar.related.linkItalienisch}
             </a>
             {d.landingBar.related.mid2}
+            <a href={routePath('/firmenfeier-events-charlottenburg/')}>{d.landingBar.related.linkEvents}</a>
+            {d.landingBar.related.mid3}
+            <a href={routePath('/terrasse-restaurant-berlin-charlottenburg/')}>{d.landingBar.related.linkTerrasse}</a>
+            {d.landingBar.related.mid4}
             <a href={routePath('/fruehstueck-brunch-kurfuerstendamm/')}>{d.landingBar.related.linkFruehstueck}</a>{d.landingBar.related.post}
           </p>
         </div>

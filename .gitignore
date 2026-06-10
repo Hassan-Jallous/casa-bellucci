@@ -47,3 +47,10 @@ _quelle-fotos/
 
 # php-backend secrets (redundant safety; php-backend/.gitignore already ignores it)
 php-backend/config.php
+
+# scratch / generierte Wegwerf-Artefakte unter scripts/ (Bild-Kandidaten, Backups, pycache)
+scripts/_backup/
+scripts/_hero-candidates/
+scripts/_og-candidates/
+scripts/__pycache__/
+scripts/_*/

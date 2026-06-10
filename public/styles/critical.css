@@ -248,7 +248,7 @@ body { background: var(--summer-page); }
 .image-hero-actions .btn-ghost.btn-on-dark { color: rgba(43, 25, 13, 0.56) !important; }
 .image-hero-scroll { display: none; }
 }
-@media (max-width: 880px){.image-hero { min-height: 100dvh; height: 100dvh; }
+@media (max-width: 880px){.image-hero { min-height: 100svh; height: 100svh; }
 .site-header { padding: 10px 0px; background: transparent; backdrop-filter: none; box-shadow: none; color: rgb(43, 25, 13); }
 .site-header .row { min-height: 40px; }
 .site-header .brand { font-size: 21px; text-shadow: rgba(255, 250, 241, 0.72) 0px 1px 12px; }

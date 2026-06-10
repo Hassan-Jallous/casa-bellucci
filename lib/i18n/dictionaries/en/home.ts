@@ -3,6 +3,7 @@
 // source of truth in ../de/home.ts. Same structure, keys and array lengths.
 export const home = {
   hero: {
+    tagline: 'La Dolce Vita on the Kudamm',
     h1: 'Italian restaurant with a Sicilian vibe in Berlin Charlottenburg',
     lede: 'Casa Bellucci at Kurfürstendamm 63 in Berlin Charlottenburg: Italian cuisine from breakfast to dinner, a bar with aperitivo on the summer terrace and a live DJ at the weekend.',
     viewMenu: 'View menu →',
@@ -50,6 +51,24 @@ export const home = {
       { v: 'Lunch under lemon trees' },
       { v: 'Aperitivo, wine and live DJ' },
     ],
+    linkPre: 'More space, more sun: ',
+    link: 'all about the terrace on the Kudamm',
+    linkPost: '.',
+  },
+  weekend: {
+    eyebrow: 'Weekend & aperitivo',
+    headingPre: 'Aperitivo and live DJ at the ',
+    headingEm: 'weekend',
+    headingPost: '.',
+    p0: 'On Friday and Saturday a live DJ plays while the Aperitivo Bellucci of bitter, citrus and prosecco fills the glass. It stays a restaurant-bar mood, not a club: the music carries the evening without drowning out the conversation.',
+    p1: 'A glass at the counter, a spritz on the summer terrace or a long evening with friends, the weekend on the Kudamm has many tempos here.',
+    ctaLabel: 'To the bar & aperitivo →',
+    mediaLabel: 'Aperitivo and weekend at Casa Bellucci',
+    photos: {
+      morning: { alt: 'Aperitivo Bellucci of bitter, citrus and prosecco at the bar of Casa Bellucci on the Kudamm', caption: 'Aperitivo' },
+      midday: { alt: 'Classically mixed cocktail at the bar of Casa Bellucci in Berlin-Charlottenburg', caption: 'Cocktail' },
+      evening: { alt: 'Aperitivo in the evening on the summer terrace of Casa Bellucci on the Kudamm', caption: 'Terrace' },
+    },
   },
   gallery: {
     eyebrow: 'Our gallery',
@@ -58,6 +77,16 @@ export const home = {
     headingPost: '',
     lede: 'Impressions from our Italian restaurant on the Kurfürstendamm. Click an image to enlarge.',
     instagram: '@casabellucci_berlin · Instagram →',
+  },
+  reviews: {
+    eyebrow: 'Guest voices',
+    headingPre: 'What our ',
+    headingEm: 'guests say',
+    headingPost: '',
+    lede: 'Breakfast, aperitivo on the terrace or dinner with a live DJ: hundreds of guests have rated Casa Bellucci on the Kudamm.',
+    ratingLabel: 'reviews',
+    showMore: 'show more',
+    ctaAll: 'See all reviews on Google →',
   },
   reservation: {
     eyebrow: 'Reserve',
@@ -91,7 +120,9 @@ export const home = {
       link2: 'Italian cuisine',
       p2: 'and',
       link3: 'aperitivo at the bar',
-      p3: 'in the evening.',
+      p3: 'in the evening. At midday the',
+      link4: 'lunch menu',
+      p4: 'in Charlottenburg is worth a stop.',
     },
     heroAlt: 'Set table at Casa Bellucci, Italian menu in Berlin-Charlottenburg',
     heroCaption: 'Bellucci',

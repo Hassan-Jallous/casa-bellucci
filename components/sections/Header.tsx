@@ -31,7 +31,7 @@ export function Header() {
         </a>
         <nav className="nav-links">
           <a href={localizedHref('/#menu')} onClick={onSmoothScrollClick}>{d.header.nav.karte}</a>
-          <a href={localizedHref('/#terrasse')} onClick={onSmoothScrollClick}>{d.header.nav.terrasse}</a>
+          <a href={localizedHref('/terrasse-restaurant-berlin-charlottenburg/')}>{d.header.nav.terrasse}</a>
           <a href={localizedHref('/#galerie')} onClick={onSmoothScrollClick}>{d.header.nav.galerie}</a>
           <a href={localizedHref('/reservierung/')} onClick={onReserveClick}>{d.header.nav.reservieren}</a>
           <a href={localizedHref('/#kontakt')} onClick={onSmoothScrollClick}>{d.header.nav.kontakt}</a>

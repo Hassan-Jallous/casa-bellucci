@@ -22,6 +22,21 @@ export const meta = {
     description:
       'Bar and wine bar at Kurfürstendamm 63 in Berlin-Charlottenburg. Aperitivo, cocktails and Italian wine, with a summer terrace and a live DJ on weekends.',
   },
+  terrasse: {
+    title: 'Restaurant with Terrace in Berlin | Casa Bellucci',
+    description:
+      'Sunny summer terrace on the Kurfürstendamm: Italian cuisine, aperitivo and wine outdoors in Berlin-Charlottenburg. Reserve your terrace table now.',
+  },
+  lunch: {
+    title: 'Lunch & Business Lunch in Charlottenburg | Casa Bellucci',
+    description:
+      'Italian lunch and business lunch on the Kurfürstendamm: pasta fatta a mano, fresh fish, served fast, with terrace seating at midday.',
+  },
+  events: {
+    title: 'Company Parties, Events & Christmas Party Berlin | Casa Bellucci',
+    description:
+      'Event venue on the Kurfürstendamm for company parties, Christmas parties, birthdays and private dinners. Terrace, bar and Italian cuisine. Enquire now.',
+  },
   reservierung: {
     title: 'Book a table',
     description:

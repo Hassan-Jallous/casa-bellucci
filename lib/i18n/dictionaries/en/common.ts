@@ -10,6 +10,7 @@ export const common = {
   // Repeated CTA button labels
   actions: {
     reserve: 'Reserve',
+    reserveTable: 'Reserve a table',
     call: 'Call',
     bookOnline: 'Book online',
     openMaps: 'Open in maps →',

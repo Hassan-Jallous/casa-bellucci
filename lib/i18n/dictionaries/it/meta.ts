@@ -22,6 +22,21 @@ export const meta = {
     description:
       'Bar ed enoteca al Kurfürstendamm 63 a Berlin-Charlottenburg. Aperitivo, cocktail e vino italiano, terrazza estiva e DJ dal vivo nel weekend.',
   },
+  terrasse: {
+    title: 'Ristorante con terrazza a Berlino | Casa Bellucci',
+    description:
+      'Terrazza estiva soleggiata sul Kurfürstendamm: cucina italiana, aperitivo e vino all’aperto a Berlin-Charlottenburg. Prenota subito un tavolo in terrazza.',
+  },
+  lunch: {
+    title: 'Pranzo & Business Lunch a Charlottenburg | Casa Bellucci',
+    description:
+      'Pranzo italiano e business lunch sul Kurfürstendamm: pasta fatta a mano, pesce fresco, servito in fretta, a mezzogiorno anche in terrazza.',
+  },
+  events: {
+    title: 'Feste aziendali ed eventi a Berlino | Casa Bellucci',
+    description:
+      'Location per eventi sul Kurfürstendamm per feste aziendali, feste di Natale, compleanni e cene private. Terrazza, bar e cucina italiana. Richiedi ora.',
+  },
   reservierung: {
     title: 'Prenota un tavolo',
     description:

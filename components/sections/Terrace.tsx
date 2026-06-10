@@ -2,6 +2,7 @@
 
 import { asset } from '@/lib/assetPath';
 import { SmoothScrollLink } from '@/components/SmoothScrollLink';
+import { routePath } from '@/lib/routes';
 import { useDict } from '@/lib/i18n/LanguageProvider';
 
 export function Terrace() {
@@ -42,6 +43,11 @@ export function Terrace() {
               </div>
             ))}
           </div>
+          <p className="terrace-link">
+            {d.home.terrace.linkPre}
+            <a href={routePath('/terrasse-restaurant-berlin-charlottenburg/')}>{d.home.terrace.link}</a>
+            {d.home.terrace.linkPost}
+          </p>
         </div>
       </div>
     </section>

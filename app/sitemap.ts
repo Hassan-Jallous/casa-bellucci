@@ -26,6 +26,21 @@ const ROUTES = [
     changeFrequency: 'monthly',
   },
   {
+    path: '/terrasse-restaurant-berlin-charlottenburg/',
+    priority: 0.8,
+    changeFrequency: 'monthly',
+  },
+  {
+    path: '/business-lunch-mittagstisch-charlottenburg/',
+    priority: 0.8,
+    changeFrequency: 'monthly',
+  },
+  {
+    path: '/firmenfeier-events-charlottenburg/',
+    priority: 0.8,
+    changeFrequency: 'monthly',
+  },
+  {
     path: '/reservierung/',
     priority: 0.8,
     changeFrequency: 'monthly',

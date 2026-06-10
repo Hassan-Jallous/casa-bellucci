@@ -3,6 +3,7 @@
 // source of truth in ../de/home.ts. Same structure, keys and array lengths.
 export const home = {
   hero: {
+    tagline: 'La Dolce Vita sul Kudamm',
     h1: "Ristorante italiano con un'anima siciliana a Berlino Charlottenburg",
     lede: 'Casa Bellucci al Kurfürstendamm 63 a Berlino Charlottenburg: cucina italiana dalla colazione alla cena, bar con aperitivo sulla terrazza estiva e DJ dal vivo nel weekend.',
     viewMenu: 'Vedi il menu →',
@@ -50,6 +51,24 @@ export const home = {
       { v: 'Pranzo sotto gli alberi di limoni' },
       { v: 'Aperitivo, vino e DJ dal vivo' },
     ],
+    linkPre: 'Più spazio, più sole: ',
+    link: 'tutto sulla terrazza sul Kudamm',
+    linkPost: '.',
+  },
+  weekend: {
+    eyebrow: 'Weekend & aperitivo',
+    headingPre: 'Aperitivo e DJ dal vivo nel ',
+    headingEm: 'weekend',
+    headingPost: '.',
+    p0: 'Venerdì e sabato suona un DJ dal vivo mentre l\'Aperitivo Bellucci di bitter, agrumi e prosecco arriva nel bicchiere. Resta un\'atmosfera da restaurant-bar, non un club: la musica accompagna la serata senza coprire la conversazione.',
+    p1: 'Un bicchiere al bancone, uno spritz sulla terrazza estiva o una lunga serata in gruppo, il weekend sul Kudamm qui ha molti tempi.',
+    ctaLabel: 'Al bar & aperitivo →',
+    mediaLabel: 'Aperitivo e weekend al Casa Bellucci',
+    photos: {
+      morning: { alt: 'Aperitivo Bellucci di bitter, agrumi e prosecco al bar del Casa Bellucci sul Kudamm', caption: 'Aperitivo' },
+      midday: { alt: 'Cocktail miscelato in modo classico al bar del Casa Bellucci a Berlino-Charlottenburg', caption: 'Cocktail' },
+      evening: { alt: 'Aperitivo la sera sulla terrazza estiva del Casa Bellucci sul Kudamm', caption: 'Terrazza' },
+    },
   },
   gallery: {
     eyebrow: 'La nostra galleria',
@@ -58,6 +77,16 @@ export const home = {
     headingPost: '',
     lede: 'Impressioni dal nostro ristorante italiano sul Kurfürstendamm. Clicca un\'immagine per ingrandirla.',
     instagram: '@casabellucci_berlin · Instagram →',
+  },
+  reviews: {
+    eyebrow: 'Voci degli ospiti',
+    headingPre: 'Cosa dicono i ',
+    headingEm: 'nostri ospiti',
+    headingPost: '',
+    lede: 'Colazione, aperitivo in terrazza o cena con DJ dal vivo: centinaia di ospiti hanno recensito Casa Bellucci sul Kudamm.',
+    ratingLabel: 'recensioni',
+    showMore: 'mostra di più',
+    ctaAll: 'Vedi tutte le recensioni su Google →',
   },
   reservation: {
     eyebrow: 'Prenota',
@@ -91,7 +120,9 @@ export const home = {
       link2: 'cucina italiana',
       p2: 'e',
       link3: 'aperitivo al bar',
-      p3: 'la sera.',
+      p3: 'la sera. A mezzogiorno vale il',
+      link4: 'menu di pranzo',
+      p4: 'a Charlottenburg.',
     },
     heroAlt: 'Tavola apparecchiata al Casa Bellucci, menu italiano a Berlino-Charlottenburg',
     heroCaption: 'Bellucci',

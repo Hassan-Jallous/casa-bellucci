@@ -898,6 +898,34 @@ body {
   border-color: rgba(43, 31, 18, 0.14);
 }
 
+/* Tablet-/iPad-Band: Der Kontaktblock stapelt (statt Text neben schmaler, extrem
+   hoher Karte). Gestapelt ist die Karte voll breit, moderate Hoehe statt der
+   560px-Basishoehe x align-items:stretch. Gilt im ganzen Band 601-1200px;
+   unter 880px setzt der bestehende Block die Kartenhoehe ohnehin tiefer. */
+@media (min-width: 601px) and (max-width: 1200px) {
+  .contact .grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    align-items: start;
+  }
+  .contact .map {
+    min-height: 420px;
+  }
+}
+
+/* Footer reflowt, bevor die 5-Spalten-Basis (Marke + 4 Spalten) ueber den Rand
+   laeuft (passt erst ab ca. 1200px sauber nebeneinander). Marke volle Breite oben,
+   darunter die vier Link-Spalten: 4 nebeneinander im oberen Band, 2x2 darunter.
+   Unter 601px greift die bestehende Mobile-Regel (Footer 1-spaltig). */
+@media (min-width: 901px) and (max-width: 1200px) {
+  .footer-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .footer-brand { grid-column: 1 / -1; }
+}
+@media (min-width: 601px) and (max-width: 900px) {
+  .footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .footer-brand { grid-column: 1 / -1; }
+}
+
 @media (max-width: 880px) {
   .all-day,
   .signature-menu,
@@ -1387,11 +1415,15 @@ body {
 }
 
 
-/* MOBILE HERO NAV REFINEMENT — no blur, full viewport */
+/* MOBILE HERO NAV REFINEMENT — no blur, full viewport.
+   WICHTIG: 100svh (small viewport height), NICHT 100dvh. dvh aendert sich beim
+   Scrollen, waehrend die mobile Browser-Leiste ein-/ausfaehrt, wodurch das
+   object-fit:cover-Hero-Bild staendig nachskaliert (wirkt wie ruckartiges
+   Reinzoomen). svh ist stabil und behebt den Zoom-Bug. */
 @media (max-width: 880px) {
   .image-hero {
-    min-height: 100dvh;
-    height: 100dvh;
+    min-height: 100svh;
+    height: 100svh;
   }
 
   .site-header {
@@ -1999,4 +2031,286 @@ body {
   box-shadow: var(--glass-shadow);
   -webkit-backdrop-filter: var(--glass-blur);
   backdrop-filter: var(--glass-blur);
+}
+
+/* ============================================================
+   Konversions-CTAs (Audit Block B)
+   - btn-solid: gefuellter Gold-Button (Hero-Reservieren + Sticky-Bar).
+     Bewusst NEUE Klasse, btn-primary/btn-ghost bleiben unangetastet.
+   - image-hero-tagline: emotionale Script-Zeile ueber der H1 (H1 bleibt
+     SEO-stark, Emotion kommt als Kicker dazu).
+   - reserve-bar: immer sichtbarer Reservierungs-Button auf Mobile.
+   ============================================================ */
+
+/* --- Gefuellter Gold-Button --- */
+.btn.btn-solid {
+  background: var(--accent);
+  color: var(--accent-ink);
+  padding: 15px 30px;
+  border-radius: 999px;
+  box-shadow: 0 14px 30px -16px rgba(120, 84, 12, 0.65);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+.btn.btn-solid::after { display: none; } /* keine Unterstrich-Linie */
+.btn.btn-solid:hover {
+  background: var(--accent-2);
+  transform: translateY(-2px);
+  box-shadow: 0 18px 36px -16px rgba(120, 84, 12, 0.75);
+}
+/* btn-on-dark erzwingt anderswo dunkle Textfarbe via !important; auf dem
+   gefuellten Gold-Button ist dunkle Schrift ohnehin korrekt -> passt. */
+.btn.btn-solid.btn-on-dark { color: var(--accent-ink) !important; }
+
+/* Hinweis: Die emotionale Zeile "Dolce Vita am Kudamm" sitzt jetzt in der
+   Eyebrow neben der Flagge (kein separater Script-Absatz mehr). */
+
+/* --- Sticky Reservierungs-CTA (nur Mobile) --- */
+.reserve-bar { display: none; }
+@media (max-width: 880px) {
+  .reserve-bar {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    left: 0; right: 0;
+    bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+    z-index: 120;
+    padding: 0 20px;
+    pointer-events: none;
+    transition: transform 0.4s cubic-bezier(0.65, 0, 0.35, 1), opacity 0.3s ease;
+  }
+  .reserve-bar .reserve-bar-btn {
+    pointer-events: auto;
+    width: 100%;
+    max-width: 420px;
+    justify-content: center;
+    padding: 17px 28px;
+    font-size: 15px;
+    letter-spacing: 0.14em;
+    box-shadow: 0 16px 34px -12px rgba(60, 40, 12, 0.55);
+  }
+  .reserve-bar.is-hidden {
+    transform: translateY(140%);
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+/* Hero-Gold-Button: Padding gegen die responsive .image-hero-actions .btn-Regel
+   sperren (hoehere Spezifitaet), damit er nicht asymmetrisch wird. */
+.image-hero-actions .btn.btn-solid {
+  padding: 15px 30px;
+  border-radius: 999px;
+}
+
+/* ============================================================
+   Hero-Feinschliff (Audit Block B, Iteration)
+   - "Karte ansehen" (btn-ghost) schwarz (beide Viewports).
+   - Lede-Absatz schwarz NUR auf Mobile.
+   - Mobile: beide CTAs nebeneinander (kein Umbruch), Pfeil ausgeblendet.
+   ============================================================ */
+
+/* "Karte ansehen" schwarz. Hohe Spezifitaet + !important schlaegt die
+   bestehenden btn-on-dark-Farbregeln (auch in den Media-Queries). */
+.image-hero .image-hero-actions .btn-ghost.btn-on-dark {
+  color: #161210 !important;
+}
+
+@media (max-width: 880px) {
+  /* Lede-Absatz schwarz (nur Mobile). Tagline bleibt Gold dank eigener,
+     gleich/hoeher spezifischer Regel weiter oben. */
+  .image-hero .image-hero-lede {
+    color: #161210;
+  }
+
+  /* Hero-Bild rechtsbuendig: rechte Bildkante zeigen. */
+  .image-hero-bg {
+    object-position: right center;
+  }
+
+  /* Beide CTAs in einer Reihe nebeneinander, volle Breite (je 50%). */
+  .image-hero-actions {
+    flex-wrap: nowrap;
+    align-items: stretch;
+    gap: 12px;
+    margin-top: 22px;
+    width: 100%;
+  }
+  .image-hero-actions .btn {
+    flex: 1 1 0;
+    justify-content: center;
+    text-align: center;
+  }
+  .image-hero-actions .btn.btn-solid {
+    padding: 13px 16px;
+  }
+  .image-hero-actions .btn.btn-viewmenu {
+    padding-left: 0;
+    padding-right: 0;
+    white-space: nowrap;
+  }
+  /* Pfeil auf Mobile entfernen (Platz). */
+  .image-hero-actions .hero-arrow {
+    display: none;
+  }
+}
+
+/* ============================================================
+   Gaeste-Stimmen / Reviews (Audit Block C)
+   Echte Google-Gesamtbewertung + kuratierte Zitate.
+   ============================================================ */
+.reviews {
+  padding: clamp(64px, 9vw, 120px) 0;
+  background: var(--surface);
+  text-align: center;
+}
+.reviews .section-eyebrow { justify-content: center; display: flex; }
+.reviews h2 {
+  margin: 14px 0 10px;
+}
+.reviews-lede {
+  max-width: 620px;
+  margin: 0 auto 28px;
+  color: var(--ink-muted);
+}
+
+/* Sternleiste: graue Basis, goldener Vordergrund per Breite geclippt. */
+.rating-stars {
+  position: relative;
+  display: inline-block;
+  white-space: nowrap;
+  font-size: 22px;
+  line-height: 1;
+  letter-spacing: 2px;
+}
+.rating-stars-bg { color: rgba(43, 31, 18, 0.18); }
+.rating-stars-fg {
+  position: absolute;
+  left: 0; top: 0;
+  overflow: hidden;
+  color: var(--accent);
+}
+.rating-stars--sm { font-size: 15px; letter-spacing: 1px; }
+
+/* Gesamtbewertung als ein klickbarer Block. */
+.reviews-rating {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  margin: 0 auto 40px;
+  padding: 12px 22px;
+  border: 1px solid var(--hair);
+  border-radius: 999px;
+  background: var(--bg);
+  text-decoration: none;
+  color: var(--ink);
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.reviews-rating:hover { transform: translateY(-2px); box-shadow: var(--shadow-warm); }
+.reviews-rating-value {
+  font-family: var(--font-display);
+  font-size: 30px;
+  font-weight: 600;
+  /* Playfair hat viel interne Oberlaenge -> mit line-height 1 saesse die Ziffer
+     optisch zu tief. Knappe line-height + leichter Hochzug zentriert sie. */
+  line-height: 0.8;
+  position: relative;
+  top: -0.02em;
+}
+.reviews-rating-count {
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  color: var(--ink-muted);
+  text-align: left;
+}
+
+/* Karten-Grid. */
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin: 0 auto 36px;
+  text-align: left;
+}
+.review-card {
+  margin: 0;
+  padding: 26px 24px;
+  background: var(--bg);
+  border: 1px solid var(--hair);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.review-card blockquote {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--ink-2);
+  font-style: normal;
+}
+/* Zitat auf einheitliche Hoehe klemmen (4 Zeilen) + automatisches "…". */
+.review-card .review-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.review-card .review-more {
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent-ink);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(175, 126, 32, 0.5);
+  align-self: flex-start;
+  padding-bottom: 2px;
+  transition: color 0.25s ease, border-color 0.25s ease;
+}
+.review-card .review-more:hover {
+  color: rgba(175, 126, 32, 0.96);
+  border-color: rgba(175, 126, 32, 0.9);
+}
+.review-card figcaption {
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  margin-top: auto;
+}
+.reviews-cta {
+  display: inline-flex;
+  max-width: 100%;
+  white-space: normal;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  /* Reviews als horizontaler Slider (analog Galerie-Filmstrip): full-bleed,
+     scroll-snap, eine Karte zentriert mit Peek der Nachbarn. */
+  .reviews-grid {
+    display: flex;
+    grid-template-columns: none;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    gap: 16px;
+    max-width: none;
+    /* Exaktes Full-bleed unabhaengig vom Wrap-Padding (das je Breakpoint
+       18-22px variiert). calc(50% - 50vw) spannt genau die Viewport-Breite,
+       kein horizontaler Overflow. */
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    padding: 4px 20px 8px;
+  }
+  .reviews-grid::-webkit-scrollbar { display: none; }
+  .review-card {
+    flex: 0 0 calc(100vw - 72px);
+    scroll-snap-align: center;
+  }
 }

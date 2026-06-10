@@ -1,5 +1,5 @@
 export const mobileNav = {
-  items: ['Karte', 'Terrasse', 'Galerie', 'Reservieren', 'Kontakt'],
+  items: ['Karte', 'Terrasse', 'Lunch', 'Events', 'Galerie', 'Reservieren', 'Kontakt'],
   cta: 'Reservieren',
   aria: 'Mobile Navigation',
   languageAria: 'Sprache wählen',

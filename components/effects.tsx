@@ -38,13 +38,16 @@ export function ImageHero() {
         <div className="image-hero-copy">
           <div className="image-hero-eyebrow">
             <FlagBar orientation="h" size="md" />
-            Casa Bellucci · Berlin-Charlottenburg
+            {d.home.hero.tagline}
           </div>
           <h1>{d.home.hero.h1}</h1>
-          <p>{d.home.hero.lede}</p>
+          <p className="image-hero-lede">{d.home.hero.lede}</p>
           <div className="image-hero-actions">
-            <SmoothScrollButton targetId="reservieren" className="btn btn-primary btn-on-dark">{d.common.actions.reserve}</SmoothScrollButton>
-            <button type="button" className="btn btn-ghost btn-on-dark" onClick={() => openMenu('dinner')}>{d.home.hero.viewMenu}</button>
+            <SmoothScrollButton targetId="reservieren" className="btn btn-solid btn-on-dark">{d.common.actions.reserve}</SmoothScrollButton>
+            <button type="button" className="btn btn-ghost btn-on-dark btn-viewmenu" onClick={() => openMenu('dinner')}>
+              {d.home.hero.viewMenu.replace(/\s*→\s*$/, '')}
+              <span className="hero-arrow" aria-hidden="true"> →</span>
+            </button>
           </div>
         </div>
       </div>

@@ -6,6 +6,9 @@ import { home } from './home';
 import { landingBar } from './landingBar';
 import { landingFruehstueck } from './landingFruehstueck';
 import { landingItalienisch } from './landingItalienisch';
+import { landingTerrasse } from './landingTerrasse';
+import { landingLunch } from './landingLunch';
+import { landingEvents } from './landingEvents';
 import { pages } from './pages';
 import { legal } from './legal';
 import { data } from './data';
@@ -23,6 +26,9 @@ export const en: Dict = {
   landingBar,
   landingFruehstueck,
   landingItalienisch,
+  landingTerrasse,
+  landingLunch,
+  landingEvents,
   pages,
   legal,
   data,

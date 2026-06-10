@@ -25,7 +25,7 @@ export const SEO = {
     'Weinbar Berlin',
     'Aperitivo Berlin',
   ],
-  ogImage: '/images/hero-summer-desktop.jpg',
+  ogImage: '/images/og-image.jpg',
 } as const;
 
 export function canonicalUrl(path = '/'): string {
@@ -86,9 +86,9 @@ export function pageMetadata({
       images: [
         {
           url: imageUrl,
-          width: 1600,
-          height: 1067,
-          alt: 'Casa Bellucci Terrasse am Kudamm in Berlin',
+          width: 1200,
+          height: 630,
+          alt: 'Casa Bellucci, italienisches Restaurant am Kurfürstendamm in Berlin',
         },
       ],
     },
@@ -126,6 +126,13 @@ export function restaurantJsonLd() {
       addressCountry: 'DE',
     },
     servesCuisine: ['Italienisch', 'Mediterran'],
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: SITE.rating.value,
+      reviewCount: SITE.rating.count,
+      bestRating: 5,
+      worstRating: 1,
+    },
     priceRange: '€€€',
     geo: {
       '@type': 'GeoCoordinates',

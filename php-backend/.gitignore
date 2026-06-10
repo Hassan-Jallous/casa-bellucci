@@ -4,3 +4,7 @@ config.php
 
 # Beim Upload automatisch erzeugte Metadaten
 pdf/*.json
+
+# Event-Anfrage-Logs (enthalten personenbezogene Daten, gehoeren NICHT ins Repo)
+logs/
+

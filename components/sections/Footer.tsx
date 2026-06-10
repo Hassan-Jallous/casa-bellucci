@@ -42,6 +42,9 @@ export function Footer() {
             <a href={routePath('/italienisches-restaurant-berlin-charlottenburg/')}>{d.footer.discover.italienisch}</a>
             <a href={routePath('/bar-aperitivo-kurfuerstendamm/')}>{d.footer.discover.bar}</a>
             <a href={routePath('/fruehstueck-brunch-kurfuerstendamm/')}>{d.footer.discover.fruehstueck}</a>
+            <a href={routePath('/terrasse-restaurant-berlin-charlottenburg/')}>{d.footer.discover.terrasse}</a>
+            <a href={routePath('/business-lunch-mittagstisch-charlottenburg/')}>{d.footer.discover.lunch}</a>
+            <a href={routePath('/firmenfeier-events-charlottenburg/')}>{d.footer.discover.events}</a>
           </div>
           <div className="footer-col footer-socials">
             <h5>{d.footer.cols.follow}</h5>

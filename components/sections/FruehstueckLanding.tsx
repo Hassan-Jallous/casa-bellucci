@@ -269,6 +269,10 @@ export function FruehstueckLanding() {
               {d.landingFruehstueck.related.italienischLink}
             </a>
             {d.landingFruehstueck.related.afterItalienisch}
+            <a href={routePath('/business-lunch-mittagstisch-charlottenburg/')}>{d.landingFruehstueck.related.lunchLink}</a>
+            {d.landingFruehstueck.related.afterLunch}
+            <a href={routePath('/terrasse-restaurant-berlin-charlottenburg/')}>{d.landingFruehstueck.related.terrasseLink}</a>
+            {d.landingFruehstueck.related.afterTerrasse}
             <a href={routePath('/bar-aperitivo-kurfuerstendamm/')}>{d.landingFruehstueck.related.barLink}</a>{d.landingFruehstueck.related.afterBar}
           </p>
         </div>
