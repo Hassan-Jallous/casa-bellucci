@@ -1,0 +1,51 @@
+# Preserve Authorization header for PHP on shared Apache/LiteSpeed hosts.
+SetEnvIf Authorization "(.+)" HTTP_AUTHORIZATION=$1
+
+# Legacy relaunch redirects. Keep these before static file handling on Hostinger.
+RedirectMatch 301 ^/presse/?$ /
+RedirectMatch 301 ^/it-restaurant/?$ /italienisches-restaurant-berlin-charlottenburg/
+RedirectMatch 301 ^/fruehstueck/?$ /fruehstueck-brunch-kurfuerstendamm/
+RedirectMatch 301 ^/fruehstueck-charlottenburg-kurfuerstendamm/?$ /fruehstueck-brunch-kurfuerstendamm/
+RedirectMatch 301 ^/bar/?$ /bar-aperitivo-kurfuerstendamm/
+RedirectMatch 301 ^/bar-charlottenburg-kurfuerstendamm/?$ /bar-aperitivo-kurfuerstendamm/
+RedirectMatch 301 ^/sommerterrasse-kurfuerstendamm/?$ /#terrasse
+RedirectMatch 301 ^/speisekarte/?$ /#menu
+RedirectMatch 301 ^/lunch/?$ /#menu
+RedirectMatch 301 ^/dinner/?$ /#menu
+RedirectMatch 301 ^/drinks-wein/?$ /#wein
+
+# Protect config file.
+<Files "config.php">
+    Require all denied
+</Files>
+
+# Ensure ES module workers (pdf.js) are served as JavaScript.
+<IfModule mod_mime.c>
+    AddType application/javascript .mjs
+</IfModule>
+
+# Serve WebP to supporting browsers when a .webp twin exists (no markup changes).
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{HTTP_ACCEPT} image/webp
+    RewriteCond %{REQUEST_FILENAME} ^(.+)\.(jpe?g|png)$
+    RewriteCond %1.webp -f
+    RewriteRule ^(.+)\.(jpe?g|png)$ $1.webp [T=image/webp,E=webp:1,L]
+</IfModule>
+<IfModule mod_headers.c>
+    Header append Vary Accept env=webp
+</IfModule>
+
+# Cache lifetimes: images/fonts immutable, CSS/JS moderate (not fingerprinted).
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    ExpiresByType font/woff2 "access plus 1 year"
+    ExpiresByType font/woff "access plus 1 year"
+    ExpiresByType text/css "access plus 7 days"
+    ExpiresByType application/javascript "access plus 30 days"
+</IfModule>

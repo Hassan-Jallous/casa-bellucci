@@ -1,10 +1,16 @@
-import type { CSSProperties } from 'react';
+'use client';
+
+import { useState, type CSSProperties } from 'react';
 import { asset } from '@/lib/assetPath';
+import { useMenuUrls } from '@/lib/menuUrls';
 import { routePath } from '@/lib/routes';
 import { SITE } from '@/lib/site';
+import { useDict, usePageTitle } from '@/lib/i18n/LanguageProvider';
 import { FlagBar } from './Brand';
+import { FaqAccordion } from './FaqAccordion';
 import { GalleryFilmstrip } from './GalleryFilmstrip';
 import { Lightbox } from './Lightbox';
+import { MenuViewer, useMenuViewer } from './MenuViewer';
 
 const eyebrowStyle: CSSProperties = {
   display: 'inline-flex',
@@ -12,37 +18,24 @@ const eyebrowStyle: CSSProperties = {
   gap: 10,
 };
 
-// Sichtbarer FAQ-Inhalt und faqJsonLd teilen sich diese Quelle, damit das
-// FAQPage-Schema exakt dem dargestellten Text entspricht (Google-Richtlinie).
-export const ITALIENISCH_FAQ = [
-  {
-    question: 'Wo ist Casa Bellucci in Charlottenburg?',
-    answer:
-      'Casa Bellucci liegt am Kurfürstendamm 63, 10707 Berlin-Charlottenburg, mitten in der City West direkt am Kudamm. Das italienische Restaurant ist gut zu Fuß, mit Bus und U-Bahn erreichbar und rollstuhlgerecht.',
-  },
-  {
-    question: 'Hat das italienische Restaurant am Kudamm eine Terrasse?',
-    answer:
-      'Ja. Casa Bellucci hat eine Sommerterrasse direkt am Kudamm, die bei gutem Wetter geöffnet ist. Dort gibt es Frühstück, Lunch und am Abend Aperitivo. Im Haus erwartet Sie zusätzlich eine eigene Bar.',
-  },
-  {
-    question: 'Gibt es Frühstück bei Casa Bellucci?',
-    answer:
-      'Ja. Als All-Day-Restaurant servieren wir Frühstück ab 09:00 Uhr, dazu Lunch, Dinner und Aperitivo. Espresso, Croissants und leichte Teller am Morgen, Pasta und Fisch über den Tag.',
-  },
-  {
-    question: 'Kann man bei Casa Bellucci online reservieren?',
-    answer:
-      'Ja. Sie können bequem online über unser Reservierungsmodul einen Tisch buchen oder uns telefonisch unter +49 162 3009925 erreichen, etwa für größere Gruppen oder kurzfristige Wünsche.',
-  },
-  {
-    question: 'Wann hat Casa Bellucci geöffnet?',
-    answer:
-      'Casa Bellucci ist Montag bis Samstag von 09:00 bis 00:00 Uhr geöffnet und Sonntag von 09:00 bis 18:00 Uhr.',
-  },
-];
-
 export function ItalienischLanding() {
+  usePageTitle('italienisch');
+  const d = useDict();
+  const menuLabels = d.home.menu;
+  const { activeMenu, isOpen, openMenu, closeMenu } = useMenuViewer();
+  const menuUrls = useMenuUrls();
+  const [allTabs, setAllTabs] = useState(false);
+  // Volles Karten-Popup wie auf der Startseite (alle Karten, mit Tab-Wechsler).
+  const allMenus = [
+    { key: 'fruehstueck', label: menuLabels.tabs[0].label, pdf: menuUrls.fruehstueck },
+    { key: 'lunch', label: menuLabels.tabs[1].label, pdf: menuUrls.lunch },
+    { key: 'dinner', label: menuLabels.tabs[2].label, pdf: menuUrls.dinner },
+    { key: 'weine', label: menuLabels.tabs[3].label, pdf: menuUrls.weine },
+  ];
+  // Nur die Weinkarte (kein Tab-Wechsler).
+  const wineMenu = [{ key: 'weine', label: menuLabels.tabs[3].label, pdf: menuUrls.weine }];
+  const openWine = () => { setAllTabs(false); openMenu('weine'); };
+  const openAll = () => { setAllTabs(true); openMenu('dinner'); };
   return (
     <main className="subpage subpage-italienisch">
       {/* 1. Hero / Intro */}
@@ -52,47 +45,45 @@ export function ItalienischLanding() {
             <div className="all-day-copy">
               <div className="section-eyebrow">
                 <span className="eyebrow" style={eyebrowStyle}>
-                  <FlagBar orientation="h" /> Italienisch am Kudamm
+                  <FlagBar orientation="h" /> {d.landingItalienisch.hero.eyebrow}
                 </span>
               </div>
               <h1 id="ital-h1">
-                Italienisches Restaurant in <span className="it">Berlin-Charlottenburg</span>
+                {d.landingItalienisch.hero.h1Pre}<span className="it">{d.landingItalienisch.hero.h1Em}</span>
               </h1>
               <p className="lede">
-                Casa Bellucci am Kurfürstendamm 63 ist ein italienisches Restaurant für den ganzen Tag.
-                Frühstück, Lunch auf der Terrasse, Dinner und Bar, mitten in der City West. Vom ersten
-                Espresso bis zum späten Aperitivo, an einem Ort.
+                {d.landingItalienisch.hero.lede}
               </p>
               <div className="contact-actions">
                 <a className="btn btn-primary" href={routePath('/reservierung/')}>
-                  Reservieren
+                  {d.common.actions.reserve}
                 </a>
-                <a className="btn btn-ghost" href={routePath('/#menu')}>
-                  Karte ansehen →
-                </a>
+                <button type="button" className="btn btn-ghost" onClick={openAll}>
+                  {d.landingItalienisch.hero.viewMenu}
+                </button>
               </div>
             </div>
-            <div className="all-day-media" aria-label="Frühstück, Lunch und Abend bei Casa Bellucci am Kudamm">
+            <div className="all-day-media" aria-label={d.landingItalienisch.hero.mediaLabel}>
               <figure className="all-day-photo morning">
                 <img
                   src={asset('images/menu-breakfast.jpg')}
-                  alt="Italienisches Frühstück bei Casa Bellucci am Kudamm in Berlin-Charlottenburg"
+                  alt={d.landingItalienisch.hero.morningAlt}
                 />
-                <figcaption>Colazione</figcaption>
+                <figcaption>{d.landingItalienisch.hero.morningCaption}</figcaption>
               </figure>
               <figure className="all-day-photo midday">
                 <img
                   src={asset('images/gallery/2.jpg')}
-                  alt="Hausgemachte Pasta zum Lunch im italienischen Restaurant Casa Bellucci"
+                  alt={d.landingItalienisch.hero.middayAlt}
                 />
-                <figcaption>Pranzo</figcaption>
+                <figcaption>{d.landingItalienisch.hero.middayCaption}</figcaption>
               </figure>
               <figure className="all-day-photo evening">
                 <img
-                  src={asset('images/gallery/4.jpg')}
-                  alt="Abend auf der Sommerterrasse des italienischen Restaurants Casa Bellucci am Kudamm"
+                  src={asset('images/lp-terr-abend-1.jpg')}
+                  alt={d.landingItalienisch.hero.eveningAlt}
                 />
-                <figcaption>Sera</figcaption>
+                <figcaption>{d.landingItalienisch.hero.eveningCaption}</figcaption>
               </figure>
             </div>
           </div>
@@ -106,39 +97,26 @@ export function ItalienischLanding() {
             <div>
               <div className="section-eyebrow">
                 <span className="eyebrow" style={eyebrowStyle}>
-                  <FlagBar orientation="h" /> Lage und Konzept
+                  <FlagBar orientation="h" /> {d.landingItalienisch.location.eyebrow}
                 </span>
               </div>
               <h2>
-                Mitten am <span className="it">Kudamm</span>, in Charlottenburg
+                {d.landingItalienisch.location.h2Pre}<span className="it">{d.landingItalienisch.location.h2Em}</span>{d.landingItalienisch.location.h2Post}
               </h2>
               <p>
-                Unser italienisches Restaurant in Berlin-Charlottenburg liegt am Kurfürstendamm 63,
-                10707 Berlin, im Herzen der City West. Zwischen Shopping am Kudamm und einem
-                ruhigen Platz auf der Terrasse ist Casa Bellucci eine Adresse für den ganzen Tag, vom
-                Frühstück bis zum späten Abend.
+                {d.landingItalienisch.location.p1}
               </p>
               <p>
-                Das All-Day-Konzept verbindet vier Momente unter einem Dach. Frühstück und Brunch am
-                Morgen, Lunch auf der Sommerterrasse, Dinner am Abend und dazu eine eigene Bar für
-                Aperitivo und einen Drink danach. Ob Geschäftsessen am Mittag, ein gemütliches Essen
-                mit Familie oder ein Glas Wein solo an der Bar, hier passt jeder Anlass am
-                Kudamm.
-              </p>
-              <p>
-                Am Abend rückt die sizilianische Küche in den Vordergrund. Mehr dazu auf unserer Seite
-                zum{' '}
-                <a href={routePath('/sizilianisches-restaurant-berlin/')}>sizilianischen Restaurant in Berlin</a>.
+                {d.landingItalienisch.location.p2}
               </p>
             </div>
             <figure className="about img-col ital-photo-card">
               <img
-                src={asset('images/about.jpg')}
-                alt="Innenraum von Casa Bellucci, einem Italiener in der City West am Kudamm in Charlottenburg"
+                src={asset('images/lp-int-1.jpg')}
+                alt={d.landingItalienisch.location.photoAlt}
               />
               <figcaption>
-                <span>Charlottenburg</span>
-                <strong>Sala</strong>
+                <strong>{d.landingItalienisch.location.captionStrong}</strong>
               </figcaption>
             </figure>
           </div>
@@ -152,71 +130,89 @@ export function ItalienischLanding() {
             <div>
               <div className="section-eyebrow">
                 <span className="eyebrow" style={eyebrowStyle}>
-                  <FlagBar orientation="h" /> Aus der Küche
+                  <FlagBar orientation="h" /> {d.landingItalienisch.kitchen.eyebrow}
                 </span>
               </div>
               <h2>
-                Italienische Küche, <span className="it">sizilianisch geprägt</span>
+                {d.landingItalienisch.kitchen.h2Pre}<span className="it">{d.landingItalienisch.kitchen.h2Em}</span>
               </h2>
               <div className="dishes">
-                <div className="dish">
-                  <div className="name">
-                    Pasta fatta a <span className="it">mano</span>
+                {d.landingItalienisch.kitchen.dishes.map((dish, i) => (
+                  <div className="dish" key={i}>
+                    <div className="name">
+                      {dish.namePre}<span className="it">{dish.nameEm}</span>{dish.namePost}
+                    </div>
+                    <div className="desc">
+                      {dish.desc}
+                    </div>
                   </div>
-                  <div className="desc">
-                    Frische Pasta machen wir täglich von Hand. Dazu fangfrischen Fisch vom Großmarkt,
-                    italienisch und mediterran interpretiert.
-                  </div>
-                </div>
-                <div className="dish">
-                  <div className="name">
-                    Tagliatelle al <span className="it">Tartufo</span>
-                  </div>
-                  <div className="desc">Frische Bandnudeln mit Trüffel, ein Klassiker der Karte.</div>
-                </div>
-                <div className="dish">
-                  <div className="name">
-                    Spaghetti alle <span className="it">Vongole</span>
-                  </div>
-                  <div className="desc">Venusmuscheln, Knoblauch, Petersilie und ein Spritzer Weißwein.</div>
-                </div>
-                <div className="dish">
-                  <div className="name">
-                    Branzino alla <span className="it">Griglia</span>
-                  </div>
-                  <div className="desc">Gegrillter Wolfsbarsch, schlicht und auf den Punkt zubereitet.</div>
-                </div>
-                <div className="dish">
-                  <div className="name">
-                    Burrata di <span className="it">Andria</span>
-                  </div>
-                  <div className="desc">Cremige Burrata als leichter Start in das italienische Essen.</div>
-                </div>
-                <div className="dish">
-                  <div className="name">
-                    Vitello <span className="it">Tonnato</span> und Tiramisù della Casa
-                  </div>
-                  <div className="desc">
-                    Vitello Tonnato als Vorspeise und zum Abschluss unser hausgemachtes Tiramisù.
-                  </div>
-                </div>
+                ))}
               </div>
               <div className="contact-actions">
-                <a className="btn btn-primary" href={routePath('/#menu')}>
-                  Zur Karte
-                </a>
+                <button type="button" className="btn btn-primary" onClick={openAll}>
+                  {d.landingItalienisch.kitchen.toMenu}
+                </button>
               </div>
             </div>
             <figure className="about img-col ital-photo-card">
               <img
                 src={asset('images/menu-dinner.jpg')}
-                alt="Italienisches Gericht der sizilianisch geprägten Küche bei Casa Bellucci am Kudamm"
+                alt={d.landingItalienisch.kitchen.photoAlt}
               />
               <figcaption>
-                <span>Fatto a mano</span>
-                <strong>Cucina</strong>
+                <strong>{d.landingItalienisch.kitchen.captionStrong}</strong>
               </figcaption>
             </figure>
+          </div>
+        </div>
+      </section>
+
+      {/* 3b. Wein und Italien */}
+      <section className="wine" aria-labelledby="ital-wein-h2">
+        <div className="wrap">
+          <div className="top">
+            <div>
+              <div className="section-eyebrow">
+                <span className="eyebrow" style={eyebrowStyle}>
+                  <FlagBar orientation="h" /> {d.landingItalienisch.wine.eyebrow}
+                </span>
+              </div>
+              <h2 id="ital-wein-h2">
+                {d.landingItalienisch.wine.headingPre}<span className="it">{d.landingItalienisch.wine.headingEm}</span>{d.landingItalienisch.wine.headingPost}
+              </h2>
+              <p className="lede" style={{ marginTop: 14 }}>
+                {d.landingItalienisch.wine.lede}
+              </p>
+            </div>
+            <button
+              type="button"
+              className="btn btn-primary"
+              onClick={openWine}
+            >
+              {d.landingItalienisch.wine.pdfLink}
+              <span className="wine-cta-arrow" aria-hidden="true">→</span>
+            </button>
+          </div>
+          <div className="regions">
+            {d.landingItalienisch.wine.regions.map((region) => (
+              <article className="region" key={region.label}>
+                <div className="label">{region.label}</div>
+                <h3>{region.name}</h3>
+                <p>{region.copy}</p>
+                <div className="list">
+                  {region.list.map((row) => (
+                    <div className="row" key={row.name}>
+                      <div>
+                        <div>{row.name}</div>
+                        <div className="v" style={{ fontSize: 14, color: 'var(--ink-muted)' }}>
+                          {row.v}
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </article>
+            ))}
           </div>
         </div>
       </section>
@@ -227,41 +223,37 @@ export function ItalienischLanding() {
           <div className="grid">
             <figure className="about img-col ital-photo-card">
               <img
-                src={asset('images/gallery/3.jpg')}
-                alt="Gemütliche und gehobene Atmosphäre im italienischen Restaurant Casa Bellucci in Berlin-Charlottenburg"
+                src={asset('images/lp-terr-it.jpg')}
+                alt={d.landingItalienisch.atmosphere.photoAlt}
               />
               <figcaption>
-                <span>Am Kudamm</span>
-                <strong>Terrazza</strong>
+                <strong>{d.landingItalienisch.atmosphere.captionStrong}</strong>
               </figcaption>
             </figure>
             <div>
               <div className="section-eyebrow">
                 <span className="eyebrow" style={eyebrowStyle}>
-                  <FlagBar orientation="h" /> Atmosphäre und Angebot
+                  <FlagBar orientation="h" /> {d.landingItalienisch.atmosphere.eyebrow}
                 </span>
               </div>
               <h2>
-                Gehoben und <span className="it">gemütlich</span> zugleich
+                {d.landingItalienisch.atmosphere.h2Pre}<span className="it">{d.landingItalienisch.atmosphere.h2Em}</span>{d.landingItalienisch.atmosphere.h2Post}
               </h2>
               <p>
-                Casa Bellucci ist gehoben und gemütlich zugleich, casual genug für den Alltag und
-                schön genug für den besonderen Abend. Drinnen wie auf der Sommerterrasse am
-                Kudamm sitzen Gruppen, Familien und Gäste, die solo auf einen Aperitivo
-                vorbeikommen.
+                {d.landingItalienisch.atmosphere.p1}
               </p>
               <p>
-                Die eigene Bar ist der Treffpunkt für Aperitivo und Drinks, von früh bis spät. Auf der
-                Speisekarte stehen vegetarische und vegane Optionen. Das italienische Restaurant ist
-                rollstuhlgerecht und hundefreundlich, gut geeignet für Gruppen und ein entspanntes
-                Essen in Charlottenburg.
+                {d.landingItalienisch.atmosphere.p2}
+              </p>
+              <p>
+                {d.landingItalienisch.atmosphere.p3}
               </p>
               <div className="contact-actions">
                 <a className="btn btn-primary" href={routePath('/reservierung/')}>
-                  Tisch reservieren
+                  {d.common.actions.reserve}
                 </a>
                 <a className="btn btn-ghost" href={routePath('/#terrasse')}>
-                  Terrasse ansehen →
+                  {d.landingItalienisch.atmosphere.viewTerrace}
                 </a>
               </div>
             </div>
@@ -276,19 +268,18 @@ export function ItalienischLanding() {
             <div>
               <div className="section-eyebrow">
                 <span className="eyebrow" style={eyebrowStyle}>
-                  <FlagBar orientation="h" /> Galerie am Kudamm
+                  <FlagBar orientation="h" /> {d.landingItalienisch.gallery.eyebrow}
                 </span>
               </div>
               <h2 id="ital-gallery-h2">
-                Einblicke ins <span className="it">italienische Restaurant</span>
+                {d.landingItalienisch.gallery.h2Pre}<span className="it">{d.landingItalienisch.gallery.h2Em}</span>
               </h2>
               <p className="lede" style={{ marginTop: 14 }}>
-                Eindrücke aus unserem italienischen Restaurant am Kurfürstendamm in Berlin-Charlottenburg,
-                von der Sala über die Terrasse bis zur Bar.
+                {d.landingItalienisch.gallery.lede}
               </p>
             </div>
             <a className="btn btn-ghost" href={routePath('/#galerie')}>
-              Zur ganzen Galerie →
+              {d.landingItalienisch.gallery.toGallery}
             </a>
           </div>
           <GalleryFilmstrip />
@@ -302,27 +293,26 @@ export function ItalienischLanding() {
             <div>
               <div className="section-eyebrow">
                 <span className="eyebrow" style={eyebrowStyle}>
-                  <FlagBar orientation="h" /> Öffnungszeiten und Anfahrt
+                  <FlagBar orientation="h" /> {d.landingItalienisch.directions.eyebrow}
                 </span>
               </div>
               <h2>
-                Besuch am <span className="it">Kudamm</span>
+                {d.landingItalienisch.directions.h2Pre}<span className="it">{d.landingItalienisch.directions.h2Em}</span>
               </h2>
               <p className="lede">
-                Der Italiener mitten in der City West. Reservieren Sie online oder telefonisch,
-                Walk-ins sind besonders an der Bar willkommen.
+                {d.landingItalienisch.directions.lede}
               </p>
               <div className="info">
                 <div className="block">
-                  <div className="k">Adresse</div>
+                  <div className="k">{d.common.info.address}</div>
                   <div className="v">
-                    Kurfürstendamm 63
+                    {d.landingItalienisch.directions.addressLine1}
                     <br />
-                    10707 Berlin · Charlottenburg
+                    {d.landingItalienisch.directions.addressLine2}
                   </div>
                 </div>
                 <div className="block">
-                  <div className="k">Reservierung</div>
+                  <div className="k">{d.common.info.reservation}</div>
                   <div className="v">
                     {SITE.phone}
                     <br />
@@ -330,7 +320,7 @@ export function ItalienischLanding() {
                   </div>
                 </div>
                 <div className="block">
-                  <div className="k">Öffnungszeiten</div>
+                  <div className="k">{d.common.info.hours}</div>
                   <div className="v">
                     {SITE.openingHours.weekdays}
                     <br />
@@ -339,20 +329,20 @@ export function ItalienischLanding() {
                 </div>
                 <div className="contact-actions">
                   <a className="btn btn-primary" href={routePath('/reservierung/')}>
-                    Tisch reservieren
+                    {d.common.actions.reserve}
                   </a>
                   <a className="btn btn-ghost" href={SITE.mapsUrl} target="_blank" rel="noreferrer">
-                    Auf Karte öffnen →
+                    {d.common.actions.openMaps}
                   </a>
                 </div>
               </div>
             </div>
-            <div className="map" aria-label="Lage auf Karte">
-              <div className="corner">Kudamm · Charlottenburg</div>
+            <div className="map" aria-label={d.landingItalienisch.directions.mapLabel}>
+              <div className="corner">{d.common.mapCorner.area}</div>
               <div className="pin">
                 <div className="dot"></div>
                 <div className="pulse"></div>
-                <div className="label">Casa Bellucci</div>
+                <div className="label">{d.common.mapCorner.name}</div>
               </div>
             </div>
           </div>
@@ -364,29 +354,37 @@ export function ItalienischLanding() {
         <div className="wrap">
           <div className="section-eyebrow">
             <span className="eyebrow" style={eyebrowStyle}>
-              <FlagBar orientation="h" /> Häufige Fragen
+              <FlagBar orientation="h" /> {d.landingItalienisch.faqHeadingEyebrow}
             </span>
           </div>
           <h2 id="ital-faq-h2">
-            Häufige <span className="it">Fragen</span>
+            {d.landingItalienisch.faqHeadingPre}<span className="it">{d.landingItalienisch.faqHeadingEm}</span>
           </h2>
-          <div className="subpage-info-grid" style={{ marginTop: 24 }}>
-            {ITALIENISCH_FAQ.map((faq) => (
-              <div key={faq.question}>
-                <h3>{faq.question}</h3>
-                <p>{faq.answer}</p>
-              </div>
-            ))}
-          </div>
-          <p style={{ marginTop: 28 }}>
-            Mehr zum Haus auf der Startseite,{' '}
-            <a href={routePath('/')}>Casa Bellucci</a>. Am Abend das{' '}
-            <a href={routePath('/sizilianisches-restaurant-berlin/')}>sizilianische Restaurant in Berlin</a>, am Morgen{' '}
-            <a href={routePath('/fruehstueck-brunch-kurfuerstendamm/')}>Frühstück und Brunch am Kudamm</a> und für den
-            Aperitivo unsere <a href={routePath('/bar-aperitivo-kurfuerstendamm/')}>Bar am Kudamm</a>.
+          <FaqAccordion items={[...d.landingItalienisch.faqs]} idBase="ital-faq" />
+          <p className="subpage-related">
+            {d.landingItalienisch.related.pre}{' '}
+            <a href={routePath('/')}>{d.landingItalienisch.related.homeLink}</a>{d.landingItalienisch.related.mid2}{' '}
+            <a href={routePath('/fruehstueck-brunch-kurfuerstendamm/')}>{d.landingItalienisch.related.fruehstueckLink}</a> {d.landingItalienisch.related.mid3}{' '}
+            <a href={routePath('/bar-aperitivo-kurfuerstendamm/')}>{d.landingItalienisch.related.barLink}</a>{d.landingItalienisch.related.post}
           </p>
         </div>
       </section>
+
+      <MenuViewer
+        menus={allTabs ? allMenus : wineMenu}
+        activeMenu={activeMenu}
+        isOpen={isOpen}
+        onSelect={openMenu}
+        onClose={closeMenu}
+        showTabs={allTabs}
+        labels={{
+          laCarta: menuLabels.laCarta,
+          close: menuLabels.close,
+          openNewTab: menuLabels.openNewTab,
+          resetZoom: menuLabels.resetZoom,
+          iframeTitlePrefix: menuLabels.iframeTitlePrefix,
+        }}
+      />
 
       <Lightbox />
     </main>

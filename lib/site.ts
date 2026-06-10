@@ -10,7 +10,7 @@ export const SITE = {
   phoneHref: 'tel:+491623009925',
   email: 'info@casabellucci.de',
   emailHref: 'mailto:info@casabellucci.de',
-  instagram: 'https://www.instagram.com/bellucci_barberlin/',
+  instagram: 'https://www.instagram.com/casabellucci_berlin/',
   mapsUrl:
     'https://maps.google.com/maps?hl=de&gl=de&um=1&ie=UTF-8&fb=1&sa=X&ftid=0x47a8516867022225:0xad472da6e7276267',
   openingHours: {

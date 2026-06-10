@@ -1,0 +1,388 @@
+{
+  "version": "0.1.20260525",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "0.1227 sec.",
+  "cost": 0.0157,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "06022130-1781-0392-0000-cbba0e0c0f2c",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "0.1121 sec.",
+      "cost": 0.0157,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "dataforseo_labs",
+        "google",
+        "bulk_keyword_difficulty",
+        "live"
+      ],
+      "data": {
+        "api": "dataforseo_labs",
+        "function": "bulk_keyword_difficulty",
+        "se_type": "google",
+        "keywords": [
+          "casa bellucci",
+          "casa bellucci berlin",
+          "bellucci berlin",
+          "casa bellucci kurfürstendamm",
+          "italienisches restaurant berlin",
+          "italienisches restaurant charlottenburg",
+          "italienisches restaurant kurfürstendamm",
+          "italienisches restaurant berlin charlottenburg",
+          "restaurant kurfürstendamm",
+          "restaurant charlottenburg",
+          "restaurant berlin kudamm",
+          "restaurant berlin charlottenburg",
+          "italiener charlottenburg",
+          "italiener kurfürstendamm",
+          "gemütliche restaurants berlin charlottenburg",
+          "restaurant charlottenburg italiener",
+          "frühstück charlottenburg",
+          "frühstück kurfürstendamm",
+          "bestes frühstück charlottenburg",
+          "frühstück charlottenburg-wilmersdorf",
+          "brunch charlottenburg",
+          "brunch kurfürstendamm",
+          "frühstück berlin charlottenburg",
+          "italienisches frühstück berlin",
+          "frühstück savignyplatz",
+          "lunch charlottenburg",
+          "lunch kurfürstendamm",
+          "business lunch berlin",
+          "mittagessen charlottenburg",
+          "mittagstisch charlottenburg",
+          "business lunch charlottenburg",
+          "abendessen kurfürstendamm",
+          "dinner charlottenburg",
+          "abendessen charlottenburg",
+          "gehobenes restaurant berlin",
+          "fine dining berlin",
+          "italienisch essen berlin",
+          "bar charlottenburg",
+          "bar kurfürstendamm",
+          "cocktailbar kudamm",
+          "cocktailbar charlottenburg",
+          "aperitivo berlin",
+          "aperitivo charlottenburg",
+          "weinbar charlottenburg",
+          "weinbar berlin",
+          "restaurant terrasse berlin",
+          "restaurant mit terrasse charlottenburg",
+          "sommerterrasse berlin",
+          "restaurant terrasse kurfürstendamm",
+          "romantisches restaurant berlin",
+          "restaurant für geschäftsessen berlin",
+          "date restaurant berlin",
+          "pasta restaurant berlin",
+          "frischer fisch restaurant berlin",
+          "sizilianisches restaurant berlin",
+          "restaurant reservieren berlin",
+          "tisch reservieren charlottenburg"
+        ],
+        "location_name": "Germany",
+        "language_name": "German"
+      },
+      "result": [
+        {
+          "se_type": "google",
+          "location_code": 2276,
+          "language_code": "de",
+          "total_count": 57,
+          "items_count": 57,
+          "items": [
+            {
+              "se_type": "google",
+              "keyword": "aperitivo berlin",
+              "keyword_difficulty": 0
+            },
+            {
+              "se_type": "google",
+              "keyword": "bar charlottenburg",
+              "keyword_difficulty": 0
+            },
+            {
+              "se_type": "google",
+              "keyword": "bar kurfürstendamm",
+              "keyword_difficulty": 7
+            },
+            {
+              "se_type": "google",
+              "keyword": "bellucci berlin",
+              "keyword_difficulty": 0
+            },
+            {
+              "se_type": "google",
+              "keyword": "bestes frühstück charlottenburg",
+              "keyword_difficulty": 0
+            },
+            {
+              "se_type": "google",
+              "keyword": "brunch charlottenburg",
+              "keyword_difficulty": 0
+            },
+            {
+              "se_type": "google",
+              "keyword": "brunch kurfürstendamm",
+              "keyword_difficulty": null
+            },
+            {
+              "se_type": "google",
+              "keyword": "business lunch berlin",
+              "keyword_difficulty": 0
+            },
+            {
+              "se_type": "google",
+              "keyword": "business lunch charlottenburg",
+              "keyword_difficulty": 0
+            },
+            {
+              "se_type": "google",
+              "keyword": "casa bellucci",
+              "keyword_difficulty": 0
+            },
+            {
+              "se_type": "google",
+              "keyword": "casa bellucci berlin",
+              "keyword_difficulty": 0
+            },
+            {
+              "se_type": "google",
+              "keyword": "cocktailbar charlottenburg",
+              "keyword_difficulty": 2
+            },
+            {
+              "se_type": "google",
+              "keyword": "cocktailbar kudamm",
+              "keyword_difficulty": 8
+            },
+            {
+              "se_type": "google",
+              "keyword": "date restaurant berlin",
+              "keyword_difficulty": 0
+            },
+            {
+              "se_type": "google",
+              "keyword": "fine dining berlin",
+              "keyword_difficulty": 0
+            },
+            {
+              "se_type": "google",
+              "keyword": "frühstück berlin charlottenburg",
+              "keyword_difficulty": 0
+            },
+            {
+              "se_type": "google",
+              "keyword": "frühstück charlottenburg",
+              "keyword_difficulty": 0
+            },
+            {
+              "se_type": "google",
+              "keyword": "frühstück charlottenburg-wilmersdorf",
+              "keyword_difficulty": 0
+            },
+            {
+              "se_type": "google",
+              "keyword": "frühstück kurfürstendamm",
+              "keyword_difficulty": 0
+            },
+            {
+              "se_type": "google",
+              "keyword": "frühstück savignyplatz",
+              "keyword_difficulty": 0
+            },
+            {
+              "se_type": "google",
+              "keyword": "gehobenes restaurant berlin",
+              "keyword_difficulty": 17
+            },
+            {
+              "se_type": "google",
+              "keyword": "gemütliche restaurants berlin charlottenburg",
+              "keyword_difficulty": 0
+            },
+            {
+              "se_type": "google",
+              "keyword": "italiener charlottenburg",
+              "keyword_difficulty": 0
+            },
+            {
+              "se_type": "google",
+              "keyword": "italiener kurfürstendamm",
+              "keyword_difficulty": 0
+            },
+            {
+              "se_type": "google",
+              "keyword": "italienisch essen berlin",
+              "keyword_difficulty": 1
+            },
+            {
+              "se_type": "google",
+              "keyword": "italienisches frühstück berlin",
+              "keyword_difficulty": null
+            },
+            {
+              "se_type": "google",
+              "keyword": "italienisches restaurant berlin",
+              "keyword_difficulty": 17
+            },
+            {
+              "se_type": "google",
+              "keyword": "italienisches restaurant berlin charlottenburg",
+              "keyword_difficulty": 0
+            },
+            {
+              "se_type": "google",
+              "keyword": "italienisches restaurant charlottenburg",
+              "keyword_difficulty": 0
+            },
+            {
+              "se_type": "google",
+              "keyword": "italienisches restaurant kurfürstendamm",
+              "keyword_difficulty": 1
+            },
+            {
+              "se_type": "google",
+              "keyword": "lunch charlottenburg",
+              "keyword_difficulty": 0
+            },
+            {
+              "se_type": "google",
+              "keyword": "mittagessen charlottenburg",
+              "keyword_difficulty": 19
+            },
+            {
+              "se_type": "google",
+              "keyword": "mittagstisch charlottenburg",
+              "keyword_difficulty": 0
+            },
+            {
+              "se_type": "google",
+              "keyword": "pasta restaurant berlin",
+              "keyword_difficulty": 18
+            },
+            {
+              "se_type": "google",
+              "keyword": "restaurant berlin charlottenburg",
+              "keyword_difficulty": 0
+            },
+            {
+              "se_type": "google",
+              "keyword": "restaurant berlin kudamm",
+              "keyword_difficulty": 0
+            },
+            {
+              "se_type": "google",
+              "keyword": "restaurant charlottenburg",
+              "keyword_difficulty": 0
+            },
+            {
+              "se_type": "google",
+              "keyword": "restaurant charlottenburg italiener",
+              "keyword_difficulty": 0
+            },
+            {
+              "se_type": "google",
+              "keyword": "restaurant kurfürstendamm",
+              "keyword_difficulty": 4
+            },
+            {
+              "se_type": "google",
+              "keyword": "restaurant reservieren berlin",
+              "keyword_difficulty": 20
+            },
+            {
+              "se_type": "google",
+              "keyword": "restaurant terrasse berlin",
+              "keyword_difficulty": 12
+            },
+            {
+              "se_type": "google",
+              "keyword": "romantisches restaurant berlin",
+              "keyword_difficulty": 0
+            },
+            {
+              "se_type": "google",
+              "keyword": "sizilianisches restaurant berlin",
+              "keyword_difficulty": 12
+            },
+            {
+              "se_type": "google",
+              "keyword": "sommerterrasse berlin",
+              "keyword_difficulty": null
+            },
+            {
+              "se_type": "google",
+              "keyword": "weinbar berlin",
+              "keyword_difficulty": 20
+            },
+            {
+              "se_type": "google",
+              "keyword": "weinbar charlottenburg",
+              "keyword_difficulty": 1
+            },
+            {
+              "se_type": "google",
+              "keyword": "casa bellucci kurfürstendamm",
+              "keyword_difficulty": null
+            },
+            {
+              "se_type": "google",
+              "keyword": "lunch kurfürstendamm",
+              "keyword_difficulty": null
+            },
+            {
+              "se_type": "google",
+              "keyword": "abendessen kurfürstendamm",
+              "keyword_difficulty": null
+            },
+            {
+              "se_type": "google",
+              "keyword": "dinner charlottenburg",
+              "keyword_difficulty": null
+            },
+            {
+              "se_type": "google",
+              "keyword": "abendessen charlottenburg",
+              "keyword_difficulty": null
+            },
+            {
+              "se_type": "google",
+              "keyword": "aperitivo charlottenburg",
+              "keyword_difficulty": null
+            },
+            {
+              "se_type": "google",
+              "keyword": "restaurant mit terrasse charlottenburg",
+              "keyword_difficulty": null
+            },
+            {
+              "se_type": "google",
+              "keyword": "restaurant terrasse kurfürstendamm",
+              "keyword_difficulty": null
+            },
+            {
+              "se_type": "google",
+              "keyword": "restaurant für geschäftsessen berlin",
+              "keyword_difficulty": null
+            },
+            {
+              "se_type": "google",
+              "keyword": "frischer fisch restaurant berlin",
+              "keyword_difficulty": null
+            },
+            {
+              "se_type": "google",
+              "keyword": "tisch reservieren charlottenburg",
+              "keyword_difficulty": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

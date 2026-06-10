@@ -1,7 +1,12 @@
+'use client';
+
+import { useDict } from '@/lib/i18n/LanguageProvider';
+import { SITE } from '@/lib/site';
 import { FlagBar } from './Brand';
 import { GalleryFilmstrip } from '@/components/sections/GalleryFilmstrip';
 
 export function Gallery() {
+  const d = useDict();
   return (
     <section className="gallery" id="galerie" data-screen-label="05 Galerie">
       <div className="wrap">
@@ -9,15 +14,15 @@ export function Gallery() {
           <div>
             <div className="section-eyebrow">
               <span className="eyebrow" style={{ display: "inline-flex", alignItems: "center", gap: 10 }}>
-                <FlagBar orientation="h" /> Unsere Galerie
+                <FlagBar orientation="h" /> {d.home.gallery.eyebrow}
               </span>
             </div>
-            <h2>Einblicke in <span className="it">unser Haus</span></h2>
+            <h2>{d.home.gallery.headingPre}<span className="it">{d.home.gallery.headingEm}</span>{d.home.gallery.headingPost}</h2>
             <p className="lede" style={{ marginTop: 14 }}>
-              Eindrücke aus unserem italienischen Restaurant am Kurfürstendamm. Klicke ein Bild für die Großansicht.
+              {d.home.gallery.lede}
             </p>
           </div>
-          <a className="btn btn-ghost" href="https://instagram.com" target="_blank" rel="noreferrer">@casabellucci · Instagram →</a>
+          <a className="btn btn-ghost" href={SITE.instagram} target="_blank" rel="noreferrer">{d.home.gallery.instagram}</a>
         </div>
         <GalleryFilmstrip />
       </div>

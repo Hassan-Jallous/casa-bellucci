@@ -1,15 +1,10 @@
 import type { Metadata } from 'next';
-import { LegalPage } from '@/components/LegalPage';
-import { pageMetadata } from '@/lib/seo';
-import { getWordPressPage } from '@/lib/wordpress';
+import { ImpressumPage, impressumMetadata } from '@/components/pages/ImpressumPage';
 
-export const metadata: Metadata = pageMetadata({
-  title: 'Impressum',
-  description: 'Impressum der Bellucci Gastronomie GmbH in Berlin.',
-  path: '/impressum/',
-});
+export function generateMetadata(): Metadata {
+  return impressumMetadata('de');
+}
 
-export default async function ImpressumPage() {
-  const page = await getWordPressPage('impressum');
-  return <LegalPage page={page} eyebrow="Legal" />;
+export default function Page() {
+  return <ImpressumPage lang="de" />;
 }

@@ -3,6 +3,7 @@
 import { createContext, useCallback, useContext, useMemo, useState } from 'react';
 import type { ReactNode } from 'react';
 import { GALLERY } from '@/lib/data';
+import { useMenuViewer } from '@/components/sections/MenuViewer';
 
 interface LightboxState {
   open: boolean;
@@ -18,6 +19,11 @@ interface UIContextValue {
   closeLightbox: () => void;
   prevImage: () => void;
   nextImage: () => void;
+  // Karten-Popup, geteilt zwischen Hero-CTA und MenuSection auf der Homepage.
+  menuActive: string | null;
+  menuOpen: boolean;
+  openMenu: (key: string) => void;
+  closeMenu: () => void;
 }
 
 const UIContext = createContext<UIContextValue | null>(null);
@@ -40,6 +46,11 @@ export function UIProvider({ children }: { children: ReactNode }) {
     []
   );
 
+  // Karten-Popup-Logik (Escape, Scroll-Lock, Fokus-Rueckgabe) liegt im
+  // useMenuViewer-Hook. Hier gehoben, damit Hero-CTA und MenuSection dieselbe
+  // Instanz teilen. activeMenu/isOpen werden als menuActive/menuOpen exponiert.
+  const { activeMenu: menuActive, isOpen: menuOpen, openMenu, closeMenu } = useMenuViewer();
+
   const value = useMemo<UIContextValue>(
     () => ({
       mobileOpen,
@@ -50,8 +61,12 @@ export function UIProvider({ children }: { children: ReactNode }) {
       closeLightbox,
       prevImage,
       nextImage,
+      menuActive,
+      menuOpen,
+      openMenu,
+      closeMenu,
     }),
-    [mobileOpen, toggleMobile, closeMobile, lightbox, openLightbox, closeLightbox, prevImage, nextImage]
+    [mobileOpen, toggleMobile, closeMobile, lightbox, openLightbox, closeLightbox, prevImage, nextImage, menuActive, menuOpen, openMenu, closeMenu]
   );
 
   return <UIContext.Provider value={value}>{children}</UIContext.Provider>;

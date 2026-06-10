@@ -36,9 +36,9 @@ export interface PressLogo {
 }
 
 export interface GalleryImage {
+  // Sprachneutrale Bildquelle. Sichtbare Texte (caption, alt) sind lokalisiert
+  // und leben ausschliesslich in lib/i18n/dictionaries/{de,en,it}/data.ts (gallery[]).
   src: string;
-  caption: string;
-  alt: string;
 }
 
 export const MENU: Menu = {
@@ -86,7 +86,7 @@ export const MENU: Menu = {
     sub: "18:00 — 23:30",
     img: "images/menu-dinner.jpg",
     note: {
-      title: "Una Serata Siciliana",
+      title: "Una Serata Italiana",
       text: "Am Abend wird Casa Bellucci zur Sommerterrasse Taorminas: Kerzen, lange Tafeln und Gerichte, die Zeit brauchen. Reservierung empfohlen.",
     },
     sections: [
@@ -125,7 +125,7 @@ export const MENU: Menu = {
     img: "images/menu-wines.jpg",
     note: {
       title: "Vom Ätna bis zum Veneto",
-      text: "Unsere Auswahl folgt der italienischen Stiefelspitze: 65% Sizilien & Süditalien, kuratiert von unserem Sommelier Marco. Glasweise täglich rotierend.",
+      text: "Unsere Auswahl folgt der italienischen Stiefelspitze: 65% Süditalien, kuratiert von unserem Sommelier Marco. Glasweise täglich rotierend.",
     },
     sections: [
       {
@@ -191,7 +191,7 @@ export const MENU: Menu = {
 export const PRESS_QUOTES: string[] = [
   "Italiens Seele am Kudamm — als hätte jemand eine Trattoria aus Taormina nach Charlottenburg verpflanzt.",
   "Eine der schönsten Sommerterrassen Berlins. Hier riecht es nach Zitronen und langem Nachmittag.",
-  "Authentisch sizilianisch — von der Pasta bis zur Karte. Selten so ehrlich gegessen.",
+  "Authentisch italienisch, von der Pasta bis zur Karte. Selten so ehrlich gegessen.",
 ];
 
 export const PRESS_LOGOS: PressLogo[] = [
@@ -203,12 +203,12 @@ export const PRESS_LOGOS: PressLogo[] = [
 ];
 
 export const GALLERY: GalleryImage[] = [
-  { src: "images/gallery/1.jpg", caption: "Aperitivo", alt: "Aperitivo am Abend in der Bar des Casa Bellucci am Kurfürstendamm" },
-  { src: "images/gallery/2.jpg", caption: "Pasta della Casa", alt: "Hausgemachte Pasta im italienischen Restaurant Casa Bellucci in Berlin" },
-  { src: "images/gallery/3.jpg", caption: "Sala", alt: "Sala des sizilianischen Restaurants Casa Bellucci in Berlin-Charlottenburg" },
-  { src: "images/gallery/4.jpg", caption: "Dolce Vita", alt: "Dolce Vita auf der Sommerterrasse am Kudamm" },
-  { src: "images/gallery/5.jpg", caption: "Antipasti", alt: "Sizilianische Antipasti im Casa Bellucci" },
-  { src: "images/gallery/6.jpg", caption: "Tavolo", alt: "Gedeckter Tisch im Casa Bellucci, Kurfürstendamm 63" },
-  { src: "images/gallery/7.jpg", caption: "Crudo di Mare", alt: "Crudo di Mare, frischer Fisch im sizilianischen Restaurant Berlin" },
-  { src: "images/gallery/8.jpg", caption: "Cantina", alt: "Die Cantina, italienische Weine im Casa Bellucci Charlottenburg" },
+  { src: "images/gallery/1.jpg" },
+  { src: "images/gallery/2.jpg" },
+  { src: "images/gallery/3.jpg" },
+  { src: "images/gallery/4.jpg" },
+  { src: "images/gallery/5.jpg" },
+  { src: "images/gallery/6.jpg" },
+  { src: "images/gallery/7.jpg" },
+  { src: "images/gallery/8.jpg" },
 ];

@@ -30,6 +30,8 @@ jobs:
       - name: Build Next.js static export
         run: npm run build
         env:
+          # GitHub Pages is a preview under /casa-bellucci. The app uses this
+          # env value to emit noindex metadata while Hostinger stays canonical.
           NEXT_PUBLIC_BASE_PATH: /casa-bellucci
       - uses: actions/upload-pages-artifact@v5
         with:

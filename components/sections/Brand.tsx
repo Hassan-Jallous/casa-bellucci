@@ -30,7 +30,7 @@ export function PostalStamp({ size = 100, rot = 0 }: PostalStampProps) {
         </defs>
         <g className="label-circle">
           <text fontFamily='"Montserrat", Arial, sans-serif' fontSize="8" letterSpacing="3.5" fill="currentColor" textLength="240">
-            <textPath href="#circle-text" startOffset="0">DA SICILIA · KURFÜRSTENDAMM 63 · BERLIN · </textPath>
+            <textPath href="#circle-text" startOffset="0">DA ITALIA · KURFÜRSTENDAMM 63 · BERLIN · </textPath>
           </text>
         </g>
       </svg>

@@ -1,0 +1,80 @@
+name: Deploy to Hostinger (FTP)
+
+# Deployt den statischen Next.js-Export (out/) per FTP nach Hostinger.
+# Das PHP-Backend (api/, config.php, .htaccess) und die hochgeladenen
+# Karten (pdf/) werden EINMALIG manuell per FTP/Dateimanager eingespielt
+# (siehe php-backend/DEPLOY.md) und vom Sync hier BEWUSST ausgeschlossen.
+
+on:
+  # Primär: manuell aus dem Actions-Tab starten.
+  workflow_dispatch:
+
+  # Optional: automatisch bei push auf main.
+  # ACHTUNG: Diesen Trigger erst aktivieren (auskommentieren entfernen),
+  # wenn die vier FTP-Secrets gesetzt sind. Sonst schlagen die Runs rot fehl.
+  # push:
+  #   branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      # Build OHNE NEXT_PUBLIC_BASE_PATH: eigene Domain, Site liegt im Root.
+      # NEXT_PUBLIC_MENU_API_BASE bleibt leer -> same-origin Default (/api).
+      - name: Build Next.js static export
+        run: npm run build
+        env:
+          NEXT_PUBLIC_BASE_PATH: ''
+          NEXT_PUBLIC_MENU_API_BASE: ''
+
+      # FTP-Deploy-Action v4.4.0 (latest, Stand 2026-06).
+      # Quelle: https://github.com/SamKirkland/FTP-Deploy-Action/releases/latest
+      - name: Sync out/ to Hostinger via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.4.0
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+
+          # Nur der statische Export wird hochgeladen.
+          local-dir: ./out/
+
+          # Ziel = public_html-Root auf Hostinger.
+          # Als Secret FTP_SERVER_DIR setzen (mit führendem und abschließendem /),
+          # z.B. /public_html/ . Falls nicht gesetzt, hier fix anpassen.
+          server-dir: ${{ secrets.FTP_SERVER_DIR }}
+
+          # SICHERHEIT: dangerous-clean-slate bleibt AUS (Default false).
+          # Wäre es true, würde die Action ALLES im server-dir löschen,
+          # auch die unten ausgeschlossenen Dateien (pdf/, api/, config.php,
+          # .htaccess). Niemals auf true setzen.
+          dangerous-clean-slate: false
+
+          # KRITISCH: Die Action löscht serverseitig entfernte Dateien beim
+          # Sync. Diese exclude-Globs schützen die persistenten Backend-Daten,
+          # die NICHT aus out/ stammen und manuell verwaltet werden.
+          # Format: multiline literal block (|), ein Glob pro Zeile.
+          exclude: |
+            **/pdf/**
+            pdf/**
+            config.php
+            **/api/**
+            api/**
+            .htaccess
+            **/.htaccess
+            **/.git*
+            **/.git*/**
+            **/node_modules/**

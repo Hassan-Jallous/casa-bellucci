@@ -19,6 +19,7 @@
 
 # production
 /build
+/_deploy/
 
 # misc
 .DS_Store
@@ -42,3 +43,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+_quelle-fotos/
+
+# php-backend secrets (redundant safety; php-backend/.gitignore already ignores it)
+php-backend/config.php

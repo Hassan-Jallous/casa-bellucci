@@ -1,8 +1,13 @@
 "use client";
 
-import { useEffect } from 'react';
+import { useEffect, type MouseEvent } from 'react';
+import { usePathname } from 'next/navigation';
 import { useUI } from '@/components/UIProvider';
+import { useDict, useLang, useLocalizedHref } from '@/lib/i18n/LanguageProvider';
+import type { Lang } from '@/lib/i18n/config';
+import { switchLangPath } from '@/lib/i18n/localize';
 import { routePath } from '@/lib/routes';
+import { smoothScrollFromHref } from '@/components/SmoothScrollLink';
 import { SITE } from '@/lib/site';
 
 interface MobileNavAProps {
@@ -12,12 +17,16 @@ interface MobileNavAProps {
 
 /* Mobile Nav A: Full-Screen Overlay */
 function MobileNavA({ open, onClose }: MobileNavAProps) {
-  const items = [
-    { href: routePath('/#menu'), label: "Karte" },
-    { href: routePath('/#terrasse'), label: "Terrasse" },
-    { href: routePath('/#galerie'), label: "Galerie" },
-    { href: routePath('/reservierung/'), label: "Reservieren" },
-    { href: routePath('/#kontakt'), label: "Kontakt" },
+  const d = useDict();
+  const { lang } = useLang();
+  const pathname = usePathname();
+  const localizedHref = useLocalizedHref();
+  const items: { href: string; label: string; scroll?: string }[] = [
+    { href: localizedHref('/#menu'), label: d.mobileNav.items[0] },
+    { href: localizedHref('/#terrasse'), label: d.mobileNav.items[1] },
+    { href: localizedHref('/#galerie'), label: d.mobileNav.items[2] },
+    { href: localizedHref('/reservierung/'), label: d.mobileNav.items[3], scroll: '#reservieren' },
+    { href: localizedHref('/#kontakt'), label: d.mobileNav.items[4] },
   ];
 
   useEffect(() => {
@@ -26,18 +35,39 @@ function MobileNavA({ open, onClose }: MobileNavAProps) {
     return () => { document.body.style.overflow = ""; };
   }, [open]);
 
+  const onItemClick = (scrollHref: string) => (e: MouseEvent<HTMLAnchorElement>) => {
+    const handled = smoothScrollFromHref(e, scrollHref, () => {
+      document.body.style.overflow = "";
+      onClose();
+    });
+    if (!handled) onClose();
+  };
+
   return (
-    <nav className={`mobile-nav-a${open ? " open" : ""}`} aria-label="Mobile Navigation">
+    <nav className={`mobile-nav-a${open ? " open" : ""}`} aria-label={d.mobileNav.aria}>
       <div className="nav-items">
         {items.map((it, i) => (
-          <a key={i} href={it.href} className="nav-item" onClick={onClose}>
+          <a key={i} href={it.href} className="nav-item" onClick={onItemClick(it.scroll ?? it.href)}>
             <span className="num">{String(i + 1).padStart(2, "0")}</span>
             {it.label}
           </a>
         ))}
       </div>
-      <a href={routePath('/reservierung/')} className="nav-cta" onClick={onClose}>
-        <span>Reservieren</span>
+      <div className="mobile-lang-switch" aria-label={d.mobileNav.languageAria}>
+        {(['de', 'en', 'it'] as Lang[]).map((l) => (
+          <button
+            type="button"
+            key={l}
+            className={lang === l ? 'active' : ''}
+            aria-pressed={lang === l}
+            onClick={() => window.location.assign(routePath(switchLangPath(pathname, l)))}
+          >
+            {l.toUpperCase()}
+          </button>
+        ))}
+      </div>
+      <a href={localizedHref('/reservierung/')} className="nav-cta" onClick={onItemClick('#reservieren')}>
+        <span>{d.mobileNav.cta}</span>
         <span className="arrow">→</span>
       </a>
       <div className="nav-meta">

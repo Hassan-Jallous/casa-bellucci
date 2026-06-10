@@ -1,19 +1,21 @@
 import type { Metadata } from 'next';
 import { SITE } from './site';
+import { localizedPath, OG_LOCALE, IN_LANGUAGE } from '@/lib/i18n/localize';
+import type { Lang } from '@/lib/i18n/config';
 
 const SITE_URL = SITE.canonicalUrl;
+export const IS_PREVIEW_BUILD = Boolean(process.env.NEXT_PUBLIC_BASE_PATH);
 
 export const SEO = {
   siteUrl: SITE_URL,
   title:
-    'Casa Bellucci · Italienisches & sizilianisches Restaurant Berlin',
+    'Casa Bellucci · Italienisches Restaurant Berlin',
   description:
-    'Casa Bellucci ist ein italienisches und sizilianisches Restaurant mit Bar am Kurfürstendamm 63 in Berlin-Charlottenburg. Frühstück, Lunch, Dinner, Aperitivo und Sommerterrasse, mit Online-Reservierung.',
+    'Casa Bellucci ist ein italienisches Restaurant mit Bar am Kurfürstendamm 63 in Berlin-Charlottenburg. Frühstück, Lunch, Dinner, Aperitivo und Sommerterrasse, mit Online-Reservierung.',
   keywords: [
     'Casa Bellucci',
     'Casa Bellucci Berlin',
     'italienisches Restaurant Berlin',
-    'sizilianisches Restaurant Berlin',
     'italienisches Restaurant Charlottenburg',
     'Restaurant Charlottenburg',
     'Restaurant Kudamm',
@@ -37,27 +39,37 @@ export function pageMetadata({
   path = '/',
   index = true,
   image,
+  lang = 'de',
 }: {
   title: string;
   description: string;
   path?: string;
   index?: boolean;
   image?: string;
+  lang?: Lang;
 }): Metadata {
-  const url = canonicalUrl(path);
+  const localized = localizedPath(path, lang);
+  const url = canonicalUrl(localized);
   const imageUrl = canonicalUrl(image ?? SEO.ogImage);
+  const shouldIndex = index && !IS_PREVIEW_BUILD;
 
   return {
     title: { absolute: title },
     description,
     alternates: {
       canonical: url,
+      languages: {
+        de: canonicalUrl(localizedPath(path, 'de')),
+        en: canonicalUrl(localizedPath(path, 'en')),
+        it: canonicalUrl(localizedPath(path, 'it')),
+        'x-default': canonicalUrl(localizedPath(path, 'de')),
+      },
     },
     robots: {
-      index,
+      index: shouldIndex,
       follow: true,
       googleBot: {
-        index,
+        index: shouldIndex,
         follow: true,
         'max-image-preview': 'large',
         'max-snippet': -1,
@@ -70,7 +82,7 @@ export function pageMetadata({
       url,
       siteName: SITE.name,
       type: 'website',
-      locale: 'de_DE',
+      locale: OG_LOCALE[lang],
       images: [
         {
           url: imageUrl,
@@ -113,7 +125,7 @@ export function restaurantJsonLd() {
       addressRegion: 'Berlin',
       addressCountry: 'DE',
     },
-    servesCuisine: ['Italienisch', 'Sizilianisch', 'Mediterran'],
+    servesCuisine: ['Italienisch', 'Mediterran'],
     priceRange: '€€€',
     geo: {
       '@type': 'GeoCoordinates',
@@ -170,7 +182,10 @@ export function restaurantJsonLd() {
   };
 }
 
-export function breadcrumbJsonLd(items: { name: string; path: string }[]) {
+export function breadcrumbJsonLd(
+  items: { name: string; path: string }[],
+  lang: Lang = 'de'
+) {
   return {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -178,15 +193,19 @@ export function breadcrumbJsonLd(items: { name: string; path: string }[]) {
       '@type': 'ListItem',
       position: index + 1,
       name: item.name,
-      item: canonicalUrl(item.path),
+      item: canonicalUrl(localizedPath(item.path, lang)),
     })),
   };
 }
 
-export function faqJsonLd(faqs: { question: string; answer: string }[]) {
+export function faqJsonLd(
+  faqs: { question: string; answer: string }[],
+  lang: Lang = 'de'
+) {
   return {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
+    inLanguage: IN_LANGUAGE[lang],
     mainEntity: faqs.map((faq) => ({
       '@type': 'Question',
       name: faq.question,
@@ -202,12 +221,14 @@ export function webPageJsonLd({
   name,
   description,
   path,
+  lang = 'de',
 }: {
   name: string;
   description: string;
   path: string;
+  lang?: Lang;
 }) {
-  const url = canonicalUrl(path);
+  const url = canonicalUrl(localizedPath(path, lang));
   return {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
@@ -220,7 +241,7 @@ export function webPageJsonLd({
       '@id': `${SITE_URL}/#website`,
       url: SITE_URL,
     },
-    inLanguage: 'de-DE',
+    inLanguage: IN_LANGUAGE[lang],
   };
 }
 
@@ -230,14 +251,16 @@ export function placeJsonLd({
   description,
   path,
   servesCuisine,
+  lang = 'de',
 }: {
   type: 'Restaurant' | 'BarOrPub' | 'CafeOrCoffeeShop';
   name: string;
   description: string;
   path: string;
   servesCuisine?: string[];
+  lang?: Lang;
 }) {
-  const url = canonicalUrl(path);
+  const url = canonicalUrl(localizedPath(path, lang));
   return {
     '@context': 'https://schema.org',
     '@type': type,
@@ -245,7 +268,7 @@ export function placeJsonLd({
     name,
     description,
     url,
-    parentOrganization: { '@id': `${SITE_URL}/#restaurant` },
+    isPartOf: { '@id': `${SITE_URL}/#restaurant` },
     address: {
       '@type': 'PostalAddress',
       streetAddress: SITE.address.street,

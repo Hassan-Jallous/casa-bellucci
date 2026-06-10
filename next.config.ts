@@ -16,6 +16,10 @@ const nextConfig: NextConfig = {
     unoptimized: true,
   },
   trailingSlash: true,
+  // Production-Build: console.* entfernen (console.error bleibt), schlankeres Bundle.
+  compiler: {
+    removeConsole: { exclude: ['error'] },
+  },
 };
 
 export default nextConfig;

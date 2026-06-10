@@ -1,0 +1,30 @@
+import { common } from './common';
+import { header } from './header';
+import { mobileNav } from './mobileNav';
+import { footer } from './footer';
+import { home } from './home';
+import { landingBar } from './landingBar';
+import { landingFruehstueck } from './landingFruehstueck';
+import { landingItalienisch } from './landingItalienisch';
+import { pages } from './pages';
+import { legal } from './legal';
+import { data } from './data';
+import { meta } from './meta';
+import type { Dict } from '../de';
+
+// The `: Dict` annotation enforces completeness: once these slices carry real
+// Italian content, any missing/extra key or wrong array length fails to compile.
+export const it: Dict = {
+  common,
+  header,
+  mobileNav,
+  footer,
+  home,
+  landingBar,
+  landingFruehstueck,
+  landingItalienisch,
+  pages,
+  legal,
+  data,
+  meta,
+};

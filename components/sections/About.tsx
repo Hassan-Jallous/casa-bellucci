@@ -1,26 +1,15 @@
+'use client';
+
 import type { CSSProperties } from 'react';
 import { asset } from '@/lib/assetPath';
+import { useDict, usePageTitle } from '@/lib/i18n/LanguageProvider';
 import { FlagBar } from './Brand';
 
 /* All-Day Concept */
 export function About() {
-  const moments = [
-    {
-      time: "Vormittag",
-      title: "Frühstück & Brunch",
-      copy: "Frühstück in Charlottenburg mit Espresso und Cornetto, am Wochenende Brunch am Kudamm. Ein ruhiger Start in den Tag.",
-    },
-    {
-      time: "Mittag",
-      title: "Lunch & Mittagstisch",
-      copy: "Pasta fatta a mano, fangfrischer Fisch und Salate, mittags auch als Business Lunch auf der Sommerterrasse.",
-    },
-    {
-      time: "Abend",
-      title: "Dinner & Bar",
-      copy: "Sizilianische Küche, Aperitivo an der Bar, Wein vom Ätna und am Wochenende Live-DJ bis spät in den Abend.",
-    },
-  ];
+  usePageTitle('home');
+  const d = useDict();
+  const moments = d.home.about.moments;
 
   return (
     <section className="about all-day" id="ueber-uns" data-screen-label="02 All-Day Concept">
@@ -29,14 +18,14 @@ export function About() {
           <div className="all-day-copy">
             <div className="section-eyebrow">
               <span className="eyebrow" style={{ display: "inline-flex", alignItems: "center", gap: 10 }}>
-                <FlagBar orientation="h" /> All-Day Concept
+                <FlagBar orientation="h" /> {d.home.about.eyebrow}
               </span>
             </div>
-            <h2>Frühstück, Lunch &amp; Dinner am <span className="it">Kudamm</span>.</h2>
+            <h2>{d.home.about.headingPre}<span className="it">{d.home.about.headingEm}</span>{d.home.about.headingPost}</h2>
             <p>
-              Ein Ort, drei Stimmungen: vom ruhigen Espresso am Vormittag über den Lunch auf der Sommerterrasse bis zum Dinner mit Live-DJ am Wochenende. Auf dem Teller Pasta fatta a mano, fangfrischer Fisch und Aperitivo an der Bar, im Glas Weine vom Ätna.
+              {d.home.about.lede}
             </p>
-            <div className="dayline" aria-label="Tagesmomente">
+            <div className="dayline" aria-label={d.home.about.daylineLabel}>
               {moments.map((moment, index) => (
                 <div className="day-moment" key={moment.title} style={{ "--i": index } as CSSProperties}>
                   <span className="moment-time">{moment.time}</span>
@@ -46,18 +35,18 @@ export function About() {
               ))}
             </div>
           </div>
-          <div className="all-day-media" aria-label="Atmosphäre von Frühstück, Mittag und Abend">
+          <div className="all-day-media" aria-label={d.home.about.mediaLabel}>
             <figure className="all-day-photo morning">
-              <img src={asset("images/menu-breakfast.jpg")} alt="Frühstück bei Casa Bellucci am Kudamm in Berlin-Charlottenburg" />
-              <figcaption>Frühstück</figcaption>
+              <img src={asset("images/allday-morning.jpg")} alt={d.home.about.photos.morning.alt} width={900} height={1200} loading="lazy" decoding="async" />
+              <figcaption>{d.home.about.photos.morning.caption}</figcaption>
             </figure>
             <figure className="all-day-photo midday">
-              <img src={asset("images/menu-lunch.jpg")} alt="Lunch mit Pasta auf der Sommerterrasse in Charlottenburg" />
-              <figcaption>Mittag</figcaption>
+              <img src={asset("images/allday-midday.jpg")} alt={d.home.about.photos.midday.alt} width={1600} height={1067} loading="lazy" decoding="async" />
+              <figcaption>{d.home.about.photos.midday.caption}</figcaption>
             </figure>
             <figure className="all-day-photo evening">
-              <img src={asset("images/menu-dinner.jpg")} alt="Sizilianisches Dinner bei Casa Bellucci, italienisches Restaurant in Berlin" />
-              <figcaption>Abend</figcaption>
+              <img src={asset("images/allday-evening.jpg")} alt={d.home.about.photos.evening.alt} width={2000} height={1334} loading="lazy" decoding="async" />
+              <figcaption>{d.home.about.photos.evening.caption}</figcaption>
             </figure>
           </div>
         </div>

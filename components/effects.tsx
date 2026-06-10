@@ -1,13 +1,38 @@
+'use client';
 // Casa Bellucci, effects and presentational components.
 import type { CSSProperties } from 'react';
+import { asset } from '@/lib/assetPath';
 import { SmoothScrollButton } from '@/components/SmoothScrollButton';
+import { useUI } from '@/components/UIProvider';
+import { useDict } from '@/lib/i18n/LanguageProvider';
 import { FlagBar } from './sections/Brand';
 import { MajolikaPattern } from './decor';
 
 /* ============ IMAGE HERO ============ */
 export function ImageHero() {
+  const d = useDict();
+  const { openMenu } = useUI();
   return (
     <section className="hero image-hero" data-screen-label="01 Hero · Terrasse">
+      {/*
+        LCP-Element: das Hero-Bild ist jetzt ein echtes <img> (frueher CSS-background),
+        damit der Preload-Scanner es sofort entdeckt und mit hoher Prioritaet laedt.
+        <picture> liefert auf Mobile das hochformatige hero-mobile, sonst Querformat.
+        Server-seitige WebP-Negotiation (.htaccess) liefert die .webp-Zwillinge.
+      */}
+      <picture>
+        <source media="(max-width: 880px)" srcSet={asset("images/hero-mobile.jpg")} />
+        <img
+          className="image-hero-bg"
+          src={asset("images/hero-summer-desktop.jpg")}
+          alt=""
+          aria-hidden="true"
+          fetchPriority="high"
+          decoding="async"
+          width={1920}
+          height={1080}
+        />
+      </picture>
       <div className="image-hero-shade" aria-hidden="true"></div>
       <div className="image-hero-content wrap">
         <div className="image-hero-copy">
@@ -15,16 +40,16 @@ export function ImageHero() {
             <FlagBar orientation="h" size="md" />
             Casa Bellucci · Berlin-Charlottenburg
           </div>
-          <h1>Italienisches &amp; sizilianisches Restaurant in Berlin Charlottenburg</h1>
-          <p>Casa Bellucci am Kurfürstendamm 63 in Berlin Charlottenburg: sizilianische Küche von Frühstück bis Dinner, Bar mit Aperitivo auf der Sommerterrasse und Live-DJ am Wochenende.</p>
+          <h1>{d.home.hero.h1}</h1>
+          <p>{d.home.hero.lede}</p>
           <div className="image-hero-actions">
-            <SmoothScrollButton targetId="reservieren" className="btn btn-primary btn-on-dark">Reservieren</SmoothScrollButton>
-            <a className="btn btn-ghost btn-on-dark" href="#menu">Karte ansehen →</a>
+            <SmoothScrollButton targetId="reservieren" className="btn btn-primary btn-on-dark">{d.common.actions.reserve}</SmoothScrollButton>
+            <button type="button" className="btn btn-ghost btn-on-dark" onClick={() => openMenu('dinner')}>{d.home.hero.viewMenu}</button>
           </div>
         </div>
       </div>
       <div className="image-hero-scroll" aria-hidden="true">
-        <span>Entdecken</span>
+        <span>{d.home.hero.discover}</span>
         <i></i>
       </div>
     </section>

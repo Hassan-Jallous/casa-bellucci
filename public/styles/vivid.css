@@ -61,9 +61,17 @@
   overflow: hidden;
   display: flex;
   align-items: flex-end;
-  background:
-    url("../images/hero-summer-desktop.jpg") center center / cover no-repeat #fff8ea;
+  background: #fff8ea;
   color: #2b190d;
+}
+.image-hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  z-index: 0;
 }
 .image-hero-shade {
   position: absolute;
@@ -455,8 +463,7 @@ body {
     radial-gradient(circle at 93% 70%, var(--summer-rose), transparent 36%),
     rgba(255, 249, 240, 0.66);
   box-shadow: var(--summer-shadow);
-  backdrop-filter: blur(18px) saturate(1.08);
-  -webkit-backdrop-filter: blur(18px) saturate(1.08);
+  /* backdrop-filter entfernt: kein Bild dahinter -> Blur war wirkungslos */
 }
 
 .all-day-copy {
@@ -550,6 +557,19 @@ body {
   pointer-events: none;
 }
 
+/* Unterseiten: den dekorativen inneren Rahmen der Bild-Karten entfernen,
+   damit das Bild randlos ohne scheinbares Padding sitzt. Homepage behaelt
+   den Rahmen. Gilt ueber alle Breakpoints (Regel nur einmal definiert). */
+.subpage .all-day-photo::before {
+  content: none;
+}
+
+/* Hinweis: .all-day-media wird auf Mobile (<=880px) seitenuebergreifend als
+   full-bleed Image-Slider behandelt (siehe Bleed-Regeln in den Mobile-
+   Bloecken weiter unten). Daher KEINE .subpage-Sonderbehandlung mehr fuer den
+   Container, damit auch die Unterseiten-Slider bei 0px vom Screenrand starten
+   und die Bilder von drausen hereinscrollen. */
+
 .all-day-photo img,
 .signature-menu-hero img,
 .filmstrip-frame img,
@@ -561,16 +581,9 @@ body {
 .filmstrip-label,
 .contact .map .corner,
 .contact .map .pin .label {
-  border: 1px solid rgba(255, 249, 240, 0.66);
-  border-radius: 6px;
-  background:
-    radial-gradient(circle at 88% 42%, var(--summer-rose), transparent 40%),
-    radial-gradient(circle at 68% 36%, var(--summer-olive), transparent 34%),
-    rgba(255, 249, 240, 0.62);
   color: var(--ink);
-  text-shadow: none;
-  backdrop-filter: blur(18px) saturate(1.08);
-  -webkit-backdrop-filter: blur(18px) saturate(1.08);
+  /* Glas-Material (bg, Rand, Radius, Blur, Schatten) kommt zentral aus den
+     --glass-* Tokens — siehe Single-Source-Regel am Ende dieser Datei. */
 }
 
 .all-day-photo figcaption {
@@ -642,16 +655,8 @@ body {
   max-width: none;
   z-index: 3;
   padding: clamp(16px, 2vw, 22px);
-  border: 1px solid rgba(255, 249, 240, 0.66);
-  border-radius: 6px;
-  background:
-    radial-gradient(circle at 86% 42%, var(--summer-rose), transparent 40%),
-    radial-gradient(circle at 70% 34%, var(--summer-olive), transparent 38%),
-    rgba(255, 249, 240, 0.62);
   color: var(--ink);
-  text-shadow: none;
-  backdrop-filter: blur(20px) saturate(1.12);
-  -webkit-backdrop-filter: blur(20px) saturate(1.12);
+  /* Glas-Material zentral aus den --glass-* Tokens (Regel am Dateiende). */
 }
 
 .signature-menu-hero figcaption span {
@@ -735,15 +740,7 @@ body {
   gap: clamp(14px, 1.6vw, 24px);
 }
 
-.terrace-photo figcaption {
-  /* Dichtere Glasflaeche plus dunklerer Bodenverlauf sichern den Kontrast
-     fuer den dunklen Headline-Text unabhaengig vom Bildausschnitt (WCAG). */
-  background:
-    linear-gradient(to top, rgba(43, 31, 18, 0.14), transparent 58%),
-    radial-gradient(circle at 88% 48%, rgba(224, 140, 134, 0.22), transparent 38%),
-    radial-gradient(circle at 72% 38%, rgba(116, 137, 73, 0.18), transparent 34%),
-    rgba(255, 249, 240, 0.64);
-}
+/* .terrace-photo figcaption: Glas-Material zentral aus --glass-* Tokens. */
 
 .terrace-panel {
   border-color: rgba(255, 249, 240, 0.7);
@@ -834,11 +831,8 @@ body {
   right: 24px;
   z-index: 3;
   padding: 7px 8px;
-  border-radius: 999px;
-  background: rgba(255, 249, 240, 0.56);
   color: var(--ink);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+  /* Glas-Material + runde Form zentral (.filmstrip-number-Regel am Dateiende). */
 }
 
 .reservation {
@@ -982,7 +976,7 @@ body {
   .all-day-media {
     display: flex;
     min-height: 0;
-    gap: 16px;
+    gap: 40px;
     margin: 0 -20px;
     padding: 6px 20px 22px;
     overflow-x: auto;
@@ -999,12 +993,21 @@ body {
   .all-day-photo.morning,
   .all-day-photo.midday,
   .all-day-photo.evening {
-    flex: 0 0 78vw;
+    flex: 0 0 calc(100vw - 40px);
     min-height: 430px;
     aspect-ratio: 4 / 5;
     grid-column: auto;
     grid-row: auto;
     scroll-snap-align: center;
+  }
+
+  /* Galerie-Filmstrip-Spur: 20px Innenabstand (= Rand zum Screen) + 40px
+     Luecke, sodass wie bei .all-day-media genau ein zentriertes Bild pro
+     Ansicht erscheint. Steht nach der Basis-Regel und gewinnt daher. */
+  .filmstrip-track {
+    padding-left: 20px;
+    padding-right: 20px;
+    gap: 40px;
   }
 
   .all-day-photo figcaption,
@@ -1087,15 +1090,22 @@ body {
     margin-top: 18px;
   }
 
+  /* Galerie-Filmstrip-Spur full-bleed (481-880px): margin -20px kompensiert die
+     .wrap-Padding (20px), max-width:none hebt die Basis-Begrenzung auf, sodass
+     die Spur exakt 100vw breit wird. Der 20px-Rand + die zentrierte Slide
+     kommen aus der .filmstrip-track / .filmstrip-frame-Geometrie oben.
+     Seitenuebergreifend (Home + Unterseiten), analog zu .all-day-media. */
   .filmstrip-wrap {
     margin-left: -20px;
     margin-right: -20px;
-    padding-left: 20px;
+    padding-left: 0;
+    max-width: none;
   }
 
   .filmstrip-frame {
-    flex: 0 0 82vw;
+    flex: 0 0 calc(100vw - 40px);
     aspect-ratio: 4 / 5;
+    scroll-snap-align: center;
   }
 
   .filmstrip-label {
@@ -1144,7 +1154,6 @@ body {
   .all-day-photo.morning,
   .all-day-photo.midday,
   .all-day-photo.evening {
-    flex-basis: 82vw;
     min-height: 410px;
   }
 
@@ -1156,18 +1165,7 @@ body {
     min-height: 430px;
   }
 
-  .terrace-photo figcaption {
-    /* Mobil ebenfalls dichtere Glasflaeche plus Bodenverlauf fuer den Kontrast. */
-    background:
-      linear-gradient(to top, rgba(43, 31, 18, 0.14), transparent 58%),
-      radial-gradient(circle at 86% 50%, rgba(224, 140, 134, 0.26), transparent 38%),
-      radial-gradient(circle at 72% 38%, rgba(116, 137, 73, 0.18), transparent 36%),
-      rgba(255, 249, 240, 0.66);
-  }
-
-  .filmstrip-frame {
-    flex-basis: 84vw;
-  }
+  /* .terrace-photo figcaption: Glas-Material zentral via --glass-* Tokens. */
 }
 
 @media (max-width: 480px) {
@@ -1190,20 +1188,13 @@ body {
     padding: 20px;
   }
 
-  .all-day-media {
-    margin-left: -18px;
-    margin-right: -18px;
-    padding-left: 18px;
-  }
-
+  /* Image-Slider <=480px: .wrap-Padding ist hier 18px -> margin -18px haelt
+     die Slider-Spur full-bleed (100vw). Der 20px-Rand und die Slide-Breite
+     (calc(100vw - 40px)) kommen aus dem <=880px-Block. */
+  .all-day-media,
   .filmstrip-wrap {
     margin-left: -18px;
     margin-right: -18px;
-    padding-left: 18px;
-  }
-
-  .filmstrip-frame {
-    flex-basis: 86vw;
   }
 
   .contact .map {
@@ -1229,15 +1220,8 @@ body {
   .image-hero-copy {
     max-width: none;
     padding: 22px 18px 20px;
-    border: 1px solid rgba(255, 249, 240, 0.78);
-    border-radius: 14px;
-    background:
-      radial-gradient(circle at 86% 16%, rgba(224, 140, 134, 0.18), transparent 38%),
-      radial-gradient(circle at 12% 100%, rgba(246, 215, 120, 0.26), transparent 42%),
-      rgba(255, 250, 241, 0.68);
-    box-shadow: 0 28px 70px -38px rgba(55, 35, 17, 0.55);
     text-shadow: none;
-    backdrop-filter: blur(10px);
+    /* Glas-Material zentral via --glass-* (Hero-Mobile-Regel weiter unten). */
   }
 
   .image-hero-eyebrow {
@@ -1323,7 +1307,7 @@ body {
     height: 100svh;
     background:
       linear-gradient(180deg, rgba(255, 250, 241, 0.00) 0%, rgba(255, 250, 241, 0.00) 45%, rgba(255, 250, 241, 0.04) 100%),
-      url("../images/hero-mobile-variants-v2/01-awning-flowers-high.jpg") center center / cover no-repeat;
+      url("../images/hero-mobile.jpg") center center / cover no-repeat;
   }
 
   .image-hero-shade {
@@ -1337,14 +1321,12 @@ body {
   .image-hero-copy {
     max-width: none;
     padding: 20px 18px 18px;
-    border: 1px solid rgba(255, 255, 255, 0.72);
-    border-radius: 18px;
-    background:
-      radial-gradient(circle at 78% 0%, rgba(231,187,72,0.12), transparent 40%),
-      rgba(255, 250, 241, 0.46);
-    -webkit-backdrop-filter: blur(4px);
-    backdrop-filter: blur(4px);
-    box-shadow: 0 24px 64px -36px rgba(62, 39, 18, 0.42);
+    border: var(--glass-border);
+    border-radius: var(--glass-radius);
+    background: var(--glass-bg);
+    -webkit-backdrop-filter: var(--glass-blur);
+    backdrop-filter: var(--glass-blur);
+    box-shadow: var(--glass-shadow);
     text-shadow: none;
   }
 
@@ -1527,11 +1509,8 @@ body {
     right: 20px;
     bottom: 20px;
     padding: 14px 16px;
-    border-radius: 10px;
     font-size: clamp(24px, 6.6vw, 34px);
-    /* Blur an die transparente Glas-Div-Sprache (Hero) angeglichen. */
-    -webkit-backdrop-filter: blur(2px);
-    backdrop-filter: blur(2px);
+    /* Glas-Material (inkl. Radius/Blur) zentral via --glass-* Tokens. */
   }
 
   .signature-menu-hero figcaption span {
@@ -1551,17 +1530,17 @@ body {
    Scope: ab Mobile (<=880px), wo diese Panels als Glasflaeche erscheinen.
    ============================================================ */
 @media (max-width: 880px) {
-  .image-hero-copy,
-  .terrace-photo figcaption,
-  .signature-menu-hero figcaption,
-  .all-day-photo figcaption,
-  .all-day-photo.evening figcaption,
-  .filmstrip-label,
-  .contact .map .corner,
-  .contact .map .pin .label {
+  /* Foto-Overlay-Glas-Divs werden zentral ueber die --glass-* Single-Source-Regel
+     am Dateiende formatiert (gilt fuer alle Breakpoints). Hier stehen nur noch die
+     Text-Panels (kein Bild dahinter): transluzente --glass-bg Optik OHNE
+     backdrop-filter, da der Blur ohne Bild wirkungslos waere. */
+  .all-day-copy,
+  .signature-list,
+  .gallery .top,
+  .reservation-inner > div:first-child,
+  .reservation-card,
+  .contact .grid > div:first-child {
     background: var(--glass-bg);
-    -webkit-backdrop-filter: var(--glass-blur);
-    backdrop-filter: var(--glass-blur);
   }
 }
 
@@ -1582,39 +1561,43 @@ body {
 .reservation-widget-card .quandoo-widget-shell {
   min-height: 0;
   background: transparent;
+  overflow: hidden;
+  margin-inline: auto;
 }
+/* Quandoo rendert sein Widget in fester nativer Breite (380px). Zwingt man das
+   iframe schmaler (Quandoo setzt selbst max-width:100%), bricht der Inhalt NICHT
+   um, sondern scrollt intern. Daher: iframe auf native 380px-Breite halten und
+   den Container per transform:scale verkleinern, bis er in den verfuegbaren
+   Platz passt.
+   WICHTIG transform statt zoom: zoom verkleinert auf Safari/iOS das iframe-
+   Viewport, sodass Quandoos Inhalt ueberlaeuft und ein zweiter (interner)
+   Scrollbalken im Widget entsteht. transform skaliert nur die Darstellung und
+   laesst das iframe-Viewport voll, der Inhalt passt also ohne internen Scroll.
+   transform skaliert die Layout-Box NICHT mit, daher setzt QuandooWidget.tsx die
+   Hoehe/Breite der Shell live auf die skalierte Groesse (sonst Leerraum). */
 .reservation-widget-card #quandoo-booking-widget {
-  min-height: 0;
-  /* Quandoo rendert das iframe in einem inline-block-Wrapper. Ohne
-     line-height: 0 entsteht darunter ein Baseline-Descender-Gap (~8px),
-     der die Karte unten ungleichmaessig wirken laesst. */
+  width: 380px;
+  transform: scale(var(--quandoo-scale, 1));
+  transform-origin: top left;
+  /* Ohne line-height/font-size: 0 entsteht unter dem inline-block-Wrapper von
+     Quandoo ein Baseline-Descender-Gap (~8px). */
   line-height: 0;
   font-size: 0;
 }
 .reservation-widget-card #quandoo-booking-widget > div {
   vertical-align: bottom;
+  width: 100%;
 }
 .reservation-widget-card #quandoo-booking-widget iframe {
   display: block;
-  margin-inline: auto;
-}
-/* Das Quandoo-iframe hat eine feste Hoehe von 550px. Bei voller Breite
-   (~378px, ab Tablet) ist der Inhalt (Zeitslots + Button) hoeher als 550px
-   und das iframe scrollt intern. Daher die Hoehe so anheben, dass der
-   gesamte Inhalt sichtbar ist. Auf schmalen Phones (gestauchtes iframe)
-   reichen die 550px, dort keine Anhebung, damit kein Leerraum entsteht. */
-@media (min-width: 481px) {
-  .reservation-widget-card .quandoo-widget-shell,
-  .reservation-widget-card #quandoo-booking-widget,
-  .reservation-widget-card #quandoo-booking-widget > div,
-  .reservation-widget-card #quandoo-booking-widget iframe {
-    min-height: 620px;
-  }
+  width: 380px;
+  max-width: none;
 }
 
 @media (max-width: 440px) {
-  /* Auf schmalen Phones die Karte fast randlos, damit das iframe seine
-     native Breite behaelt und full view ohne Scroll passt. */
+  /* Auf schmalen Phones die Karte fast randlos, damit moeglichst viel Breite
+     fuer das Widget bleibt und der zoom-Faktor (siehe oben) so nah wie
+     moeglich an 1 liegt. */
   .reservation-card.reservation-widget-card {
     max-width: 100%;
     padding: 10px;
@@ -1679,8 +1662,15 @@ body {
 }
 
 /* --- 2. Bild-Karten mit Caption-Overlay (wie .terrace-photo figcaption) --- */
+/* Form/Clip direkt auf der Karte setzen: .about .img-col greift nur als
+   Nachfahren-Selektor, in der .menu-Sektion (Cucina-Karte) sitzt die Figure
+   aber nicht unter einem .about-Vorfahren, daher hier explizit. */
 .subpage-italienisch .ital-photo-card {
   position: relative;
+  aspect-ratio: 4 / 5;
+  border-radius: 8px; /* identisch zur Homepage-Bildkarte (.terrace-photo) */
+  overflow: hidden;
+  box-shadow: var(--shadow-warm);
 }
 .subpage-italienisch .ital-photo-card img {
   transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -1709,14 +1699,11 @@ body {
   align-items: flex-start;
   max-width: min(80%, 320px);
   padding: 16px 20px;
-  border: 1px solid rgba(255, 249, 240, 0.56);
-  border-radius: 6px;
-  background: rgba(255, 249, 240, 0.42);
-  -webkit-backdrop-filter: blur(22px) saturate(1.18);
-  backdrop-filter: blur(22px) saturate(1.18);
   color: var(--ink);
-  text-shadow: 0 1px 18px rgba(255, 249, 240, 0.48);
+  /* Glas-Material (bg, Rand, Radius, Blur, Schatten) zentral via --glass-* Tokens. */
 }
+/* Desktop-Sonderregel entfernt: ital-photo-card figcaption nutzt jetzt auf
+   allen Breakpoints dieselbe zentrale --glass-* Optik wie alle Glas-Divs. */
 .subpage-italienisch .ital-photo-card figcaption span {
   font-family: var(--font-mono);
   font-size: 10px;
@@ -1743,18 +1730,273 @@ body {
   align-items: center;
 }
 
+/* Gerichte untereinander statt zweispaltig: Titel oben, Beschreibung darunter.
+   Nur auf der Italienisch-Seite, die Homepage-Karte (Name | Preis) bleibt. */
+.subpage-italienisch .menu .dish {
+  grid-template-columns: 1fr;
+  gap: 6px;
+  align-items: start;
+}
+.subpage-italienisch .menu .dish .desc {
+  max-width: none;
+  margin-top: 0;
+}
+
 /* --- 5. Mobile: Caption-Karten kompakter, Wasserzeichen kleiner --- */
 @media (max-width: 980px) {
   .subpage-italienisch .ital-photo-card {
     aspect-ratio: 4/5;
+    /* Einspaltig (ab <=980px) wuerde die Karte sonst die volle Spaltenbreite
+       einnehmen und ~1045px hoch werden (siehe Messung). Auf eine ruhige
+       Kartengroesse deckeln und zentrieren, damit Bild und Text im Verhaeltnis
+       bleiben statt dass das Bild den ganzen Viewport fuellt. */
+    width: 100%;
+    max-width: 500px;
+    margin-inline: auto;
   }
   .subpage-italienisch .ital-photo-card figcaption {
-    left: 16px;
-    bottom: 16px;
+    /* Abstand zum inneren Strich (::before inset 14px) an die Homepage-Karten
+       angleichen, statt fast auf dem Strich zu kleben. */
+    left: 20px;
+    bottom: 20px;
     padding: 13px 16px;
+  }
+  /* In der Atmosphaere-Sektion steht das Bild im DOM vor dem Text (fuer das
+     Bild-links-Layout auf Desktop). Einspaltig landet es dadurch direkt unter
+     dem Cucina-Bild der vorigen Sektion, also zwei Bilder ohne Text dazwischen.
+     Reihenfolge drehen: Text zuerst, Bild darunter, wie bei den anderen
+     Sektionen. */
+  .subpage-italienisch .ital-section--gold .grid > figure {
+    order: 2;
   }
   .subpage-italienisch .ital-section--gold::after {
     font-size: clamp(96px, 26vw, 180px);
     opacity: 0.85;
   }
+}
+
+/* ============================================================
+   FAQ-Accordion (Unterseiten) - editorial im Vibe der Seite:
+   Magazin-Nummerierung (Mono-Eyebrow-Sprache), Playfair-Fragen,
+   Hairline-Trenner wie die Speisenliste, hauchduenner +/- Indikator
+   ohne Disc, Gold nur als feiner Akzent beim offenen Eintrag.
+   Antworten bleiben im DOM (Collapse via grid-template-rows),
+   damit der sichtbare Text dem faqJsonLd-Schema entspricht.
+   ============================================================ */
+.faq-accordion {
+  --faq-indent: clamp(2.1rem, 3.4vw, 3.1rem);
+  --faq-gap: clamp(14px, 2vw, 26px);
+  margin-top: clamp(20px, 3vw, 32px);
+  border-top: 1px solid var(--hair);
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--hair);
+}
+
+.faq-q {
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.faq-trigger {
+  width: 100%;
+  display: grid;
+  grid-template-columns: var(--faq-indent) 1fr auto;
+  align-items: baseline;
+  gap: var(--faq-gap);
+  padding: clamp(22px, 2.6vw, 32px) 0;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  text-align: left;
+  color: var(--ink);
+}
+
+/* Magazin-Nummer in der Mono-/Eyebrow-Sprache der Seite */
+.faq-num {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  color: var(--ink-muted);
+  transition: color 0.4s ease;
+}
+
+.faq-q-text {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(18px, 1.9vw, 24px);
+  line-height: 1.3;
+  letter-spacing: 0;
+  color: var(--ink);
+  transition: color 0.4s ease;
+}
+
+/* Hauchduenner +/- Indikator, kein Hintergrund */
+.faq-icon {
+  position: relative;
+  align-self: center;
+  flex: 0 0 auto;
+  width: 16px;
+  height: 16px;
+}
+
+.faq-icon::before,
+.faq-icon::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: var(--ink-muted);
+  transition: transform 0.42s cubic-bezier(0.4, 0, 0.2, 1), background 0.4s ease;
+}
+
+.faq-icon::before {
+  width: 15px;
+  height: 1px;
+  transform: translate(-50%, -50%);
+}
+
+.faq-icon::after {
+  width: 1px;
+  height: 15px;
+  transform: translate(-50%, -50%);
+}
+
+/* Hover: dezent dunkler */
+.faq-trigger:hover .faq-num {
+  color: var(--ink-2);
+}
+
+.faq-trigger:hover .faq-icon::before,
+.faq-trigger:hover .faq-icon::after {
+  background: var(--ink);
+}
+
+/* Offen: vertikaler Strich kollabiert -> Minus, Gold-Akzent */
+.faq-item[data-open="true"] .faq-icon::after {
+  transform: translate(-50%, -50%) scaleY(0);
+}
+
+.faq-item[data-open="true"] .faq-icon::before {
+  background: var(--accent);
+}
+
+.faq-item[data-open="true"] .faq-num {
+  color: var(--accent);
+}
+
+/* Panel: weiche Hoehen-Animation, Inhalt bleibt im DOM */
+.faq-panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.faq-item[data-open="true"] .faq-panel {
+  grid-template-rows: 1fr;
+}
+
+.faq-panel-inner {
+  overflow: hidden;
+}
+
+/* Antwort buendig unter der Frage (Nummer-Spalte + Gap eingerueckt) */
+.faq-panel-inner p {
+  margin: 0;
+  padding: 0 var(--faq-gap) clamp(24px, 2.8vw, 34px)
+    calc(var(--faq-indent) + var(--faq-gap));
+  max-width: 68ch;
+  color: var(--ink-2);
+  font-size: 16px;
+  line-height: 1.8;
+  opacity: 0;
+  transform: translateY(-4px);
+  transition: opacity 0.4s ease 0.06s, transform 0.4s ease 0.06s;
+}
+
+.faq-item[data-open="true"] .faq-panel-inner p {
+  opacity: 1;
+  transform: none;
+}
+
+@media (max-width: 600px) {
+  .faq-accordion {
+    --faq-indent: 1.9rem;
+    --faq-gap: 14px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .faq-panel,
+  .faq-icon::before,
+  .faq-icon::after,
+  .faq-panel-inner p {
+    transition: none;
+  }
+}
+
+/* Interne Weiterleitungs-Links unter der FAQ: bewusst dezent (klein, gedaempft),
+   aber lesbar. Farbe haelt WCAG AA (#7A6852 = 5.14:1 auf #fffaf1), also kein
+   Hidden Text - nur eine ruhige Fussnote. Links bleiben per Unterstreichung
+   als Links erkennbar (nicht nur ueber Farbe). */
+.subpage-info .subpage-related {
+  margin-top: clamp(28px, 4vw, 44px);
+  max-width: 72ch;
+  font-size: 13px;
+  line-height: 1.7;
+  letter-spacing: 0.01em;
+  color: var(--ink-muted);
+}
+
+.subpage-info .subpage-related a {
+  color: var(--ink-muted);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  text-decoration-color: var(--hair);
+  transition: color 0.3s ease, text-decoration-color 0.3s ease;
+}
+
+.subpage-info .subpage-related a:hover {
+  color: var(--ink);
+  text-decoration-color: var(--accent);
+}
+
+
+/* ============================================================
+   GLAS-DIVS — SINGLE SOURCE OF TRUTH (Foto-Overlays auf Bildern).
+   JEDE Glas-Flaeche, die auf einem Bild liegt, teilt sich hier EINE
+   Optik ueber die --glass-* Tokens (Definition: styles.css :root).
+   Material (Hintergrund, Blur, Rand, Radius, Schatten) kommt NUR von
+   dieser Regel. Groesse/Position/Padding bleibt in den Layout-Regeln
+   der jeweiligen Sektion. Optik aendern? -> nur die --glass-* Tokens.
+   Steht bewusst am Dateiende, damit sie alle frueheren Werte gewinnt.
+   ============================================================ */
+.terrace-photo figcaption,
+.signature-menu-hero figcaption,
+.all-day-photo figcaption,
+.filmstrip-label,
+.subpage-italienisch .ital-photo-card figcaption,
+.contact .map .corner,
+.contact .map .pin .label {
+  background: var(--glass-bg);
+  border: var(--glass-border);
+  border-radius: var(--glass-radius);
+  box-shadow: var(--glass-shadow);
+  -webkit-backdrop-filter: var(--glass-blur);
+  backdrop-filter: var(--glass-blur);
+  text-shadow: none;
+}
+
+/* Rundes Zaehler-Badge (Galerie): gleiches Glas-Material, runde Form bleibt. */
+.filmstrip-number {
+  background: var(--glass-bg);
+  border: var(--glass-border);
+  border-radius: 999px;
+  box-shadow: var(--glass-shadow);
+  -webkit-backdrop-filter: var(--glass-blur);
+  backdrop-filter: var(--glass-blur);
 }

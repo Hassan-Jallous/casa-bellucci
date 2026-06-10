@@ -1,71 +1,65 @@
-# Casa Bellucci Prototype
+# Casa Bellucci
+
+Next.js 16 Static Export für die Casa Bellucci Website.
 
 ## Aktueller Stand
 
-Dieses Projekt ist aktuell ein statischer HTML/React-Prototyp. Die aktive Homepage läuft über:
+Die aktive Website läuft über die migrierte Next.js-App:
 
-- `index.html`
-- `scripts/`
-- `styles/`
-- `images/`
-- `fonts/`
-- `public/menus/`
+- `app/`
+- `components/`
+- `lib/`
+- `public/`
+- `php-backend/` für die Hostinger-PHP-APIs
 
-Der alte Next.js-Stand ist nicht mehr die aktive Arbeitsbasis. Homepage-Arbeit passiert im Prototyp, bis die Migration ausdrücklich gestartet wird.
-
-## Quelle der Wahrheit
-
-`homepage-structure.md` definiert die Homepage-Struktur, Positionierung und die erlaubten Hauptsektionen. Keine neuen Homepage-Sektionen hinzufügen, ohne diese Datei vorher bewusst zu ändern.
-
-Aktuelle Homepage-Reihenfolge:
-
-1. Hero
-2. All-Day Concept
-3. Signature Moments / Menu
-4. Sommerterrasse
-5. Gallery / Atmosphere
-6. Reservation
-7. Contact / Location
+Die alte statische Prototyp-Phase ist abgeschlossen. Neue Homepage- und SEO-Arbeit passiert in der Next.js-App.
 
 ## Lokal starten
 
-Der Prototyp braucht keinen Build-Schritt. Wegen Video-, PDF- und Font-Pfaden sollte er aber über einen lokalen HTTP-Server laufen:
+```bash
+npm install
+npm run dev
+```
+
+Für Production-Checks:
 
 ```bash
-python3 -m http.server 4173
+npm exec tsc -- --noEmit
+npm run lint
+npm run build
 ```
 
-Dann öffnen:
+## Production
+
+Die Production-Domain ist:
 
 ```text
-http://localhost:4173/
+https://casabellucci.de
 ```
 
-## Wichtige Pfade
+Canonical URLs, Sitemap, JSON-LD und Open Graph zeigen auf diese Domain. Der Hostinger-Deploy läuft über `.github/workflows/deploy-hostinger.yml`; die manuelle PHP-Backend-Installation ist in `php-backend/DEPLOY.md` dokumentiert.
 
-- `scripts/app.jsx`: React-Einstieg und Seitenreihenfolge
-- `scripts/sections.jsx`: Homepage-Sektionen und Navigation
-- `scripts/data.js`: Menü-, Presse- und Galerie-Daten
-- `scripts/effects.jsx`: Video-Hero und ergänzende UI-Effekte
-- `scripts/decor.jsx`: dekorative SVG-Komponenten
-- `styles/styles.css`: Basislayout und Hauptdesign
-- `styles/vivid.css`: aktuelle visuelle Override-Schicht
-- `brand-spec.md`: visuelle Richtung
-- `docs/nextjs-migration.md`: spätere Next.js-Migrationsnotizen
+Vor einem Production-Deploy muss `docs/production-readiness-todo.md` abgearbeitet sein. Der Live-Smoke läuft mit:
 
-## Deployment
+```bash
+./scripts/live-smoke.sh https://casabellucci.de
+```
 
-GitHub Pages wird über `.github/workflows/deploy.yml` gebaut. Der Workflow kopiert bewusst nur die statisch benötigten Prototyp-Artefakte nach `site/`:
+## GitHub Pages Preview
 
-- `index.html`
-- `scripts/`
-- `styles/`
-- `images/`
-- `fonts/`
-- `public/menus/`
+`.github/workflows/deploy.yml` baut eine GitHub-Pages-Preview unter `/casa-bellucci`.
 
-Wenn neue statische Root-Pfade eingebaut werden, muss der Workflow entsprechend erweitert werden.
+Diese Preview ist nicht die Production-Version. Der Workflow setzt:
 
-## Next.js später
+```text
+NEXT_PUBLIC_BASE_PATH=/casa-bellucci
+```
 
-Die Migration wird vorbereitet, aber nicht im laufenden Prototyp versteckt begonnen. Vor Next.js-Arbeit zuerst `docs/nextjs-migration.md` lesen. Wenn wieder echtes Next.js im Projekt installiert ist, zusätzlich die lokale Dokumentation unter `node_modules/next/dist/docs/` prüfen, bevor Code geschrieben wird.
+Die App erkennt dadurch den Preview-Build und rendert `noindex, follow` in der Metadata. Hostinger baut ohne `NEXT_PUBLIC_BASE_PATH` und bleibt indexierbar.
+
+## Wichtige Dokumente
+
+- `AGENTS.md`: Projektregeln und aktueller Arbeitsmodus
+- `homepage-structure.md`: Homepage-Struktur und Positionierung
+- `docs/production-readiness-todo.md`: aktive Production-Readiness-Liste
+- `php-backend/DEPLOY.md`: Hostinger-Backend und Live-Smoke

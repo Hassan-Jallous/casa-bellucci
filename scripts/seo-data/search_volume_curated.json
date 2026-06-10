@@ -1,0 +1,3759 @@
+{
+  "version": "0.1.20260525",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "1.6448 sec.",
+  "cost": 0.075,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "06022130-1781-0367-0000-b23789b8244e",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "1.6290 sec.",
+      "cost": 0.075,
+      "result_count": 57,
+      "path": [
+        "v3",
+        "keywords_data",
+        "google_ads",
+        "search_volume",
+        "live"
+      ],
+      "data": {
+        "api": "keywords_data",
+        "function": "search_volume",
+        "se": "google_ads",
+        "keywords": [
+          "casa bellucci",
+          "casa bellucci berlin",
+          "bellucci berlin",
+          "casa bellucci kurfürstendamm",
+          "italienisches restaurant berlin",
+          "italienisches restaurant charlottenburg",
+          "italienisches restaurant kurfürstendamm",
+          "italienisches restaurant berlin charlottenburg",
+          "restaurant kurfürstendamm",
+          "restaurant charlottenburg",
+          "restaurant berlin kudamm",
+          "restaurant berlin charlottenburg",
+          "italiener charlottenburg",
+          "italiener kurfürstendamm",
+          "gemütliche restaurants berlin charlottenburg",
+          "restaurant charlottenburg italiener",
+          "frühstück charlottenburg",
+          "frühstück kurfürstendamm",
+          "bestes frühstück charlottenburg",
+          "frühstück charlottenburg-wilmersdorf",
+          "brunch charlottenburg",
+          "brunch kurfürstendamm",
+          "frühstück berlin charlottenburg",
+          "italienisches frühstück berlin",
+          "frühstück savignyplatz",
+          "lunch charlottenburg",
+          "lunch kurfürstendamm",
+          "business lunch berlin",
+          "mittagessen charlottenburg",
+          "mittagstisch charlottenburg",
+          "business lunch charlottenburg",
+          "abendessen kurfürstendamm",
+          "dinner charlottenburg",
+          "abendessen charlottenburg",
+          "gehobenes restaurant berlin",
+          "fine dining berlin",
+          "italienisch essen berlin",
+          "bar charlottenburg",
+          "bar kurfürstendamm",
+          "cocktailbar kudamm",
+          "cocktailbar charlottenburg",
+          "aperitivo berlin",
+          "aperitivo charlottenburg",
+          "weinbar charlottenburg",
+          "weinbar berlin",
+          "restaurant terrasse berlin",
+          "restaurant mit terrasse charlottenburg",
+          "sommerterrasse berlin",
+          "restaurant terrasse kurfürstendamm",
+          "romantisches restaurant berlin",
+          "restaurant für geschäftsessen berlin",
+          "date restaurant berlin",
+          "pasta restaurant berlin",
+          "frischer fisch restaurant berlin",
+          "sizilianisches restaurant berlin",
+          "restaurant reservieren berlin",
+          "tisch reservieren charlottenburg"
+        ],
+        "location_name": "Germany",
+        "language_code": "de"
+      },
+      "result": [
+        {
+          "keyword": "casa bellucci",
+          "spell": null,
+          "location_code": 2276,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": "LOW",
+          "competition_index": 3,
+          "search_volume": 390,
+          "low_top_of_page_bid": 0.4,
+          "high_top_of_page_bid": 1.05,
+          "cpc": 1.36,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 4,
+              "search_volume": 390
+            },
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 480
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 590
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 320
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 390
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 390
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 390
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 320
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 390
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 720
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 260
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 320
+            }
+          ]
+        },
+        {
+          "keyword": "casa bellucci berlin",
+          "spell": null,
+          "location_code": 2276,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": "LOW",
+          "competition_index": 7,
+          "search_volume": 170,
+          "low_top_of_page_bid": 0.37,
+          "high_top_of_page_bid": 1.72,
+          "cpc": 3.64,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 4,
+              "search_volume": 110
+            },
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 170
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 260
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 170
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 170
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 210
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 210
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 210
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 170
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 390
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 70
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 110
+            }
+          ]
+        },
+        {
+          "keyword": "bellucci berlin",
+          "spell": null,
+          "location_code": 2276,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": "LOW",
+          "competition_index": 10,
+          "search_volume": 2900,
+          "low_top_of_page_bid": 0.52,
+          "high_top_of_page_bid": 2.69,
+          "cpc": 1.58,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 4,
+              "search_volume": 2900
+            },
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 2900
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 3600
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 2400
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 2900
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 2900
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 2900
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 2400
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 2900
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 2900
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 2900
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 4400
+            }
+          ]
+        },
+        {
+          "keyword": "casa bellucci kurfürstendamm",
+          "spell": null,
+          "location_code": 2276,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "italienisches restaurant berlin",
+          "spell": null,
+          "location_code": 2276,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": "LOW",
+          "competition_index": 21,
+          "search_volume": 4400,
+          "low_top_of_page_bid": 0.18,
+          "high_top_of_page_bid": 0.85,
+          "cpc": 0.6,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 4,
+              "search_volume": 3600
+            },
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 5400
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 4400
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 4400
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 3600
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 3600
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 4400
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 3600
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 4400
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 5400
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 4400
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 4400
+            }
+          ]
+        },
+        {
+          "keyword": "italienisches restaurant charlottenburg",
+          "spell": null,
+          "location_code": 2276,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": "LOW",
+          "competition_index": 11,
+          "search_volume": 320,
+          "low_top_of_page_bid": 0.14,
+          "high_top_of_page_bid": 1.06,
+          "cpc": 0.37,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 4,
+              "search_volume": 210
+            },
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 390
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 320
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 320
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 390
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 260
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 390
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 320
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 320
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 390
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 390
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 390
+            }
+          ]
+        },
+        {
+          "keyword": "italienisches restaurant kurfürstendamm",
+          "spell": null,
+          "location_code": 2276,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": "LOW",
+          "competition_index": 20,
+          "search_volume": 70,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": 0.15,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 4,
+              "search_volume": 50
+            },
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 50
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 90
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 50
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 50
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 70
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 70
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 50
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 70
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 70
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 70
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 90
+            }
+          ]
+        },
+        {
+          "keyword": "italienisches restaurant berlin charlottenburg",
+          "spell": null,
+          "location_code": 2276,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": "LOW",
+          "competition_index": 14,
+          "search_volume": 210,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": 0.45,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 4,
+              "search_volume": 140
+            },
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 170
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 210
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 260
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 170
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 210
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 260
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 170
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 170
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 170
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 170
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 260
+            }
+          ]
+        },
+        {
+          "keyword": "restaurant kurfürstendamm",
+          "spell": null,
+          "location_code": 2276,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": "LOW",
+          "competition_index": 25,
+          "search_volume": 880,
+          "low_top_of_page_bid": 0.27,
+          "high_top_of_page_bid": 1.21,
+          "cpc": 0.44,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 4,
+              "search_volume": 590
+            },
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 720
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 720
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 720
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 880
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 720
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 1000
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 880
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 880
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 880
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 880
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 1000
+            }
+          ]
+        },
+        {
+          "keyword": "restaurant charlottenburg",
+          "spell": null,
+          "location_code": 2276,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": "LOW",
+          "competition_index": 15,
+          "search_volume": 2900,
+          "low_top_of_page_bid": 0.35,
+          "high_top_of_page_bid": 0.94,
+          "cpc": 0.52,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 4,
+              "search_volume": 2400
+            },
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 2900
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 2900
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 2900
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 2900
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 3600
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 3600
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 2900
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 3600
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 3600
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 2900
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 3600
+            }
+          ]
+        },
+        {
+          "keyword": "restaurant berlin kudamm",
+          "spell": null,
+          "location_code": 2276,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": "LOW",
+          "competition_index": 21,
+          "search_volume": 880,
+          "low_top_of_page_bid": 0.25,
+          "high_top_of_page_bid": 1.08,
+          "cpc": 0.52,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 4,
+              "search_volume": 880
+            },
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 880
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 880
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 880
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 1000
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 880
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 880
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 590
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 590
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 880
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 720
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 880
+            }
+          ]
+        },
+        {
+          "keyword": "restaurant berlin charlottenburg",
+          "spell": null,
+          "location_code": 2276,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": "LOW",
+          "competition_index": 18,
+          "search_volume": 1300,
+          "low_top_of_page_bid": 0.28,
+          "high_top_of_page_bid": 1.26,
+          "cpc": 0.52,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 4,
+              "search_volume": 880
+            },
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 1300
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 1000
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 1300
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 1300
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 1300
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 1300
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 1300
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 1000
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 1300
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 1300
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 1300
+            }
+          ]
+        },
+        {
+          "keyword": "italiener charlottenburg",
+          "spell": null,
+          "location_code": 2276,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": "LOW",
+          "competition_index": 16,
+          "search_volume": 1000,
+          "low_top_of_page_bid": 0.17,
+          "high_top_of_page_bid": 1.31,
+          "cpc": 0.25,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 4,
+              "search_volume": 720
+            },
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 1000
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 880
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 880
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 1000
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 1300
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 1000
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 1300
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 1000
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 1000
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 880
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 1300
+            }
+          ]
+        },
+        {
+          "keyword": "italiener kurfürstendamm",
+          "spell": null,
+          "location_code": 2276,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": "LOW",
+          "competition_index": 16,
+          "search_volume": 140,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": 0.43,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 4,
+              "search_volume": 70
+            },
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 140
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 140
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 110
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 140
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 110
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 170
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 110
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 140
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 170
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 140
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 170
+            }
+          ]
+        },
+        {
+          "keyword": "gemütliche restaurants berlin charlottenburg",
+          "spell": null,
+          "location_code": 2276,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": "LOW",
+          "competition_index": 21,
+          "search_volume": 170,
+          "low_top_of_page_bid": 0.17,
+          "high_top_of_page_bid": 0.69,
+          "cpc": 0.4,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 4,
+              "search_volume": 170
+            },
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 170
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 170
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 140
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 170
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 210
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 260
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 170
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 170
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 170
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 170
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 210
+            }
+          ]
+        },
+        {
+          "keyword": "restaurant charlottenburg italiener",
+          "spell": null,
+          "location_code": 2276,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": "LOW",
+          "competition_index": 13,
+          "search_volume": 70,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": 0.31,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 4,
+              "search_volume": 70
+            },
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 40
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 70
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 30
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 40
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 70
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 70
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 70
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 70
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 70
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 70
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 90
+            }
+          ]
+        },
+        {
+          "keyword": "frühstück charlottenburg",
+          "spell": null,
+          "location_code": 2276,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": "LOW",
+          "competition_index": 15,
+          "search_volume": 1900,
+          "low_top_of_page_bid": 0.23,
+          "high_top_of_page_bid": 0.64,
+          "cpc": 0.21,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 4,
+              "search_volume": 1300
+            },
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 1900
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 1300
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 1600
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 1600
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 1900
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 1900
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 1600
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 1900
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 1900
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 1900
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 2400
+            }
+          ]
+        },
+        {
+          "keyword": "frühstück kurfürstendamm",
+          "spell": null,
+          "location_code": 2276,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": "LOW",
+          "competition_index": 20,
+          "search_volume": 210,
+          "low_top_of_page_bid": 0.19,
+          "high_top_of_page_bid": 0.39,
+          "cpc": 0.23,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 4,
+              "search_volume": 210
+            },
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 260
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 170
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 140
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 260
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 210
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 210
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 210
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 210
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 210
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 210
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 320
+            }
+          ]
+        },
+        {
+          "keyword": "bestes frühstück charlottenburg",
+          "spell": null,
+          "location_code": 2276,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": "LOW",
+          "competition_index": 24,
+          "search_volume": 210,
+          "low_top_of_page_bid": 0.25,
+          "high_top_of_page_bid": 0.59,
+          "cpc": 0.36,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 4,
+              "search_volume": 170
+            },
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 260
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 260
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 210
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 170
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 210
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 260
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 210
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 170
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 210
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 210
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 260
+            }
+          ]
+        },
+        {
+          "keyword": "frühstück charlottenburg-wilmersdorf",
+          "spell": null,
+          "location_code": 2276,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": "LOW",
+          "competition_index": 19,
+          "search_volume": 170,
+          "low_top_of_page_bid": 0.22,
+          "high_top_of_page_bid": 0.52,
+          "cpc": 0.26,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 4,
+              "search_volume": 140
+            },
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 260
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 140
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 210
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 140
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 140
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 210
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 140
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 140
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 140
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 170
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 210
+            }
+          ]
+        },
+        {
+          "keyword": "brunch charlottenburg",
+          "spell": null,
+          "location_code": 2276,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": "LOW",
+          "competition_index": 18,
+          "search_volume": 1000,
+          "low_top_of_page_bid": 0.22,
+          "high_top_of_page_bid": 0.56,
+          "cpc": 0.39,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 4,
+              "search_volume": 880
+            },
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 1300
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 1000
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 1000
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 1000
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 1300
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 1000
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 1000
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 1000
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 880
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 880
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 1300
+            }
+          ]
+        },
+        {
+          "keyword": "brunch kurfürstendamm",
+          "spell": null,
+          "location_code": 2276,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": "LOW",
+          "competition_index": 14,
+          "search_volume": 30,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": 0.15,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 4,
+              "search_volume": 10
+            },
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 10
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 50
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 20
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 20
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 20
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 20
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 70
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 30
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 20
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 40
+            }
+          ]
+        },
+        {
+          "keyword": "frühstück berlin charlottenburg",
+          "spell": null,
+          "location_code": 2276,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": "LOW",
+          "competition_index": 18,
+          "search_volume": 720,
+          "low_top_of_page_bid": 0.12,
+          "high_top_of_page_bid": 0.59,
+          "cpc": 0.25,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 4,
+              "search_volume": 590
+            },
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 880
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 590
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 590
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 480
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 590
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 720
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 590
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 720
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 720
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 720
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 880
+            }
+          ]
+        },
+        {
+          "keyword": "italienisches frühstück berlin",
+          "spell": null,
+          "location_code": 2276,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": "LOW",
+          "competition_index": 15,
+          "search_volume": 30,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 4,
+              "search_volume": 20
+            },
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 30
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 10
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 20
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 20
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 20
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 40
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 20
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 30
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 40
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 30
+            }
+          ]
+        },
+        {
+          "keyword": "frühstück savignyplatz",
+          "spell": null,
+          "location_code": 2276,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": "LOW",
+          "competition_index": 15,
+          "search_volume": 320,
+          "low_top_of_page_bid": 0.25,
+          "high_top_of_page_bid": 0.54,
+          "cpc": 0.25,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 4,
+              "search_volume": 210
+            },
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 390
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 260
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 210
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 260
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 260
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 320
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 320
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 390
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 480
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 390
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 480
+            }
+          ]
+        },
+        {
+          "keyword": "lunch charlottenburg",
+          "spell": null,
+          "location_code": 2276,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": "LOW",
+          "competition_index": 12,
+          "search_volume": 140,
+          "low_top_of_page_bid": 0.17,
+          "high_top_of_page_bid": 0.68,
+          "cpc": 0.65,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 4,
+              "search_volume": 90
+            },
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 140
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 110
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 110
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 110
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 110
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 140
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 140
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 140
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 140
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 140
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 110
+            }
+          ]
+        },
+        {
+          "keyword": "lunch kurfürstendamm",
+          "spell": null,
+          "location_code": 2276,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "business lunch berlin",
+          "spell": null,
+          "location_code": 2276,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": "LOW",
+          "competition_index": 29,
+          "search_volume": 170,
+          "low_top_of_page_bid": 0.73,
+          "high_top_of_page_bid": 2.77,
+          "cpc": 3.01,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 4,
+              "search_volume": 110
+            },
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 140
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 140
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 140
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 90
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 140
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 170
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 210
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 260
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 260
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 210
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 170
+            }
+          ]
+        },
+        {
+          "keyword": "mittagessen charlottenburg",
+          "spell": null,
+          "location_code": 2276,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": "LOW",
+          "competition_index": 15,
+          "search_volume": 40,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": 0.29,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 4,
+              "search_volume": 40
+            },
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 40
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 40
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 40
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 50
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 30
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 20
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 50
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 40
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 30
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 20
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 20
+            }
+          ]
+        },
+        {
+          "keyword": "mittagstisch charlottenburg",
+          "spell": null,
+          "location_code": 2276,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": "LOW",
+          "competition_index": 9,
+          "search_volume": 90,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": 0.53,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 4,
+              "search_volume": 90
+            },
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 70
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 90
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 70
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 70
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 70
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 110
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 90
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 90
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 110
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 70
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 110
+            }
+          ]
+        },
+        {
+          "keyword": "business lunch charlottenburg",
+          "spell": null,
+          "location_code": 2276,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": "LOW",
+          "competition_index": 18,
+          "search_volume": 40,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": 0.33,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 4,
+              "search_volume": 30
+            },
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 30
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 50
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 40
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 40
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 20
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 30
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 30
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 70
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 70
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 50
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 50
+            }
+          ]
+        },
+        {
+          "keyword": "abendessen kurfürstendamm",
+          "spell": null,
+          "location_code": 2276,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "dinner charlottenburg",
+          "spell": null,
+          "location_code": 2276,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": "MEDIUM",
+          "competition_index": 34,
+          "search_volume": 10,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 4,
+              "search_volume": 10
+            },
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 20
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 10
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 20
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 30
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 10
+            }
+          ]
+        },
+        {
+          "keyword": "abendessen charlottenburg",
+          "spell": null,
+          "location_code": 2276,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "gehobenes restaurant berlin",
+          "spell": null,
+          "location_code": 2276,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": "LOW",
+          "competition_index": 32,
+          "search_volume": 320,
+          "low_top_of_page_bid": 0.16,
+          "high_top_of_page_bid": 0.62,
+          "cpc": 0.63,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 4,
+              "search_volume": 320
+            },
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 260
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 390
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 390
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 390
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 320
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 320
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 320
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 260
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 320
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 390
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 480
+            }
+          ]
+        },
+        {
+          "keyword": "fine dining berlin",
+          "spell": null,
+          "location_code": 2276,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": "MEDIUM",
+          "competition_index": 41,
+          "search_volume": 1900,
+          "low_top_of_page_bid": 0.29,
+          "high_top_of_page_bid": 1.24,
+          "cpc": 0.9,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 4,
+              "search_volume": 1300
+            },
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 1900
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 1900
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 2400
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 2400
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 2400
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 2400
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 1900
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 1600
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 1900
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 1600
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 1900
+            }
+          ]
+        },
+        {
+          "keyword": "italienisch essen berlin",
+          "spell": null,
+          "location_code": 2276,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": "LOW",
+          "competition_index": 22,
+          "search_volume": 140,
+          "low_top_of_page_bid": 0.3,
+          "high_top_of_page_bid": 0.96,
+          "cpc": 0.37,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 4,
+              "search_volume": 90
+            },
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 170
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 140
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 110
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 110
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 140
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 140
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 170
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 170
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 140
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 170
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 210
+            }
+          ]
+        },
+        {
+          "keyword": "bar charlottenburg",
+          "spell": null,
+          "location_code": 2276,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": "LOW",
+          "competition_index": 13,
+          "search_volume": 2400,
+          "low_top_of_page_bid": 0.32,
+          "high_top_of_page_bid": 0.69,
+          "cpc": 0.31,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 4,
+              "search_volume": 1900
+            },
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 2400
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 2400
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 2400
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 2400
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 2400
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 2400
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 1900
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 2400
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 1900
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 1600
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 2400
+            }
+          ]
+        },
+        {
+          "keyword": "bar kurfürstendamm",
+          "spell": null,
+          "location_code": 2276,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": "LOW",
+          "competition_index": 12,
+          "search_volume": 170,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": 0.26,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 4,
+              "search_volume": 140
+            },
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 210
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 110
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 170
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 210
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 170
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 170
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 210
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 170
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 170
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 210
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 260
+            }
+          ]
+        },
+        {
+          "keyword": "cocktailbar kudamm",
+          "spell": null,
+          "location_code": 2276,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": "LOW",
+          "competition_index": 14,
+          "search_volume": 110,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": 0.36,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 4,
+              "search_volume": 70
+            },
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 90
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 110
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 110
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 90
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 90
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 110
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 70
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 140
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 110
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 110
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 170
+            }
+          ]
+        },
+        {
+          "keyword": "cocktailbar charlottenburg",
+          "spell": null,
+          "location_code": 2276,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": "LOW",
+          "competition_index": 11,
+          "search_volume": 170,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": 0.34,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 4,
+              "search_volume": 170
+            },
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 170
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 140
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 170
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 170
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 140
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 210
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 140
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 170
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 140
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 140
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 260
+            }
+          ]
+        },
+        {
+          "keyword": "aperitivo berlin",
+          "spell": null,
+          "location_code": 2276,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": "LOW",
+          "competition_index": 6,
+          "search_volume": 210,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": 0.16,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 4,
+              "search_volume": 260
+            },
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 260
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 140
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 170
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 110
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 170
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 210
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 210
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 320
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 260
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 260
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 260
+            }
+          ]
+        },
+        {
+          "keyword": "aperitivo charlottenburg",
+          "spell": null,
+          "location_code": 2276,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "weinbar charlottenburg",
+          "spell": null,
+          "location_code": 2276,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": "LOW",
+          "competition_index": 14,
+          "search_volume": 260,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": 0.47,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 4,
+              "search_volume": 210
+            },
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 320
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 210
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 260
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 210
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 260
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 260
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 210
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 210
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 260
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 210
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 320
+            }
+          ]
+        },
+        {
+          "keyword": "weinbar berlin",
+          "spell": null,
+          "location_code": 2276,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": "LOW",
+          "competition_index": 13,
+          "search_volume": 1600,
+          "low_top_of_page_bid": 0.82,
+          "high_top_of_page_bid": 2.15,
+          "cpc": 0.43,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 4,
+              "search_volume": 1900
+            },
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 1900
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 1900
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 1600
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 1300
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 1600
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 1600
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 1600
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 1600
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 1300
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 1300
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 1900
+            }
+          ]
+        },
+        {
+          "keyword": "restaurant terrasse berlin",
+          "spell": null,
+          "location_code": 2276,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": "LOW",
+          "competition_index": 16,
+          "search_volume": 210,
+          "low_top_of_page_bid": 0.11,
+          "high_top_of_page_bid": 0.59,
+          "cpc": 0.33,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 4,
+              "search_volume": 210
+            },
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 140
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 40
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 20
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 20
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 20
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 50
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 110
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 390
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 480
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 720
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 390
+            }
+          ]
+        },
+        {
+          "keyword": "restaurant mit terrasse charlottenburg",
+          "spell": null,
+          "location_code": 2276,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "sommerterrasse berlin",
+          "spell": null,
+          "location_code": 2276,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": "LOW",
+          "competition_index": 21,
+          "search_volume": 10,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": 0.37,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 4,
+              "search_volume": 10
+            },
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 10
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 0
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 0
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 0
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 0
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 10
+            }
+          ]
+        },
+        {
+          "keyword": "restaurant terrasse kurfürstendamm",
+          "spell": null,
+          "location_code": 2276,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "romantisches restaurant berlin",
+          "spell": null,
+          "location_code": 2276,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": "MEDIUM",
+          "competition_index": 54,
+          "search_volume": 720,
+          "low_top_of_page_bid": 0.28,
+          "high_top_of_page_bid": 1.17,
+          "cpc": 1.08,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 4,
+              "search_volume": 480
+            },
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 480
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 1300
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 1000
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 590
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 720
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 880
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 720
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 720
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 880
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 720
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 880
+            }
+          ]
+        },
+        {
+          "keyword": "restaurant für geschäftsessen berlin",
+          "spell": null,
+          "location_code": 2276,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "date restaurant berlin",
+          "spell": null,
+          "location_code": 2276,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": "MEDIUM",
+          "competition_index": 39,
+          "search_volume": 110,
+          "low_top_of_page_bid": 0.24,
+          "high_top_of_page_bid": 1.17,
+          "cpc": 0.73,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 4,
+              "search_volume": 110
+            },
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 140
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 140
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 110
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 110
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 140
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 140
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 90
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 90
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 140
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 140
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 90
+            }
+          ]
+        },
+        {
+          "keyword": "pasta restaurant berlin",
+          "spell": null,
+          "location_code": 2276,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": "LOW",
+          "competition_index": 16,
+          "search_volume": 170,
+          "low_top_of_page_bid": 0.13,
+          "high_top_of_page_bid": 0.76,
+          "cpc": 0.51,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 4,
+              "search_volume": 170
+            },
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 170
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 170
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 140
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 90
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 140
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 210
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 210
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 210
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 210
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 170
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 260
+            }
+          ]
+        },
+        {
+          "keyword": "frischer fisch restaurant berlin",
+          "spell": null,
+          "location_code": 2276,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        },
+        {
+          "keyword": "sizilianisches restaurant berlin",
+          "spell": null,
+          "location_code": 2276,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": "LOW",
+          "competition_index": 21,
+          "search_volume": 4400,
+          "low_top_of_page_bid": 0.18,
+          "high_top_of_page_bid": 0.85,
+          "cpc": 0.6,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 4,
+              "search_volume": 3600
+            },
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 5400
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 4400
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 4400
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 3600
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 3600
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 4400
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 3600
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 4400
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 5400
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 4400
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 4400
+            }
+          ]
+        },
+        {
+          "keyword": "restaurant reservieren berlin",
+          "spell": null,
+          "location_code": 2276,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": "MEDIUM",
+          "competition_index": 35,
+          "search_volume": 20,
+          "low_top_of_page_bid": 0.84,
+          "high_top_of_page_bid": 2.39,
+          "cpc": 1.36,
+          "monthly_searches": [
+            {
+              "year": 2026,
+              "month": 4,
+              "search_volume": 20
+            },
+            {
+              "year": 2026,
+              "month": 3,
+              "search_volume": 30
+            },
+            {
+              "year": 2026,
+              "month": 2,
+              "search_volume": 50
+            },
+            {
+              "year": 2026,
+              "month": 1,
+              "search_volume": 30
+            },
+            {
+              "year": 2025,
+              "month": 12,
+              "search_volume": 40
+            },
+            {
+              "year": 2025,
+              "month": 11,
+              "search_volume": 20
+            },
+            {
+              "year": 2025,
+              "month": 10,
+              "search_volume": 20
+            },
+            {
+              "year": 2025,
+              "month": 9,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 8,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 7,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 6,
+              "search_volume": 10
+            },
+            {
+              "year": 2025,
+              "month": 5,
+              "search_volume": 20
+            }
+          ]
+        },
+        {
+          "keyword": "tisch reservieren charlottenburg",
+          "spell": null,
+          "location_code": 2276,
+          "language_code": "de",
+          "search_partners": false,
+          "competition": null,
+          "competition_index": null,
+          "search_volume": null,
+          "low_top_of_page_bid": null,
+          "high_top_of_page_bid": null,
+          "cpc": null,
+          "monthly_searches": null
+        }
+      ]
+    }
+  ]
+}

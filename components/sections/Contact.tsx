@@ -1,7 +1,12 @@
+'use client';
+
 import { FlagBar } from './Brand';
 import { SITE } from '@/lib/site';
+import { routePath } from '@/lib/routes';
+import { useDict } from '@/lib/i18n/LanguageProvider';
 
 export function Contact() {
+  const d = useDict();
   return (
     <section className="contact" id="kontakt" data-screen-label="07 Kontakt">
       <div className="wrap">
@@ -9,38 +14,40 @@ export function Contact() {
           <div>
             <div className="section-eyebrow">
               <span className="eyebrow" style={{ display: "inline-flex", alignItems: "center", gap: 10 }}>
-                <FlagBar orientation="h" /> Kontakt
+                <FlagBar orientation="h" /> {d.home.contact.eyebrow}
               </span>
             </div>
-            <h2>Kontakt &amp;<br/><span className="it">Anfahrt</span></h2>
+            <h2>{d.home.contact.headingPre}<br/><span className="it">{d.home.contact.headingEm}</span></h2>
             <p className="lede">
-              Besuchen Sie Casa Bellucci, Ihr italienisches und sizilianisches Restaurant am Kurfürstendamm 63 in Berlin-Charlottenburg. Reservierungen per Telefon oder online, Walk-ins besonders an der Bar.
+              {d.home.contact.ledeParts.pre}{' '}
+              <a href={routePath('/italienisches-restaurant-berlin-charlottenburg/')}>{d.home.contact.ledeParts.link}</a>{' '}
+              {d.home.contact.ledeParts.post}
             </p>
             <div className="info">
               <div className="block">
-                <div className="k">Adresse</div>
+                <div className="k">{d.common.info.address}</div>
                 <div className="v">Kurfürstendamm 63<br/>10707 Berlin · Charlottenburg</div>
               </div>
               <div className="block">
-                <div className="k">Reservierung</div>
+                <div className="k">{d.common.info.reservation}</div>
                 <div className="v">{SITE.phone}<br/><span className="muted">{SITE.email}</span></div>
               </div>
               <div className="block">
-                <div className="k">Öffnungszeiten</div>
-                <div className="v">{SITE.openingHours.weekdays}<br/><span className="muted">{SITE.openingHours.sunday}</span></div>
+                <div className="k">{d.common.info.hours}</div>
+                <div className="v">{d.common.hours.weekdays}<br/><span className="muted">{d.common.hours.sunday}</span></div>
               </div>
               <div className="contact-actions">
-                <a className="btn btn-primary" href={SITE.phoneHref}>Anrufen</a>
-                <a className="btn btn-ghost" href={SITE.mapsUrl} target="_blank" rel="noreferrer">Auf Karte öffnen →</a>
+                <a className="btn btn-primary" href={SITE.phoneHref}>{d.common.actions.call}</a>
+                <a className="btn btn-ghost" href={SITE.mapsUrl} target="_blank" rel="noreferrer">{d.common.actions.openMaps}</a>
               </div>
             </div>
           </div>
-          <div className="map" aria-label="Lage auf Karte">
-            <div className="corner">Kudamm · Charlottenburg</div>
+          <div className="map" aria-label={d.home.contact.mapLabel}>
+            <div className="corner">{d.common.mapCorner.area}</div>
             <div className="pin">
               <div className="dot"></div>
               <div className="pulse"></div>
-              <div className="label">Casa Bellucci</div>
+              <div className="label">{d.common.mapCorner.name}</div>
             </div>
           </div>
         </div>

@@ -1,0 +1,392 @@
+/* Eigenständiges dunkel/gold Admin-Design. Bewusst als CSS-Modul, damit das
+   pixelgenaue globale Public-CSS (public/styles/*.css) unberührt bleibt. */
+
+.page {
+  font-family: 'Montserrat', sans-serif;
+  background: #0a0a0a;
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px;
+  box-sizing: border-box;
+}
+
+.page *,
+.page *::before,
+.page *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.wrap {
+  width: 100%;
+  max-width: 460px;
+}
+
+/* ── Header ── */
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  font-weight: 300;
+  letter-spacing: 8px;
+  color: #c9a96e;
+  text-transform: uppercase;
+}
+.header p {
+  font-size: 10px;
+  letter-spacing: 4px;
+  color: #444;
+  text-transform: uppercase;
+  margin-top: 6px;
+}
+
+/* ── Login Card ── */
+.loginCard {
+  background: #111;
+  border: 1px solid #1e1e1e;
+  border-radius: 14px;
+  padding: 36px 32px;
+}
+.loginCard label {
+  display: block;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #555;
+  margin-bottom: 10px;
+}
+.loginCard input {
+  width: 100%;
+  padding: 14px 16px;
+  background: #080808;
+  border: 1px solid #252525;
+  border-radius: 10px;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+.loginCard input:focus {
+  border-color: #c9a96e;
+}
+.loginCard input:focus-visible,
+.btnGold:focus,
+.btnGold:focus-visible,
+.btnLogout:focus,
+.btnLogout:focus-visible,
+.fileRow:focus-within,
+.pwToggle:focus,
+.pwToggle:focus-visible,
+.pwInput:focus,
+.pwInput:focus-visible {
+  outline: 2px solid #c9a96e;
+  outline-offset: 3px;
+}
+.loginCard input::placeholder {
+  color: #333;
+}
+
+/* ── Buttons ── */
+.btnGold {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 14px;
+  background: #c9a96e;
+  color: #0a0a0a;
+  border: none;
+  border-radius: 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-top: 20px;
+}
+.btnGold:hover:not(:disabled) {
+  background: #dbb878;
+}
+.btnGold:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btnUpload {
+  padding: 11px;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  margin-top: 14px;
+  border-radius: 8px;
+}
+
+.btnLogout {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background: none;
+  color: #444;
+  border: 1px solid #1e1e1e;
+  border-radius: 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-top: 20px;
+}
+.btnLogout:hover {
+  color: #c9a96e;
+  border-color: #c9a96e40;
+}
+
+/* ── Alert Messages ── */
+.alert {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 16px;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-align: center;
+  margin-top: 16px;
+  animation: alertSlideIn 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+@keyframes alertSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.alertError {
+  background: rgba(231, 76, 60, 0.06);
+  border: 1px solid rgba(231, 76, 60, 0.12);
+  color: #e57373;
+}
+.alertSuccess {
+  background: rgba(201, 169, 110, 0.08);
+  border: 1px solid rgba(201, 169, 110, 0.15);
+  color: #c9a96e;
+}
+
+/* ── Menu Section ── */
+.menuItem {
+  background: #111;
+  border: 1px solid #1e1e1e;
+  border-radius: 14px;
+  padding: 28px 28px 24px;
+  margin-bottom: 14px;
+}
+
+.menuItemTop {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.menuItemInfo h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  font-weight: 400;
+  font-style: italic;
+  color: #fff;
+  margin-bottom: 3px;
+}
+.menuItemInfo p {
+  font-size: 11px;
+  color: #444;
+  line-height: 1.4;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.badgeActive {
+  background: rgba(46, 204, 113, 0.1);
+  color: #2ecc71;
+  border: 1px solid rgba(46, 204, 113, 0.15);
+}
+.badgeEmpty {
+  background: rgba(255, 255, 255, 0.03);
+  color: #444;
+  border: 1px solid #1e1e1e;
+}
+.badgeDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.badgeActive .badgeDot {
+  background: #2ecc71;
+}
+.badgeEmpty .badgeDot {
+  background: #333;
+}
+
+.menuMeta {
+  font-size: 10px;
+  color: #333;
+  margin-top: 4px;
+}
+
+/* ── File Upload ── */
+.fileRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #080808;
+  border: 1px solid #1e1e1e;
+  border-radius: 10px;
+  padding: 10px 14px;
+  cursor: pointer;
+  transition: border-color 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+.fileRow:hover {
+  border-color: #333;
+}
+.fileRow input[type='file'] {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+  font-size: 0;
+}
+.fileRowIcon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  color: #333;
+}
+.fileRowText {
+  font-size: 12px;
+  color: #444;
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.fileRowText.hasFile {
+  color: #c9a96e;
+}
+.fileRowHint {
+  font-size: 10px;
+  color: #2a2a2a;
+  flex-shrink: 0;
+}
+
+/* ── Spinner ── */
+.spinner {
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  border: 2px solid currentColor;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ── Password Change ── */
+.pwCard {
+  margin-top: 8px;
+}
+.pwCardTop {
+  margin-bottom: 0;
+}
+.pwToggle {
+  cursor: pointer;
+  border: none;
+  background: rgba(255, 255, 255, 0.03);
+}
+.pwForm {
+  margin-top: 16px;
+}
+.pwFields {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.pwField {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.pwField label {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  color: #555;
+}
+.pwInput {
+  width: 100%;
+  padding: 12px 14px;
+  background: #080808;
+  border: 1px solid #252525;
+  border-radius: 10px;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  outline: none;
+}
+.pwInput:focus {
+  border-color: #c9a96e;
+}
+.pwInput::placeholder {
+  color: #333;
+}
+
+@media (max-width: 500px) {
+  .wrap {
+    max-width: 100%;
+  }
+  .loginCard,
+  .menuItem {
+    padding: 24px 20px;
+  }
+  .header h1 {
+    font-size: 26px;
+    letter-spacing: 6px;
+  }
+}

@@ -1,0 +1,796 @@
+{
+  "bar charlottenburg": {
+    "features": {
+      "compare_sites": 1,
+      "local_pack": 12,
+      "organic": 20,
+      "related_searches": 2
+    },
+    "organic": [
+      {
+        "rank": 1,
+        "domain": "mitvergnuegen.com",
+        "url": "https://mitvergnuegen.com/2017/11-bars-in-charlottenburg-die-ihr-kennen-solltet",
+        "title": "11 Bars in Charlottenburg, die ihr kennen solltet"
+      },
+      {
+        "rank": 2,
+        "domain": "www.tip-berlin.de",
+        "url": "https://www.tip-berlin.de/essen-trinken/bars/bars-in-charlottenburg-tipps/",
+        "title": "Bars in Charlottenburg: Von kultig bis luxuriös"
+      },
+      {
+        "rank": 3,
+        "domain": "www.reddit.com",
+        "url": "https://www.reddit.com/r/berlinsocialclub/comments/15kpsoj/can_you_recommend_me_bars_near_charlottenburg_im/?tl=de",
+        "title": "Kannst du mir Bars in der Nähe von Charlottenburg ..."
+      },
+      {
+        "rank": 4,
+        "domain": "www.opentable.de",
+        "url": "https://www.opentable.de/cuisine/best-cocktail-bar-restaurants-berlin-charlottenburg",
+        "title": "Die 13 besten Cocktailbars in Charlottenburg"
+      },
+      {
+        "rank": 5,
+        "domain": "www.tripadvisor.de",
+        "url": "https://www.tripadvisor.de/Attractions-g187323-Activities-c20-t99-zfn7281401-Berlin.html",
+        "title": "Die 10 besten Bars & Clubs in Berlin 2026 (mit fotos)"
+      },
+      {
+        "rank": 6,
+        "domain": "www.visitberlin.de",
+        "url": "https://www.visitberlin.de/de/ausgehen-der-city-west",
+        "title": "Ausgehen in der City West"
+      },
+      {
+        "rank": 7,
+        "domain": "www.galander.berlin",
+        "url": "https://www.galander.berlin/",
+        "title": "Galander Bars in Berlin Kreuzberg und Charlottenburg ..."
+      },
+      {
+        "rank": 8,
+        "domain": "www.pianobar-vangogh.de",
+        "url": "https://www.pianobar-vangogh.de/",
+        "title": "Van Gogh Piano- und Cocktailbar in Berlin Charlottenburg"
+      },
+      {
+        "rank": 9,
+        "domain": "www.galander.berlin",
+        "url": "https://www.galander.berlin/galander-bar-charlottenburg/",
+        "title": "Galander Bar Charlottenburg - Beste Drinks im edlen 20er ..."
+      },
+      {
+        "rank": 10,
+        "domain": "stairsbar-berlin.com",
+        "url": "https://stairsbar-berlin.com/",
+        "title": "STAIRS Cocktail Bar"
+      }
+    ],
+    "local_pack": [
+      {
+        "rank": 1,
+        "title": "Galander Charlottenburg",
+        "rating": {
+          "rating_type": "Max5",
+          "value": 4.7,
+          "votes_count": 609,
+          "rating_max": 5
+        }
+      },
+      {
+        "rank": 2,
+        "title": "Monkey Bar",
+        "rating": {
+          "rating_type": "Max5",
+          "value": 4.1,
+          "votes_count": 7365,
+          "rating_max": 5
+        }
+      },
+      {
+        "rank": 3,
+        "title": "Journey into the Night",
+        "rating": {
+          "rating_type": "Max5",
+          "value": 4.6,
+          "votes_count": 318,
+          "rating_max": 5
+        }
+      },
+      {
+        "rank": 4,
+        "title": "Bar Zentral",
+        "rating": {
+          "rating_type": "Max5",
+          "value": 4.7,
+          "votes_count": 566,
+          "rating_max": 5
+        }
+      },
+      {
+        "rank": 5,
+        "title": "Zeitlos Berlin",
+        "rating": {
+          "rating_type": "Max5",
+          "value": 4.5,
+          "votes_count": 938,
+          "rating_max": 5
+        }
+      },
+      {
+        "rank": 6,
+        "title": "Cocktailbar Zeitlos",
+        "rating": {
+          "rating_type": "Max5",
+          "value": 4,
+          "votes_count": 2406,
+          "rating_max": 5
+        }
+      }
+    ]
+  },
+  "frühstück charlottenburg": {
+    "features": {
+      "compare_sites": 1,
+      "local_pack": 12,
+      "organic": 20,
+      "related_searches": 2
+    },
+    "organic": [
+      {
+        "rank": 1,
+        "domain": "mitvergnuegen.com",
+        "url": "https://mitvergnuegen.com/2017/11-orte-zum-fruehstuecken-in-charlottenburg",
+        "title": "11 Orte, an denen ihr in Charlottenburg richtig gut ..."
+      },
+      {
+        "rank": 2,
+        "domain": "www.visitberlin.de",
+        "url": "https://www.visitberlin.de/de/fruehstueck-brunch-berlin/bezirk/charlottenburg-wilmersdorf",
+        "title": "Frühstück & Brunch in Berlin in Charlottenburg-Wilmersdorf"
+      },
+      {
+        "rank": 3,
+        "domain": "www.opentable.de",
+        "url": "https://www.opentable.de/cuisine/best-breakfast-restaurants-berlin-charlottenburg",
+        "title": "Die 16 besten Frühstück-Restaurants in Charlottenburg"
+      },
+      {
+        "rank": 4,
+        "domain": "setsberlin.de",
+        "url": "https://setsberlin.de/",
+        "title": "SETS - Der Ort für gutes Essen in Berlin Charlottenburg"
+      },
+      {
+        "rank": 5,
+        "domain": "www.au-lait.de",
+        "url": "https://www.au-lait.de/",
+        "title": "Café au Lait - Berlin"
+      },
+      {
+        "rank": 6,
+        "domain": "cafe-miro.com",
+        "url": "https://cafe-miro.com/",
+        "title": "MIRO — Frühstück & Café Berlin Charlottenburg"
+      },
+      {
+        "rank": 7,
+        "domain": "www.quandoo.de",
+        "url": "https://www.quandoo.de/berlin-charlottenburg/tags/fruehstueck",
+        "title": "11 Frühstücksrestaurants in Charlottenburg, Berlin - Quandoo"
+      },
+      {
+        "rank": 8,
+        "domain": "www.cremeguides.com",
+        "url": "https://www.cremeguides.com/berlin/essen/fruehstueck-brunch/",
+        "title": "Die besten Orte für Brunch und Frühstück in Berlin"
+      },
+      {
+        "rank": 9,
+        "domain": "cafefriedrichs.com",
+        "url": "https://cafefriedrichs.com/",
+        "title": "Café Friedrichs: Frühstückscafé Berlin Charlottenburg"
+      },
+      {
+        "rank": 10,
+        "domain": "www.tripadvisor.de",
+        "url": "https://www.tripadvisor.de/Restaurants-g187323-zfn15620493-zfp2-Berlin.html",
+        "title": "Restaurants Frühstück in Charlottenburg-Wilmersdorf ..."
+      }
+    ],
+    "local_pack": [
+      {
+        "rank": 1,
+        "title": "A Never Ever Ending Love Story",
+        "rating": {
+          "rating_type": "Max5",
+          "value": 4.6,
+          "votes_count": 2702,
+          "rating_max": 5
+        }
+      },
+      {
+        "rank": 2,
+        "title": "Café au Lait",
+        "rating": {
+          "rating_type": "Max5",
+          "value": 4.4,
+          "votes_count": 2998,
+          "rating_max": 5
+        }
+      },
+      {
+        "rank": 3,
+        "title": "Day Date Berlin",
+        "rating": {
+          "rating_type": "Max5",
+          "value": 4.8,
+          "votes_count": 142,
+          "rating_max": 5
+        }
+      },
+      {
+        "rank": 4,
+        "title": "KIRA'S Café und Manufaktur",
+        "rating": {
+          "rating_type": "Max5",
+          "value": 4.9,
+          "votes_count": 260,
+          "rating_max": 5
+        }
+      },
+      {
+        "rank": 5,
+        "title": "What a treat Breakfast Charlottenburg",
+        "rating": {
+          "rating_type": "Max5",
+          "value": 4.8,
+          "votes_count": 90,
+          "rating_max": 5
+        }
+      },
+      {
+        "rank": 6,
+        "title": "lagom Café",
+        "rating": {
+          "rating_type": "Max5",
+          "value": 4.6,
+          "votes_count": 371,
+          "rating_max": 5
+        }
+      }
+    ]
+  },
+  "italienisches restaurant berlin": {
+    "features": {
+      "compare_sites": 1,
+      "local_pack": 12,
+      "organic": 20,
+      "people_also_search": 1,
+      "related_searches": 2
+    },
+    "organic": [
+      {
+        "rank": 1,
+        "domain": "www.tripadvisor.de",
+        "url": "https://www.tripadvisor.de/Restaurants-g187323-c26-Berlin.html",
+        "title": "Die 10 Besten Italienischen Restaurants in Berlin"
+      },
+      {
+        "rank": 2,
+        "domain": "mitvergnuegen.com",
+        "url": "https://mitvergnuegen.com/2016/italienisch-essen",
+        "title": "11 Restaurants, in denen ihr richtig gut italienisch essen ..."
+      },
+      {
+        "rank": 3,
+        "domain": "ristorante-arlecchino.de",
+        "url": "https://ristorante-arlecchino.de/",
+        "title": "Italienisches Restaurant Berlin-Charlottenburg"
+      },
+      {
+        "rank": 4,
+        "domain": "www.bigmammagroup.com",
+        "url": "https://www.bigmammagroup.com/de/italienische-restaurants/coccodrillo-berlin",
+        "title": "Coccodrillo Berlin | Italienisches Restaurant Mitte"
+      },
+      {
+        "rank": 5,
+        "domain": "www.bocca-felice.de",
+        "url": "https://www.bocca-felice.de/",
+        "title": "Ristorante Bocca Felice / Gourmet / Berlin"
+      },
+      {
+        "rank": 6,
+        "domain": "www.amano-ristorante.de",
+        "url": "https://www.amano-ristorante.de/",
+        "title": "Restaurant A Mano – Berlin – Ristorante Italiano"
+      },
+      {
+        "rank": 7,
+        "domain": "www.feinschmecker.de",
+        "url": "https://www.feinschmecker.de/geniessen/italiener-berlin-italienische-restaurants",
+        "title": "Italienische Restaurants Berlin: Die besten Italiener der Stadt"
+      },
+      {
+        "rank": 8,
+        "domain": "www.mamma-monti.com",
+        "url": "https://www.mamma-monti.com/",
+        "title": "Startseite - Mamma Monti - Italieniches Restaurant in Berlin ..."
+      },
+      {
+        "rank": 9,
+        "domain": "www.nuovoanticaroma-berlin.de",
+        "url": "https://www.nuovoanticaroma-berlin.de/",
+        "title": "Italienisches Restaurant Berlin Schöneberg am Wittenbergplatz"
+      },
+      {
+        "rank": 10,
+        "domain": "www.tutti-gusti.de",
+        "url": "http://www.tutti-gusti.de/",
+        "title": "Tutti Gusti - Italienisches Restaurant Berlin Charlottenburg"
+      }
+    ],
+    "local_pack": [
+      {
+        "rank": 1,
+        "title": "Ristorante Nuova Italia-Berlin Gendarmenmarkt",
+        "rating": {
+          "rating_type": "Max5",
+          "value": 4.9,
+          "votes_count": 596,
+          "rating_max": 5
+        }
+      },
+      {
+        "rank": 2,
+        "title": "Ristorante Bocca Felice Berlin-Mitte",
+        "rating": {
+          "rating_type": "Max5",
+          "value": 4.9,
+          "votes_count": 2286,
+          "rating_max": 5
+        }
+      },
+      {
+        "rank": 3,
+        "title": "Impasto Rosso",
+        "rating": {
+          "rating_type": "Max5",
+          "value": 4.8,
+          "votes_count": 2953,
+          "rating_max": 5
+        }
+      },
+      {
+        "rank": 4,
+        "title": "La Via Del Muro",
+        "rating": {
+          "rating_type": "Max5",
+          "value": 4.8,
+          "votes_count": 4013,
+          "rating_max": 5
+        }
+      },
+      {
+        "rank": 5,
+        "title": "Ristorante A MANO",
+        "rating": {
+          "rating_type": "Max5",
+          "value": 4.8,
+          "votes_count": 4092,
+          "rating_max": 5
+        }
+      },
+      {
+        "rank": 6,
+        "title": "AMON Restaurant - Cucina italiana",
+        "rating": {
+          "rating_type": "Max5",
+          "value": 4.8,
+          "votes_count": 551,
+          "rating_max": 5
+        }
+      }
+    ]
+  },
+  "italienisches restaurant charlottenburg": {
+    "features": {
+      "compare_sites": 1,
+      "local_pack": 12,
+      "organic": 20,
+      "related_searches": 2
+    },
+    "organic": [
+      {
+        "rank": 1,
+        "domain": "www.quandoo.de",
+        "url": "https://www.quandoo.de/berlin-charlottenburg/tags/italienische-restaurants",
+        "title": "26 Italienische Restaurants in Charlottenburg, Berlin - Quandoo"
+      },
+      {
+        "rank": 2,
+        "domain": "www.tripadvisor.de",
+        "url": "https://www.tripadvisor.de/Restaurants-g187323-c26-zfn7281401-Berlin.html",
+        "title": "Top 10 Restaurants Italienisch in Charlottenburg (Berlin)"
+      },
+      {
+        "rank": 3,
+        "domain": "www.mamma-monti.com",
+        "url": "https://www.mamma-monti.com/",
+        "title": "Startseite - Mamma Monti - Italieniches Restaurant in Berlin ..."
+      },
+      {
+        "rank": 4,
+        "domain": "www.visitberlin.de",
+        "url": "https://www.visitberlin.de/de/italienische-kueche/bezirk/charlottenburg-wilmersdorf",
+        "title": "Italienische Küche in Charlottenburg-Wilmersdorf"
+      },
+      {
+        "rank": 5,
+        "domain": "ristorante-arlecchino.de",
+        "url": "https://ristorante-arlecchino.de/",
+        "title": "Italienisches Restaurant Berlin-Charlottenburg"
+      },
+      {
+        "rank": 6,
+        "domain": "www.feinschmecker.de",
+        "url": "https://www.feinschmecker.de/geniessen/italiener-berlin-italienische-restaurants",
+        "title": "Italienische Restaurants Berlin: Die besten Italiener der Stadt"
+      },
+      {
+        "rank": 7,
+        "domain": "osteria-ballaro.berlin",
+        "url": "https://osteria-ballaro.berlin/",
+        "title": "Osteria Ballarò › Cucina Siciliana › Charlottenburg"
+      },
+      {
+        "rank": 8,
+        "domain": "mitvergnuegen.com",
+        "url": "https://mitvergnuegen.com/2016/italienisch-essen",
+        "title": "11 Restaurants, in denen ihr richtig gut italienisch essen ..."
+      },
+      {
+        "rank": 9,
+        "domain": "culaccino.berlin",
+        "url": "https://culaccino.berlin/",
+        "title": "Culaccino Berlin – Italienisches Restaurant in Charlottenburg ..."
+      },
+      {
+        "rank": 10,
+        "domain": "www.focaccino.eu",
+        "url": "http://www.focaccino.eu/",
+        "title": "Focaccino Trattoria - Italienisches Restaurant in Berlin ..."
+      }
+    ],
+    "local_pack": [
+      {
+        "rank": 1,
+        "title": "Luardi 🥇🇮🇹 »Cucina della Mamma«",
+        "rating": {
+          "rating_type": "Max5",
+          "value": 4.8,
+          "votes_count": 8786,
+          "rating_max": 5
+        }
+      },
+      {
+        "rank": 2,
+        "title": "Restaurant Mamma Monti",
+        "rating": {
+          "rating_type": "Max5",
+          "value": 4.8,
+          "votes_count": 845,
+          "rating_max": 5
+        }
+      },
+      {
+        "rank": 3,
+        "title": "Ristorante Arlecchino",
+        "rating": {
+          "rating_type": "Max5",
+          "value": 4.8,
+          "votes_count": 3007,
+          "rating_max": 5
+        }
+      },
+      {
+        "rank": 4,
+        "title": "Osteria Ballarò",
+        "rating": {
+          "rating_type": "Max5",
+          "value": 4.8,
+          "votes_count": 434,
+          "rating_max": 5
+        }
+      },
+      {
+        "rank": 5,
+        "title": "Trattoria il Sapore",
+        "rating": {
+          "rating_type": "Max5",
+          "value": 4.8,
+          "votes_count": 747,
+          "rating_max": 5
+        }
+      },
+      {
+        "rank": 6,
+        "title": "Ristorante il Secondo",
+        "rating": {
+          "rating_type": "Max5",
+          "value": 4.8,
+          "votes_count": 383,
+          "rating_max": 5
+        }
+      }
+    ]
+  },
+  "restaurant charlottenburg": {
+    "features": {
+      "compare_sites": 1,
+      "local_pack": 12,
+      "organic": 20,
+      "people_also_ask": 1,
+      "related_searches": 2
+    },
+    "organic": [
+      {
+        "rank": 1,
+        "domain": "mitvergnuegen.com",
+        "url": "https://mitvergnuegen.com/2025/restaurants-in-charlottenburg-berlin",
+        "title": "11 wirklich gute Restaurants in Charlottenburg, die immer ..."
+      },
+      {
+        "rank": 2,
+        "domain": "www.tip-berlin.de",
+        "url": "https://www.tip-berlin.de/essen-trinken/restaurants/charlottenburg-restaurants-tipps/",
+        "title": "Restaurants in Charlottenburg: Das beste Essen im alten ..."
+      },
+      {
+        "rank": 3,
+        "domain": "www.cremeguides.com",
+        "url": "https://www.cremeguides.com/berlin/charlottenburg/",
+        "title": "Charlottenburg | Berlin"
+      },
+      {
+        "rank": 4,
+        "domain": "al-mundo.de",
+        "url": "https://al-mundo.de/",
+        "title": "Restaurant Al-Mundo – Die Küche der Welt in Berlin ..."
+      },
+      {
+        "rank": 5,
+        "domain": "www.opentable.de",
+        "url": "https://www.opentable.de/features/hot-spot-restaurants-berlin-charlottenburg",
+        "title": "34 der besten Trend-Restaurants in Charlottenburg"
+      },
+      {
+        "rank": 6,
+        "domain": "www.berlin.de",
+        "url": "https://www.berlin.de/restaurants/kieze/9171273-3804422-gastroszene-rund-und-stuttgarter-platz-u.html",
+        "title": "Gastroszene rund und Stuttgarter Platz und Leonhardtstraße"
+      },
+      {
+        "rank": 7,
+        "domain": "www.daskoestlich.de",
+        "url": "https://www.daskoestlich.de/berlin-charlottenburg",
+        "title": "Berlin-Charlottenburg"
+      },
+      {
+        "rank": 8,
+        "domain": "dicke-wirtin.de",
+        "url": "https://dicke-wirtin.de/",
+        "title": "Dicke Wirtin - das Alt Berliner Traditions Restaurant"
+      },
+      {
+        "rank": 9,
+        "domain": "www.tripadvisor.de",
+        "url": "https://www.tripadvisor.de/Restaurants-g187323-zfn7281401-Berlin.html",
+        "title": "Besten Restaurants in Charlottenburg - Berlin"
+      },
+      {
+        "rank": 10,
+        "domain": "www.the-berliner.com",
+        "url": "https://www.the-berliner.com/food/the-best-restaurants-in-charlottenburg-berlin/",
+        "title": "The best of the West: Charlottenburg's top restaurants"
+      }
+    ],
+    "local_pack": [
+      {
+        "rank": 1,
+        "title": "DAS KÖSTLICH-Berlin Charlottenburg",
+        "rating": {
+          "rating_type": "Max5",
+          "value": 4.8,
+          "votes_count": 173,
+          "rating_max": 5
+        }
+      },
+      {
+        "rank": 2,
+        "title": "Schnitzelei Charlottenburg",
+        "rating": {
+          "rating_type": "Max5",
+          "value": 4.5,
+          "votes_count": 4651,
+          "rating_max": 5
+        }
+      },
+      {
+        "rank": 3,
+        "title": "Restaurant Al-Mundo",
+        "rating": {
+          "rating_type": "Max5",
+          "value": 4.8,
+          "votes_count": 845,
+          "rating_max": 5
+        }
+      },
+      {
+        "rank": 4,
+        "title": "Loxa",
+        "rating": {
+          "rating_type": "Max5",
+          "value": 4.9,
+          "votes_count": 212,
+          "rating_max": 5
+        }
+      },
+      {
+        "rank": 5,
+        "title": "Luardi 🥇🇮🇹 »Cucina della Mamma«",
+        "rating": {
+          "rating_type": "Max5",
+          "value": 4.8,
+          "votes_count": 8786,
+          "rating_max": 5
+        }
+      },
+      {
+        "rank": 6,
+        "title": "NENI Berlin",
+        "rating": {
+          "rating_type": "Max5",
+          "value": 4.3,
+          "votes_count": 4678,
+          "rating_max": 5
+        }
+      }
+    ]
+  },
+  "restaurant kurfürstendamm": {
+    "features": {
+      "local_pack": 12,
+      "compare_sites": 1,
+      "organic": 20,
+      "people_also_ask": 1
+    },
+    "organic": [
+      {
+        "rank": 1,
+        "domain": "www.tripadvisor.de",
+        "url": "https://www.tripadvisor.de/RestaurantsNear-g187323-d190539-Kurfurstendamm-Berlin.html",
+        "title": "Die 10 besten Restaurants nahe Kurfürstendamm, Berlin"
+      },
+      {
+        "rank": 2,
+        "domain": "www.restaurant-schildkroete.de",
+        "url": "https://www.restaurant-schildkroete.de/",
+        "title": "Restaurant Schildkröte | Schildkröte Berlin"
+      },
+      {
+        "rank": 3,
+        "domain": "louisas-place.de",
+        "url": "https://louisas-place.de/aktivitaeten-in-berlin/restaurants-am-berliner-kudamm-louisas-place-berlin/",
+        "title": "7 Restaurants am Berliner Ku'damm"
+      },
+      {
+        "rank": 4,
+        "domain": "eiffel-restaurant.de",
+        "url": "https://eiffel-restaurant.de/",
+        "title": "- Eiffel Restaurant - Kurfürstendamm, Berlin"
+      },
+      {
+        "rank": 5,
+        "domain": "casabellucci.de",
+        "url": "https://casabellucci.de/",
+        "title": "CASA Belluccci | Italienisches Restaurant am Berliner Kudamm"
+      },
+      {
+        "rank": 6,
+        "domain": "www.opentable.de",
+        "url": "https://www.opentable.de/landmark/restaurants-near-kurfurstendamm-zoo",
+        "title": "Restaurants in der Nähe von Kurfürstendamm"
+      },
+      {
+        "rank": 7,
+        "domain": "mitvergnuegen.com",
+        "url": "https://mitvergnuegen.com/2016/11-restaurants-rund-um-den-kudamm-die-ihr-ausprobieren-muesst",
+        "title": "11 Restaurants rund um den Ku'damm, die ihr ..."
+      },
+      {
+        "rank": 8,
+        "domain": "grace-restaurant.de",
+        "url": "https://grace-restaurant.de/",
+        "title": "GRACE Berlin – Fine Dining & Rooftop Bar am Kurfürstendamm"
+      },
+      {
+        "rank": 9,
+        "domain": "www.maikudamm.de",
+        "url": "https://www.maikudamm.de/",
+        "title": "Asiatisches Fusion Restaurant Mai Kudamm in Berlin"
+      },
+      {
+        "rank": 10,
+        "domain": "ribsandmore.de",
+        "url": "https://ribsandmore.de/",
+        "title": "Restaurant am Kurfürstendamm Berlin - Ribs & more ..."
+      }
+    ],
+    "local_pack": [
+      {
+        "rank": 1,
+        "title": "Casa Bellucci Restaurant - Berlin Charlottenburg",
+        "rating": {
+          "rating_type": "Max5",
+          "value": 4.5,
+          "votes_count": 264,
+          "rating_max": 5
+        }
+      },
+      {
+        "rank": 2,
+        "title": "Bocca di Lupo",
+        "rating": {
+          "rating_type": "Max5",
+          "value": 4.9,
+          "votes_count": 65,
+          "rating_max": 5
+        }
+      },
+      {
+        "rank": 3,
+        "title": "Greek Restaurant Ku'Damm Berlin",
+        "rating": {
+          "rating_type": "Max5",
+          "value": 4.7,
+          "votes_count": 84,
+          "rating_max": 5
+        }
+      },
+      {
+        "rank": 4,
+        "title": "Bellucci Restaurant - Berlin Wilmersdorf",
+        "rating": {
+          "rating_type": "Max5",
+          "value": 4.7,
+          "votes_count": 1527,
+          "rating_max": 5
+        }
+      },
+      {
+        "rank": 5,
+        "title": "Mai Kudamm",
+        "rating": {
+          "rating_type": "Max5",
+          "value": 4.7,
+          "votes_count": 1031,
+          "rating_max": 5
+        }
+      },
+      {
+        "rank": 6,
+        "title": "Restaurant Capone",
+        "rating": {
+          "rating_type": "Max5",
+          "value": 4.5,
+          "votes_count": 2118,
+          "rating_max": 5
+        }
+      }
+    ]
+  }
+}

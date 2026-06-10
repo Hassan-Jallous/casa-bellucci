@@ -1,13 +1,14 @@
+'use client';
+
 import type { CSSProperties } from 'react';
 import { asset } from '@/lib/assetPath';
+import { useMenuUrls } from '@/lib/menuUrls';
 import { routePath } from '@/lib/routes';
 import { SITE } from '@/lib/site';
+import { useDict, usePageTitle } from '@/lib/i18n/LanguageProvider';
 import { FlagBar } from './Brand';
-
-export interface BarFaq {
-  question: string;
-  answer: string;
-}
+import { FaqAccordion } from './FaqAccordion';
+import { MenuViewer, useMenuViewer } from './MenuViewer';
 
 const eyebrowStyle: CSSProperties = {
   display: 'inline-flex',
@@ -15,24 +16,14 @@ const eyebrowStyle: CSSProperties = {
   gap: 10,
 };
 
-export function BarLanding({ faqs }: { faqs: BarFaq[] }) {
-  const drinks = [
-    {
-      time: 'Aperitivo',
-      title: 'Aperitivo Bellucci',
-      copy: 'Unser Haus-Aperitivo aus Bitter, Zitrus und Prosecco. Spritzig, leicht herb, gemacht für den frühen Abend an der Bar oder auf der Terrasse.',
-    },
-    {
-      time: 'Cocktails',
-      title: 'Klassisch gemixt',
-      copy: 'Cocktails von Negroni bis Spritz, dazu Wein, Bier und Kaffee. Die Bar ist Treffpunkt von früh bis spät, casual und einladend.',
-    },
-    {
-      time: 'Vino',
-      title: 'Glasweise aus Italien',
-      copy: 'Offene Weine, die täglich wechseln. Schwerpunkt Sizilien und Süditalien, kuratiert von Sommelier Marco.',
-    },
-  ];
+export function BarLanding() {
+  usePageTitle('bar');
+  const d = useDict();
+  const menuLabels = d.home.menu;
+  const { activeMenu, isOpen, openMenu, closeMenu } = useMenuViewer();
+  const menuUrls = useMenuUrls();
+  // Karten-Popup wie auf der Startseite, aber nur die Weinkarte (kein Tab-Wechsler).
+  const wineMenu = [{ key: 'weine', label: menuLabels.tabs[3].label, pdf: menuUrls.weine }];
 
   return (
     <main className="subpage">
@@ -43,50 +34,48 @@ export function BarLanding({ faqs }: { faqs: BarFaq[] }) {
             <div className="all-day-copy">
               <div className="section-eyebrow">
                 <span className="eyebrow" style={eyebrowStyle}>
-                  <FlagBar orientation="h" /> Bar &amp; Aperitivo am Kudamm
+                  <FlagBar orientation="h" /> {d.landingBar.hero.eyebrow}
                 </span>
               </div>
               <h1 id="bar-h1">
-                Bar und Aperitivo am <span className="it">Kudamm</span>
+                {d.landingBar.hero.h1Pre}<span className="it">{d.landingBar.hero.h1It}</span>{d.landingBar.hero.h1Post}
               </h1>
               <p className="lede">
-                Casa Bellucci ist eine Restaurant-Bar am Kurfürstendamm 63 in Berlin-Charlottenburg. An der Bar gibt es
-                Aperitivo, Cocktails und italienischen Wein, von früh bis spät. Eine entspannte Adresse für ein Glas in
-                der City West, am Tresen oder auf der Sommerterrasse.
+                {d.landingBar.hero.lede}
               </p>
               <p>
-                Gehoben und gemütlich zugleich, casual genug für nach der Arbeit und schön genug für den langen Abend.
+                {d.landingBar.hero.p2}
               </p>
               <div className="contact-actions">
                 <a className="btn btn-primary" href={routePath('/reservierung/')}>
-                  Tisch reservieren
+                  {d.common.actions.reserve}
                 </a>
                 <a className="btn btn-ghost" href={routePath('/#terrasse')}>
-                  Terrasse ansehen →
+                  {d.common.actions.viewTerrace}
                 </a>
               </div>
             </div>
-            <div className="all-day-media" aria-label="Bar, Aperitivo und Terrasse bei Casa Bellucci">
+            <div className="all-day-media" aria-label={d.landingBar.hero.mediaAria}>
               <figure className="all-day-photo morning">
                 <img
                   src={asset('images/gallery/8.jpg')}
-                  alt="Aperitivo und Drinks an der Bar von Casa Bellucci am Kudamm in Berlin-Charlottenburg"
+                  alt={d.landingBar.hero.photo1Alt}
                 />
-                <figcaption>Aperitivo</figcaption>
+                <figcaption>{d.landingBar.hero.photo1Caption}</figcaption>
               </figure>
               <figure className="all-day-photo midday">
                 <img
                   src={asset('images/menu-wines.jpg')}
-                  alt="Glas italienischer Wein an der Bar von Casa Bellucci in Charlottenburg"
+                  alt={d.landingBar.hero.photo2Alt}
                 />
-                <figcaption>Vino</figcaption>
+                <figcaption>{d.landingBar.hero.photo2Caption}</figcaption>
               </figure>
               <figure className="all-day-photo evening">
                 <img
-                  src={asset('images/terrace.jpg')}
-                  alt="Sommerterrasse von Casa Bellucci am Kudamm am Abend bei Kerzenlicht"
+                  src={asset('images/lp-terr-abend-2.jpg')}
+                  alt={d.landingBar.hero.photo3Alt}
                 />
-                <figcaption>Terrazza</figcaption>
+                <figcaption>{d.landingBar.hero.photo3Caption}</figcaption>
               </figure>
             </div>
           </div>
@@ -100,24 +89,20 @@ export function BarLanding({ faqs }: { faqs: BarFaq[] }) {
             <div className="all-day-copy">
               <div className="section-eyebrow">
                 <span className="eyebrow" style={eyebrowStyle}>
-                  <FlagBar orientation="h" /> Aperitivo und Cocktails
+                  <FlagBar orientation="h" /> {d.landingBar.aperitivo.eyebrow}
                 </span>
               </div>
               <h2 id="aperitivo-h2">
-                Aperitivo Bellucci und die <span className="it">Bar</span>
+                {d.landingBar.aperitivo.h2Pre}<span className="it">{d.landingBar.aperitivo.h2It}</span>{d.landingBar.aperitivo.h2Post}
               </h2>
               <p>
-                Aperitivo Berlin beginnt bei uns am frühen Abend. Der Aperitivo Bellucci verbindet Bitter, Zitrus und
-                Prosecco zu einem leicht herben, spritzigen Auftakt. Dazu reicht die Bar Cocktails, Wein, Bier und
-                Kaffee, also alles für den Aperitivo am Kudamm und den Drink danach.
+                {d.landingBar.aperitivo.p1}
               </p>
               <p>
-                Als Cocktailbar in Charlottenburg bleiben wir bei klaren Klassikern statt Show. Negroni, Spritz und
-                saisonale Drinks, sauber gemixt. So ist die Bar ein Ort für ein schnelles Glas am Tresen ebenso wie für
-                einen langen Abend am Kudamm.
+                {d.landingBar.aperitivo.p2}
               </p>
-              <div className="dayline" aria-label="An der Bar von Casa Bellucci">
-                {drinks.map((item, index) => (
+              <div className="dayline" aria-label={d.landingBar.aperitivo.daylineAria}>
+                {d.landingBar.drinks.map((item, index) => (
                   <div className="day-moment" key={item.title} style={{ '--i': index } as CSSProperties}>
                     <span className="moment-time">{item.time}</span>
                     <h3>{item.title}</h3>
@@ -126,152 +111,115 @@ export function BarLanding({ faqs }: { faqs: BarFaq[] }) {
                 ))}
               </div>
             </div>
-            <div className="all-day-media" aria-label="Aperitivo und Cocktails bei Casa Bellucci">
+            <div className="all-day-media" aria-label={d.landingBar.aperitivo.mediaAria}>
               <figure className="all-day-photo morning">
                 <img
-                  src={asset('images/gallery/8.jpg')}
-                  alt="Aperitivo Bellucci, Haus-Aperitivo aus Bitter, Zitrus und Prosecco bei Casa Bellucci"
+                  src={asset('images/lp-spritz.jpg')}
+                  alt={d.landingBar.aperitivo.photo1Alt}
                 />
-                <figcaption>Spritz</figcaption>
+                <figcaption>{d.landingBar.aperitivo.photo1Caption}</figcaption>
               </figure>
               <figure className="all-day-photo midday">
                 <img
-                  src={asset('images/gallery/6.jpg')}
-                  alt="Cocktails und Drinks an der Bar von Casa Bellucci in Berlin-Charlottenburg"
+                  src={asset('images/lp-cocktail.jpg')}
+                  alt={d.landingBar.aperitivo.photo2Alt}
                 />
-                <figcaption>Cocktails</figcaption>
+                <figcaption>{d.landingBar.aperitivo.photo2Caption}</figcaption>
               </figure>
               <figure className="all-day-photo evening">
                 <img
-                  src={asset('images/about.jpg')}
-                  alt="Cozy Bar-Atmosphäre bei Casa Bellucci am Kudamm"
+                  src={asset('images/lp-bar-int.jpg')}
+                  alt={d.landingBar.aperitivo.photo3Alt}
                 />
-                <figcaption>Bar</figcaption>
+                <figcaption>{d.landingBar.aperitivo.photo3Caption}</figcaption>
               </figure>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 3. Wein und Sizilien */}
+      {/* 3. Wein */}
       <section className="wine" aria-labelledby="wein-h2">
         <div className="wrap">
           <div className="top">
             <div>
               <div className="section-eyebrow">
                 <span className="eyebrow" style={eyebrowStyle}>
-                  <FlagBar orientation="h" /> Wein und Sizilien
+                  <FlagBar orientation="h" /> {d.landingBar.wine.eyebrow}
                 </span>
               </div>
               <h2 id="wein-h2">
-                Weinbar am <span className="it">Kudamm</span>
+                {d.landingBar.wine.h2Pre}<span className="it">{d.landingBar.wine.h2It}</span>{d.landingBar.wine.h2Post}
               </h2>
               <p className="lede" style={{ marginTop: 14 }}>
-                Als Weinbar in Charlottenburg legen wir den Schwerpunkt auf Sizilien und Süditalien. Kuratiert von
-                Sommelier Marco, glasweise täglich wechselnd.
+                {d.landingBar.wine.lede}
               </p>
             </div>
-            <a
-              className="btn btn-ghost"
-              href={asset('menus/weine.pdf')}
-              target="_blank"
-              rel="noreferrer"
+            <button
+              type="button"
+              className="btn btn-primary"
+              onClick={() => openMenu('weine')}
             >
-              Komplette Weinkarte (PDF) →
-            </a>
+              {d.landingBar.wine.pdfLink}
+              <span className="wine-cta-arrow" aria-hidden="true">→</span>
+            </button>
           </div>
           <div className="regions">
             <article className="region">
-              <div className="label">Sicilia</div>
-              <h3>Vom Ätna ins Glas</h3>
+              <div className="label">{d.landingBar.wine.regions.sicilia.label}</div>
+              <h3>{d.landingBar.wine.regions.sicilia.title}</h3>
               <p>
-                Vulkanische Mineralität vom Ätna und kräftige rote Trauben. Die Insel bestimmt den Charakter unserer
-                offenen Weine.
+                {d.landingBar.wine.regions.sicilia.copy}
               </p>
               <div className="list">
-                <div className="row">
-                  <div>
-                    <div>Etna Bianco DOC</div>
-                    <div className="v" style={{ fontSize: 14, color: 'var(--ink-muted)' }}>
-                      Sicilia · glasweise
+                {d.landingBar.wine.regions.sicilia.rows.map((row) => (
+                  <div className="row" key={row.name}>
+                    <div>
+                      <div>{row.name}</div>
+                      <div className="v" style={{ fontSize: 14, color: 'var(--ink-muted)' }}>
+                        {row.note}
+                      </div>
                     </div>
                   </div>
-                  <div className="p">€ 11,00</div>
-                </div>
-                <div className="row">
-                  <div>
-                    <div>Nero d&apos;Avola</div>
-                    <div className="v" style={{ fontSize: 14, color: 'var(--ink-muted)' }}>
-                      Sicilia · glasweise
-                    </div>
-                  </div>
-                  <div className="p">€ 9,00</div>
-                </div>
-                <div className="row">
-                  <div>
-                    <div>Etna Rosso</div>
-                    <div className="v" style={{ fontSize: 14, color: 'var(--ink-muted)' }}>
-                      Sicilia · glasweise
-                    </div>
-                  </div>
-                  <div className="p">€ 12,50</div>
-                </div>
+                ))}
               </div>
             </article>
             <article className="region">
-              <div className="label">Dolci &amp; Liquorosi</div>
-              <h3>Süße aus dem Süden</h3>
+              <div className="label">{d.landingBar.wine.regions.dolci.label}</div>
+              <h3>{d.landingBar.wine.regions.dolci.title}</h3>
               <p>
-                Süßweine und Liquorosi, wie sie zu Sizilien gehören. Vom Passito der Insel Pantelleria bis zum Marsala
-                aus dem Westen.
+                {d.landingBar.wine.regions.dolci.copy}
               </p>
               <div className="list">
-                <div className="row">
-                  <div>
-                    <div>Passito di Pantelleria</div>
-                    <div className="v" style={{ fontSize: 14, color: 'var(--ink-muted)' }}>
-                      Sicilia · Süßwein
+                {d.landingBar.wine.regions.dolci.rows.map((row) => (
+                  <div className="row" key={row.name}>
+                    <div>
+                      <div>{row.name}</div>
+                      <div className="v" style={{ fontSize: 14, color: 'var(--ink-muted)' }}>
+                        {row.note}
+                      </div>
                     </div>
                   </div>
-                  <div className="p">€ 10,00</div>
-                </div>
-                <div className="row">
-                  <div>
-                    <div>Marsala Superiore</div>
-                    <div className="v" style={{ fontSize: 14, color: 'var(--ink-muted)' }}>
-                      Sicilia
-                    </div>
-                  </div>
-                  <div className="p">€ 7,50</div>
-                </div>
+                ))}
               </div>
             </article>
             <article className="region">
-              <div className="label">Bollicine</div>
-              <h3>Für den Aperitivo</h3>
+              <div className="label">{d.landingBar.wine.regions.bollicine.label}</div>
+              <h3>{d.landingBar.wine.regions.bollicine.title}</h3>
               <p>
-                Schaumweine als spritziger Auftakt. Sie passen zum Aperitivo an der Bar und zum Anstoßen auf der
-                Terrasse.
+                {d.landingBar.wine.regions.bollicine.copy}
               </p>
               <div className="list">
-                <div className="row">
-                  <div>
-                    <div>Franciacorta Brut</div>
-                    <div className="v" style={{ fontSize: 14, color: 'var(--ink-muted)' }}>
-                      Lombardia · Spumante
+                {d.landingBar.wine.regions.bollicine.rows.map((row) => (
+                  <div className="row" key={row.name}>
+                    <div>
+                      <div>{row.name}</div>
+                      <div className="v" style={{ fontSize: 14, color: 'var(--ink-muted)' }}>
+                        {row.note}
+                      </div>
                     </div>
                   </div>
-                  <div className="p">€ 13,00</div>
-                </div>
-                <div className="row">
-                  <div>
-                    <div>Prosecco im Glas</div>
-                    <div className="v" style={{ fontSize: 14, color: 'var(--ink-muted)' }}>
-                      Veneto · glasweise
-                    </div>
-                  </div>
-                  <div className="p">€ 7,00</div>
-                </div>
+                ))}
               </div>
             </article>
           </div>
@@ -285,53 +233,47 @@ export function BarLanding({ faqs }: { faqs: BarFaq[] }) {
             <div className="all-day-copy">
               <div className="section-eyebrow">
                 <span className="eyebrow" style={eyebrowStyle}>
-                  <FlagBar orientation="h" /> Live-DJ und Wochenende
+                  <FlagBar orientation="h" /> {d.landingBar.music.eyebrow}
                 </span>
               </div>
               <h2 id="musik-h2">
-                Bar mit Musik in <span className="it">Berlin</span>
+                {d.landingBar.music.h2Pre}<span className="it">{d.landingBar.music.h2It}</span>{d.landingBar.music.h2Post}
               </h2>
               <p>
-                Am Wochenende legt bei uns ein Live-DJ auf. Wer eine Bar mit Musik in Berlin sucht, findet hier ruhige
-                Sounds zum Aperitivo und am Abend. Das bleibt eine Restaurant-Bar-Stimmung, kein Club. Die Musik trägt
-                den Abend, ohne das Gespräch zu übertönen.
+                {d.landingBar.music.p1}
               </p>
               <p>
-                So wird Casa Bellucci am Wochenende zur Bar mit DJ am Kudamm, casual und entspannt. Im Sommer
-                zieht sich der Aperitivo auf die Terrasse, unter Schirme am Tag und bei Kerzenlicht am Abend. Auch als
-                Restaurant mit Musik in Berlin passt das Haus für einen langen Abend zu zweit oder in der Gruppe.
+                {d.landingBar.music.p2}
               </p>
               <p>
-                Mehr zur Küche am Abend auf unseren Seiten zum{' '}
-                <a href={routePath('/sizilianisches-restaurant-berlin/')}>sizilianischen Restaurant in Berlin</a> und
-                zum{' '}
+                {d.landingBar.music.crossPre}
                 <a href={routePath('/italienisches-restaurant-berlin-charlottenburg/')}>
-                  italienischen Restaurant in Charlottenburg
+                  {d.landingBar.music.crossLinkItalienisch}
                 </a>
-                .
+                {d.landingBar.music.crossPost}
               </p>
             </div>
-            <div className="all-day-media" aria-label="Wochenende, Musik und Terrasse bei Casa Bellucci">
+            <div className="all-day-media" aria-label={d.landingBar.music.mediaAria}>
               <figure className="all-day-photo morning">
                 <img
                   src={asset('images/gallery/1.jpg')}
-                  alt="Entspannter Abend mit Musik in der Bar von Casa Bellucci am Kudamm"
+                  alt={d.landingBar.music.photo1Alt}
                 />
-                <figcaption>Serata</figcaption>
+                <figcaption>{d.landingBar.music.photo1Caption}</figcaption>
               </figure>
               <figure className="all-day-photo midday">
                 <img
-                  src={asset('images/gallery/6.jpg')}
-                  alt="Gäste an der Bar von Casa Bellucci am Wochenende in Berlin-Charlottenburg"
+                  src={asset('images/lp-bar-int-2.jpg')}
+                  alt={d.landingBar.music.photo2Alt}
                 />
-                <figcaption>Weekend</figcaption>
+                <figcaption>{d.landingBar.music.photo2Caption}</figcaption>
               </figure>
               <figure className="all-day-photo evening">
                 <img
-                  src={asset('images/terrace.jpg')}
-                  alt="Aperitivo auf der Sommerterrasse von Casa Bellucci am Kudamm bei Kerzenlicht"
+                  src={asset('images/lp-terr-abend-3.jpg')}
+                  alt={d.landingBar.music.photo3Alt}
                 />
-                <figcaption>Terrazza</figcaption>
+                <figcaption>{d.landingBar.music.photo3Caption}</figcaption>
               </figure>
             </div>
           </div>
@@ -345,28 +287,26 @@ export function BarLanding({ faqs }: { faqs: BarFaq[] }) {
             <div>
               <div className="section-eyebrow">
                 <span className="eyebrow" style={eyebrowStyle}>
-                  <FlagBar orientation="h" /> Öffnungszeiten und Reservierung
+                  <FlagBar orientation="h" /> {d.landingBar.contact.eyebrow}
                 </span>
               </div>
               <h2 id="reservierung-h2">
-                An die Bar am <span className="it">Kudamm</span>
+                {d.landingBar.contact.h2Pre}<span className="it">{d.landingBar.contact.h2It}</span>{d.landingBar.contact.h2Post}
               </h2>
               <p className="lede">
-                Casa Bellucci liegt am Kurfürstendamm 63 in Berlin-Charlottenburg, geöffnet täglich ab 09:00 Uhr,
-                Montag bis Samstag bis 00:00 Uhr. Reservieren Sie online oder telefonisch, Walk-ins sind besonders an
-                der Bar willkommen.
+                {d.landingBar.contact.lede}
               </p>
               <div className="info">
                 <div className="block">
-                  <div className="k">Adresse</div>
+                  <div className="k">{d.common.info.address}</div>
                   <div className="v">
-                    Kurfürstendamm 63
+                    {d.landingBar.contact.addressLine1}
                     <br />
-                    10707 Berlin · Charlottenburg
+                    {d.landingBar.contact.addressLine2}
                   </div>
                 </div>
                 <div className="block">
-                  <div className="k">Reservierung</div>
+                  <div className="k">{d.common.info.reservation}</div>
                   <div className="v">
                     {SITE.phone}
                     <br />
@@ -374,37 +314,37 @@ export function BarLanding({ faqs }: { faqs: BarFaq[] }) {
                   </div>
                 </div>
                 <div className="block">
-                  <div className="k">Öffnungszeiten</div>
+                  <div className="k">{d.common.info.hours}</div>
                   <div className="v">
-                    {SITE.openingHours.weekdays}
+                    {d.common.hours.weekdays}
                     <br />
-                    <span className="muted">{SITE.openingHours.sunday}</span>
+                    <span className="muted">{d.common.hours.sunday}</span>
                   </div>
                 </div>
                 <div className="block">
-                  <div className="k">An der Bar</div>
+                  <div className="k">{d.landingBar.contact.barLabel}</div>
                   <div className="v">
-                    Aperitivo ab dem frühen Abend
+                    {d.landingBar.contact.barLine1}
                     <br />
-                    <span className="muted">Live-DJ am Wochenende</span>
+                    <span className="muted">{d.landingBar.contact.barLine2}</span>
                   </div>
                 </div>
                 <div className="contact-actions">
                   <a className="btn btn-primary" href={routePath('/reservierung/')}>
-                    Online reservieren
+                    {d.common.actions.bookOnline}
                   </a>
                   <a className="btn btn-ghost" href={SITE.phoneHref}>
-                    Anrufen
+                    {d.common.actions.call}
                   </a>
                 </div>
               </div>
             </div>
-            <div className="map" aria-label="Lage von Casa Bellucci auf der Karte">
-              <div className="corner">Kudamm · Charlottenburg</div>
+            <div className="map" aria-label={d.landingBar.contact.mapAria}>
+              <div className="corner">{d.common.mapCorner.area}</div>
               <div className="pin">
                 <div className="dot"></div>
                 <div className="pulse"></div>
-                <div className="label">Casa Bellucci</div>
+                <div className="label">{d.common.mapCorner.name}</div>
               </div>
             </div>
           </div>
@@ -416,32 +356,40 @@ export function BarLanding({ faqs }: { faqs: BarFaq[] }) {
         <div className="wrap">
           <div className="section-eyebrow">
             <span className="eyebrow" style={eyebrowStyle}>
-              <FlagBar orientation="h" /> Häufige Fragen
+              <FlagBar orientation="h" /> {d.landingBar.faqHeadingEyebrow}
             </span>
           </div>
           <h2 id="faq-h2">
-            Häufige <span className="it">Fragen</span>
+            {d.landingBar.faqHeadingPre}<span className="it">{d.landingBar.faqHeadingIt}</span>{d.landingBar.faqHeadingPost}
           </h2>
-          <div className="subpage-info-grid" style={{ marginTop: 24 }}>
-            {faqs.map((faq) => (
-              <div key={faq.question}>
-                <h3>{faq.question}</h3>
-                <p>{faq.answer}</p>
-              </div>
-            ))}
-          </div>
-          <p style={{ marginTop: 28 }}>
-            Mehr zum Haus auf der Startseite,{' '}
-            <a href={routePath('/')}>Casa Bellucci</a>. Entdecken Sie unser{' '}
+          <FaqAccordion items={[...d.landingBar.faqs]} idBase="bar-faq" />
+          <p className="subpage-related">
+            {d.landingBar.related.pre}
+            <a href={routePath('/')}>{d.landingBar.related.linkHome}</a>{d.landingBar.related.mid1}
             <a href={routePath('/italienisches-restaurant-berlin-charlottenburg/')}>
-              italienisches Restaurant in Charlottenburg
+              {d.landingBar.related.linkItalienisch}
             </a>
-            , das{' '}
-            <a href={routePath('/sizilianisches-restaurant-berlin/')}>sizilianische Restaurant in Berlin</a> und{' '}
-            <a href={routePath('/fruehstueck-brunch-kurfuerstendamm/')}>Frühstück und Brunch am Kudamm</a>.
+            {d.landingBar.related.mid2}
+            <a href={routePath('/fruehstueck-brunch-kurfuerstendamm/')}>{d.landingBar.related.linkFruehstueck}</a>{d.landingBar.related.post}
           </p>
         </div>
       </section>
+
+      <MenuViewer
+        menus={wineMenu}
+        activeMenu={activeMenu}
+        isOpen={isOpen}
+        onSelect={openMenu}
+        onClose={closeMenu}
+        showTabs={false}
+        labels={{
+          laCarta: menuLabels.laCarta,
+          close: menuLabels.close,
+          openNewTab: menuLabels.openNewTab,
+          resetZoom: menuLabels.resetZoom,
+          iframeTitlePrefix: menuLabels.iframeTitlePrefix,
+        }}
+      />
     </main>
   );
 }

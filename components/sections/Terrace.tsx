@@ -1,10 +1,15 @@
+'use client';
+
 import { asset } from '@/lib/assetPath';
+import { SmoothScrollLink } from '@/components/SmoothScrollLink';
+import { useDict } from '@/lib/i18n/LanguageProvider';
 
 export function Terrace() {
+  const d = useDict();
   const moments = [
-    { k: "10:00", v: "Frühstück auf der Terrasse" },
-    { k: "14:30", v: "Lunch unter Zitronenbäumen" },
-    { k: "18:00", v: "Aperitivo, Wein und Live-DJ" },
+    { k: "10:00", v: d.home.terrace.moments[0].v },
+    { k: "14:30", v: d.home.terrace.moments[1].v },
+    { k: "18:00", v: d.home.terrace.moments[2].v },
   ];
 
   return (
@@ -13,21 +18,21 @@ export function Terrace() {
         <div className="terrace-bg" aria-hidden="true"></div>
 
         <figure className="terrace-photo">
-          <img src={asset("images/terrace/terrace-04.jpg")} alt="Sommerterrasse vom Casa Bellucci, italienisches Restaurant mit Terrasse am Kudamm in Berlin-Charlottenburg" />
+          <img src={asset("images/terrace/terrace-04.jpg")} alt={d.home.terrace.photoAlt} width={1403} height={962} loading="lazy" decoding="async" />
           <figcaption>
-            <h2>Sommerterrasse am Kudamm</h2>
+            <h2>{d.home.terrace.heading}</h2>
           </figcaption>
         </figure>
 
         <div className="terrace-actions">
-          <a className="btn btn-primary" href="#reservieren">reservieren</a>
-          <a className="btn btn-ghost" href="#galerie">Terrasse ansehen →</a>
+          <SmoothScrollLink targetId="reservieren" className="btn btn-primary">{d.home.terrace.reserve}</SmoothScrollLink>
+          <SmoothScrollLink targetId="galerie" className="btn btn-ghost">{d.home.terrace.viewTerrace}</SmoothScrollLink>
         </div>
 
         <div className="terrace-panel">
           <div className="terrace-quote">
             <span>„</span>
-            Lange Nachmittage draußen, leise Gespräche, der erste Aperitivo im Glas.
+            {d.home.terrace.quote}
           </div>
           <div className="terrace-moments">
             {moments.map(moment => (

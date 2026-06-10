@@ -15,11 +15,19 @@
 
 @font-face {
   font-family: "Billion Miracles";
-  src: url("../fonts/BillionMiracles.otf") format("opentype");
+  src: url("../fonts/BillionMiracles.woff2") format("woff2"),
+    url("../fonts/BillionMiracles.otf") format("opentype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
+
+/* Metrik-angepasste Fallback-Fonts (size-adjust + ascent/descent-override, berechnet
+   von scripts/calc-font-fallback.py). Sie ahmen die Webfont-Metriken nach, sodass der
+   Font-Swap (font-display:swap) KEINEN Layout-Shift verursacht -> CLS ~0, ganz ohne
+   Font-Preload (der FCP bremsen wuerde). In die Font-Stacks unten eingebunden. */
+@font-face{font-family:"Playfair Display Fallback";src:local("Times New Roman"),local("Georgia");size-adjust:112.87%;ascent-override:95.86%;descent-override:22.24%;line-gap-override:0.00%;}
+@font-face{font-family:"Montserrat Fallback";src:local("Arial"),local("Helvetica Neue");size-adjust:109.76%;ascent-override:88.19%;descent-override:22.87%;line-gap-override:0.00%;}
 
 :root {
   /* Base tokens (warm Sicilian sandstone palette) */
@@ -40,27 +48,33 @@
   --accent-soft: #FFF4C9;   /* tinted bg */
 
   /* Type — overridden by tweak */
-  --font-display: "Playfair Display", "Times New Roman", serif;
-  --font-body: "Montserrat", Arial, sans-serif;
+  --font-display: "Playfair Display", "Playfair Display Fallback", "Times New Roman", serif;
+  --font-body: "Montserrat", "Montserrat Fallback", Arial, sans-serif;
   --font-script: "Allura", cursive;
   --font-logo-script: "Billion Miracles", "Allura", cursive;
-  --font-mono: "Montserrat", Arial, sans-serif;
+  --font-mono: "Montserrat", "Montserrat Fallback", Arial, sans-serif;
 
   --radius-sm: 4px;
   --radius: 10px;
   --radius-lg: 22px;
+  --btn-font-size: 15px;        /* zentrale Button-Groesse, hier aendern */
+  --btn-letter-spacing: 0.12em;
 
   --shadow-soft: 0 10px 30px -18px rgba(60, 40, 18, 0.25);
   --shadow-warm: 0 30px 60px -30px rgba(120, 70, 20, 0.35);
 
-  /* Glas-Divs (Foto-Overlay-Glasflaechen) — ZENTRALE OPTIK.
-     Hier einmal aendern, gilt fuer alle Glas-Panels (Hero-Box, Terrassen-,
-     Menue-, About- und Landing-Foto-Labels, Galerie, Karten-Labels).
-     Die Anwendung steckt in der Master-Regel am Ende von vivid.css. */
+  /* Glas-Divs (Foto-Overlay-Glasflaechen) — ZENTRALE OPTIK / SINGLE SOURCE OF TRUTH.
+     Hier einmal aendern -> ALLE Glas-Overlays auf Bildern aendern sich mit.
+     Referenz: das Hero-Glas-Panel (.image-hero-copy auf Tablet/Mobile).
+     Angewendet in der zentralen .glass-Regel am ENDE von vivid.css.
+     Material kommt NUR von hier; Groesse/Position/Padding bleibt pro Element. */
   --glass-bg:
     radial-gradient(circle at 78% 0%, rgba(231, 187, 72, 0.10), transparent 40%),
     rgba(255, 250, 241, 0.42);
   --glass-blur: blur(2px);
+  --glass-border: 1px solid rgba(255, 255, 255, 0.72);
+  --glass-radius: 6px; /* identisch zum weissen Deko-Rahmen (::before, 6px) */
+  --glass-shadow: 0 24px 64px -36px rgba(62, 39, 18, 0.42);
 }
 
 /* Accent palettes */
@@ -85,16 +99,16 @@
 
 /* Font pairings */
 [data-font="classic"] {
-  --font-display: "Playfair Display", serif;
-  --font-body: "Montserrat", Arial, sans-serif;
+  --font-display: "Playfair Display", "Playfair Display Fallback", serif;
+  --font-body: "Montserrat", "Montserrat Fallback", Arial, sans-serif;
 }
 [data-font="modern"] {
-  --font-display: "Playfair Display", serif;
-  --font-body: "Montserrat", Arial, sans-serif;
+  --font-display: "Playfair Display", "Playfair Display Fallback", serif;
+  --font-body: "Montserrat", "Montserrat Fallback", Arial, sans-serif;
 }
 [data-font="couture"] {
-  --font-display: "Playfair Display", serif;
-  --font-body: "Montserrat", Arial, sans-serif;
+  --font-display: "Playfair Display", "Playfair Display Fallback", serif;
+  --font-body: "Montserrat", "Montserrat Fallback", Arial, sans-serif;
 }
 
 * { box-sizing: border-box; }
@@ -112,6 +126,18 @@ body {
 img { display: block; max-width: 100%; }
 a { color: inherit; text-decoration: none; }
 button { font: inherit; cursor: pointer; border: 0; background: none; color: inherit; }
+
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
 
 /* ------- Typography helpers ------- */
 .display {
@@ -171,9 +197,9 @@ section {
   display: inline-flex;
   align-items: center; gap: 8px;
   font-family: var(--font-display);
-  font-size: 15px;
+  font-size: var(--btn-font-size);
   font-weight: 600;
-  letter-spacing: 0.12em;
+  letter-spacing: var(--btn-letter-spacing);
   text-transform: uppercase;
   padding: 14px 4px;
   border-radius: 0;
@@ -446,6 +472,41 @@ section {
   color: var(--accent-2);
   opacity: 0.7;
   min-width: 28px;
+}
+.mobile-lang-switch {
+  margin-top: 22px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.4s ease 0.5s, transform 0.4s ease 0.5s;
+}
+.mobile-nav-a.open .mobile-lang-switch {
+  opacity: 1;
+  transform: translateY(0);
+}
+.mobile-lang-switch button {
+  width: 44px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255,249,240,0.28);
+  background: rgba(255,249,240,0.06);
+  color: rgba(255,249,240,0.72);
+  font: 600 12px/1 var(--font-body);
+  letter-spacing: 0;
+  transition: border-color .2s, background .2s, color .2s;
+}
+.mobile-lang-switch button.active {
+  border-color: rgba(255,249,240,0.8);
+  background: rgba(255,249,240,0.18);
+  color: #FFF9F0;
+}
+.mobile-lang-switch button:focus-visible {
+  outline: 2px solid #FFF9F0;
+  outline-offset: 3px;
 }
 .mobile-nav-a .nav-cta {
   margin-top: 28px;
@@ -767,10 +828,6 @@ section {
   height: 100%;
   object-fit: cover;
   display: block;
-  transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
-}
-.all-day-media:hover .all-day-photo img {
-  transform: scale(1.035);
 }
 .all-day-photo.morning {
   grid-column: 1;
@@ -1154,6 +1211,92 @@ section {
   border: 0;
   background: var(--sandstone);
 }
+/* pdf.js menu viewer: scrollable, fit-to-width pages (replaces the iframe). */
+.menu-viewer-pdf {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.menu-viewer-pages {
+  flex: 1;
+  min-height: 0;
+  width: 100%;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+}
+/* Innerer Layer: traegt die gerenderten Seiten und ist auf Touch das
+   Transform-Ziel fuer Pinch-Zoom/Pan. Auf Desktop nur ein Flow-Container. */
+.menu-viewer-zoom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  padding: clamp(12px, 2.2vw, 22px);
+  transform-origin: 0 0;
+  will-change: transform;
+}
+/* Gesten besitzen die Flaeche (Pan/Zoom), kein natives Scroll. Gilt fuer Touch
+   und Desktop; auf Desktop signalisiert grab das Ziehen zum Verschieben. */
+.menu-viewer-pages.is-gesture {
+  overflow: hidden;
+  touch-action: none;
+  cursor: grab;
+}
+.menu-viewer-page {
+  display: block;
+  width: 100%;
+  max-width: 720px;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 10px 30px rgba(31,20,12,0.16);
+  background: #fff;
+}
+/* Zoom zuruecksetzen (zurueck auf Vollansicht), nur sichtbar waehrend gezoomt. */
+.menu-viewer-zoom-reset {
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid rgba(43,31,18,0.16);
+  background: rgba(255,249,240,0.92);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  color: var(--ink);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  box-shadow: 0 8px 22px rgba(31,20,12,0.22);
+  z-index: 3;
+}
+.menu-viewer-zoom-reset svg { display: block; }
+.menu-viewer-pdf-status {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  pointer-events: none;
+}
+.menu-viewer-pdf-status a {
+  pointer-events: auto;
+  color: var(--ink-2);
+}
+.menu-viewer-spinner {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid rgba(43,31,18,0.18);
+  border-top-color: var(--accent);
+  animation: menu-viewer-spin 0.8s linear infinite;
+}
+@keyframes menu-viewer-spin { to { transform: rotate(360deg); } }
 .menu-viewer-fallback {
   padding: 12px clamp(18px, 2.5vw, 24px);
   border-top: 1px solid rgba(43,31,18,0.12);
@@ -1193,10 +1336,23 @@ section {
   display: block;
 }
 @media (max-width: 640px) {
+  .menu-viewer {
+    padding: 0;
+  }
   .menu-viewer-card {
-    height: calc(100dvh - 18px);
+    height: 100dvh;
     width: 100%;
-    border-radius: 12px;
+    max-width: 100%;
+    border-radius: 0;
+  }
+  /* Mobile: Seiten full-bleed (mehr Platz), kein Rand/Radius. */
+  .menu-viewer-zoom {
+    padding: 10px 0 14px;
+    gap: 10px;
+  }
+  .menu-viewer-page {
+    max-width: none;
+    border-radius: 0;
   }
   .menu-viewer-head {
     gap: 10px;
@@ -1330,13 +1486,9 @@ section {
   gap: 10px;
   align-items: flex-start;
   padding: 18px 22px;
-  border: 1px solid rgba(255,249,240,0.56);
-  border-radius: 6px;
-  background: rgba(255,249,240,0.38);
-  backdrop-filter: blur(22px) saturate(1.18);
-  -webkit-backdrop-filter: blur(22px) saturate(1.18);
   color: var(--ink);
-  text-shadow: 0 1px 18px rgba(255,249,240,0.48);
+  /* Glas-Material (bg, Rand, Radius, Blur, Schatten) zentral via --glass-* Tokens
+     (Single-Source-Regel am Ende von vivid.css). */
 }
 .terrace-photo figcaption span {
   font-family: var(--font-mono);
@@ -1414,6 +1566,8 @@ section {
   background: var(--surface);
 }
 .wine .top { display: flex; justify-content: space-between; align-items: flex-end; gap: 40px; margin-bottom: 48px; }
+/* Wine-CTA: Pfeil nur auf Mobile (Regel im 600px-Block), Desktop ohne Pfeil. */
+.wine-cta-arrow { display: none; }
 .wine h2 {
   font-family: var(--font-display);
   font-size: clamp(36px, 4.4vw, 60px);
@@ -1602,7 +1756,6 @@ section {
   min-width: 0;
   justify-content: center;
   text-align: center;
-  font-size: 14px;
 }
 
 /* ------- Press ------- */
@@ -1698,7 +1851,6 @@ section {
   min-width: 0;
   justify-content: center;
   text-align: center;
-  font-size: 14px;
 }
 .contact .map {
   border-radius: var(--radius);
@@ -1743,15 +1895,13 @@ section {
 }
 .contact .map .pin .label {
   margin-top: 4px;
-  background: var(--bg);
   padding: 4px 10px;
-  border-radius: 4px;
   font-family: var(--font-mono);
   font-size: 10px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--ink);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  /* Glas-Material zentral via --glass-* Tokens (Regel am Ende von vivid.css). */
 }
 .contact .map .corner {
   position: absolute;
@@ -1787,12 +1937,13 @@ section {
 .site-footer .btn::after { background: var(--accent); }
 .footer-grid {
   display: grid;
-  grid-template-columns: minmax(240px, 1.25fr) repeat(3, minmax(150px, 1fr));
+  grid-template-columns: minmax(240px, 1.25fr) repeat(4, minmax(150px, 1fr));
   gap: clamp(24px, 4vw, 52px);
   padding-bottom: 30px;
   border-bottom: 1px solid var(--border);
 }
 .footer-mark {
+  display: inline-block;
   font-family: var(--font-display);
   font-size: clamp(38px, 4vw, 58px);
   line-height: 1;
@@ -1879,6 +2030,18 @@ section {
    (120px) kappen, damit ueber dem Hero keine ueberdimensionierte Leere entsteht. */
 .subpage > section:first-child {
   padding-top: clamp(24px, 4vw, 44px);
+}
+
+/* Hero-Sektion der Content-Unterseiten: den eigenen Gradient bis ganz nach oben
+   (hinter den fixed Header) ziehen, damit kein Paper-Band und keine sichtbare
+   Kante zwischen .subpage-Hintergrund und Hero entsteht. Das negative margin-top
+   hebt das padding-top von .subpage (132px) wieder auf, padding-top raeumt den
+   Header frei. Gilt auch fuer die Reservierungs-Hero (.reservation-full), damit
+   dort kein Paper-Band zwischen Header und Gold-Gradient sichtbar bleibt. */
+.subpage > section.all-day:first-child,
+.subpage.booking-page > section.reservation-full:first-child {
+  margin-top: -132px;
+  padding-top: clamp(92px, 4vw + 64px, 128px);
 }
 
 .booking-page .reservation {
@@ -1988,6 +2151,14 @@ section {
   font-size: 15px;
   line-height: 1.78;
   color: var(--ink);
+  /* Lange URLs (z.B. Facebook-/Google-Datenschutzlinks) umbrechen lassen,
+     sonst sprengen sie auf Mobile den Viewport und erzeugen Querscrollen. */
+  overflow-wrap: anywhere;
+}
+
+.legal-content a {
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .legal-content p,
@@ -2499,7 +2670,6 @@ section {
   }
   .signature-actions .btn {
     width: auto;
-    font-size: 14px;
   }
   .terrace-stage {
     min-height: auto;
@@ -2511,8 +2681,6 @@ section {
       linear-gradient(180deg, rgba(255,249,240,0.94) 0%, rgba(250,232,174,0.78) 42%, rgba(221,170,58,0.34) 100%);
   }
   .terrace-actions .btn {
-    font-size: 14px;
-    letter-spacing: 0.12em;
     padding: 0 0 12px;
   }
   .terrace-panel {
@@ -2547,6 +2715,24 @@ section {
   .dish-pop-copy p {
     font-size: 16px;
   }
+  /* Legal-Karte auf Mobile rahmenlos: kein Border/Schatten, transparent.
+     Der enge Rahmen mit 0 Innenabstand oben/unten wirkte sonst gequetscht. */
+  .legal-wrap {
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+    padding: 0 22px;
+  }
+  /* H1 auf Mobile deutlich kleiner: lange Titel wie "Datenschutzerklaerung"
+     passen sonst kaum in den Viewport. overflow-wrap als Sicherheitsnetz. */
+  .legal-wrap h1 {
+    font-size: clamp(24px, 7vw, 34px);
+    line-height: 1.06;
+    overflow-wrap: anywhere;
+  }
+  .wine-cta-arrow {
+    display: inline-block;
+  }
 }
 
 /* ============================================
@@ -2554,6 +2740,7 @@ section {
    ============================================ */
 
 @media (max-width: 880px) {
+  :root { --btn-font-size: 14px; }
   /* Header — hide CTA, show burger */
   .nav-links, .lang-switch { display: none; }
   .burger { display: inline-flex; }
@@ -2579,7 +2766,6 @@ section {
   .hero-v1 .sub-script { font-size: clamp(28px, 9vw, 44px); }
   .hero-v1 .tag { font-size: 17px; margin: 20px 0 24px; }
   .hero-v1 .cta-row { gap: 10px; }
-  .hero-v1 .cta-row .btn { font-size: 13px; }
   .hero-v1 .meta-row { gap: 18px; margin-top: 32px; padding-top: 18px; }
   .hero-v1 .meta-row .item { gap: 2px; }
   .hero-v1 .meta-row .v { font-size: 15px; }
@@ -2720,7 +2906,7 @@ section {
   /* Footer */
   .site-footer { padding: 38px 0 22px; }
   .footer-cta { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
-  .footer-cta .btn { justify-content: center; font-size: 14px; }
+  .footer-cta .btn { justify-content: center; }
   .footer-grid { gap: 30px; padding-bottom: 28px; }
   .footer-mark { font-size: 36px; }
   .site-footer h5 { margin-bottom: 10px; }
@@ -2774,7 +2960,15 @@ section {
   .terrace .copy .features { grid-template-columns: 1fr; }
 
   /* Buttons full-width-ish on tiny screens */
-  .btn { padding: 12px 18px; font-size: 11px; }
-  .reservation-actions .btn { font-size: 14px; }
-  .contact-actions .btn { font-size: 14px; }
+  .btn { padding: 12px 18px; }
+}
+
+/* Smooth-Scroll Landing-Offset fuer den fixed Header */
+#top, #menu, #terrasse, #galerie, #reservieren, #kontakt {
+  scroll-margin-top: 88px;
+}
+@media (max-width: 880px) {
+  #top, #menu, #terrasse, #galerie, #reservieren, #kontakt {
+    scroll-margin-top: 72px;
+  }
 }

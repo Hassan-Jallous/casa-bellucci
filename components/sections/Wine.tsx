@@ -1,4 +1,7 @@
-import { asset } from '@/lib/assetPath';
+'use client';
+
+import { useMenuUrls } from '@/lib/menuUrls';
+import { useDict } from '@/lib/i18n/LanguageProvider';
 import { FlagBar } from './Brand';
 
 interface WineItem {
@@ -15,35 +18,38 @@ interface WineRegion {
 }
 
 export function Wine() {
+  const d = useDict();
+  const w = d.home.wine;
+  const menuUrls = useMenuUrls();
   const regions: WineRegion[] = [
     {
-      label: "Sicilia",
-      name: "Vom Ätna an die Küste",
-      copy: "Nero d'Avola, Etna Bianco, Frappato. Vulkanische Mineralität, ehrliche Trauben.",
+      label: w.regions[0].label,
+      name: w.regions[0].name,
+      copy: w.regions[0].copy,
       list: [
-        { n: "Etna Bianco, Planeta", v: "2022 · Sicilia", p: "11,00" },
-        { n: "Nero d'Avola, Donnafugata", v: "2021 · Sicilia", p: "9,00" },
-        { n: "Passito di Pantelleria", v: "Ben Ryé · Süßwein", p: "10,00" },
+        { n: "Etna Bianco, Planeta", v: w.regions[0].list[0].v, p: "11,00" },
+        { n: "Nero d'Avola, Donnafugata", v: w.regions[0].list[1].v, p: "9,00" },
+        { n: "Passito di Pantelleria", v: w.regions[0].list[2].v, p: "10,00" },
       ],
     },
     {
-      label: "Toscana & Piemonte",
-      name: "Die großen Klassiker",
-      copy: "Sangiovese, Nebbiolo, Brunello. Lagerfähig, aber heute schon zugänglich.",
+      label: w.regions[1].label,
+      name: w.regions[1].name,
+      copy: w.regions[1].copy,
       list: [
-        { n: "Barolo DOCG, Vietti", v: "2019 · Piemonte", p: "14,00" },
-        { n: "Brunello, Casanova di Neri", v: "2018 · Toscana", p: "18,00" },
-        { n: "Chianti Classico Riserva", v: "Felsina · 2020", p: "11,50" },
+        { n: "Barolo DOCG, Vietti", v: w.regions[1].list[0].v, p: "14,00" },
+        { n: "Brunello, Casanova di Neri", v: w.regions[1].list[1].v, p: "18,00" },
+        { n: "Chianti Classico Riserva", v: w.regions[1].list[2].v, p: "11,50" },
       ],
     },
     {
-      label: "Bollicine & Norditalia",
-      name: "Schaumwein & Weiße",
-      copy: "Franciacorta statt Champagner. Vermentino aus Sardinien, Falanghina aus Kampanien.",
+      label: w.regions[2].label,
+      name: w.regions[2].name,
+      copy: w.regions[2].copy,
       list: [
-        { n: "Franciacorta Brut", v: "Ca' del Bosco", p: "13,00" },
-        { n: "Vermentino di Sardegna", v: "Argiolas · 2023", p: "8,50" },
-        { n: "Gavi del Comune", v: "La Scolca · 2022", p: "12,00" },
+        { n: "Franciacorta Brut", v: w.regions[2].list[0].v, p: "13,00" },
+        { n: "Vermentino di Sardegna", v: w.regions[2].list[1].v, p: "8,50" },
+        { n: "Gavi del Comune", v: w.regions[2].list[2].v, p: "12,00" },
       ],
     },
   ];
@@ -54,15 +60,15 @@ export function Wine() {
           <div>
             <div className="section-eyebrow">
               <span className="eyebrow" style={{ display: "inline-flex", alignItems: "center", gap: 10 }}>
-                <FlagBar orientation="h" /> Unsere Weine
+                <FlagBar orientation="h" /> {w.eyebrow}
               </span>
             </div>
-            <h2>Carta dei <span className="it">Vini</span></h2>
+            <h2>{w.headingPre}<span className="it">{w.headingEm}</span>{w.headingPost}</h2>
             <p className="lede" style={{ marginTop: 14 }}>
-              300+ italienische Etiketten, kuratiert von Sommelier Marco. Glasweise täglich rotierend, die Flaschen warten geduldig im Keller.
+              {w.lede}
             </p>
           </div>
-          <a className="btn btn-ghost" href={asset("menus/weine.pdf")} target="_blank" rel="noreferrer">Komplette Weinkarte (PDF) →</a>
+          <a className="btn btn-ghost" href={menuUrls.weine} target="_blank" rel="noreferrer">{w.pdfLink}</a>
         </div>
         <div className="regions">
           {regions.map(r => (
@@ -77,7 +83,6 @@ export function Wine() {
                       <div>{w.n}</div>
                       <div className="v" style={{ fontSize: 14, color: "var(--ink-muted)" }}>{w.v}</div>
                     </div>
-                    <div className="p">€ {w.p}</div>
                   </div>
                 ))}
               </div>

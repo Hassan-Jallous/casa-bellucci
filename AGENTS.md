@@ -6,6 +6,14 @@ The old prototype files (`index.html`, `scripts/*.jsx`, root `styles/`, root `im
 
 Use `homepage-structure.md` as the source of truth for the Casa Bellucci homepage structure and positioning. Keep the homepage limited to the agreed sections there; move deeper SEO/content needs to future dedicated pages.
 
+## Production readiness workflow
+
+`docs/production-readiness-todo.md` is the active production-readiness work plan. We are working through it step by step. Keep it accurate as the source of truth for what is still blocking production, what has been verified, and what is already complete.
+
+When a production-readiness item is implemented, do not mark it complete immediately. First run the relevant local verification, then have a dedicated subagent review that specific item or diff in read-only mode. Only check off an item in `docs/production-readiness-todo.md` after the dedicated subagent confirms it is fully and correctly handled with no remaining actionable issue.
+
+Whenever a TODO item is completed, update `docs/production-readiness-todo.md` in the same work session with the result, verification evidence, and any remaining follow-up. Do not let the file drift behind the actual project state.
+
 <!-- BEGIN:nextjs-agent-rules -->
 # This is NOT the Next.js you know
 

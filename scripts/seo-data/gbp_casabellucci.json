@@ -1,0 +1,2819 @@
+{
+  "version": "0.1.20260525",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "3.7497 sec.",
+  "cost": 0.0054,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "06022209-1781-0572-0000-3f21a4426820",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "3.6920 sec.",
+      "cost": 0.0054,
+      "result_count": 1,
+      "path": [
+        "v3",
+        "business_data",
+        "google",
+        "my_business_info",
+        "live"
+      ],
+      "data": {
+        "api": "business_data",
+        "function": "my_business_info",
+        "se": "google",
+        "keyword": "Casa Bellucci Kurfürstendamm 63 Berlin",
+        "location_name": "Berlin,Berlin,Germany",
+        "language_code": "de",
+        "se_type": "my_business_info",
+        "device": "desktop",
+        "os": "windows"
+      },
+      "result": [
+        {
+          "keyword": "Casa Bellucci Kurfürstendamm 63 Berlin",
+          "se_domain": "google.com",
+          "location_code": 1003854,
+          "language_code": "de",
+          "check_url": "https://www.google.com/maps?cid=12485998686773928551&hl=de&gl=DE",
+          "datetime": "2026-06-02 19:09:37 +00:00",
+          "item_types": [
+            "google_business_info"
+          ],
+          "items_count": 1,
+          "items": [
+            {
+              "type": "google_business_info",
+              "rank_group": 1,
+              "rank_absolute": 1,
+              "position": "left",
+              "title": "Casa Bellucci Restaurant - Berlin Charlottenburg",
+              "original_title": null,
+              "description": "Willkommen im Casa Bellucci – Ihrem neuen Hotspot für italienische Küche und stilvolle Bar-Abende in Berlin! Hier vereinen sich Genuss und Atmosphäre zu einem Erlebnis der besonderen Art.\n\nOb ein exklusives Dinner mit italienischen Spezialitäten oder ein perfekt gemixter Drink in unserer lebhaften Bar – bei uns finden Sie beides unter einem Dach. Wöchentlich wechselnde Events sorgen für frische Highlights und machen jeden Besuch einzigartig.\n\nErleben Sie italienische Gastfreundschaft in einem Ambiente, das zum Entspannen und Genießen einlädt. Casa Bellucci – Ihre Adresse für besondere Momente in Berlin.",
+              "category": "Restaurant",
+              "category_ids": [
+                "restaurant",
+                "bar",
+                "breakfast_restaurant",
+                "cafe",
+                "italian_restaurant",
+                "lunch_restaurant"
+              ],
+              "additional_categories": [
+                "Bar",
+                "Frühstückslokal",
+                "Café",
+                "Italienisches Restaurant",
+                "Mittagsrestaurant"
+              ],
+              "cid": "12485998686773928551",
+              "feature_id": "0x47a8516867022225:0xad472da6e7276267",
+              "address": "Kurfürstendamm 63, 10707 Berlin",
+              "address_info": {
+                "borough": "Bezirk Charlottenburg-Wilmersdorf",
+                "address": "Kurfürstendamm 63",
+                "city": "Berlin",
+                "zip": "10707",
+                "region": null,
+                "country_code": "DE"
+              },
+              "place_id": "ChIJJSICZ2hRqEcRZ2In56YtR60",
+              "phone": "+491623009925",
+              "url": "https://casabellucci.de/",
+              "contact_url": "https://www.quandoo.de/place/casa-bellucci-104436?aid=63&rwg_token=AFd1xnHRDwaX_Qpyj2wlU49usEKtmYs6mw8EciwQjNHXinPhxa3-Sc030y5qRDbWuDPiHLUjLuL5A3cmXRqEsR7ZX7j-dGMEvjmynxj_dJW_MOAxdFeK8uo%3D",
+              "contributor_url": "https://maps.google.com/maps/contrib/109400461624112862462",
+              "book_online_url": "https://www.google.com/maps/reserve/v/dine/c/g5QxPJONCUg?source=pa&opi=79508299&hl=de-DE&gei=cSofavmeELeTwbkP04nSkAg&ahbb=1&sourceurl=https://www.google.com/maps/preview/place?authuser%3D0%26hl%3Dde%26gl%3Dde%26pb%3D!1m14!1s0x0:0xad472da6e7276267!3m12!1m3!1d310843.84117452684!2d13.424753449999997!3d52.50687665!2m3!1f0.0!2f0.0!3f0.0!3m2!1i1024!2i768!4f13.1!12m4!2m3!1i360!2i120!4i8!13m57!2m2!1i203!2i100!3m2!2i4!5b1!6m6!1m2!1i86!2i86!1m2!1i408!2i240!7m33!1m3!1e1!2b0!3e3!1m3!1e2!2b1!3e2!1m3!1e2!2b0!3e3!1m3!1e8!2b0!3e3!1m3!1e10!2b0!3e3!1m3!1e10!2b1!3e2!1m3!1e10!2b0!3e4!1m3!1e9!2b1!3e2!2b1!9b0!15m8!1m7!1m2!1m1!1e2!2m2!1i195!2i195!3i20!14m3!1scCofatbGE67Lp84P5oyMKQ!7e81!15i10112!15m108!1m26!13m9!2b1!3b1!4b1!6i1!8b1!9b1!14b1!20b1!25b1!18m15!3b1!4b1!5b1!6b1!13b1!14b1!17b1!21b1!22b1!30b1!32b1!33m1!1b1!34b1!36e2!10m1!8e3!11m1!3e1!17b1!20m2!1e3!1e6!24b1!25b1!26b1!27b1!29b1!30m1!2b1!36b1!37b1!39m3!2m2!2i1!3i1!43b1!52b1!54m1!1b1!55b1!56m1!1b1!61m2!1m1!1e1!65m5!3m4!1m3!1m2!1i224!2i298!72m22!1m8!2b1!5b1!7b1!12m4!1b1!2b1!4m1!1e1!4b1!8m10!1m6!4m1!1e1!4m1!1e3!4m1!1e4!3sother_user_google_review_posts__and__hotel_and_vr_partner_review_posts!6m1!1e1!9b1!89b1!90m2!1m1!1e2!98m3!1b1!2b1!3b1!103b1!113b1!114m3!1b1!2m1!1b1!117b1!122m1!1b1!126b1!127b1!128m1!1b0!21m0!22m1!1e81!30m8!3b1!6m2!1b1!2b1!7m2!1e3!2b1!9b1!34m5!7b1!10b1!14b1!15m1!1b0!37i781",
+              "domain": "casabellucci.de",
+              "logo": "https://lh6.googleusercontent.com/-Y4gDUiPxe6I/AAAAAAAAAAI/AAAAAAAAAAA/MrrZCq7H85U/s44-p-k-no-ns-nd/photo.jpg",
+              "main_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHZEBt92nzNLC8vgD0R7jlVVNp4z8-rPOlcS4yHTRoTz_vj3sExO6r7qsuPBNUs7CE3ljOiGpdLrg9wCFmfthjJCyae2Km-5WEdcZDEA9I3UuIFjY_SziEiX5_8BA5l-r0o60eUmQ=w408-h495-k-no",
+              "total_photos": 266,
+              "snippet": "Kurfürstendamm 63, 10707 Berlin",
+              "latitude": 52.5007367,
+              "longitude": 13.3112327,
+              "is_claimed": true,
+              "questions_and_answers_count": null,
+              "attributes": {
+                "available_attributes": {
+                  "service_options": [
+                    "has_seating_outdoors",
+                    "has_curbside_pickup",
+                    "has_takeout",
+                    "serves_dine_in"
+                  ],
+                  "highlights": [
+                    "serves_coffee_notable",
+                    "serves_wine_notable"
+                  ],
+                  "popular_for": [
+                    "serves_breakfast_popular",
+                    "serves_lunch_popular",
+                    "serves_dinner_popular",
+                    "suitable_for_solo_dining"
+                  ],
+                  "accessibility": [
+                    "has_wheelchair_accessible_seating",
+                    "has_wheelchair_accessible_entrance"
+                  ],
+                  "offerings": [
+                    "serves_alcohol",
+                    "serves_beer",
+                    "serves_cocktails",
+                    "serves_healthy",
+                    "serves_coffee",
+                    "serves_small_plates",
+                    "quick_bite",
+                    "serves_liquor",
+                    "serves_vegan",
+                    "serves_vegetarian",
+                    "serves_wine"
+                  ],
+                  "dining_options": [
+                    "serves_breakfast",
+                    "serves_brunch",
+                    "serves_lunch",
+                    "serves_dinner",
+                    "serves_dessert",
+                    "has_seating",
+                    "has_table_service"
+                  ],
+                  "amenities": [
+                    "has_bar_onsite",
+                    "has_restroom"
+                  ],
+                  "atmosphere": [
+                    "feels_hip",
+                    "feels_upscale",
+                    "feels_cozy",
+                    "feels_casual"
+                  ],
+                  "crowd": [
+                    "welcomes_families",
+                    "suitable_for_groups",
+                    "welcomes_lgbtq",
+                    "is_transgender_safespace"
+                  ],
+                  "planning": [
+                    "accepts_reservations"
+                  ],
+                  "payments": [
+                    "pay_debit_card",
+                    "pay_credit_card",
+                    "pay_mobile_nfc"
+                  ],
+                  "children": [
+                    "has_high_chairs",
+                    "welcomes_children"
+                  ],
+                  "parking": [
+                    "has_parking_street_paid"
+                  ],
+                  "pets": [
+                    "welcomes_dogs"
+                  ]
+                },
+                "unavailable_attributes": {
+                  "service_options": [
+                    "has_delivery"
+                  ],
+                  "accessibility": [
+                    "has_hearing_loop",
+                    "has_wheelchair_accessible_parking",
+                    "has_wheelchair_accessible_restroom"
+                  ]
+                }
+              },
+              "place_topics": {
+                "musik": 21,
+                "preis": 14,
+                "cocktails": 47,
+                "atmosphäre": 18,
+                "DJ": 9,
+                "italienisch": 22,
+                "abend": 12,
+                "toiletten": 5,
+                "auswahl": 5,
+                "tisch": 70
+              },
+              "rating": {
+                "rating_type": "Max5",
+                "value": 4.5,
+                "votes_count": 264,
+                "rating_max": null
+              },
+              "hotel_rating": null,
+              "price_level": "inexpensive",
+              "rating_distribution": {
+                "1": 13,
+                "2": 5,
+                "3": 20,
+                "4": 35,
+                "5": 191
+              },
+              "people_also_search": [
+                {
+                  "cid": "12407245295007906181",
+                  "feature_id": "0x0:0xac2f63dc02153985",
+                  "title": "Bellucci Restaurant - Berlin Wilmersdorf",
+                  "rating": {
+                    "rating_type": "Max5",
+                    "value": 4.7,
+                    "votes_count": 1527,
+                    "rating_max": null
+                  }
+                },
+                {
+                  "cid": "5068657870987424859",
+                  "feature_id": "0x0:0x46577d7a9031745b",
+                  "title": "Francucci - Ristorante Dal 1962",
+                  "rating": {
+                    "rating_type": "Max5",
+                    "value": 4.3,
+                    "votes_count": 1163,
+                    "rating_max": null
+                  }
+                },
+                {
+                  "cid": "9421579725156810374",
+                  "feature_id": "0x0:0x82c02cd7a4fe7e86",
+                  "title": "Restaurant Capone",
+                  "rating": {
+                    "rating_type": "Max5",
+                    "value": 4.5,
+                    "votes_count": 2118,
+                    "rating_max": null
+                  }
+                },
+                {
+                  "cid": "12769516123827548652",
+                  "feature_id": "0x0:0xb1366f42425d31ec",
+                  "title": "Luardi 🥇🇮🇹 »Cucina della Mamma«",
+                  "rating": {
+                    "rating_type": "Max5",
+                    "value": 4.8,
+                    "votes_count": 8777,
+                    "rating_max": null
+                  }
+                },
+                {
+                  "cid": "14869992251628944820",
+                  "feature_id": "0x0:0xce5cd32b13277db4",
+                  "title": "Eiffel Berlin",
+                  "rating": {
+                    "rating_type": "Max5",
+                    "value": 4.6,
+                    "votes_count": 781,
+                    "rating_max": null
+                  }
+                }
+              ],
+              "work_time": {
+                "work_hours": {
+                  "timetable": {
+                    "sunday": [
+                      {
+                        "open": {
+                          "hour": 9,
+                          "minute": 0
+                        },
+                        "close": {
+                          "hour": 18,
+                          "minute": 0
+                        }
+                      }
+                    ],
+                    "monday": [
+                      {
+                        "open": {
+                          "hour": 9,
+                          "minute": 0
+                        },
+                        "close": {
+                          "hour": 0,
+                          "minute": 0
+                        }
+                      }
+                    ],
+                    "tuesday": [
+                      {
+                        "open": {
+                          "hour": 9,
+                          "minute": 0
+                        },
+                        "close": {
+                          "hour": 0,
+                          "minute": 0
+                        }
+                      }
+                    ],
+                    "wednesday": [
+                      {
+                        "open": {
+                          "hour": 9,
+                          "minute": 0
+                        },
+                        "close": {
+                          "hour": 0,
+                          "minute": 0
+                        }
+                      }
+                    ],
+                    "thursday": [
+                      {
+                        "open": {
+                          "hour": 9,
+                          "minute": 0
+                        },
+                        "close": {
+                          "hour": 0,
+                          "minute": 0
+                        }
+                      }
+                    ],
+                    "friday": [
+                      {
+                        "open": {
+                          "hour": 9,
+                          "minute": 0
+                        },
+                        "close": {
+                          "hour": 0,
+                          "minute": 0
+                        }
+                      }
+                    ],
+                    "saturday": [
+                      {
+                        "open": {
+                          "hour": 9,
+                          "minute": 0
+                        },
+                        "close": {
+                          "hour": 0,
+                          "minute": 0
+                        }
+                      }
+                    ]
+                  },
+                  "current_status": "open"
+                }
+              },
+              "popular_times": {
+                "popular_times_by_days": {
+                  "sunday": [
+                    {
+                      "time": {
+                        "hour": 6,
+                        "minute": 0
+                      },
+                      "popular_index": 0
+                    },
+                    {
+                      "time": {
+                        "hour": 7,
+                        "minute": 0
+                      },
+                      "popular_index": 0
+                    },
+                    {
+                      "time": {
+                        "hour": 8,
+                        "minute": 0
+                      },
+                      "popular_index": 0
+                    },
+                    {
+                      "time": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "popular_index": 34
+                    },
+                    {
+                      "time": {
+                        "hour": 10,
+                        "minute": 0
+                      },
+                      "popular_index": 34
+                    },
+                    {
+                      "time": {
+                        "hour": 11,
+                        "minute": 0
+                      },
+                      "popular_index": 43
+                    },
+                    {
+                      "time": {
+                        "hour": 12,
+                        "minute": 0
+                      },
+                      "popular_index": 56
+                    },
+                    {
+                      "time": {
+                        "hour": 13,
+                        "minute": 0
+                      },
+                      "popular_index": 59
+                    },
+                    {
+                      "time": {
+                        "hour": 14,
+                        "minute": 0
+                      },
+                      "popular_index": 50
+                    },
+                    {
+                      "time": {
+                        "hour": 15,
+                        "minute": 0
+                      },
+                      "popular_index": 43
+                    },
+                    {
+                      "time": {
+                        "hour": 16,
+                        "minute": 0
+                      },
+                      "popular_index": 40
+                    },
+                    {
+                      "time": {
+                        "hour": 17,
+                        "minute": 0
+                      },
+                      "popular_index": 34
+                    },
+                    {
+                      "time": {
+                        "hour": 18,
+                        "minute": 0
+                      },
+                      "popular_index": 0
+                    },
+                    {
+                      "time": {
+                        "hour": 19,
+                        "minute": 0
+                      },
+                      "popular_index": 0
+                    },
+                    {
+                      "time": {
+                        "hour": 20,
+                        "minute": 0
+                      },
+                      "popular_index": 0
+                    },
+                    {
+                      "time": {
+                        "hour": 21,
+                        "minute": 0
+                      },
+                      "popular_index": 0
+                    },
+                    {
+                      "time": {
+                        "hour": 22,
+                        "minute": 0
+                      },
+                      "popular_index": 0
+                    },
+                    {
+                      "time": {
+                        "hour": 23,
+                        "minute": 0
+                      },
+                      "popular_index": 0
+                    }
+                  ],
+                  "monday": [
+                    {
+                      "time": {
+                        "hour": 6,
+                        "minute": 0
+                      },
+                      "popular_index": 0
+                    },
+                    {
+                      "time": {
+                        "hour": 7,
+                        "minute": 0
+                      },
+                      "popular_index": 0
+                    },
+                    {
+                      "time": {
+                        "hour": 8,
+                        "minute": 0
+                      },
+                      "popular_index": 0
+                    },
+                    {
+                      "time": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "popular_index": 34
+                    },
+                    {
+                      "time": {
+                        "hour": 10,
+                        "minute": 0
+                      },
+                      "popular_index": 43
+                    },
+                    {
+                      "time": {
+                        "hour": 11,
+                        "minute": 0
+                      },
+                      "popular_index": 46
+                    },
+                    {
+                      "time": {
+                        "hour": 12,
+                        "minute": 0
+                      },
+                      "popular_index": 53
+                    },
+                    {
+                      "time": {
+                        "hour": 13,
+                        "minute": 0
+                      },
+                      "popular_index": 53
+                    },
+                    {
+                      "time": {
+                        "hour": 14,
+                        "minute": 0
+                      },
+                      "popular_index": 50
+                    },
+                    {
+                      "time": {
+                        "hour": 15,
+                        "minute": 0
+                      },
+                      "popular_index": 37
+                    },
+                    {
+                      "time": {
+                        "hour": 16,
+                        "minute": 0
+                      },
+                      "popular_index": 37
+                    },
+                    {
+                      "time": {
+                        "hour": 17,
+                        "minute": 0
+                      },
+                      "popular_index": 53
+                    },
+                    {
+                      "time": {
+                        "hour": 18,
+                        "minute": 0
+                      },
+                      "popular_index": 50
+                    },
+                    {
+                      "time": {
+                        "hour": 19,
+                        "minute": 0
+                      },
+                      "popular_index": 43
+                    },
+                    {
+                      "time": {
+                        "hour": 20,
+                        "minute": 0
+                      },
+                      "popular_index": 37
+                    },
+                    {
+                      "time": {
+                        "hour": 21,
+                        "minute": 0
+                      },
+                      "popular_index": 37
+                    },
+                    {
+                      "time": {
+                        "hour": 22,
+                        "minute": 0
+                      },
+                      "popular_index": 31
+                    },
+                    {
+                      "time": {
+                        "hour": 23,
+                        "minute": 0
+                      },
+                      "popular_index": 21
+                    }
+                  ],
+                  "tuesday": [
+                    {
+                      "time": {
+                        "hour": 6,
+                        "minute": 0
+                      },
+                      "popular_index": 0
+                    },
+                    {
+                      "time": {
+                        "hour": 7,
+                        "minute": 0
+                      },
+                      "popular_index": 0
+                    },
+                    {
+                      "time": {
+                        "hour": 8,
+                        "minute": 0
+                      },
+                      "popular_index": 0
+                    },
+                    {
+                      "time": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "popular_index": 53
+                    },
+                    {
+                      "time": {
+                        "hour": 10,
+                        "minute": 0
+                      },
+                      "popular_index": 53
+                    },
+                    {
+                      "time": {
+                        "hour": 11,
+                        "minute": 0
+                      },
+                      "popular_index": 50
+                    },
+                    {
+                      "time": {
+                        "hour": 12,
+                        "minute": 0
+                      },
+                      "popular_index": 50
+                    },
+                    {
+                      "time": {
+                        "hour": 13,
+                        "minute": 0
+                      },
+                      "popular_index": 46
+                    },
+                    {
+                      "time": {
+                        "hour": 14,
+                        "minute": 0
+                      },
+                      "popular_index": 62
+                    },
+                    {
+                      "time": {
+                        "hour": 15,
+                        "minute": 0
+                      },
+                      "popular_index": 65
+                    },
+                    {
+                      "time": {
+                        "hour": 16,
+                        "minute": 0
+                      },
+                      "popular_index": 71
+                    },
+                    {
+                      "time": {
+                        "hour": 17,
+                        "minute": 0
+                      },
+                      "popular_index": 68
+                    },
+                    {
+                      "time": {
+                        "hour": 18,
+                        "minute": 0
+                      },
+                      "popular_index": 59
+                    },
+                    {
+                      "time": {
+                        "hour": 19,
+                        "minute": 0
+                      },
+                      "popular_index": 56
+                    },
+                    {
+                      "time": {
+                        "hour": 20,
+                        "minute": 0
+                      },
+                      "popular_index": 37
+                    },
+                    {
+                      "time": {
+                        "hour": 21,
+                        "minute": 0
+                      },
+                      "popular_index": 31
+                    },
+                    {
+                      "time": {
+                        "hour": 22,
+                        "minute": 0
+                      },
+                      "popular_index": 18
+                    },
+                    {
+                      "time": {
+                        "hour": 23,
+                        "minute": 0
+                      },
+                      "popular_index": 15
+                    }
+                  ],
+                  "wednesday": [
+                    {
+                      "time": {
+                        "hour": 6,
+                        "minute": 0
+                      },
+                      "popular_index": 0
+                    },
+                    {
+                      "time": {
+                        "hour": 7,
+                        "minute": 0
+                      },
+                      "popular_index": 0
+                    },
+                    {
+                      "time": {
+                        "hour": 8,
+                        "minute": 0
+                      },
+                      "popular_index": 0
+                    },
+                    {
+                      "time": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "popular_index": 43
+                    },
+                    {
+                      "time": {
+                        "hour": 10,
+                        "minute": 0
+                      },
+                      "popular_index": 40
+                    },
+                    {
+                      "time": {
+                        "hour": 11,
+                        "minute": 0
+                      },
+                      "popular_index": 37
+                    },
+                    {
+                      "time": {
+                        "hour": 12,
+                        "minute": 0
+                      },
+                      "popular_index": 56
+                    },
+                    {
+                      "time": {
+                        "hour": 13,
+                        "minute": 0
+                      },
+                      "popular_index": 78
+                    },
+                    {
+                      "time": {
+                        "hour": 14,
+                        "minute": 0
+                      },
+                      "popular_index": 93
+                    },
+                    {
+                      "time": {
+                        "hour": 15,
+                        "minute": 0
+                      },
+                      "popular_index": 100
+                    },
+                    {
+                      "time": {
+                        "hour": 16,
+                        "minute": 0
+                      },
+                      "popular_index": 84
+                    },
+                    {
+                      "time": {
+                        "hour": 17,
+                        "minute": 0
+                      },
+                      "popular_index": 68
+                    },
+                    {
+                      "time": {
+                        "hour": 18,
+                        "minute": 0
+                      },
+                      "popular_index": 68
+                    },
+                    {
+                      "time": {
+                        "hour": 19,
+                        "minute": 0
+                      },
+                      "popular_index": 78
+                    },
+                    {
+                      "time": {
+                        "hour": 20,
+                        "minute": 0
+                      },
+                      "popular_index": 78
+                    },
+                    {
+                      "time": {
+                        "hour": 21,
+                        "minute": 0
+                      },
+                      "popular_index": 62
+                    },
+                    {
+                      "time": {
+                        "hour": 22,
+                        "minute": 0
+                      },
+                      "popular_index": 46
+                    },
+                    {
+                      "time": {
+                        "hour": 23,
+                        "minute": 0
+                      },
+                      "popular_index": 28
+                    }
+                  ],
+                  "thursday": [
+                    {
+                      "time": {
+                        "hour": 6,
+                        "minute": 0
+                      },
+                      "popular_index": 0
+                    },
+                    {
+                      "time": {
+                        "hour": 7,
+                        "minute": 0
+                      },
+                      "popular_index": 0
+                    },
+                    {
+                      "time": {
+                        "hour": 8,
+                        "minute": 0
+                      },
+                      "popular_index": 0
+                    },
+                    {
+                      "time": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "popular_index": 53
+                    },
+                    {
+                      "time": {
+                        "hour": 10,
+                        "minute": 0
+                      },
+                      "popular_index": 59
+                    },
+                    {
+                      "time": {
+                        "hour": 11,
+                        "minute": 0
+                      },
+                      "popular_index": 65
+                    },
+                    {
+                      "time": {
+                        "hour": 12,
+                        "minute": 0
+                      },
+                      "popular_index": 53
+                    },
+                    {
+                      "time": {
+                        "hour": 13,
+                        "minute": 0
+                      },
+                      "popular_index": 59
+                    },
+                    {
+                      "time": {
+                        "hour": 14,
+                        "minute": 0
+                      },
+                      "popular_index": 65
+                    },
+                    {
+                      "time": {
+                        "hour": 15,
+                        "minute": 0
+                      },
+                      "popular_index": 68
+                    },
+                    {
+                      "time": {
+                        "hour": 16,
+                        "minute": 0
+                      },
+                      "popular_index": 75
+                    },
+                    {
+                      "time": {
+                        "hour": 17,
+                        "minute": 0
+                      },
+                      "popular_index": 71
+                    },
+                    {
+                      "time": {
+                        "hour": 18,
+                        "minute": 0
+                      },
+                      "popular_index": 62
+                    },
+                    {
+                      "time": {
+                        "hour": 19,
+                        "minute": 0
+                      },
+                      "popular_index": 59
+                    },
+                    {
+                      "time": {
+                        "hour": 20,
+                        "minute": 0
+                      },
+                      "popular_index": 59
+                    },
+                    {
+                      "time": {
+                        "hour": 21,
+                        "minute": 0
+                      },
+                      "popular_index": 53
+                    },
+                    {
+                      "time": {
+                        "hour": 22,
+                        "minute": 0
+                      },
+                      "popular_index": 50
+                    },
+                    {
+                      "time": {
+                        "hour": 23,
+                        "minute": 0
+                      },
+                      "popular_index": 50
+                    }
+                  ],
+                  "friday": [
+                    {
+                      "time": {
+                        "hour": 6,
+                        "minute": 0
+                      },
+                      "popular_index": 0
+                    },
+                    {
+                      "time": {
+                        "hour": 7,
+                        "minute": 0
+                      },
+                      "popular_index": 0
+                    },
+                    {
+                      "time": {
+                        "hour": 8,
+                        "minute": 0
+                      },
+                      "popular_index": 0
+                    },
+                    {
+                      "time": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "popular_index": 21
+                    },
+                    {
+                      "time": {
+                        "hour": 10,
+                        "minute": 0
+                      },
+                      "popular_index": 28
+                    },
+                    {
+                      "time": {
+                        "hour": 11,
+                        "minute": 0
+                      },
+                      "popular_index": 46
+                    },
+                    {
+                      "time": {
+                        "hour": 12,
+                        "minute": 0
+                      },
+                      "popular_index": 68
+                    },
+                    {
+                      "time": {
+                        "hour": 13,
+                        "minute": 0
+                      },
+                      "popular_index": 62
+                    },
+                    {
+                      "time": {
+                        "hour": 14,
+                        "minute": 0
+                      },
+                      "popular_index": 53
+                    },
+                    {
+                      "time": {
+                        "hour": 15,
+                        "minute": 0
+                      },
+                      "popular_index": 43
+                    },
+                    {
+                      "time": {
+                        "hour": 16,
+                        "minute": 0
+                      },
+                      "popular_index": 56
+                    },
+                    {
+                      "time": {
+                        "hour": 17,
+                        "minute": 0
+                      },
+                      "popular_index": 65
+                    },
+                    {
+                      "time": {
+                        "hour": 18,
+                        "minute": 0
+                      },
+                      "popular_index": 62
+                    },
+                    {
+                      "time": {
+                        "hour": 19,
+                        "minute": 0
+                      },
+                      "popular_index": 65
+                    },
+                    {
+                      "time": {
+                        "hour": 20,
+                        "minute": 0
+                      },
+                      "popular_index": 71
+                    },
+                    {
+                      "time": {
+                        "hour": 21,
+                        "minute": 0
+                      },
+                      "popular_index": 68
+                    },
+                    {
+                      "time": {
+                        "hour": 22,
+                        "minute": 0
+                      },
+                      "popular_index": 65
+                    },
+                    {
+                      "time": {
+                        "hour": 23,
+                        "minute": 0
+                      },
+                      "popular_index": 43
+                    }
+                  ],
+                  "saturday": [
+                    {
+                      "time": {
+                        "hour": 6,
+                        "minute": 0
+                      },
+                      "popular_index": 0
+                    },
+                    {
+                      "time": {
+                        "hour": 7,
+                        "minute": 0
+                      },
+                      "popular_index": 0
+                    },
+                    {
+                      "time": {
+                        "hour": 8,
+                        "minute": 0
+                      },
+                      "popular_index": 0
+                    },
+                    {
+                      "time": {
+                        "hour": 9,
+                        "minute": 0
+                      },
+                      "popular_index": 21
+                    },
+                    {
+                      "time": {
+                        "hour": 10,
+                        "minute": 0
+                      },
+                      "popular_index": 34
+                    },
+                    {
+                      "time": {
+                        "hour": 11,
+                        "minute": 0
+                      },
+                      "popular_index": 46
+                    },
+                    {
+                      "time": {
+                        "hour": 12,
+                        "minute": 0
+                      },
+                      "popular_index": 43
+                    },
+                    {
+                      "time": {
+                        "hour": 13,
+                        "minute": 0
+                      },
+                      "popular_index": 43
+                    },
+                    {
+                      "time": {
+                        "hour": 14,
+                        "minute": 0
+                      },
+                      "popular_index": 43
+                    },
+                    {
+                      "time": {
+                        "hour": 15,
+                        "minute": 0
+                      },
+                      "popular_index": 53
+                    },
+                    {
+                      "time": {
+                        "hour": 16,
+                        "minute": 0
+                      },
+                      "popular_index": 59
+                    },
+                    {
+                      "time": {
+                        "hour": 17,
+                        "minute": 0
+                      },
+                      "popular_index": 68
+                    },
+                    {
+                      "time": {
+                        "hour": 18,
+                        "minute": 0
+                      },
+                      "popular_index": 75
+                    },
+                    {
+                      "time": {
+                        "hour": 19,
+                        "minute": 0
+                      },
+                      "popular_index": 75
+                    },
+                    {
+                      "time": {
+                        "hour": 20,
+                        "minute": 0
+                      },
+                      "popular_index": 75
+                    },
+                    {
+                      "time": {
+                        "hour": 21,
+                        "minute": 0
+                      },
+                      "popular_index": 59
+                    },
+                    {
+                      "time": {
+                        "hour": 22,
+                        "minute": 0
+                      },
+                      "popular_index": 46
+                    },
+                    {
+                      "time": {
+                        "hour": 23,
+                        "minute": 0
+                      },
+                      "popular_index": 28
+                    }
+                  ]
+                }
+              },
+              "local_business_links": [
+                {
+                  "type": "reservation",
+                  "title": "quandoo.de",
+                  "url": "https://www.quandoo.de/place/casa-bellucci-104436?aid=63&rwg_token=AFd1xnHRDwaX_Qpyj2wlU49usEKtmYs6mw8EciwQjNHXinPhxa3-Sc030y5qRDbWuDPiHLUjLuL5A3cmXRqEsR7ZX7j-dGMEvjmynxj_dJW_MOAxdFeK8uo%3D"
+                },
+                {
+                  "type": "menu",
+                  "title": "casabellucci.de",
+                  "url": "https://casabellucci.de/wp-content/uploads/2025/03/250303_Caf_Lunch_A4.pdf"
+                }
+              ],
+              "is_directory_item": false,
+              "directory": null,
+              "services": [
+                {
+                  "category": "APERITIF & COCKTAILS",
+                  "title": "Champagner",
+                  "snippet": null,
+                  "price": {
+                    "current": 18,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "18,00 €"
+                  }
+                },
+                {
+                  "category": "APERITIF & COCKTAILS",
+                  "title": "Crémant",
+                  "snippet": null,
+                  "price": {
+                    "current": 10,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "10,00 €"
+                  }
+                },
+                {
+                  "category": "APERITIF & COCKTAILS",
+                  "title": "Prosecco",
+                  "snippet": null,
+                  "price": {
+                    "current": 9,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "9,00 €"
+                  }
+                },
+                {
+                  "category": "APERITIF & COCKTAILS",
+                  "title": "Negroni",
+                  "snippet": null,
+                  "price": {
+                    "current": 16,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "16,00 €"
+                  }
+                },
+                {
+                  "category": "APERITIF & COCKTAILS",
+                  "title": "Piña Colada",
+                  "snippet": null,
+                  "price": {
+                    "current": 15,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "15,00 €"
+                  }
+                },
+                {
+                  "category": "APERITIF & COCKTAILS",
+                  "title": "Classic Mojito",
+                  "snippet": null,
+                  "price": {
+                    "current": 15,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "15,00 €"
+                  }
+                },
+                {
+                  "category": "APERITIF & COCKTAILS",
+                  "title": "Margarita",
+                  "snippet": null,
+                  "price": {
+                    "current": 15,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "15,00 €"
+                  }
+                },
+                {
+                  "category": "APERITIF & COCKTAILS",
+                  "title": "Cosmopolitan",
+                  "snippet": null,
+                  "price": {
+                    "current": 15,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "15,00 €"
+                  }
+                },
+                {
+                  "category": "APERITIF & COCKTAILS",
+                  "title": "Porn Star Martini",
+                  "snippet": null,
+                  "price": {
+                    "current": 15,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "15,00 €"
+                  }
+                },
+                {
+                  "category": "APERITIF & COCKTAILS",
+                  "title": "Espresso Martini",
+                  "snippet": null,
+                  "price": {
+                    "current": 15,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "15,00 €"
+                  }
+                },
+                {
+                  "category": "APERITIF & COCKTAILS",
+                  "title": "Aperol Spritz",
+                  "snippet": "Aperol, Prosecco, Soda Water",
+                  "price": {
+                    "current": 13,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "13,00 €"
+                  }
+                },
+                {
+                  "category": "APERITIF & COCKTAILS",
+                  "title": "Limoncello Spritz",
+                  "snippet": "Limoncello, Prosecco, Soda Water und frische Limette",
+                  "price": {
+                    "current": 13,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "13,00 €"
+                  }
+                },
+                {
+                  "category": "APERITIF & COCKTAILS",
+                  "title": "Lillet Wild Berries",
+                  "snippet": "Lillet Vermouth, Crémant, Beeren mit Soda oder Tonic Water",
+                  "price": {
+                    "current": 14.5,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "14,50 €"
+                  }
+                },
+                {
+                  "category": "APERITIF & COCKTAILS",
+                  "title": "Mimosa",
+                  "snippet": "Champagner, Orangensaft",
+                  "price": {
+                    "current": 18,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "18,00 €"
+                  }
+                },
+                {
+                  "category": "APERITIF & COCKTAILS",
+                  "title": "Velvet Mandarine",
+                  "snippet": "Amalfi Zitrone, Mandarine, Crémant, Soda Water",
+                  "price": {
+                    "current": 14.5,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "14,50 €"
+                  }
+                },
+                {
+                  "category": "APERITIF & COCKTAILS",
+                  "title": "Bellucci Funky Pink",
+                  "snippet": "Grapefruit, Rhabarber, Crémant, Soda Water",
+                  "price": {
+                    "current": 14.5,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "14,50 €"
+                  }
+                },
+                {
+                  "category": "APERITIF & COCKTAILS",
+                  "title": "Hugo",
+                  "snippet": "St. Germain Elderflower Likör, Gin, Prosecco, frische Limette, Soda Water, Minze",
+                  "price": {
+                    "current": 13,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "13,00 €"
+                  }
+                },
+                {
+                  "category": "ALKOHOLFREI",
+                  "title": "Bellucci Florale",
+                  "snippet": "Martini Bianco alkoholfrei, Holundersirup, Fevertree Tonic Water",
+                  "price": {
+                    "current": 11,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "11,00 €"
+                  }
+                },
+                {
+                  "category": "ALKOHOLFREI",
+                  "title": "Hugo Florale",
+                  "snippet": "Holundersirup, frische Minze, Ginger Ale",
+                  "price": {
+                    "current": 11,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "11,00 €"
+                  }
+                },
+                {
+                  "category": "BELLUCCI'S SIGNATURE ANTIPASTI MARE",
+                  "title": "Caviar \"Edition Bellucci\"",
+                  "snippet": "Kaviardose auf Eis: 30g, Kaviar Select Malossol mit Blinis, Crème Fraîche und Schalotten",
+                  "price": {
+                    "current": 65,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "65,00 €"
+                  }
+                },
+                {
+                  "category": "BELLUCCI'S SIGNATURE ANTIPASTI MARE",
+                  "title": "Caviar \"Edition Bellucci\"",
+                  "snippet": "Kaviardose auf Eis: 50g, Kaviar Select Malossol mit Blinis, Crème Fraîche und Schalotten",
+                  "price": {
+                    "current": 95,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "95,00 €"
+                  }
+                },
+                {
+                  "category": "BELLUCCI'S SIGNATURE ANTIPASTI MARE",
+                  "title": "Caviar \"Edition Bellucci\"",
+                  "snippet": "Kaviardose auf Eis: 100g, Kaviar Select Malossol mit Blinis, Crème Fraîche und Schalotten",
+                  "price": {
+                    "current": 185,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "185,00 €"
+                  }
+                },
+                {
+                  "category": "BELLUCCI'S SIGNATURE ANTIPASTI MARE",
+                  "title": "Ostriche",
+                  "snippet": "Krystale Austern, Ponzu 3 Stk",
+                  "price": {
+                    "current": 18,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "18,00 €"
+                  }
+                },
+                {
+                  "category": "BELLUCCI'S SIGNATURE ANTIPASTI MARE",
+                  "title": "Ostriche",
+                  "snippet": "Krystale Austern, Ponzu 6 Stk",
+                  "price": {
+                    "current": 34,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "34,00 €"
+                  }
+                },
+                {
+                  "category": "BELLUCCI'S SIGNATURE ANTIPASTI MARE",
+                  "title": "Ceviche di Mare",
+                  "snippet": "Ceviche vom frischen Doradenfilet mit Garnelen und Mango",
+                  "price": {
+                    "current": 24.5,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "24,50 €"
+                  }
+                },
+                {
+                  "category": "BELLUCCI'S SIGNATURE ANTIPASTI MARE",
+                  "title": "Aragosta e Sashimi",
+                  "snippet": "Hummer vom Grill nach katalanischer Art und Thunfisch-Sashimi mit Avocado",
+                  "price": {
+                    "current": 29.5,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "29,50 €"
+                  }
+                },
+                {
+                  "category": "BELLUCCI'S SIGNATURE ANTIPASTI MARE",
+                  "title": "Tonno Sashimi su Chili e Avocado Mousse",
+                  "snippet": "Thunfisch-Sashimi Scheiben in Chili-Avocado-Mousse",
+                  "price": {
+                    "current": 19.5,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "19,50 €"
+                  }
+                },
+                {
+                  "category": "BELLUCCI'S SIGNATURE ANTIPASTI MARE",
+                  "title": "Tartare di Salmone",
+                  "snippet": "Frischer Lachstatar von *Label Rouge* mit Avocado-Sojasauce",
+                  "price": {
+                    "current": 17.5,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "17,50 €"
+                  }
+                },
+                {
+                  "category": "BELLUCCI'S SIGNATURE ANTIPASTI MARE",
+                  "title": "Tartare di tonno con stracciatella di burrata",
+                  "snippet": "Thunfisch-Mangotartar mit Burratta-Stracciatella",
+                  "price": {
+                    "current": 21,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "21,00 €"
+                  }
+                },
+                {
+                  "category": "BELLUCCI'S SIGNATURE ANTIPASTI VERDE",
+                  "title": "Burrata e Barbabietola",
+                  "snippet": "Frischer Burrata-Käse aus der Region Murge auf Rote-Bete-Carpaccio",
+                  "price": {
+                    "current": 21,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "21,00 €"
+                  }
+                },
+                {
+                  "category": "BELLUCCI'S SIGNATURE ANTIPASTI VERDE",
+                  "title": "Asparagi Tempura",
+                  "snippet": "Grüner Spargel im Tempurateig",
+                  "price": {
+                    "current": 14.5,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "14,50 €"
+                  }
+                },
+                {
+                  "category": "BELLUCCI'S SIGNATURE ANTIPASTI VERDE",
+                  "title": "Tartare di Barbabietola",
+                  "snippet": "Avocado-Rote-Bete-Tartar, vegan",
+                  "price": {
+                    "current": 15.5,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "15,50 €"
+                  }
+                },
+                {
+                  "category": "BELLUCCI'S SIGNATURE ANTIPASTI TERRA",
+                  "title": "Carpaccio di Wagyu",
+                  "snippet": "Wagyu-Carpaccio mit japanischen Enoki-Pilzen und Trüffel",
+                  "price": {
+                    "current": 22.5,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "22,50 €"
+                  }
+                },
+                {
+                  "category": "BELLUCCI'S SIGNATURE ANTIPASTI TERRA",
+                  "title": "Tataki di Manzo",
+                  "snippet": "Beef Tataki mit Ponzu-Sauce und Frühlingszwiebeln, kalt serviert",
+                  "price": {
+                    "current": 26.5,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "26,50 €"
+                  }
+                },
+                {
+                  "category": "BELLUCCI'S SIGNATURE ANTIPASTI TERRA",
+                  "title": "Wagyu Tartare Classico",
+                  "snippet": "Klassisches Wagyu-Rindertatar mit Sauerteigbrot und Trüffel",
+                  "price": {
+                    "current": 24.5,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "24,50 €"
+                  }
+                },
+                {
+                  "category": "BELLUCCI'S SIGNATURE ANTIPASTI TERRA",
+                  "title": "Brioche al Wagyu",
+                  "snippet": "Brioche mit gebratenen Austernpilzen und Wagyu-Flankensteak",
+                  "price": {
+                    "current": 26.5,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "26,50 €"
+                  }
+                },
+                {
+                  "category": "BELLUCCI'S SIGNATURE ANTIPASTI TERRA",
+                  "title": "Sfogliatina di Vitello con Spuma di Tonno e Capperi",
+                  "snippet": "Dünnes Kalbfleisch mit Kapern und Thunfischcreme",
+                  "price": {
+                    "current": 19,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "19,00 €"
+                  }
+                },
+                {
+                  "category": "BELLUCCI'S SIGNATURE ANTIPASTI TERRA",
+                  "title": "Degustazione Bellucci",
+                  "snippet": "Carpaccio, Vitello Tonnato, Büffelmozzarella und grüner Spargel im Tempurateig",
+                  "price": {
+                    "current": 26.5,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "26,50 €"
+                  }
+                },
+                {
+                  "category": "PASTA",
+                  "title": "Rigatoni al Ruinart Champagne con Caviale e Foglia d'Oro",
+                  "snippet": "Rigatoni in Ruinart-Champagner-Buttersoße mit Kaviar und Blattgold",
+                  "price": {
+                    "current": 75,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "75,00 €"
+                  }
+                },
+                {
+                  "category": "PASTA",
+                  "title": "Tagliolini al Tartufo Nero",
+                  "snippet": "Frische Tagliolini mit flambiertem Parmesan und schwarzem Trüffel",
+                  "price": {
+                    "current": 26,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "26,00 €"
+                  }
+                },
+                {
+                  "category": "PASTA",
+                  "title": "Linguine con Aragosta",
+                  "snippet": "Linguine mit 1/2 kanadischem Hummer in Cherrytomatensauce",
+                  "price": {
+                    "current": 35,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "35,00 €"
+                  }
+                },
+                {
+                  "category": "PASTA",
+                  "title": "Linguine al Limone e Burro con Caviale",
+                  "snippet": "Linguine in Zitronen-Buttersauce mit Kaviar",
+                  "price": {
+                    "current": 32,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "32,00 €"
+                  }
+                },
+                {
+                  "category": "PASTA",
+                  "title": "Ravioli all'Aragosta",
+                  "snippet": "Lobster-Ravioli gefüllt mit Hummerfleisch, Scampis und frischen Kräutern mit Zucchini-Julienne",
+                  "price": {
+                    "current": 27.5,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "27,50 €"
+                  }
+                },
+                {
+                  "category": "PASTA",
+                  "title": "Fettuccine con Funghi e Manzo",
+                  "snippet": "Schmale Bandnudeln mit Rinderfiletstreifen und Austernpilzen in Cognaccreme",
+                  "price": {
+                    "current": 26.5,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "26,50 €"
+                  }
+                },
+                {
+                  "category": "PASTA",
+                  "title": "Tagliolini al nero di seppia con filetto di salmone",
+                  "snippet": "Schwarze Taglioni mit frischem Lachsfilet und Cherrytomaten",
+                  "price": {
+                    "current": 24.5,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "24,50 €"
+                  }
+                },
+                {
+                  "category": "PASTA",
+                  "title": "Spaghetti alle Vongole Veraci",
+                  "snippet": "Spaghetti mit Venusmuscheln in Weißwein-Kräutersauce",
+                  "price": {
+                    "current": 26,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "26,00 €"
+                  }
+                },
+                {
+                  "category": "PASTA",
+                  "title": "Linguine Fresche con Scampi e Pomodorino Ciliegino",
+                  "snippet": "Frische feine Bandnudeln in Cherrytomaten-Weißweinsauce und Garnelen",
+                  "price": {
+                    "current": 28,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "28,00 €"
+                  }
+                },
+                {
+                  "category": "PASTA",
+                  "title": "Penne con Cubettini di Manzo, Champignon e Salsa Pomodoro",
+                  "snippet": "Kurze Nudeln mit Rinderfiletstreifen, frischen Champignons in Cherrytomatensauce",
+                  "price": {
+                    "current": 25.5,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "25,50 €"
+                  }
+                },
+                {
+                  "category": "FLAMMKUCHEN",
+                  "title": "Margarita",
+                  "snippet": "mit geriebenem Büffelmozarella",
+                  "price": {
+                    "current": 15,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "15,00 €"
+                  }
+                },
+                {
+                  "category": "FLAMMKUCHEN",
+                  "title": "Bellucci Trüffel",
+                  "snippet": "mit Crème fraîche, Mozzarella und frischem schwarzen Trüffel",
+                  "price": {
+                    "current": 24,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "24,00 €"
+                  }
+                },
+                {
+                  "category": "FLAMMKUCHEN",
+                  "title": "Mykonos",
+                  "snippet": "mit Crème fraîche, geriebenem Mozzarella, Feta, Oliven, roten Zwiebeln und Datteltomaten",
+                  "price": {
+                    "current": 17,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "17,00 €"
+                  }
+                },
+                {
+                  "category": "FLAMMKUCHEN",
+                  "title": "Napoli",
+                  "snippet": "mit Napoli-Sauce, geriebenem Mozzarella, Burrata und Basilikum",
+                  "price": {
+                    "current": 19.5,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "19,50 €"
+                  }
+                },
+                {
+                  "category": "FLAMMKUCHEN",
+                  "title": "Elsässer",
+                  "snippet": "mit Crème fraîche, geriebenem Mozzarella, Bacon, Zwiebeln und Petersilie",
+                  "price": {
+                    "current": 21,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "21,00 €"
+                  }
+                },
+                {
+                  "category": "INSALATE",
+                  "title": "Insalata di Nizzarda",
+                  "snippet": "Nizzasalat mit frischem Thunfisch-Sashimi, Ei, Oliven, Paprika und Zucchini",
+                  "price": {
+                    "current": 22,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "22,00 €"
+                  }
+                },
+                {
+                  "category": "INSALATE",
+                  "title": "Insalata di Valeriana con Pomodorini, Formaggio di Capra Arrosto",
+                  "snippet": "Feldsalat mit Cherrytomaten, Paprika, gebratenem Ziegenkäse, in Honig mariniert",
+                  "price": {
+                    "current": 18.5,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "18,50 €"
+                  }
+                },
+                {
+                  "category": "INSALATE",
+                  "title": "Insalata Bellucci con Pollo, Prosciutto Crudo e Mozzarella",
+                  "snippet": "Gemischter Salat mit gebratenem Hähnchenbrustfilet, Parmaschinken und Mozzarella",
+                  "price": {
+                    "current": 22,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "22,00 €"
+                  }
+                },
+                {
+                  "category": "INSALATE",
+                  "title": "Insalata di Salmone con Mandorle e Miele",
+                  "snippet": "Gemischter Salat mit gebratenem Lachs und Mandeln, in Honig mariniert",
+                  "price": {
+                    "current": 23,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "23,00 €"
+                  }
+                },
+                {
+                  "category": "INSALATE",
+                  "title": "Insalata Mari e Monti \"Surf'n Turf\"",
+                  "snippet": "Gemischtes Salatbouquet mit Rinderfiletstreifen, Avocado und gegrillten Scampi",
+                  "price": {
+                    "current": 27.5,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "27,50 €"
+                  }
+                },
+                {
+                  "category": "CARNE",
+                  "title": "Filetto di Manzo U.S.A.",
+                  "snippet": "Nebraska U.S.A. Premium - Filet vom Grill, dazu Barolo-Rotweinsauce",
+                  "price": {
+                    "current": 69,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "69,00 €"
+                  }
+                },
+                {
+                  "category": "CARNE",
+                  "title": "Filetto di Manzo alla Griglia",
+                  "snippet": "Argentinien - Black Angus Rinderfilet vom Grill",
+                  "price": {
+                    "current": 45,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "45,00 €"
+                  }
+                },
+                {
+                  "category": "CARNE",
+                  "title": "Rossini Royale Foie Gras",
+                  "snippet": "Argentinien - Rinderfilet vom Grill mit Foie Gras, Kartoffel-Trüffel-Püree und 24 Stunden gereifter Madeira-Sauce",
+                  "price": {
+                    "current": 65,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "65,00 €"
+                  }
+                },
+                {
+                  "category": "CARNE",
+                  "title": "Tagliata di Manzo Wagyu Australia",
+                  "snippet": "Australien - Wagyu-Flankensteak auf Rucolabett & Parmesanflocken",
+                  "price": {
+                    "current": 38,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "38,00 €"
+                  }
+                },
+                {
+                  "category": "CARNE",
+                  "title": "Surf and Turf Mari e Monti",
+                  "snippet": "Argentinien - Black Angus: Filet Mignon und zwei Scampis vom Grill, dazu Barolo-Rotweinsauce",
+                  "price": {
+                    "current": 65,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "65,00 €"
+                  }
+                },
+                {
+                  "category": "CARNE",
+                  "title": "Chateaubriand al Tartufo Nero per 2 Persone",
+                  "snippet": "Argentinien - Chateaubriand vom Black Angusfilet mit frischer Trüffelpasta und Sauce Béarnaise (für zwei Personen)",
+                  "price": {
+                    "current": 110,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "110,00 €"
+                  }
+                },
+                {
+                  "category": "CARNE",
+                  "title": "Filet de Veau à la Royale",
+                  "snippet": "Kalbsmedaillon mit gebratenen Morcheln, Kartoffel-Trüffel-Püree und 24 Stunden gereifter Madeira-Sauce",
+                  "price": {
+                    "current": 34,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "34,00 €"
+                  }
+                },
+                {
+                  "category": "PESCE",
+                  "title": "Tonno Teriyaki",
+                  "snippet": "Saku cut Premium - Teriyaki Sashimi-Thunfischfilets auf Feldsalat und Avocadocreme",
+                  "price": {
+                    "current": 38,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "38,00 €"
+                  }
+                },
+                {
+                  "category": "PESCE",
+                  "title": "Filetto di Salmone ai Due Sesami",
+                  "snippet": "Lachsfilet von Label Rouge mit zwei verschiedenen Sesamsorten auf Gemüse",
+                  "price": {
+                    "current": 29.5,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "29,50 €"
+                  }
+                },
+                {
+                  "category": "PESCE",
+                  "title": "Lucioperca con crema di tartufo",
+                  "snippet": "Frisches Zanderfilet, auf der Haut gebraten mit Trüffelcremesauce",
+                  "price": {
+                    "current": 27.5,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "27,50 €"
+                  }
+                },
+                {
+                  "category": "PESCE",
+                  "title": "Due Gamberoni Imperiale su Pasta al Aglio e Olio",
+                  "snippet": "Zwei Riesengarnelen vom Grill mit frischer Pasta in Knoblauch und Öl",
+                  "price": {
+                    "current": 45,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "45,00 €"
+                  }
+                },
+                {
+                  "category": "PESCE",
+                  "title": "Scampi per 2 Persone",
+                  "snippet": "1 Pfund Scampi, dazu Cocktailsauce",
+                  "price": {
+                    "current": 85,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "85,00 €"
+                  }
+                },
+                {
+                  "category": "PESCE",
+                  "title": "Scampi alla Griglia",
+                  "snippet": "Scampi vom Grill",
+                  "price": {
+                    "current": 38.5,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "38,50 €"
+                  }
+                },
+                {
+                  "category": "PESCE",
+                  "title": "Filetto di Sogliola",
+                  "snippet": "Frische Seezunge",
+                  "price": {
+                    "current": 45,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "45,00 €"
+                  }
+                },
+                {
+                  "category": "PESCE",
+                  "title": "Orata Fresca del Mediterraneo",
+                  "snippet": "Frische Mittelmeer-Dorade vom Grill",
+                  "price": {
+                    "current": 38,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "38,00 €"
+                  }
+                },
+                {
+                  "category": "PESCE",
+                  "title": "Loup de Mer al Sale per 2 Persone",
+                  "snippet": "Frischer Loup de mer in Salzkruste",
+                  "price": {
+                    "current": 79,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "79,00 €"
+                  }
+                },
+                {
+                  "category": "DOLCI",
+                  "title": "Tiramisù",
+                  "snippet": "Tiramisù - der Klassiker",
+                  "price": {
+                    "current": 11,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "11,00 €"
+                  }
+                },
+                {
+                  "category": "DOLCI",
+                  "title": "La Panna Cotta con Salsa Fragole",
+                  "snippet": "Panna Cotta mit Erdbeersauce",
+                  "price": {
+                    "current": 10.5,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "10,50 €"
+                  }
+                },
+                {
+                  "category": "DOLCI",
+                  "title": "Soufflé al Cioccolato Caldo e Quenelle di Gelato alla Vaniglia",
+                  "snippet": "Schokoladensoufflé mit Vanille-Eis",
+                  "price": {
+                    "current": 12.5,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "12,50 €"
+                  }
+                },
+                {
+                  "category": "DOLCI",
+                  "title": "Mousse di Mascarpone con Frutti di Bosco",
+                  "snippet": "Mascarponecreme mit frischen Beeren",
+                  "price": {
+                    "current": 16.5,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "16,50 €"
+                  }
+                },
+                {
+                  "category": "DOLCI",
+                  "title": "Profiterol Crema Nocciola e Cioccolato Bianco",
+                  "snippet": "Windbeutel mit Haselnusscreme und weißer Schokolade",
+                  "price": {
+                    "current": 11,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "11,00 €"
+                  }
+                },
+                {
+                  "category": "DOLCI",
+                  "title": "New York Cheesecake",
+                  "snippet": "New York Cheesecake - der Klassiker",
+                  "price": {
+                    "current": 12.5,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "12,50 €"
+                  }
+                },
+                {
+                  "category": "DOLCI",
+                  "title": "Mille-Feuille alla Vaniglia e Polvere d'Oro",
+                  "snippet": "Blätterteig-Schichten, gefüllt mit Vanillecreme, verfeinert mit Himbeeren und Goldstaub",
+                  "price": {
+                    "current": 19.5,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "19,50 €"
+                  }
+                },
+                {
+                  "category": "DOLCI",
+                  "title": "Degustazione di Dolci \"Bellucci Style\" per Due",
+                  "snippet": "Eine Auswahl feiner Nachspeisen für zwei Personen",
+                  "price": {
+                    "current": 34.5,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "34,50 €"
+                  }
+                },
+                {
+                  "category": "OFFENE WEINE WEISS",
+                  "title": "Bianco Sicilia IGT",
+                  "snippet": "Monte Pietroso, Sizilien",
+                  "price": {
+                    "current": 11,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "11,00 €"
+                  }
+                },
+                {
+                  "category": "OFFENE WEINE WEISS",
+                  "title": "Lugana DOC",
+                  "snippet": "Venetien",
+                  "price": {
+                    "current": 12,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "12,00 €"
+                  }
+                },
+                {
+                  "category": "OFFENE WEINE WEISS",
+                  "title": "Riesling QbA trocken",
+                  "snippet": "Weingut Spiess, Rheinhessen",
+                  "price": {
+                    "current": 10,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "10,00 €"
+                  }
+                },
+                {
+                  "category": "OFFENE WEINE WEISS",
+                  "title": "Sauvignon Blanc",
+                  "snippet": "Domaine Eric Louis, Loire",
+                  "price": {
+                    "current": 12,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "12,00 €"
+                  }
+                },
+                {
+                  "category": "OFFENE WEINE ROT",
+                  "title": "Gran Passione Rosso IGT",
+                  "snippet": "Casa Vinicola Botter, Venetien",
+                  "price": {
+                    "current": 10,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "10,00 €"
+                  }
+                },
+                {
+                  "category": "OFFENE WEINE ROT",
+                  "title": "Primitivo IGT",
+                  "snippet": "Monte Pletroso, Apulien",
+                  "price": {
+                    "current": 12,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "12,00 €"
+                  }
+                },
+                {
+                  "category": "OFFENE WEINE ROT",
+                  "title": "Montepulciano d'Abruzzo DOC",
+                  "snippet": "Terra Nostra, Abruzzen",
+                  "price": {
+                    "current": 10,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "10,00 €"
+                  }
+                },
+                {
+                  "category": "OFFENE WEINE ROSÉ",
+                  "title": "Côtes de Provence Rosé \"Héritage\"",
+                  "snippet": "Estandon, Provence",
+                  "price": {
+                    "current": 11,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "11,00 €"
+                  }
+                },
+                {
+                  "category": "OFFENE WEINE ROSÉ",
+                  "title": "The Pale",
+                  "snippet": "Château d'Esclans, Provence",
+                  "price": {
+                    "current": 11,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "11,00 €"
+                  }
+                },
+                {
+                  "category": "BIER",
+                  "title": "1664 Blanc Frankreich Lager",
+                  "snippet": null,
+                  "price": {
+                    "current": 3.5,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "3,50 €"
+                  }
+                },
+                {
+                  "category": "BIER",
+                  "title": "1664 Blanc Frankreich Lager",
+                  "snippet": null,
+                  "price": {
+                    "current": 6.5,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "6,50 €"
+                  }
+                },
+                {
+                  "category": "BIER",
+                  "title": "Erdinger Kristall",
+                  "snippet": null,
+                  "price": {
+                    "current": 6,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "6,00 €"
+                  }
+                },
+                {
+                  "category": "BIER",
+                  "title": "Erdinger Hefe",
+                  "snippet": null,
+                  "price": {
+                    "current": 6,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "6,00 €"
+                  }
+                },
+                {
+                  "category": "BIER",
+                  "title": "Erdinger alkoholfrei",
+                  "snippet": null,
+                  "price": {
+                    "current": 6,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "6,00 €"
+                  }
+                },
+                {
+                  "category": "BIER",
+                  "title": "Lübzer alkoholfrei",
+                  "snippet": null,
+                  "price": {
+                    "current": 4.5,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "4,50 €"
+                  }
+                },
+                {
+                  "category": "SOFTDRINKS",
+                  "title": "Coca Cola",
+                  "snippet": null,
+                  "price": {
+                    "current": 4,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "4,00 €"
+                  }
+                },
+                {
+                  "category": "SOFTDRINKS",
+                  "title": "Coca Cola Zero",
+                  "snippet": null,
+                  "price": {
+                    "current": 4,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "4,00 €"
+                  }
+                },
+                {
+                  "category": "SOFTDRINKS",
+                  "title": "Fever Tree lemonade",
+                  "snippet": "Tonic Water; Soda Water; Bitter Lemon; Ginger Ale; Grapefruit; Ginger Beer",
+                  "price": {
+                    "current": 4.5,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "4,50 €"
+                  }
+                },
+                {
+                  "category": "SOFTDRINKS",
+                  "title": "Vaihinger Säfte",
+                  "snippet": "Apfel; Orange; Rhabarber; Maracuja",
+                  "price": {
+                    "current": 4,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "4,00 €"
+                  }
+                },
+                {
+                  "category": "SOFTDRINKS",
+                  "title": "Saftschorle",
+                  "snippet": null,
+                  "price": {
+                    "current": 3.5,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "3,50 €"
+                  }
+                },
+                {
+                  "category": "WASSER",
+                  "title": "Aqua Morelli Still; Sprudel",
+                  "snippet": null,
+                  "price": {
+                    "current": 4,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "4,00 €"
+                  }
+                },
+                {
+                  "category": "WASSER",
+                  "title": "Aqua Morelli Still; Sprudel",
+                  "snippet": null,
+                  "price": {
+                    "current": 8.5,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "8,50 €"
+                  }
+                },
+                {
+                  "category": "HEISSGETRÄNKE",
+                  "title": "Espresso",
+                  "snippet": null,
+                  "price": {
+                    "current": 3,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "3,00 €"
+                  }
+                },
+                {
+                  "category": "HEISSGETRÄNKE",
+                  "title": "Espresso Macchiato",
+                  "snippet": null,
+                  "price": {
+                    "current": 3.5,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "3,50 €"
+                  }
+                },
+                {
+                  "category": "HEISSGETRÄNKE",
+                  "title": "Doppelter Espresso",
+                  "snippet": null,
+                  "price": {
+                    "current": 5.5,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "5,50 €"
+                  }
+                },
+                {
+                  "category": "HEISSGETRÄNKE",
+                  "title": "Kaffee",
+                  "snippet": null,
+                  "price": {
+                    "current": 3.5,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "3,50 €"
+                  }
+                },
+                {
+                  "category": "HEISSGETRÄNKE",
+                  "title": "Cappuccino",
+                  "snippet": null,
+                  "price": {
+                    "current": 4,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "4,00 €"
+                  }
+                },
+                {
+                  "category": "HEISSGETRÄNKE",
+                  "title": "Latte Macchiato",
+                  "snippet": null,
+                  "price": {
+                    "current": 4.9,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "4,90 €"
+                  }
+                },
+                {
+                  "category": "HEISSGETRÄNKE",
+                  "title": "Flat White",
+                  "snippet": null,
+                  "price": {
+                    "current": 6,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "6,00 €"
+                  }
+                },
+                {
+                  "category": "HEISSGETRÄNKE",
+                  "title": "Espresso Corretto",
+                  "snippet": null,
+                  "price": {
+                    "current": 8,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "8,00 €"
+                  }
+                },
+                {
+                  "category": "HEISSGETRÄNKE",
+                  "title": "Heiße Schokolade",
+                  "snippet": null,
+                  "price": {
+                    "current": 5,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "5,00 €"
+                  }
+                },
+                {
+                  "category": "HEISSGETRÄNKE",
+                  "title": "Chai Latte",
+                  "snippet": null,
+                  "price": {
+                    "current": 4.5,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "4,50 €"
+                  }
+                },
+                {
+                  "category": "HEISSGETRÄNKE",
+                  "title": "Matcha Latte",
+                  "snippet": null,
+                  "price": {
+                    "current": 5.5,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "5,50 €"
+                  }
+                },
+                {
+                  "category": "HEISSGETRÄNKE",
+                  "title": "Frischer Minze Ingwer Tee",
+                  "snippet": null,
+                  "price": {
+                    "current": 4.5,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "4,50 €"
+                  }
+                },
+                {
+                  "category": "HEISSGETRÄNKE",
+                  "title": "Tee, verschiedene Sorten",
+                  "snippet": null,
+                  "price": {
+                    "current": 4,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "4,00 €"
+                  }
+                },
+                {
+                  "category": "HEISSGETRÄNKE",
+                  "title": "Aufschlag für Hafer-, Mandel- oder Sojamilch",
+                  "snippet": null,
+                  "price": {
+                    "current": 0.5,
+                    "regular": null,
+                    "max_value": null,
+                    "currency": "EUR",
+                    "is_price_range": false,
+                    "displayed_price": "0,50 €"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

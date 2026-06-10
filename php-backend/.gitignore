@@ -1,0 +1,6 @@
+# Echte Konfiguration mit Passwort/Secret darf NICHT ins Repo.
+# Vorlage ist config.example.php (committed).
+config.php
+
+# Beim Upload automatisch erzeugte Metadaten
+pdf/*.json

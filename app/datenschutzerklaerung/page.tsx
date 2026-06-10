@@ -1,16 +1,10 @@
 import type { Metadata } from 'next';
-import { LegalPage } from '@/components/LegalPage';
-import { pageMetadata } from '@/lib/seo';
-import { getWordPressPage } from '@/lib/wordpress';
+import { DatenschutzPage, datenschutzMetadata } from '@/components/pages/DatenschutzPage';
 
-export const metadata: Metadata = pageMetadata({
-  title: 'Datenschutzerklärung',
-  description: 'Datenschutzerklärung von Casa Bellucci.',
-  path: '/datenschutzerklaerung/',
-  index: false,
-});
+export function generateMetadata(): Metadata {
+  return datenschutzMetadata('de');
+}
 
-export default async function DatenschutzPage() {
-  const page = await getWordPressPage('datenschutzerklaerung');
-  return <LegalPage page={page} eyebrow="Datenschutz" />;
+export default function Page() {
+  return <DatenschutzPage lang="de" />;
 }
