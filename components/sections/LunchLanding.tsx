@@ -110,6 +110,8 @@ export function LunchLanding() {
                 <img
                   src={asset('images/gallery/3.jpg')}
                   alt={d.landingLunch.pranzo.photos.pasta.alt}
+                  loading="lazy"
+                  decoding="async"
                 />
                 <figcaption>{d.landingLunch.pranzo.photos.pasta.caption}</figcaption>
               </figure>
@@ -117,6 +119,8 @@ export function LunchLanding() {
                 <img
                   src={asset('images/gallery/5.jpg')}
                   alt={d.landingLunch.pranzo.photos.pesce.alt}
+                  loading="lazy"
+                  decoding="async"
                 />
                 <figcaption>{d.landingLunch.pranzo.photos.pesce.caption}</figcaption>
               </figure>
@@ -124,6 +128,8 @@ export function LunchLanding() {
                 <img
                   src={asset('images/lp-brunch-1.jpg')}
                   alt={d.landingLunch.pranzo.photos.dolce.alt}
+                  loading="lazy"
+                  decoding="async"
                 />
                 <figcaption>{d.landingLunch.pranzo.photos.dolce.caption}</figcaption>
               </figure>
@@ -157,6 +163,8 @@ export function LunchLanding() {
                 <img
                   src={asset('images/gallery/3.jpg')}
                   alt={d.landingLunch.business.photos.saal.alt}
+                  loading="lazy"
+                  decoding="async"
                 />
                 <figcaption>{d.landingLunch.business.photos.saal.caption}</figcaption>
               </figure>
@@ -164,6 +172,8 @@ export function LunchLanding() {
                 <img
                   src={asset('images/lp-terr-hell-2.jpg')}
                   alt={d.landingLunch.business.photos.terrasse.alt}
+                  loading="lazy"
+                  decoding="async"
                 />
                 <figcaption>{d.landingLunch.business.photos.terrasse.caption}</figcaption>
               </figure>
@@ -171,6 +181,8 @@ export function LunchLanding() {
                 <img
                   src={asset('images/lp-spritz.jpg')}
                   alt={d.landingLunch.business.photos.aperitivo.alt}
+                  loading="lazy"
+                  decoding="async"
                 />
                 <figcaption>{d.landingLunch.business.photos.aperitivo.caption}</figcaption>
               </figure>

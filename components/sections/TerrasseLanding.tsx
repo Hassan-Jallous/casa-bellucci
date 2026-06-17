@@ -110,6 +110,8 @@ export function TerrasseLanding() {
                 <img
                   src={asset('images/lp-terr-hell-2.jpg')}
                   alt={d.landingTerrasse.experience.photos.hell.alt}
+                  loading="lazy"
+                  decoding="async"
                 />
                 <figcaption>{d.landingTerrasse.experience.photos.hell.caption}</figcaption>
               </figure>
@@ -117,6 +119,8 @@ export function TerrasseLanding() {
                 <img
                   src={asset('images/lp-terr-abend-2.jpg')}
                   alt={d.landingTerrasse.experience.photos.schatten.alt}
+                  loading="lazy"
+                  decoding="async"
                 />
                 <figcaption>{d.landingTerrasse.experience.photos.schatten.caption}</figcaption>
               </figure>
@@ -124,6 +128,8 @@ export function TerrasseLanding() {
                 <img
                   src={asset('images/lp-terr-it.jpg')}
                   alt={d.landingTerrasse.experience.photos.italia.alt}
+                  loading="lazy"
+                  decoding="async"
                 />
                 <figcaption>{d.landingTerrasse.experience.photos.italia.caption}</figcaption>
               </figure>
@@ -157,6 +163,8 @@ export function TerrasseLanding() {
                 <img
                   src={asset('images/lp-spritz.jpg')}
                   alt={d.landingTerrasse.aperitivo.photos.spritz.alt}
+                  loading="lazy"
+                  decoding="async"
                 />
                 <figcaption>{d.landingTerrasse.aperitivo.photos.spritz.caption}</figcaption>
               </figure>
@@ -164,6 +172,8 @@ export function TerrasseLanding() {
                 <img
                   src={asset('images/lp-terr-abend-1.jpg')}
                   alt={d.landingTerrasse.aperitivo.photos.abend.alt}
+                  loading="lazy"
+                  decoding="async"
                 />
                 <figcaption>{d.landingTerrasse.aperitivo.photos.abend.caption}</figcaption>
               </figure>
@@ -171,6 +181,8 @@ export function TerrasseLanding() {
                 <img
                   src={asset('images/terrace/terrace-04.jpg')}
                   alt={d.landingTerrasse.aperitivo.photos.terrace.alt}
+                  loading="lazy"
+                  decoding="async"
                 />
                 <figcaption>{d.landingTerrasse.aperitivo.photos.terrace.caption}</figcaption>
               </figure>

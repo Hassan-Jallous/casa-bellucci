@@ -4,9 +4,9 @@ const contactBlock = `
 <p>
   Bellucci Gastronomie GmbH<br>
   Kurfürstendamm 63<br>
-  10625 Berlin<br>
+  10707 Berlin<br>
   Deutschland<br>
-  Telefon: <a href="tel:4901623009925">+49 (0) 162 3009925</a><br>
+  Telefon: <a href="tel:+491623009925">+49 (0) 162 3009925</a><br>
   E-Mail: <a href="mailto:info@casabellucci.de">info@casabellucci.de</a>
 </p>
 `;
@@ -14,7 +14,6 @@ const contactBlock = `
 const impressum = `
 <h2>Angaben gemäß § 5 TMG</h2>
 ${contactBlock}
-<p><strong>Hinweis zur Adresse:</strong> Die gesetzliche Anbieteranschrift ist Kurfürstendamm 63, 10625 Berlin. Die öffentlich kommunizierte Besucheradresse des Restaurants und die Local-SEO-/Schema-Adresse lauten Kurfürstendamm 63, 10707 Berlin-Charlottenburg.</p>
 <h2>Handelsregister</h2>
 <p>
   Handelsregister: HRB 227777 B<br>

@@ -4,9 +4,9 @@ const contactBlock = `
 <p>
   Bellucci Gastronomie GmbH<br>
   Kurfürstendamm 63<br>
-  10625 Berlin<br>
+  10707 Berlin<br>
   Germania<br>
-  Telefono: <a href="tel:4901623009925">+49 (0) 162 3009925</a><br>
+  Telefono: <a href="tel:+491623009925">+49 (0) 162 3009925</a><br>
   Email: <a href="mailto:info@casabellucci.de">info@casabellucci.de</a>
 </p>
 `;
@@ -14,7 +14,6 @@ const contactBlock = `
 const impressum = `
 <h2>Note legali</h2>
 ${contactBlock}
-<p><strong>Nota sull'indirizzo:</strong> l'indirizzo legale del fornitore è Kurfürstendamm 63, 10625 Berlin. L'indirizzo pubblico per gli ospiti del ristorante e l'indirizzo usato per Local SEO/schema sono Kurfürstendamm 63, 10707 Berlin-Charlottenburg.</p>
 <h2>Registro commerciale</h2>
 <p>Registro commerciale: HRB 227777 B<br>Tribunale del registro: Amtsgericht Charlottenburg</p>
 <h2>Rappresentata da</h2>

@@ -4,7 +4,7 @@ export const SITE = {
   address: {
     street: 'Kurfürstendamm 63',
     postalCity: '10707 Berlin',
-    legalPostalCity: '10625 Berlin',
+    legalPostalCity: '10707 Berlin',
   },
   phone: '+49 162 3009925',
   phoneHref: 'tel:+491623009925',

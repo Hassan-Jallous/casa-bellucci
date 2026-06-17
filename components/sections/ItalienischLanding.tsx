@@ -114,6 +114,8 @@ export function ItalienischLanding() {
               <img
                 src={asset('images/lp-int-1.jpg')}
                 alt={d.landingItalienisch.location.photoAlt}
+                loading="lazy"
+                decoding="async"
               />
               <figcaption>
                 <strong>{d.landingItalienisch.location.captionStrong}</strong>
@@ -158,6 +160,8 @@ export function ItalienischLanding() {
               <img
                 src={asset('images/menu-dinner.jpg')}
                 alt={d.landingItalienisch.kitchen.photoAlt}
+                loading="lazy"
+                decoding="async"
               />
               <figcaption>
                 <strong>{d.landingItalienisch.kitchen.captionStrong}</strong>
@@ -225,6 +229,8 @@ export function ItalienischLanding() {
               <img
                 src={asset('images/lp-terr-it.jpg')}
                 alt={d.landingItalienisch.atmosphere.photoAlt}
+                loading="lazy"
+                decoding="async"
               />
               <figcaption>
                 <strong>{d.landingItalienisch.atmosphere.captionStrong}</strong>

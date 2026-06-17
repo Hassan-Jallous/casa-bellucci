@@ -111,6 +111,8 @@ export function EventsLanding() {
                 <img
                   src={asset('images/lp-int-1.jpg')}
                   alt={d.landingEvents.occasions.photos.tavola.alt}
+                  loading="lazy"
+                  decoding="async"
                 />
                 <figcaption>{d.landingEvents.occasions.photos.tavola.caption}</figcaption>
               </figure>
@@ -118,6 +120,8 @@ export function EventsLanding() {
                 <img
                   src={asset('images/lp-cocktail.jpg')}
                   alt={d.landingEvents.occasions.photos.cocktail.alt}
+                  loading="lazy"
+                  decoding="async"
                 />
                 <figcaption>{d.landingEvents.occasions.photos.cocktail.caption}</figcaption>
               </figure>
@@ -125,6 +129,8 @@ export function EventsLanding() {
                 <img
                   src={asset('images/lp-terr-abend-3.jpg')}
                   alt={d.landingEvents.occasions.photos.terrazza.alt}
+                  loading="lazy"
+                  decoding="async"
                 />
                 <figcaption>{d.landingEvents.occasions.photos.terrazza.caption}</figcaption>
               </figure>
@@ -158,6 +164,8 @@ export function EventsLanding() {
                 <img
                   src={asset('images/terrace/terrace-04.jpg')}
                   alt={d.landingEvents.spaces.photos.terrasse.alt}
+                  loading="lazy"
+                  decoding="async"
                 />
                 <figcaption>{d.landingEvents.spaces.photos.terrasse.caption}</figcaption>
               </figure>
@@ -165,6 +173,8 @@ export function EventsLanding() {
                 <img
                   src={asset('images/lp-bar-int.jpg')}
                   alt={d.landingEvents.spaces.photos.bar.alt}
+                  loading="lazy"
+                  decoding="async"
                 />
                 <figcaption>{d.landingEvents.spaces.photos.bar.caption}</figcaption>
               </figure>
@@ -172,6 +182,8 @@ export function EventsLanding() {
                 <img
                   src={asset('images/signature-hero.jpg')}
                   alt={d.landingEvents.spaces.photos.saal.alt}
+                  loading="lazy"
+                  decoding="async"
                 />
                 <figcaption>{d.landingEvents.spaces.photos.saal.caption}</figcaption>
               </figure>
@@ -212,6 +224,8 @@ export function EventsLanding() {
                 <img
                   src={asset('images/signature-hero.jpg')}
                   alt={d.landingEvents.menu.photos.piatti.alt}
+                  loading="lazy"
+                  decoding="async"
                 />
                 <figcaption>{d.landingEvents.menu.photos.piatti.caption}</figcaption>
               </figure>
@@ -219,6 +233,8 @@ export function EventsLanding() {
                 <img
                   src={asset('images/lp-cocktail.jpg')}
                   alt={d.landingEvents.menu.photos.vino.alt}
+                  loading="lazy"
+                  decoding="async"
                 />
                 <figcaption>{d.landingEvents.menu.photos.vino.caption}</figcaption>
               </figure>
@@ -226,6 +242,8 @@ export function EventsLanding() {
                 <img
                   src={asset('images/lp-terr-abend-3.jpg')}
                   alt={d.landingEvents.menu.photos.festa.alt}
+                  loading="lazy"
+                  decoding="async"
                 />
                 <figcaption>{d.landingEvents.menu.photos.festa.caption}</figcaption>
               </figure>

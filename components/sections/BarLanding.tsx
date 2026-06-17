@@ -116,6 +116,8 @@ export function BarLanding() {
                 <img
                   src={asset('images/lp-spritz.jpg')}
                   alt={d.landingBar.aperitivo.photo1Alt}
+                  loading="lazy"
+                  decoding="async"
                 />
                 <figcaption>{d.landingBar.aperitivo.photo1Caption}</figcaption>
               </figure>
@@ -123,6 +125,8 @@ export function BarLanding() {
                 <img
                   src={asset('images/lp-cocktail.jpg')}
                   alt={d.landingBar.aperitivo.photo2Alt}
+                  loading="lazy"
+                  decoding="async"
                 />
                 <figcaption>{d.landingBar.aperitivo.photo2Caption}</figcaption>
               </figure>
@@ -130,6 +134,8 @@ export function BarLanding() {
                 <img
                   src={asset('images/lp-bar-int.jpg')}
                   alt={d.landingBar.aperitivo.photo3Alt}
+                  loading="lazy"
+                  decoding="async"
                 />
                 <figcaption>{d.landingBar.aperitivo.photo3Caption}</figcaption>
               </figure>
@@ -258,6 +264,8 @@ export function BarLanding() {
                 <img
                   src={asset('images/gallery/1.jpg')}
                   alt={d.landingBar.music.photo1Alt}
+                  loading="lazy"
+                  decoding="async"
                 />
                 <figcaption>{d.landingBar.music.photo1Caption}</figcaption>
               </figure>
@@ -265,6 +273,8 @@ export function BarLanding() {
                 <img
                   src={asset('images/lp-bar-int-2.jpg')}
                   alt={d.landingBar.music.photo2Alt}
+                  loading="lazy"
+                  decoding="async"
                 />
                 <figcaption>{d.landingBar.music.photo2Caption}</figcaption>
               </figure>
@@ -272,6 +282,8 @@ export function BarLanding() {
                 <img
                   src={asset('images/lp-terr-abend-3.jpg')}
                   alt={d.landingBar.music.photo3Alt}
+                  loading="lazy"
+                  decoding="async"
                 />
                 <figcaption>{d.landingBar.music.photo3Caption}</figcaption>
               </figure>

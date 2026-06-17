@@ -110,6 +110,8 @@ export function FruehstueckLanding() {
                 <img
                   src={asset('images/lp-frueh-2.jpg')}
                   alt={d.landingFruehstueck.italian.photos.cornetto.alt}
+                  loading="lazy"
+                  decoding="async"
                 />
                 <figcaption>{d.landingFruehstueck.italian.photos.cornetto.caption}</figcaption>
               </figure>
@@ -117,6 +119,8 @@ export function FruehstueckLanding() {
                 <img
                   src={asset('images/lp-brunch-1.jpg')}
                   alt={d.landingFruehstueck.italian.photos.caffe.alt}
+                  loading="lazy"
+                  decoding="async"
                 />
                 <figcaption>{d.landingFruehstueck.italian.photos.caffe.caption}</figcaption>
               </figure>
@@ -124,6 +128,8 @@ export function FruehstueckLanding() {
                 <img
                   src={asset('images/lp-int-3.jpg')}
                   alt={d.landingFruehstueck.italian.photos.sala.alt}
+                  loading="lazy"
+                  decoding="async"
                 />
                 <figcaption>{d.landingFruehstueck.italian.photos.sala.caption}</figcaption>
               </figure>
@@ -157,6 +163,8 @@ export function FruehstueckLanding() {
                 <img
                   src={asset('images/lp-terr-hell-2.jpg')}
                   alt={d.landingFruehstueck.brunch.photos.terrasse.alt}
+                  loading="lazy"
+                  decoding="async"
                 />
                 <figcaption>{d.landingFruehstueck.brunch.photos.terrasse.caption}</figcaption>
               </figure>
@@ -164,6 +172,8 @@ export function FruehstueckLanding() {
                 <img
                   src={asset('images/lp-brunch-2.jpg')}
                   alt={d.landingFruehstueck.brunch.photos.weekend.alt}
+                  loading="lazy"
+                  decoding="async"
                 />
                 <figcaption>{d.landingFruehstueck.brunch.photos.weekend.caption}</figcaption>
               </figure>
@@ -171,6 +181,8 @@ export function FruehstueckLanding() {
                 <img
                   src={asset('images/lp-bowl.jpg')}
                   alt={d.landingFruehstueck.brunch.photos.brunch.alt}
+                  loading="lazy"
+                  decoding="async"
                 />
                 <figcaption>{d.landingFruehstueck.brunch.photos.brunch.caption}</figcaption>
               </figure>
