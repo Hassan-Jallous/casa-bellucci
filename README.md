@@ -1,65 +1,73 @@
-# Casa Bellucci
+# Casa Bellucci Website
 
-Next.js 16 Static Export für die Casa Bellucci Website.
+Mehrsprachige Restaurant-Website (DE / EN / IT), gebaut mit **Next.js** (statischer Export). Gehostet auf **Hostinger** unter [casabellucci.de](https://casabellucci.de).
 
-## Aktueller Stand
+## Stack
 
-Die aktive Website läuft über die migrierte Next.js-App:
+- **Next.js 16** – App Router, statischer Export (`output: 'export'`)
+- **React 19**
+- **PDF.js** (`pdfjs-dist`) – Speisekarten-Viewer
+- Plain CSS (`public/styles/`)
+- **PHP** – kleines Backend (Kontaktformular, Admin-Upload)
 
-- `app/`
-- `components/`
-- `lib/`
-- `public/`
-- `php-backend/` für die Hostinger-PHP-APIs
+## Voraussetzungen
 
-Die alte statische Prototyp-Phase ist abgeschlossen. Neue Homepage- und SEO-Arbeit passiert in der Next.js-App.
+- Node.js 20 oder neuer
+- npm
 
-## Lokal starten
+## Lokale Entwicklung
 
-```bash
-npm install
-npm run dev
+```sh
+npm install        # Abhängigkeiten installieren
+npm run dev        # Dev-Server auf http://localhost:3000
+npm run build      # Statischer Export nach ./out/
+npm run lint       # ESLint
 ```
 
-Für Production-Checks:
+## Projektstruktur
 
-```bash
-npm exec tsc -- --noEmit
-npm run lint
+```text
+app/
+├── [lang]/        # Sprach-Routing (de/en/it) – alle Seiten liegen hier
+└── admin/         # Admin-Panel (Speisekarten-Upload)
+components/        # React-Komponenten (Sections, UI)
+lib/
+├── data.ts        # Inhalte / Daten
+└── i18n/          # Übersetzungen (dictionaries/, config, Provider)
+public/
+├── styles/        # CSS (critical.css, styles.css, vivid.css)
+└── …              # Bilder, PDFs, Fonts
+php-backend/       # PHP-API (Kontaktformular, Admin-Upload)
+docs/              # Interne Notizen (SEO, Migration) – kein Build-Bestandteil
+```
+
+Routing läuft über das `[lang]`-Segment im App Router. Sprache wird aus der URL abgeleitet (`/de/`, `/en/`, `/it/`).
+
+## Deployment auf Hostinger
+
+Es gibt zwei Wege. Beide laden den statischen Export aus `out/` ins Web-Root (`public_html`).
+
+### A) Automatisch per GitHub Actions (empfohlen)
+
+Der Workflow `.github/workflows/deploy-hostinger.yml` baut bei jedem Push auf `main` den Export und lädt `out/` per FTP hoch. Dafür müssen im GitHub-Repo unter **Settings → Secrets and variables → Actions** vier Secrets gesetzt sein:
+
+| Secret | Wert |
+| :--- | :--- |
+| `FTP_SERVER` | FTP-Host (z. B. `82.25.102.236`) |
+| `FTP_USERNAME` | FTP-Benutzer |
+| `FTP_PASSWORD` | FTP-Passwort |
+| `FTP_SERVER_DIR` | Zielordner mit führendem/abschließendem Slash, z. B. `/public_html/` |
+
+### B) Manuell per FTP
+
+```sh
 npm run build
 ```
 
-## Production
+Anschließend den **gesamten Inhalt** von `out/` per SFTP/FTP nach `/public_html/` laden (Zugangsdaten separat).
 
-Die Production-Domain ist:
+> Server-Secrets (SMTP, Admin-Passwort) liegen in `php-backend/config.php` direkt auf dem Server und sind **nicht** Teil dieses Repos. PHP-Backend-Setup siehe `php-backend/DEPLOY.md`.
 
-```text
-https://casabellucci.de
-```
+## Sprachen
 
-Canonical URLs, Sitemap, JSON-LD und Open Graph zeigen auf diese Domain. Der Hostinger-Deploy läuft über `.github/workflows/deploy-hostinger.yml`; die manuelle PHP-Backend-Installation ist in `php-backend/DEPLOY.md` dokumentiert.
-
-Vor einem Production-Deploy muss `docs/production-readiness-todo.md` abgearbeitet sein. Der Live-Smoke läuft mit:
-
-```bash
-./scripts/live-smoke.sh https://casabellucci.de
-```
-
-## GitHub Pages Preview
-
-`.github/workflows/deploy.yml` baut eine GitHub-Pages-Preview unter `/casa-bellucci`.
-
-Diese Preview ist nicht die Production-Version. Der Workflow setzt:
-
-```text
-NEXT_PUBLIC_BASE_PATH=/casa-bellucci
-```
-
-Die App erkennt dadurch den Preview-Build und rendert `noindex, follow` in der Metadata. Hostinger baut ohne `NEXT_PUBLIC_BASE_PATH` und bleibt indexierbar.
-
-## Wichtige Dokumente
-
-- `AGENTS.md`: Projektregeln und aktueller Arbeitsmodus
-- `homepage-structure.md`: Homepage-Struktur und Positionierung
-- `docs/production-readiness-todo.md`: aktive Production-Readiness-Liste
-- `php-backend/DEPLOY.md`: Hostinger-Backend und Live-Smoke
+Übersetzungen unter `lib/i18n/dictionaries/` (de/en/it). Neue Texte dort für alle drei Sprachen ergänzen.
