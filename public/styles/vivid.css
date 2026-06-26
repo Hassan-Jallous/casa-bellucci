@@ -117,7 +117,7 @@
   margin: 26px 0 0;
   font-family: var(--font-body);
   font-size: clamp(16px, 1.45vw, 20px);
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.38;
   color: rgba(43, 25, 13, 0.72);
 }
@@ -309,7 +309,7 @@
 }
 .filmstrip-label {
   position: absolute; bottom: 16px; left: 16px;
-  font-family: var(--font-script); font-size: 22px;
+  font-family: var(--font-display); font-size: 22px; font-style: italic;
   color: #FFF9F0; z-index: 1;
   text-shadow: 0 2px 8px rgba(0,0,0,0.4);
 }
@@ -2313,4 +2313,26 @@ body {
     flex: 0 0 calc(100vw - 72px);
     scroll-snap-align: center;
   }
+}
+
+/* ============================================================
+   Bellucci-Look: einheitlich Playfair Display, Differenzierung NUR ueber Gewicht.
+   Haupttitel kraeftiger (600) gegen den 400er Fliesstext fuer klaren Dicke-Kontrast.
+   Kursive Akzent-Spans (.it) behalten via eigener, hoeherer Spezifitaet ihr 400 ->
+   editoriales Leicht/Schwer-Spiel. Zuletzt geladene Datei = setzt sich in der Kaskade durch.
+   ============================================================ */
+.image-hero h1,
+.hero-v1 h1,
+.about h2,
+.menu h2,
+.all-day h2,
+.wine h2,
+.gallery h2,
+.reservation h2,
+.contact h2,
+.reviews h2,
+.press-cards h2,
+.terrace-photo figcaption h2,
+.signature-menu-title h2 {
+  font-weight: 600;
 }

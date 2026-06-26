@@ -138,9 +138,8 @@ export const data = {
     },
   },
   gallery: [
-    { caption: 'Aperitivo al limone', alt: 'Aperitivo al limone nel bicchiere al bar del Casa Bellucci sul Kurfürstendamm' },
+    { caption: 'Pornstar Martini', alt: 'Pornstar Martini nel bicchiere al bar del Casa Bellucci sul Kurfürstendamm' },
     { caption: 'Pasta al caviale', alt: 'Paccheri fatti in casa al caviale nel ristorante italiano Casa Bellucci a Berlino' },
-    { caption: 'Ostriche e frutti di mare', alt: 'Ostriche fresche e frutti di mare come antipasto al Casa Bellucci' },
     { caption: 'Filetto di manzo', alt: 'Filetto di manzo scottato con salsa e vino rosso al Casa Bellucci sul Kurfürstendamm' },
     { caption: 'Burrata con pinoli', alt: 'Burrata con pinoli e olio extra vergine, antipasto al Casa Bellucci Berlino-Charlottenburg' },
     { caption: 'Dolce ai frutti di bosco', alt: 'Dolce fatto in casa con frutti di bosco e menta al Casa Bellucci' },

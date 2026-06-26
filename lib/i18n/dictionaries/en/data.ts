@@ -138,9 +138,8 @@ export const data = {
     },
   },
   gallery: [
-    { caption: 'Lemon aperitif', alt: 'Lemony aperitif in a glass at the bar of Casa Bellucci on the Kurfürstendamm' },
+    { caption: 'Pornstar Martini', alt: 'Pornstar Martini in a glass at the bar of Casa Bellucci on the Kurfürstendamm' },
     { caption: 'Pasta with caviar', alt: 'Homemade paccheri with caviar at the Italian restaurant Casa Bellucci in Berlin' },
-    { caption: 'Oysters & seafood', alt: 'Fresh oysters and seafood antipasto at Casa Bellucci' },
     { caption: 'Beef fillet', alt: 'Seared beef fillet with jus and red wine at Casa Bellucci on the Kurfürstendamm' },
     { caption: 'Burrata with pine nuts', alt: 'Burrata with pine nuts and olive oil, starter at Casa Bellucci Berlin-Charlottenburg' },
     { caption: 'Berry dessert', alt: 'Homemade dessert with berries and mint at Casa Bellucci' },

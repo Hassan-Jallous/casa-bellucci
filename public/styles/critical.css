@@ -27,14 +27,14 @@
 @font-face { font-family: "Billion Miracles"; src: url("/fonts/BillionMiracles.woff2") format("woff2"), url("/fonts/BillionMiracles.otf") format("opentype"); font-weight: 400; font-style: normal; font-display: swap; }
 @font-face { font-family: "Playfair Display Fallback"; src: local("Times New Roman"), local("Georgia"); size-adjust: 112.87%; ascent-override: 95.86%; descent-override: 22.24%; line-gap-override: 0%; }
 @font-face { font-family: "Montserrat Fallback"; src: local("Arial"), local("Helvetica Neue"); size-adjust: 109.76%; ascent-override: 88.19%; descent-override: 22.87%; line-gap-override: 0%; }
-:root { --bg: #FFF9F0; --surface: #FAF3E5; --surface-2: #F4E9D2; --sandstone: #E8D5B7; --ink: #2B1F12; --ink-2: #4A3826; --ink-muted: #7A6852; --border: #E2D4BC; --hair: #D6C5A8; --accent: #E0B92E; --accent-2: #F4D03F; --accent-ink: #2B1F12; --accent-soft: #FFF4C9; --font-display: "Playfair Display", "Playfair Display Fallback", "Times New Roman", serif; --font-body: "Montserrat", "Montserrat Fallback", Arial, sans-serif; --font-script: "Allura", cursive; --font-logo-script: "Billion Miracles", "Allura", cursive; --font-mono: "Montserrat", "Montserrat Fallback", Arial, sans-serif; --radius-sm: 4px; --radius: 10px; --radius-lg: 22px; --btn-font-size: 15px; --btn-letter-spacing: 0.12em; --shadow-soft: 0 10px 30px -18px rgba(60, 40, 18, 0.25); --shadow-warm: 0 30px 60px -30px rgba(120, 70, 20, 0.35); --glass-bg: radial-gradient(circle at 78% 0%, rgba(231, 187, 72, 0.10), transparent 40%),
+:root { --bg: #FFF9F0; --surface: #FAF3E5; --surface-2: #F4E9D2; --sandstone: #E8D5B7; --ink: #2B1F12; --ink-2: #4A3826; --ink-muted: #7A6852; --border: #E2D4BC; --hair: #D6C5A8; --accent: #E0B92E; --accent-2: #F4D03F; --accent-ink: #2B1F12; --accent-soft: #FFF4C9; --font-display: "Playfair Display", "Playfair Display Fallback", "Times New Roman", serif; --font-body: "Playfair Display", "Playfair Display Fallback", "Times New Roman", serif; --font-script: "Allura", cursive; --font-logo-script: "Billion Miracles", "Allura", cursive; --font-mono: "Playfair Display", "Playfair Display Fallback", "Times New Roman", serif; --radius-sm: 4px; --radius: 10px; --radius-lg: 22px; --btn-font-size: 15px; --btn-letter-spacing: 0.12em; --shadow-soft: 0 10px 30px -18px rgba(60, 40, 18, 0.25); --shadow-warm: 0 30px 60px -30px rgba(120, 70, 20, 0.35); --glass-bg: radial-gradient(circle at 78% 0%, rgba(231, 187, 72, 0.10), transparent 40%),
     rgba(255, 250, 241, 0.42); --glass-blur: blur(2px); --glass-border: 1px solid rgba(255, 255, 255, 0.72); --glass-radius: 6px; --glass-shadow: 0 24px 64px -36px rgba(62, 39, 18, 0.42); }
 [data-accent="lemon"] { --accent: #E0B92E; --accent-2: #F4D03F; --accent-ink: #2B1F12; --accent-soft: #FFF4C9; }
 [data-accent="terracotta"] { --accent: #B96A4D; --accent-2: #D88565; --accent-ink: #FFF9F0; --accent-soft: #F7DDD0; }
 [data-accent="medblue"] { --accent: #1B4F72; --accent-2: #2F6B92; --accent-ink: #FFF9F0; --accent-soft: #D5E2EC; }
-[data-font="classic"] { --font-display: "Playfair Display", "Playfair Display Fallback", serif; --font-body: "Montserrat", "Montserrat Fallback", Arial, sans-serif; }
-[data-font="modern"] { --font-display: "Playfair Display", "Playfair Display Fallback", serif; --font-body: "Montserrat", "Montserrat Fallback", Arial, sans-serif; }
-[data-font="couture"] { --font-display: "Playfair Display", "Playfair Display Fallback", serif; --font-body: "Montserrat", "Montserrat Fallback", Arial, sans-serif; }
+[data-font="classic"] { --font-display: "Playfair Display", "Playfair Display Fallback", serif; --font-body: "Playfair Display", "Playfair Display Fallback", serif; --font-mono: "Playfair Display", "Playfair Display Fallback", serif; }
+[data-font="modern"] { --font-display: "Playfair Display", "Playfair Display Fallback", serif; --font-body: "Playfair Display", "Playfair Display Fallback", serif; --font-mono: "Playfair Display", "Playfair Display Fallback", serif; }
+[data-font="couture"] { --font-display: "Playfair Display", "Playfair Display Fallback", serif; --font-body: "Playfair Display", "Playfair Display Fallback", serif; --font-mono: "Playfair Display", "Playfair Display Fallback", serif; }
 * { box-sizing: border-box; }
 html, body { margin: 0px; padding: 0px; }
 body { font-family: var(--font-body); font-size: 16px; line-height: 1.55; color: var(--ink); background: var(--bg); -webkit-font-smoothing: antialiased; text-rendering: optimizelegibility; }
@@ -163,7 +163,7 @@ section { padding: 56px 0px; }
 .image-hero-copy { max-width: 650px; text-shadow: none; }
 .image-hero-eyebrow { display: flex; align-items: center; gap: 12px; margin-bottom: 22px; font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.22em; line-height: 1.35; text-transform: uppercase; color: rgba(65, 43, 22, 0.62); }
 .image-hero h1 { max-width: 16ch; margin: 0px; font-family: var(--font-display); font-size: clamp(40px, 4.4vw, 66px); overflow-wrap: break-word; font-weight: 500; line-height: 0.92; letter-spacing: 0px; color: rgb(43, 25, 13); }
-.image-hero p { max-width: 21em; margin: 26px 0px 0px; font-family: var(--font-body); font-size: clamp(16px, 1.45vw, 20px); font-weight: 300; line-height: 1.38; color: rgba(43, 25, 13, 0.72); }
+.image-hero p { max-width: 21em; margin: 26px 0px 0px; font-family: var(--font-body); font-size: clamp(16px, 1.45vw, 20px); font-weight: 400; line-height: 1.38; color: rgba(43, 25, 13, 0.72); }
 .image-hero-actions { display: flex; flex-wrap: wrap; gap: 22px; margin-top: 36px; }
 .btn-primary.btn-on-dark { color: rgb(43, 25, 13) !important; }
 .btn-primary.btn-on-dark::after { background: rgba(175, 126, 32, 0.72) !important; }
@@ -181,7 +181,7 @@ section { padding: 56px 0px; }
 .image-hero-actions { gap: 18px; margin-top: 34px; }
 .image-hero-actions .btn { padding-bottom: 12px; font-size: 14px; letter-spacing: 0.12em; }
 }
-.filmstrip-label { position: absolute; bottom: 16px; left: 16px; font-family: var(--font-script); font-size: 22px; color: rgb(255, 249, 240); z-index: 1; text-shadow: rgba(0, 0, 0, 0.4) 0px 2px 8px; }
+.filmstrip-label { position: absolute; bottom: 16px; left: 16px; font-family: var(--font-display); font-size: 22px; font-style: italic; color: rgb(255, 249, 240); z-index: 1; text-shadow: rgba(0, 0, 0, 0.4) 0px 2px 8px; }
 .filmstrip-number { position: absolute; top: 14px; right: 14px; font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.15em; color: rgba(255, 249, 240, 0.6); z-index: 1; }
 :root { --summer-page: #fffaf1; --summer-cream: rgba(255, 250, 241, 0.82); --summer-cream-solid: #fff8ea; --summer-border: rgba(255, 249, 240, 0.76); --summer-hairline: rgba(88, 62, 34, 0.13); --summer-gold: rgba(230, 187, 73, 0.42); --summer-gold-soft: rgba(246, 215, 120, 0.24); --summer-olive: rgba(116, 137, 73, 0.18); --summer-rose: rgba(224, 140, 134, 0.18); --summer-shadow: 0 32px 80px -42px rgba(73, 47, 22, 0.42); --summer-photo-shadow: 0 28px 74px -34px rgba(55, 35, 17, 0.5); }
 body { background: var(--summer-page); }

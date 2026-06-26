@@ -47,12 +47,16 @@
   --accent-ink: #2B1F12;    /* text on accent */
   --accent-soft: #FFF4C9;   /* tinted bg */
 
-  /* Type — overridden by tweak */
+  /* Type — overridden by tweak.
+     Einheitlicher Bellucci-Look: Playfair Display fuer Titel UND Fliesstext/Labels,
+     differenziert nur ueber font-weight. Script bleibt nur fuer Logo (--font-logo-script)
+     und das Terrassen-Wasserzeichen (--font-script). Legal-Seiten setzen body/mono
+     per .legal-page-Scope wieder auf Montserrat zurueck. */
   --font-display: "Playfair Display", "Playfair Display Fallback", "Times New Roman", serif;
-  --font-body: "Montserrat", "Montserrat Fallback", Arial, sans-serif;
+  --font-body: "Playfair Display", "Playfair Display Fallback", "Times New Roman", serif;
   --font-script: "Allura", cursive;
   --font-logo-script: "Billion Miracles", "Allura", cursive;
-  --font-mono: "Montserrat", "Montserrat Fallback", Arial, sans-serif;
+  --font-mono: "Playfair Display", "Playfair Display Fallback", "Times New Roman", serif;
 
   --radius-sm: 4px;
   --radius: 10px;
@@ -97,18 +101,21 @@
   --accent-soft: #D5E2EC;
 }
 
-/* Font pairings */
+/* Font pairings — alle Varianten durchgaengig Playfair (Bellucci-Look) */
 [data-font="classic"] {
   --font-display: "Playfair Display", "Playfair Display Fallback", serif;
-  --font-body: "Montserrat", "Montserrat Fallback", Arial, sans-serif;
+  --font-body: "Playfair Display", "Playfair Display Fallback", serif;
+  --font-mono: "Playfair Display", "Playfair Display Fallback", serif;
 }
 [data-font="modern"] {
   --font-display: "Playfair Display", "Playfair Display Fallback", serif;
-  --font-body: "Montserrat", "Montserrat Fallback", Arial, sans-serif;
+  --font-body: "Playfair Display", "Playfair Display Fallback", serif;
+  --font-mono: "Playfair Display", "Playfair Display Fallback", serif;
 }
 [data-font="couture"] {
   --font-display: "Playfair Display", "Playfair Display Fallback", serif;
-  --font-body: "Montserrat", "Montserrat Fallback", Arial, sans-serif;
+  --font-body: "Playfair Display", "Playfair Display Fallback", serif;
+  --font-mono: "Playfair Display", "Playfair Display Fallback", serif;
 }
 
 * { box-sizing: border-box; }
@@ -2135,6 +2142,18 @@ section {
   padding-bottom: 96px;
 }
 
+/* Rechtstexte (Impressum/Datenschutz) bewusst NICHT auf den Playfair-Look umstellen:
+   body/labels lokal wieder auf Montserrat, damit lange Paragraphen gut lesbar bleiben.
+   Headings (h1/h2..) erben weiter --font-display (Playfair) wie zuvor. */
+.legal-page {
+  --font-body: "Montserrat", "Montserrat Fallback", Arial, sans-serif;
+  --font-mono: "Montserrat", "Montserrat Fallback", Arial, sans-serif;
+  /* Explizit setzen, damit auch erbende Elemente (Eyebrow, Meta) Montserrat
+     bekommen, nicht nur die mit eigener var(--font-*)-Deklaration. Headings
+     tragen ihr eigenes --font-display und bleiben unberuehrt Playfair. */
+  font-family: var(--font-body);
+}
+
 .legal-wrap {
   max-width: 980px;
   padding: 56px;
@@ -2162,7 +2181,7 @@ section {
 }
 
 .legal-content {
-  font-family: "Montserrat", system-ui, sans-serif;
+  font-family: var(--font-body);
   font-size: 15px;
   line-height: 1.78;
   color: var(--ink);

@@ -145,9 +145,8 @@ export const data = {
     },
   },
   gallery: [
-    { caption: 'Zitronen-Aperitif', alt: 'Zitroniger Aperitif im Glas in der Bar des Casa Bellucci am Kurfürstendamm' },
+    { caption: 'Pornstar Martini', alt: 'Pornstar Martini im Glas in der Bar des Casa Bellucci am Kurfürstendamm' },
     { caption: 'Pasta mit Kaviar', alt: 'Hausgemachte Paccheri mit Kaviar im italienischen Restaurant Casa Bellucci in Berlin' },
-    { caption: 'Austern & Meeresfrüchte', alt: 'Frische Austern und Meeresfrüchte als Antipasto im Casa Bellucci' },
     { caption: 'Rinderfilet', alt: 'Gebratenes Rinderfilet mit Jus und Rotwein im Casa Bellucci am Kurfürstendamm' },
     { caption: 'Burrata mit Pinienkernen', alt: 'Burrata mit Pinienkernen und Olivenöl als Vorspeise im Casa Bellucci Berlin-Charlottenburg' },
     { caption: 'Dessert mit Beeren', alt: 'Hausgemachtes Dessert mit Beeren und Minze im Casa Bellucci' },

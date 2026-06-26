@@ -21,8 +21,7 @@ function StarBar({ value, className = '' }: { value: number; className?: string 
 export function Reviews() {
   const d = useDict();
   const r = d.home.reviews;
-  const { value, count, url, reviewsUrl } = SITE.rating;
-  const valueStr = value.toFixed(1).replace('.', ',');
+  const { url, reviewsUrl } = SITE.rating;
 
   return (
     <section className="reviews" id="bewertungen" data-screen-label="06 Gästestimmen">
@@ -34,12 +33,6 @@ export function Reviews() {
         </div>
         <h2>{r.headingPre}<span className="it">{r.headingEm}</span>{r.headingPost}</h2>
         <p className="reviews-lede">{r.lede}</p>
-
-        <a className="reviews-rating" href={url} target="_blank" rel="noopener noreferrer">
-          <span className="reviews-rating-value">{valueStr}</span>
-          <StarBar value={value} />
-          <span className="reviews-rating-count">{count} {r.ratingLabel}</span>
-        </a>
 
         <div className="reviews-grid">
           {REVIEWS.map((rev) => (
