@@ -56,3 +56,11 @@ scripts/__pycache__/
 scripts/_*/
 
 casabellucci-old-snapshot/
+
+# AI-Assistant / Tooling-Dateien (nicht Teil der Website)
+CLAUDE.md
+AGENTS.md
+
+# Scratch HTML-Experimente
+hero-mobile-variants.html
+hero-mobile-variants-v2.html
