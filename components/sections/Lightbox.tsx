@@ -28,7 +28,16 @@ export function Lightbox() {
       <button className="close" onClick={onClose}>✕</button>
       <button className="nav prev" onClick={(e) => { e.stopPropagation(); onPrev(); }}>‹</button>
       <button className="nav next" onClick={(e) => { e.stopPropagation(); onNext(); }}>›</button>
-      {open && <img src={asset(GALLERY[idx].src)} alt={d.data.gallery[idx].alt} onClick={(e) => e.stopPropagation()} />}
+      {open && (
+        <img
+          src={asset(GALLERY[idx].src)}
+          alt={d.data.gallery[idx].alt}
+          width={1100}
+          height={1467}
+          decoding="async"
+          onClick={(e) => e.stopPropagation()}
+        />
+      )}
     </div>
   );
 }

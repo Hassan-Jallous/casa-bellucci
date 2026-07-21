@@ -54,21 +54,21 @@ export function TerrasseLanding() {
                 <img
                   src={asset('images/lp-terr-hell-1.jpg')}
                   alt={d.landingTerrasse.hero.photos.tag.alt}
-                />
+                 loading="lazy" decoding="async" />
                 <figcaption>{d.landingTerrasse.hero.photos.tag.caption}</figcaption>
               </figure>
               <figure className="all-day-photo midday">
                 <img
                   src={asset('images/terrace/terrace-04.jpg')}
                   alt={d.landingTerrasse.hero.photos.mittag.alt}
-                />
+                 loading="lazy" decoding="async" />
                 <figcaption>{d.landingTerrasse.hero.photos.mittag.caption}</figcaption>
               </figure>
               <figure className="all-day-photo evening">
                 <img
                   src={asset('images/lp-terr-abend-1.jpg')}
                   alt={d.landingTerrasse.hero.photos.abend.alt}
-                />
+                 loading="lazy" decoding="async" />
                 <figcaption>{d.landingTerrasse.hero.photos.abend.caption}</figcaption>
               </figure>
             </div>

@@ -19,7 +19,7 @@ export function Terrace() {
         <div className="terrace-bg" aria-hidden="true"></div>
 
         <figure className="terrace-photo">
-          <img src={asset("images/terrace/terrace-04.jpg")} alt={d.home.terrace.photoAlt} width={1403} height={962} loading="lazy" decoding="async" />
+          <img src={asset("images/terrace/terrace-04.jpg")} alt={d.home.terrace.photoAlt} width={1400} height={960} loading="lazy" decoding="async" />
           <figcaption>
             <h2>{d.home.terrace.heading}</h2>
           </figcaption>

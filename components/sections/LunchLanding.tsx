@@ -54,21 +54,21 @@ export function LunchLanding() {
                 <img
                   src={asset('images/menu-lunch.jpg')}
                   alt={d.landingLunch.hero.photos.pranzo.alt}
-                />
+                 loading="lazy" decoding="async" />
                 <figcaption>{d.landingLunch.hero.photos.pranzo.caption}</figcaption>
               </figure>
               <figure className="all-day-photo midday">
                 <img
                   src={asset('images/lp-bowl.jpg')}
                   alt={d.landingLunch.hero.photos.schnell.alt}
-                />
+                 loading="lazy" decoding="async" />
                 <figcaption>{d.landingLunch.hero.photos.schnell.caption}</figcaption>
               </figure>
               <figure className="all-day-photo evening">
                 <img
                   src={asset('images/lp-brunch-1.jpg')}
                   alt={d.landingLunch.hero.photos.business.alt}
-                />
+                 loading="lazy" decoding="async" />
                 <figcaption>{d.landingLunch.hero.photos.business.caption}</figcaption>
               </figure>
             </div>

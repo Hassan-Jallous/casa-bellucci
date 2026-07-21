@@ -60,21 +60,21 @@ export function BarLanding() {
                 <img
                   src={asset('images/gallery/8.jpg')}
                   alt={d.landingBar.hero.photo1Alt}
-                />
+                 loading="lazy" decoding="async" />
                 <figcaption>{d.landingBar.hero.photo1Caption}</figcaption>
               </figure>
               <figure className="all-day-photo midday">
                 <img
                   src={asset('images/menu-wines.jpg')}
                   alt={d.landingBar.hero.photo2Alt}
-                />
+                 loading="lazy" decoding="async" />
                 <figcaption>{d.landingBar.hero.photo2Caption}</figcaption>
               </figure>
               <figure className="all-day-photo evening">
                 <img
                   src={asset('images/lp-terr-abend-2.jpg')}
                   alt={d.landingBar.hero.photo3Alt}
-                />
+                 loading="lazy" decoding="async" />
                 <figcaption>{d.landingBar.hero.photo3Caption}</figcaption>
               </figure>
             </div>

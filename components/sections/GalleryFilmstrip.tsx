@@ -14,7 +14,7 @@ export function GalleryFilmstrip() {
       <div className="filmstrip-track">
         {GALLERY.map((g, i) => (
           <div key={i} className="filmstrip-frame" onClick={() => openLightbox(i)}>
-            <img src={asset(g.src)} alt={d.data.gallery[i].alt} loading="lazy" />
+            <img src={asset(g.src)} alt={d.data.gallery[i].alt} width={720} height={960} loading="lazy" decoding="async" />
             <span className="filmstrip-label">{d.data.gallery[i].caption}</span>
             <div className="filmstrip-number">{String(i + 1).padStart(2, '0')}</div>
           </div>

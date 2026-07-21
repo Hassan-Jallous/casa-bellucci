@@ -55,21 +55,21 @@ export function EventsLanding() {
                 <img
                   src={asset('images/lp-terr-abend-1.jpg')}
                   alt={d.landingEvents.hero.photos.abend.alt}
-                />
+                 loading="lazy" decoding="async" />
                 <figcaption>{d.landingEvents.hero.photos.abend.caption}</figcaption>
               </figure>
               <figure className="all-day-photo midday">
                 <img
                   src={asset('images/lp-int-1.jpg')}
                   alt={d.landingEvents.hero.photos.sala.alt}
-                />
+                 loading="lazy" decoding="async" />
                 <figcaption>{d.landingEvents.hero.photos.sala.caption}</figcaption>
               </figure>
               <figure className="all-day-photo evening">
                 <img
                   src={asset('images/lp-cocktail.jpg')}
                   alt={d.landingEvents.hero.photos.brindisi.alt}
-                />
+                 loading="lazy" decoding="async" />
                 <figcaption>{d.landingEvents.hero.photos.brindisi.caption}</figcaption>
               </figure>
             </div>

@@ -21,7 +21,9 @@ export function ImageHero() {
         Server-seitige WebP-Negotiation (.htaccess) liefert die .webp-Zwillinge.
       */}
       <picture>
+        <source media="(max-width: 880px)" type="image/webp" srcSet={asset("images/hero-mobile.webp")} />
         <source media="(max-width: 880px)" srcSet={asset("images/hero-mobile.jpg")} />
+        <source type="image/webp" srcSet={asset("images/hero-summer-desktop.webp")} />
         <img
           className="image-hero-bg"
           src={asset("images/hero-summer-desktop.jpg")}
@@ -29,8 +31,8 @@ export function ImageHero() {
           aria-hidden="true"
           fetchPriority="high"
           decoding="async"
-          width={1920}
-          height={1080}
+          width={1600}
+          height={900}
         />
       </picture>
       <div className="image-hero-shade" aria-hidden="true"></div>

@@ -68,21 +68,21 @@ export function ItalienischLanding() {
                 <img
                   src={asset('images/menu-breakfast.jpg')}
                   alt={d.landingItalienisch.hero.morningAlt}
-                />
+                 loading="lazy" decoding="async" />
                 <figcaption>{d.landingItalienisch.hero.morningCaption}</figcaption>
               </figure>
               <figure className="all-day-photo midday">
                 <img
                   src={asset('images/gallery/2.jpg')}
                   alt={d.landingItalienisch.hero.middayAlt}
-                />
+                 loading="lazy" decoding="async" />
                 <figcaption>{d.landingItalienisch.hero.middayCaption}</figcaption>
               </figure>
               <figure className="all-day-photo evening">
                 <img
                   src={asset('images/lp-terr-abend-1.jpg')}
                   alt={d.landingItalienisch.hero.eveningAlt}
-                />
+                 loading="lazy" decoding="async" />
                 <figcaption>{d.landingItalienisch.hero.eveningCaption}</figcaption>
               </figure>
             </div>

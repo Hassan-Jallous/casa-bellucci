@@ -41,11 +41,11 @@ export function About() {
               <figcaption>{d.home.about.photos.morning.caption}</figcaption>
             </figure>
             <figure className="all-day-photo midday">
-              <img src={asset("images/allday-midday.jpg")} alt={d.home.about.photos.midday.alt} width={1600} height={1067} loading="lazy" decoding="async" />
+              <img src={asset("images/allday-midday.jpg")} alt={d.home.about.photos.midday.alt} width={1400} height={934} loading="lazy" decoding="async" />
               <figcaption>{d.home.about.photos.midday.caption}</figcaption>
             </figure>
             <figure className="all-day-photo evening">
-              <img src={asset("images/allday-evening.jpg")} alt={d.home.about.photos.evening.alt} width={2000} height={1334} loading="lazy" decoding="async" />
+              <img src={asset("images/allday-evening.jpg")} alt={d.home.about.photos.evening.alt} width={1400} height={934} loading="lazy" decoding="async" />
               <figcaption>{d.home.about.photos.evening.caption}</figcaption>
             </figure>
           </div>

@@ -54,21 +54,21 @@ export function FruehstueckLanding() {
                 <img
                   src={asset('images/menu-breakfast.jpg')}
                   alt={d.landingFruehstueck.hero.photos.colazione.alt}
-                />
+                 loading="lazy" decoding="async" />
                 <figcaption>{d.landingFruehstueck.hero.photos.colazione.caption}</figcaption>
               </figure>
               <figure className="all-day-photo midday">
                 <img
                   src={asset('images/lp-frueh-1.jpg')}
                   alt={d.landingFruehstueck.hero.photos.mattina.alt}
-                />
+                 loading="lazy" decoding="async" />
                 <figcaption>{d.landingFruehstueck.hero.photos.mattina.caption}</figcaption>
               </figure>
               <figure className="all-day-photo evening">
                 <img
                   src={asset('images/lp-terr-hell-1.jpg')}
                   alt={d.landingFruehstueck.hero.photos.terrazza.alt}
-                />
+                 loading="lazy" decoding="async" />
                 <figcaption>{d.landingFruehstueck.hero.photos.terrazza.caption}</figcaption>
               </figure>
             </div>

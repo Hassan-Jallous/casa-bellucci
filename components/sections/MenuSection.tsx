@@ -100,8 +100,8 @@ export function MenuSection() {
               src={asset("images/signature-hero.jpg")}
               alt={m.heroAlt}
               className="signature-hero-img is-active"
-              width={1134}
-              height={1700}
+              width={667}
+              height={1000}
               loading="lazy"
               decoding="async"
             />

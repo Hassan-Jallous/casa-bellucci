@@ -29,15 +29,15 @@ export function Weekend() {
           </div>
           <div className="all-day-media" aria-label={w.mediaLabel}>
             <figure className="all-day-photo morning">
-              <img src={asset("images/lp-spritz.jpg")} alt={w.photos.morning.alt} width={900} height={1200} loading="lazy" decoding="async" />
+              <img src={asset("images/lp-spritz.jpg")} alt={w.photos.morning.alt} width={934} height={1400} loading="lazy" decoding="async" />
               <figcaption>{w.photos.morning.caption}</figcaption>
             </figure>
             <figure className="all-day-photo midday">
-              <img src={asset("images/lp-cocktail.jpg")} alt={w.photos.midday.alt} width={1600} height={1067} loading="lazy" decoding="async" />
+              <img src={asset("images/lp-cocktail.jpg")} alt={w.photos.midday.alt} width={1400} height={934} loading="lazy" decoding="async" />
               <figcaption>{w.photos.midday.caption}</figcaption>
             </figure>
             <figure className="all-day-photo evening">
-              <img src={asset("images/lp-terr-abend-2.jpg")} alt={w.photos.evening.alt} width={2000} height={1334} loading="lazy" decoding="async" />
+              <img src={asset("images/lp-terr-abend-2.jpg")} alt={w.photos.evening.alt} width={1400} height={934} loading="lazy" decoding="async" />
               <figcaption>{w.photos.evening.caption}</figcaption>
             </figure>
           </div>
