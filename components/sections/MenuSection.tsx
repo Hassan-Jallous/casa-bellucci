@@ -4,8 +4,7 @@ import { asset } from '@/lib/assetPath';
 import { SmoothScrollLink } from '@/components/SmoothScrollLink';
 import { useUI } from '@/components/UIProvider';
 import { useMenuUrls } from '@/lib/menuUrls';
-import { routePath } from '@/lib/routes';
-import { useDict } from '@/lib/i18n/LanguageProvider';
+import { useDict, useLocalizedHref } from '@/lib/i18n/LanguageProvider';
 import { FlagBar } from './Brand';
 import { MenuViewer, type MenuTab } from './MenuViewer';
 
@@ -21,6 +20,7 @@ interface SignatureItem {
 
 export function MenuSection() {
   const d = useDict();
+  const localizedHref = useLocalizedHref();
   const m = d.home.menu;
   const urls = useMenuUrls();
   const signatures: SignatureItem[] = [
@@ -83,13 +83,13 @@ export function MenuSection() {
           </div>
           <p>
             {m.introParts.p0}{' '}
-            <a href={routePath('/fruehstueck-brunch-kurfuerstendamm/')}>{m.introParts.link1}</a>{' '}
+            <a href={localizedHref('/fruehstueck-brunch-kurfuerstendamm/')}>{m.introParts.link1}</a>{' '}
             {m.introParts.p1}{' '}
-            <a href={routePath('/#menu')}>{m.introParts.link2}</a>{' '}
+            <a href={localizedHref('/#menu')}>{m.introParts.link2}</a>{' '}
             {m.introParts.p2}{' '}
-            <a href={routePath('/bar-aperitivo-kurfuerstendamm/')}>{m.introParts.link3}</a>{' '}
+            <a href={localizedHref('/bar-aperitivo-kurfuerstendamm/')}>{m.introParts.link3}</a>{' '}
             {m.introParts.p3}{' '}
-            <a href={routePath('/business-lunch-mittagstisch-charlottenburg/')}>{m.introParts.link4}</a>{' '}
+            <a href={localizedHref('/business-lunch-mittagstisch-charlottenburg/')}>{m.introParts.link4}</a>{' '}
             {m.introParts.p4}
           </p>
         </div>
@@ -139,12 +139,16 @@ export function MenuSection() {
         isOpen={isOpen}
         onSelect={openMenu}
         onClose={closeMenu}
+        onReserve={() => {
+          document.getElementById('reservieren')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }}
         labels={{
           laCarta: m.laCarta,
           close: m.close,
           openNewTab: m.openNewTab,
           resetZoom: m.resetZoom,
           iframeTitlePrefix: m.iframeTitlePrefix,
+          reserve: d.common.actions.reserveTable,
         }}
       />
     </section>

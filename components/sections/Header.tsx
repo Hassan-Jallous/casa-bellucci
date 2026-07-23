@@ -40,7 +40,12 @@ export function Header() {
           <div className="lang-switch">
             {["DE", "EN", "IT"].map((l, i) => (
               <Fragment key={l}>
-                <button className={lang === l.toLowerCase() ? "active" : ""} onClick={() => window.location.assign(routePath(switchLangPath(pathname, l.toLowerCase() as Lang)))}>{l}</button>
+                <button
+                  type="button"
+                  className={lang === l.toLowerCase() ? "active" : ""}
+                  aria-pressed={lang === l.toLowerCase()}
+                  onClick={() => window.location.assign(routePath(switchLangPath(pathname, l.toLowerCase() as Lang)))}
+                >{l}</button>
                 {i < 2 && <span className="sep">·</span>}
               </Fragment>
             ))}

@@ -165,6 +165,21 @@ export default function RootLayout({
                 den FCP bremsen) - deren Font-Swap-CLS faengt der metrik-angepasste
                 Fallback-Font (size-adjust) ab. */}
             <link rel="preload" as="font" type="font/woff2" crossOrigin="anonymous" href={`${BASE}/fonts/BillionMiracles.woff2`} />
+            {/* LCP-Hero: mobiles Hochformat vs. Desktop-Querformat, media-spezifisch. */}
+            <link
+              rel="preload"
+              as="image"
+              type="image/webp"
+              href={`${BASE}/images/hero-mobile.webp`}
+              media="(max-width: 880px)"
+            />
+            <link
+              rel="preload"
+              as="image"
+              type="image/webp"
+              href={`${BASE}/images/hero-summer-desktop.webp`}
+              media="(min-width: 881px)"
+            />
             <script dangerouslySetInnerHTML={{ __html: ASYNC_CSS_SCRIPT }} />
             <noscript>
               <link rel="stylesheet" href={CSS_HREFS[0]} />

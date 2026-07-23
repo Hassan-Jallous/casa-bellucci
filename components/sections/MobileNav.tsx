@@ -37,6 +37,15 @@ function MobileNavA({ open, onClose }: MobileNavAProps) {
     return () => { document.body.style.overflow = ""; };
   }, [open]);
 
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') onClose();
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [open, onClose]);
+
   const onItemClick = (scrollHref: string) => (e: MouseEvent<HTMLAnchorElement>) => {
     const handled = smoothScrollFromHref(e, scrollHref, () => {
       document.body.style.overflow = "";

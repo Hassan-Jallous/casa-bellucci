@@ -2,11 +2,11 @@
 
 import { asset } from '@/lib/assetPath';
 import { SmoothScrollLink } from '@/components/SmoothScrollLink';
-import { routePath } from '@/lib/routes';
-import { useDict } from '@/lib/i18n/LanguageProvider';
+import { useDict, useLocalizedHref } from '@/lib/i18n/LanguageProvider';
 
 export function Terrace() {
   const d = useDict();
+  const localizedHref = useLocalizedHref();
   const moments = [
     { k: "10:00", v: d.home.terrace.moments[0].v },
     { k: "14:30", v: d.home.terrace.moments[1].v },
@@ -45,7 +45,7 @@ export function Terrace() {
           </div>
           <p className="terrace-link">
             {d.home.terrace.linkPre}
-            <a href={routePath('/terrasse-restaurant-berlin-charlottenburg/')}>{d.home.terrace.link}</a>
+            <a href={localizedHref('/terrasse-restaurant-berlin-charlottenburg/')}>{d.home.terrace.link}</a>
             {d.home.terrace.linkPost}
           </p>
         </div>

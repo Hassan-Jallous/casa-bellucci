@@ -24,7 +24,7 @@ export const home = {
       },
       {
         time: 'Midday',
-        title: 'Lunch & lunch menu',
+        title: 'Lunch & business lunch',
         copy: 'Pasta fatta a mano, freshly caught fish and salads, at midday also as a business lunch on the summer terrace.',
       },
       {
@@ -43,7 +43,7 @@ export const home = {
   terrace: {
     photoAlt: 'Summer terrace at Casa Bellucci, Italian restaurant with terrace on the Kudamm in Berlin-Charlottenburg',
     heading: 'Summer terrace on the Kudamm',
-    reserve: 'reserve',
+    reserve: 'Reserve',
     viewTerrace: 'View gallery →',
     quote: 'Long afternoons outside, quiet conversations, the first aperitivo in the glass.',
     moments: [

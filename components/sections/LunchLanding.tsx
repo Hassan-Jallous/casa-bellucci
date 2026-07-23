@@ -2,9 +2,8 @@
 
 import type { CSSProperties } from 'react';
 import { asset } from '@/lib/assetPath';
-import { routePath } from '@/lib/routes';
 import { SITE } from '@/lib/site';
-import { useDict, usePageTitle } from '@/lib/i18n/LanguageProvider';
+import { useDict, usePageTitle, useLocalizedHref } from '@/lib/i18n/LanguageProvider';
 import { FlagBar } from './Brand';
 import { FaqAccordion } from './FaqAccordion';
 
@@ -17,6 +16,7 @@ const eyebrowStyle: CSSProperties = {
 export function LunchLanding() {
   usePageTitle('lunch');
   const d = useDict();
+  const localizedHref = useLocalizedHref();
   const pranzo = d.landingLunch.pranzo.moments;
 
   return (
@@ -41,10 +41,10 @@ export function LunchLanding() {
                 {d.landingLunch.hero.para}
               </p>
               <div className="contact-actions">
-                <a className="btn btn-primary" href={routePath('/reservierung/')}>
+                <a className="btn btn-primary" href={localizedHref('/reservierung/')}>
                   {d.common.actions.reserve}
                 </a>
-                <a className="btn btn-ghost" href={routePath('/#menu')}>
+                <a className="btn btn-ghost" href={localizedHref('/#menu')}>
                   {d.landingLunch.hero.viewMenu}
                 </a>
               </div>
@@ -227,9 +227,9 @@ export function LunchLanding() {
                 <div className="block">
                   <div className="k">{d.common.info.hours}</div>
                   <div className="v">
-                    {SITE.openingHours.weekdays}
+                    {d.common.hours.weekdays}
                     <br />
-                    <span className="muted">{SITE.openingHours.sunday}</span>
+                    <span className="muted">{d.common.hours.sunday}</span>
                   </div>
                 </div>
                 <div className="block">
@@ -241,7 +241,7 @@ export function LunchLanding() {
                   </div>
                 </div>
                 <div className="contact-actions">
-                  <a className="btn btn-primary" href={routePath('/reservierung/')}>
+                  <a className="btn btn-primary" href={localizedHref('/reservierung/')}>
                     {d.common.actions.bookOnline}
                   </a>
                   <a className="btn btn-ghost" href={SITE.phoneHref}>
@@ -276,15 +276,15 @@ export function LunchLanding() {
           <FaqAccordion items={[...d.landingLunch.faqs]} idBase="lunch-faq" />
           <p className="subpage-related">
             {d.landingLunch.related.pre}
-            <a href={routePath('/terrasse-restaurant-berlin-charlottenburg/')}>
+            <a href={localizedHref('/terrasse-restaurant-berlin-charlottenburg/')}>
               {d.landingLunch.related.terrasseLink}
             </a>
             {d.landingLunch.related.afterTerrasse}
-            <a href={routePath('/italienisches-restaurant-berlin-charlottenburg/')}>
+            <a href={localizedHref('/italienisches-restaurant-berlin-charlottenburg/')}>
               {d.landingLunch.related.italienischLink}
             </a>
             {d.landingLunch.related.afterItalienisch}
-            <a href={routePath('/fruehstueck-brunch-kurfuerstendamm/')}>
+            <a href={localizedHref('/fruehstueck-brunch-kurfuerstendamm/')}>
               {d.landingLunch.related.fruehstueckLink}
             </a>
             {d.landingLunch.related.afterFruehstueck}

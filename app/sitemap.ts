@@ -47,7 +47,9 @@ const ROUTES = [
   },
 ] as const;
 
-const LAST_MODIFIED = new Date('2026-06-05T00:00:00.000Z');
+// Build-Zeit-Stamp: bei jedem Deploy frisch, damit Crawler Content-Updates
+// nicht an einem eingefrorenen lastmod hängen bleiben.
+const LAST_MODIFIED = new Date();
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return ROUTES.map((route) => ({

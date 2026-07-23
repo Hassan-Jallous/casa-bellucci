@@ -2,9 +2,8 @@
 
 import type { CSSProperties } from 'react';
 import { asset } from '@/lib/assetPath';
-import { routePath } from '@/lib/routes';
 import { SITE } from '@/lib/site';
-import { useDict, usePageTitle } from '@/lib/i18n/LanguageProvider';
+import { useDict, usePageTitle, useLocalizedHref } from '@/lib/i18n/LanguageProvider';
 import { FlagBar } from './Brand';
 import { FaqAccordion } from './FaqAccordion';
 import { EventInquiryForm } from './EventInquiryForm';
@@ -18,6 +17,7 @@ const eyebrowStyle: CSSProperties = {
 export function EventsLanding() {
   usePageTitle('events');
   const d = useDict();
+  const localizedHref = useLocalizedHref();
   const occasions = d.landingEvents.occasions.moments;
 
   return (
@@ -45,7 +45,7 @@ export function EventsLanding() {
                 <a className="btn btn-primary" href="#event-anfrage">
                   {d.landingEvents.form.submit}
                 </a>
-                <a className="btn btn-ghost" href={routePath('/#menu')}>
+                <a className="btn btn-ghost" href={localizedHref('/#menu')}>
                   {d.landingEvents.hero.viewMenu}
                 </a>
               </div>
@@ -213,7 +213,7 @@ export function EventsLanding() {
               </p>
               <p>
                 {d.landingEvents.menu.crossPre}
-                <a href={routePath('/italienisches-restaurant-berlin-charlottenburg/')}>
+                <a href={localizedHref('/italienisches-restaurant-berlin-charlottenburg/')}>
                   {d.landingEvents.menu.crossLinkItalienisch}
                 </a>
                 {d.landingEvents.menu.crossPost}
@@ -352,13 +352,13 @@ export function EventsLanding() {
           <FaqAccordion items={[...d.landingEvents.faqs]} idBase="events-faq" />
           <p className="subpage-related">
             {d.landingEvents.related.pre}
-            <a href={routePath('/terrasse-restaurant-berlin-charlottenburg/')}>
+            <a href={localizedHref('/terrasse-restaurant-berlin-charlottenburg/')}>
               {d.landingEvents.related.terrasseLink}
             </a>
             {d.landingEvents.related.afterTerrasse}
-            <a href={routePath('/bar-aperitivo-kurfuerstendamm/')}>{d.landingEvents.related.barLink}</a>
+            <a href={localizedHref('/bar-aperitivo-kurfuerstendamm/')}>{d.landingEvents.related.barLink}</a>
             {d.landingEvents.related.afterBar}
-            <a href={routePath('/italienisches-restaurant-berlin-charlottenburg/')}>
+            <a href={localizedHref('/italienisches-restaurant-berlin-charlottenburg/')}>
               {d.landingEvents.related.italienischLink}
             </a>
             {d.landingEvents.related.afterItalienisch}

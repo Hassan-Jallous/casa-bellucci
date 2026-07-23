@@ -1,18 +1,18 @@
 'use client';
 
-import { useDict } from '@/lib/i18n/LanguageProvider';
-import { routePath } from '@/lib/routes';
+import { useDict, useLocalizedHref } from '@/lib/i18n/LanguageProvider';
 import { onReserveClick } from '@/components/SmoothScrollLink';
 import { SITE } from '@/lib/site';
 
 export function Footer() {
   const d = useDict();
+  const localizedHref = useLocalizedHref();
   return (
     <footer className="site-footer">
       <div className="wrap">
         <div className="footer-grid">
           <div className="footer-brand">
-            <a className="footer-mark" href={routePath('/')}>
+            <a className="footer-mark" href={localizedHref('/')}>
               <span className="script">Casa</span>
               <span>Bellucci</span>
             </a>
@@ -20,7 +20,7 @@ export function Footer() {
               {d.footer.blurb}
             </p>
             <div className="footer-cta">
-              <a className="btn btn-primary" href={routePath('/reservierung/')} onClick={onReserveClick}>{d.common.actions.reserve}</a>
+              <a className="btn btn-primary" href={localizedHref('/reservierung/')} onClick={onReserveClick}>{d.common.actions.reserve}</a>
               <a className="btn btn-ghost" href={SITE.phoneHref}>{d.common.actions.call}</a>
             </div>
           </div>
@@ -39,12 +39,12 @@ export function Footer() {
           </div>
           <div className="footer-col">
             <h5>{d.footer.cols.discover}</h5>
-            <a href={routePath('/italienisches-restaurant-berlin-charlottenburg/')}>{d.footer.discover.italienisch}</a>
-            <a href={routePath('/bar-aperitivo-kurfuerstendamm/')}>{d.footer.discover.bar}</a>
-            <a href={routePath('/fruehstueck-brunch-kurfuerstendamm/')}>{d.footer.discover.fruehstueck}</a>
-            <a href={routePath('/terrasse-restaurant-berlin-charlottenburg/')}>{d.footer.discover.terrasse}</a>
-            <a href={routePath('/business-lunch-mittagstisch-charlottenburg/')}>{d.footer.discover.lunch}</a>
-            <a href={routePath('/firmenfeier-events-charlottenburg/')}>{d.footer.discover.events}</a>
+            <a href={localizedHref('/italienisches-restaurant-berlin-charlottenburg/')}>{d.footer.discover.italienisch}</a>
+            <a href={localizedHref('/bar-aperitivo-kurfuerstendamm/')}>{d.footer.discover.bar}</a>
+            <a href={localizedHref('/fruehstueck-brunch-kurfuerstendamm/')}>{d.footer.discover.fruehstueck}</a>
+            <a href={localizedHref('/terrasse-restaurant-berlin-charlottenburg/')}>{d.footer.discover.terrasse}</a>
+            <a href={localizedHref('/business-lunch-mittagstisch-charlottenburg/')}>{d.footer.discover.lunch}</a>
+            <a href={localizedHref('/firmenfeier-events-charlottenburg/')}>{d.footer.discover.events}</a>
           </div>
           <div className="footer-col footer-socials">
             <h5>{d.footer.cols.follow}</h5>
@@ -61,9 +61,9 @@ export function Footer() {
         <div className="bottom">
           <span>{d.footer.copyright}</span>
           <div className="legal">
-            <a href={routePath('/impressum/')}>{d.footer.links.impressum}</a>
-            <a href={routePath('/datenschutzerklaerung/')}>{d.footer.links.datenschutz}</a>
-            <a href={routePath('/cookie-richtlinie-eu/')}>{d.footer.links.cookies}</a>
+            <a href={localizedHref('/impressum/')}>{d.footer.links.impressum}</a>
+            <a href={localizedHref('/datenschutzerklaerung/')}>{d.footer.links.datenschutz}</a>
+            <a href={localizedHref('/cookie-richtlinie-eu/')}>{d.footer.links.cookies}</a>
           </div>
         </div>
       </div>

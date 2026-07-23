@@ -1,13 +1,13 @@
 'use client';
 
 import { asset } from '@/lib/assetPath';
-import { routePath } from '@/lib/routes';
-import { useDict } from '@/lib/i18n/LanguageProvider';
+import { useDict, useLocalizedHref } from '@/lib/i18n/LanguageProvider';
 import { FlagBar } from './Brand';
 
 /* Weekend & Aperitivo */
 export function Weekend() {
   const d = useDict();
+  const localizedHref = useLocalizedHref();
   const w = d.home.weekend;
 
   return (
@@ -24,7 +24,7 @@ export function Weekend() {
             <p>{w.p0}</p>
             <p>{w.p1}</p>
             <div className="signature-actions">
-              <a href={routePath('/bar-aperitivo-kurfuerstendamm/')} className="btn btn-primary">{w.ctaLabel}</a>
+              <a href={localizedHref('/bar-aperitivo-kurfuerstendamm/')} className="btn btn-primary">{w.ctaLabel}</a>
             </div>
           </div>
           <div className="all-day-media" aria-label={w.mediaLabel}>

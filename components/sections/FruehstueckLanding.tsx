@@ -2,9 +2,8 @@
 
 import type { CSSProperties } from 'react';
 import { asset } from '@/lib/assetPath';
-import { routePath } from '@/lib/routes';
 import { SITE } from '@/lib/site';
-import { useDict, usePageTitle } from '@/lib/i18n/LanguageProvider';
+import { useDict, usePageTitle, useLocalizedHref } from '@/lib/i18n/LanguageProvider';
 import { FlagBar } from './Brand';
 import { FaqAccordion } from './FaqAccordion';
 
@@ -17,6 +16,7 @@ const eyebrowStyle: CSSProperties = {
 export function FruehstueckLanding() {
   usePageTitle('fruehstueck');
   const d = useDict();
+  const localizedHref = useLocalizedHref();
   const colazione = d.landingFruehstueck.italian.moments;
 
   return (
@@ -41,10 +41,10 @@ export function FruehstueckLanding() {
                 {d.landingFruehstueck.hero.para}
               </p>
               <div className="contact-actions">
-                <a className="btn btn-primary" href={routePath('/reservierung/')}>
+                <a className="btn btn-primary" href={localizedHref('/reservierung/')}>
                   {d.common.actions.reserve}
                 </a>
-                <a className="btn btn-ghost" href={routePath('/#menu')}>
+                <a className="btn btn-ghost" href={localizedHref('/#menu')}>
                   {d.landingFruehstueck.hero.viewMenu}
                 </a>
               </div>
@@ -227,9 +227,9 @@ export function FruehstueckLanding() {
                 <div className="block">
                   <div className="k">{d.common.info.hours}</div>
                   <div className="v">
-                    {SITE.openingHours.weekdays}
+                    {d.common.hours.weekdays}
                     <br />
-                    <span className="muted">{SITE.openingHours.sunday}</span>
+                    <span className="muted">{d.common.hours.sunday}</span>
                   </div>
                 </div>
                 <div className="block">
@@ -241,7 +241,7 @@ export function FruehstueckLanding() {
                   </div>
                 </div>
                 <div className="contact-actions">
-                  <a className="btn btn-primary" href={routePath('/reservierung/')}>
+                  <a className="btn btn-primary" href={localizedHref('/reservierung/')}>
                     {d.common.actions.bookOnline}
                   </a>
                   <a className="btn btn-ghost" href={SITE.phoneHref}>
@@ -276,16 +276,16 @@ export function FruehstueckLanding() {
           <FaqAccordion items={[...d.landingFruehstueck.faqs]} idBase="fruehstueck-faq" />
           <p className="subpage-related">
             {d.landingFruehstueck.related.pre}
-            <a href={routePath('/')}>{d.landingFruehstueck.related.homeLink}</a>{d.landingFruehstueck.related.afterHome}
-            <a href={routePath('/italienisches-restaurant-berlin-charlottenburg/')}>
+            <a href={localizedHref('/')}>{d.landingFruehstueck.related.homeLink}</a>{d.landingFruehstueck.related.afterHome}
+            <a href={localizedHref('/italienisches-restaurant-berlin-charlottenburg/')}>
               {d.landingFruehstueck.related.italienischLink}
             </a>
             {d.landingFruehstueck.related.afterItalienisch}
-            <a href={routePath('/business-lunch-mittagstisch-charlottenburg/')}>{d.landingFruehstueck.related.lunchLink}</a>
+            <a href={localizedHref('/business-lunch-mittagstisch-charlottenburg/')}>{d.landingFruehstueck.related.lunchLink}</a>
             {d.landingFruehstueck.related.afterLunch}
-            <a href={routePath('/terrasse-restaurant-berlin-charlottenburg/')}>{d.landingFruehstueck.related.terrasseLink}</a>
+            <a href={localizedHref('/terrasse-restaurant-berlin-charlottenburg/')}>{d.landingFruehstueck.related.terrasseLink}</a>
             {d.landingFruehstueck.related.afterTerrasse}
-            <a href={routePath('/bar-aperitivo-kurfuerstendamm/')}>{d.landingFruehstueck.related.barLink}</a>{d.landingFruehstueck.related.afterBar}
+            <a href={localizedHref('/bar-aperitivo-kurfuerstendamm/')}>{d.landingFruehstueck.related.barLink}</a>{d.landingFruehstueck.related.afterBar}
           </p>
         </div>
       </section>

@@ -3,9 +3,8 @@
 import { useState, type CSSProperties } from 'react';
 import { asset } from '@/lib/assetPath';
 import { useMenuUrls } from '@/lib/menuUrls';
-import { routePath } from '@/lib/routes';
 import { SITE } from '@/lib/site';
-import { useDict, usePageTitle } from '@/lib/i18n/LanguageProvider';
+import { useDict, usePageTitle, useLocalizedHref } from '@/lib/i18n/LanguageProvider';
 import { FlagBar } from './Brand';
 import { FaqAccordion } from './FaqAccordion';
 import { GalleryFilmstrip } from './GalleryFilmstrip';
@@ -21,6 +20,7 @@ const eyebrowStyle: CSSProperties = {
 export function ItalienischLanding() {
   usePageTitle('italienisch');
   const d = useDict();
+  const localizedHref = useLocalizedHref();
   const menuLabels = d.home.menu;
   const { activeMenu, isOpen, openMenu, closeMenu } = useMenuViewer();
   const menuUrls = useMenuUrls();
@@ -55,7 +55,7 @@ export function ItalienischLanding() {
                 {d.landingItalienisch.hero.lede}
               </p>
               <div className="contact-actions">
-                <a className="btn btn-primary" href={routePath('/reservierung/')}>
+                <a className="btn btn-primary" href={localizedHref('/reservierung/')}>
                   {d.common.actions.reserve}
                 </a>
                 <button type="button" className="btn btn-ghost" onClick={openAll}>
@@ -255,10 +255,10 @@ export function ItalienischLanding() {
                 {d.landingItalienisch.atmosphere.p3}
               </p>
               <div className="contact-actions">
-                <a className="btn btn-primary" href={routePath('/reservierung/')}>
+                <a className="btn btn-primary" href={localizedHref('/reservierung/')}>
                   {d.common.actions.reserve}
                 </a>
-                <a className="btn btn-ghost" href={routePath('/#terrasse')}>
+                <a className="btn btn-ghost" href={localizedHref('/#terrasse')}>
                   {d.landingItalienisch.atmosphere.viewTerrace}
                 </a>
               </div>
@@ -284,7 +284,7 @@ export function ItalienischLanding() {
                 {d.landingItalienisch.gallery.lede}
               </p>
             </div>
-            <a className="btn btn-ghost" href={routePath('/#galerie')}>
+            <a className="btn btn-ghost" href={localizedHref('/#galerie')}>
               {d.landingItalienisch.gallery.toGallery}
             </a>
           </div>
@@ -328,13 +328,13 @@ export function ItalienischLanding() {
                 <div className="block">
                   <div className="k">{d.common.info.hours}</div>
                   <div className="v">
-                    {SITE.openingHours.weekdays}
+                    {d.common.hours.weekdays}
                     <br />
-                    <span className="muted">{SITE.openingHours.sunday}</span>
+                    <span className="muted">{d.common.hours.sunday}</span>
                   </div>
                 </div>
                 <div className="contact-actions">
-                  <a className="btn btn-primary" href={routePath('/reservierung/')}>
+                  <a className="btn btn-primary" href={localizedHref('/reservierung/')}>
                     {d.common.actions.reserve}
                   </a>
                   <a className="btn btn-ghost" href={SITE.mapsUrl} target="_blank" rel="noreferrer">
@@ -369,11 +369,11 @@ export function ItalienischLanding() {
           <FaqAccordion items={[...d.landingItalienisch.faqs]} idBase="ital-faq" />
           <p className="subpage-related">
             {d.landingItalienisch.related.pre}{' '}
-            <a href={routePath('/')}>{d.landingItalienisch.related.homeLink}</a>{d.landingItalienisch.related.mid2}{' '}
-            <a href={routePath('/fruehstueck-brunch-kurfuerstendamm/')}>{d.landingItalienisch.related.fruehstueckLink}</a>{d.landingItalienisch.related.mid3}{' '}
-            <a href={routePath('/business-lunch-mittagstisch-charlottenburg/')}>{d.landingItalienisch.related.lunchLink}</a>{d.landingItalienisch.related.mid4}{' '}
-            <a href={routePath('/terrasse-restaurant-berlin-charlottenburg/')}>{d.landingItalienisch.related.terrasseLink}</a>{d.landingItalienisch.related.mid5}{' '}
-            <a href={routePath('/bar-aperitivo-kurfuerstendamm/')}>{d.landingItalienisch.related.barLink}</a>{d.landingItalienisch.related.post}
+            <a href={localizedHref('/')}>{d.landingItalienisch.related.homeLink}</a>{d.landingItalienisch.related.mid2}{' '}
+            <a href={localizedHref('/fruehstueck-brunch-kurfuerstendamm/')}>{d.landingItalienisch.related.fruehstueckLink}</a>{d.landingItalienisch.related.mid3}{' '}
+            <a href={localizedHref('/business-lunch-mittagstisch-charlottenburg/')}>{d.landingItalienisch.related.lunchLink}</a>{d.landingItalienisch.related.mid4}{' '}
+            <a href={localizedHref('/terrasse-restaurant-berlin-charlottenburg/')}>{d.landingItalienisch.related.terrasseLink}</a>{d.landingItalienisch.related.mid5}{' '}
+            <a href={localizedHref('/bar-aperitivo-kurfuerstendamm/')}>{d.landingItalienisch.related.barLink}</a>{d.landingItalienisch.related.post}
           </p>
         </div>
       </section>
@@ -385,12 +385,16 @@ export function ItalienischLanding() {
         onSelect={openMenu}
         onClose={closeMenu}
         showTabs={allTabs}
+        onReserve={() => {
+          window.location.assign(localizedHref('/reservierung/'));
+        }}
         labels={{
           laCarta: menuLabels.laCarta,
           close: menuLabels.close,
           openNewTab: menuLabels.openNewTab,
           resetZoom: menuLabels.resetZoom,
           iframeTitlePrefix: menuLabels.iframeTitlePrefix,
+          reserve: d.common.actions.reserveTable,
         }}
       />
 

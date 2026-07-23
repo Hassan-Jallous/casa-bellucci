@@ -2,11 +2,11 @@
 
 import { FlagBar } from './Brand';
 import { SITE } from '@/lib/site';
-import { routePath } from '@/lib/routes';
-import { useDict } from '@/lib/i18n/LanguageProvider';
+import { useDict, useLocalizedHref } from '@/lib/i18n/LanguageProvider';
 
 export function Contact() {
   const d = useDict();
+  const localizedHref = useLocalizedHref();
   return (
     <section className="contact" id="kontakt" data-screen-label="07 Kontakt">
       <div className="wrap">
@@ -20,7 +20,7 @@ export function Contact() {
             <h2>{d.home.contact.headingPre}<br/><span className="it">{d.home.contact.headingEm}</span></h2>
             <p className="lede">
               {d.home.contact.ledeParts.pre}{' '}
-              <a href={routePath('/italienisches-restaurant-berlin-charlottenburg/')}>{d.home.contact.ledeParts.link}</a>{' '}
+              <a href={localizedHref('/italienisches-restaurant-berlin-charlottenburg/')}>{d.home.contact.ledeParts.link}</a>{' '}
               {d.home.contact.ledeParts.post}
             </p>
             <div className="info">
@@ -42,14 +42,20 @@ export function Contact() {
               </div>
             </div>
           </div>
-          <div className="map" aria-label={d.home.contact.mapLabel}>
+          <a
+            className="map"
+            href={SITE.mapsUrl}
+            target="_blank"
+            rel="noreferrer"
+            aria-label={`${d.home.contact.mapLabel}. ${d.common.actions.openMaps}`}
+          >
             <div className="corner">{d.common.mapCorner.area}</div>
             <div className="pin">
               <div className="dot"></div>
               <div className="pulse"></div>
               <div className="label">{d.common.mapCorner.name}</div>
             </div>
-          </div>
+          </a>
         </div>
       </div>
     </section>

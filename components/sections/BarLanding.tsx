@@ -3,9 +3,8 @@
 import type { CSSProperties } from 'react';
 import { asset } from '@/lib/assetPath';
 import { useMenuUrls } from '@/lib/menuUrls';
-import { routePath } from '@/lib/routes';
 import { SITE } from '@/lib/site';
-import { useDict, usePageTitle } from '@/lib/i18n/LanguageProvider';
+import { useDict, usePageTitle, useLocalizedHref } from '@/lib/i18n/LanguageProvider';
 import { FlagBar } from './Brand';
 import { FaqAccordion } from './FaqAccordion';
 import { MenuViewer, useMenuViewer } from './MenuViewer';
@@ -19,6 +18,7 @@ const eyebrowStyle: CSSProperties = {
 export function BarLanding() {
   usePageTitle('bar');
   const d = useDict();
+  const localizedHref = useLocalizedHref();
   const menuLabels = d.home.menu;
   const { activeMenu, isOpen, openMenu, closeMenu } = useMenuViewer();
   const menuUrls = useMenuUrls();
@@ -47,10 +47,10 @@ export function BarLanding() {
                 {d.landingBar.hero.p2}
               </p>
               <div className="contact-actions">
-                <a className="btn btn-primary" href={routePath('/reservierung/')}>
+                <a className="btn btn-primary" href={localizedHref('/reservierung/')}>
                   {d.common.actions.reserve}
                 </a>
-                <a className="btn btn-ghost" href={routePath('/#terrasse')}>
+                <a className="btn btn-ghost" href={localizedHref('/#terrasse')}>
                   {d.common.actions.viewTerrace}
                 </a>
               </div>
@@ -253,7 +253,7 @@ export function BarLanding() {
               </p>
               <p>
                 {d.landingBar.music.crossPre}
-                <a href={routePath('/italienisches-restaurant-berlin-charlottenburg/')}>
+                <a href={localizedHref('/italienisches-restaurant-berlin-charlottenburg/')}>
                   {d.landingBar.music.crossLinkItalienisch}
                 </a>
                 {d.landingBar.music.crossPost}
@@ -342,7 +342,7 @@ export function BarLanding() {
                   </div>
                 </div>
                 <div className="contact-actions">
-                  <a className="btn btn-primary" href={routePath('/reservierung/')}>
+                  <a className="btn btn-primary" href={localizedHref('/reservierung/')}>
                     {d.common.actions.bookOnline}
                   </a>
                   <a className="btn btn-ghost" href={SITE.phoneHref}>
@@ -377,16 +377,16 @@ export function BarLanding() {
           <FaqAccordion items={[...d.landingBar.faqs]} idBase="bar-faq" />
           <p className="subpage-related">
             {d.landingBar.related.pre}
-            <a href={routePath('/')}>{d.landingBar.related.linkHome}</a>{d.landingBar.related.mid1}
-            <a href={routePath('/italienisches-restaurant-berlin-charlottenburg/')}>
+            <a href={localizedHref('/')}>{d.landingBar.related.linkHome}</a>{d.landingBar.related.mid1}
+            <a href={localizedHref('/italienisches-restaurant-berlin-charlottenburg/')}>
               {d.landingBar.related.linkItalienisch}
             </a>
             {d.landingBar.related.mid2}
-            <a href={routePath('/firmenfeier-events-charlottenburg/')}>{d.landingBar.related.linkEvents}</a>
+            <a href={localizedHref('/firmenfeier-events-charlottenburg/')}>{d.landingBar.related.linkEvents}</a>
             {d.landingBar.related.mid3}
-            <a href={routePath('/terrasse-restaurant-berlin-charlottenburg/')}>{d.landingBar.related.linkTerrasse}</a>
+            <a href={localizedHref('/terrasse-restaurant-berlin-charlottenburg/')}>{d.landingBar.related.linkTerrasse}</a>
             {d.landingBar.related.mid4}
-            <a href={routePath('/fruehstueck-brunch-kurfuerstendamm/')}>{d.landingBar.related.linkFruehstueck}</a>{d.landingBar.related.post}
+            <a href={localizedHref('/fruehstueck-brunch-kurfuerstendamm/')}>{d.landingBar.related.linkFruehstueck}</a>{d.landingBar.related.post}
           </p>
         </div>
       </section>
@@ -398,12 +398,16 @@ export function BarLanding() {
         onSelect={openMenu}
         onClose={closeMenu}
         showTabs={false}
+        onReserve={() => {
+          window.location.assign(localizedHref('/reservierung/'));
+        }}
         labels={{
           laCarta: menuLabels.laCarta,
           close: menuLabels.close,
           openNewTab: menuLabels.openNewTab,
           resetZoom: menuLabels.resetZoom,
           iframeTitlePrefix: menuLabels.iframeTitlePrefix,
+          reserve: d.common.actions.reserveTable,
         }}
       />
     </main>

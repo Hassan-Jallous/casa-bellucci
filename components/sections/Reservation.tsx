@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import { FlagBar } from './Brand';
 import { QuandooWidget } from '@/components/QuandooWidget';
 import { useDict } from '@/lib/i18n/LanguageProvider';
+import { SITE } from '@/lib/site';
 
 export function Reservation() {
   const d = useDict();
@@ -45,8 +46,22 @@ export function Reservation() {
           <p className="lede">
             {d.home.reservation.lede}
           </p>
+          <div className="reservation-side-actions">
+            <a className="btn btn-ghost" href={SITE.phoneHref}>{d.common.actions.call} · {SITE.phone}</a>
+            <p className="reservation-hours muted">
+              {d.common.hours.weekdays}
+              <br />
+              {d.common.hours.sunday}
+            </p>
+          </div>
         </div>
         <div className="reservation-card reservation-widget-card" ref={cardRef}>
+          {!showWidget && (
+            <div className="reservation-widget-skeleton" role="status" aria-live="polite">
+              <span className="reservation-widget-skeleton-label">{d.common.actions.bookOnline}…</span>
+              <a className="btn btn-primary" href={SITE.phoneHref}>{d.common.actions.call}</a>
+            </div>
+          )}
           {showWidget && <QuandooWidget />}
         </div>
       </div>

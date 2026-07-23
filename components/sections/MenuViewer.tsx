@@ -15,6 +15,8 @@ export interface MenuViewerLabels {
   openNewTab: string;
   resetZoom: string;
   iframeTitlePrefix: string;
+  /** Optional: CTA unter der Karte (z.B. „Tisch reservieren“). */
+  reserve?: string;
 }
 
 interface MenuViewerProps {
@@ -26,6 +28,8 @@ interface MenuViewerProps {
   labels: MenuViewerLabels;
   // false -> nur die aktive Karte als statisches Label, kein Tab-Wechsler
   showTabs?: boolean;
+  /** Wird nach Schliessen des Viewers gerufen (scroll zu #reservieren o.ä.). */
+  onReserve?: () => void;
 }
 
 // Geteilte Open/Close-Logik fuer das Karten-Popup. activeMenu bleibt waehrend der
@@ -78,6 +82,7 @@ export function useMenuViewer() {
 
 export function MenuViewer({
   menus,
+  onReserve,
   activeMenu,
   isOpen,
   onSelect,
@@ -553,6 +558,19 @@ export function MenuViewer({
           </div>
           <div className="menu-viewer-fallback">
             <a href={current.pdf} target="_blank" rel="noreferrer">{labels.openNewTab}</a>
+            {labels.reserve && onReserve && (
+              <button
+                type="button"
+                className="btn btn-solid menu-viewer-reserve"
+                onClick={() => {
+                  onClose();
+                  // Nach der Close-Animation zur Reservierung springen.
+                  window.setTimeout(() => onReserve(), 400);
+                }}
+              >
+                {labels.reserve}
+              </button>
+            )}
           </div>
         </div>
       )}
