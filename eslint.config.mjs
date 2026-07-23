@@ -10,8 +10,19 @@ const eslintConfig = defineConfig([
     'out/**',
     'build/**',
     '_archive/**',
+    // Vendor / third-party assets (not project source).
+    'public/**',
+    'php-backend/**',
+    'scripts/**',
     'next-env.d.ts',
   ]),
+  {
+    // Static export + custom CSS: next/image is intentionally not used
+    // (images.unoptimized, asset() helper, existing class-based markup).
+    rules: {
+      '@next/next/no-img-element': 'off',
+    },
+  },
 ]);
 
 export default eslintConfig;

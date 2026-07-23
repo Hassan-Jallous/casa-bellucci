@@ -4,7 +4,7 @@
 export const home = {
   hero: {
     tagline: 'La Dolce Vita sul Kudamm',
-    h1: "Ristorante italiano con un'anima siciliana a Berlino Charlottenburg",
+    h1: 'Dolce Vita sul Kurfürstendamm a Berlino Charlottenburg',
     lede: 'Casa Bellucci al Kurfürstendamm 63 a Berlino Charlottenburg: cucina italiana dalla colazione alla cena, bar con aperitivo sulla terrazza estiva e DJ dal vivo nel weekend.',
     viewMenu: 'Vedi il menu →',
     discover: 'Scopri',

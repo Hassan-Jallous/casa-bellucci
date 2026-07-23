@@ -19,6 +19,11 @@ RedirectMatch 301 ^/drinks-wein/?$ /#wein
     Require all denied
 </Files>
 
+# FTP deploy state files must not be public (hash inventory of the whole site).
+<FilesMatch "^\.ftp-deploy-sync-state">
+    Require all denied
+</FilesMatch>
+
 # Ensure ES module workers (pdf.js) are served as JavaScript.
 <IfModule mod_mime.c>
     AddType application/javascript .mjs

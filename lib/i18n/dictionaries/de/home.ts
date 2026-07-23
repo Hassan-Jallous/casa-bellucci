@@ -4,7 +4,7 @@
 export const home = {
   hero: {
     tagline: 'Dolce Vita am Kudamm',
-    h1: 'Italienisches Restaurant mit sizilianischem Vibe in Berlin Charlottenburg',
+    h1: 'Dolce Vita am Kurfürstendamm in Berlin Charlottenburg',
     lede: 'Casa Bellucci am Kurfürstendamm 63 in Berlin Charlottenburg: italienische Küche von Frühstück bis Dinner, Bar mit Aperitivo auf der Sommerterrasse und Live-DJ am Wochenende.',
     viewMenu: 'Karte ansehen →',
     discover: 'Entdecken',
