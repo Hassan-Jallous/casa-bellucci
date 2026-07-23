@@ -40,8 +40,40 @@ jobs:
           NEXT_PUBLIC_BASE_PATH: ''
           NEXT_PUBLIC_MENU_API_BASE: ''
 
+      # Build-interne Konsistenz: index.html darf keine fehlenden Chunks referenzieren.
+      - name: Verify local out/ chunk references
+        run: |
+          python3 - <<'PY'
+          import re, pathlib, sys
+          root = pathlib.Path('out')
+          html_files = list(root.glob('**/index.html'))
+          if not html_files:
+              print('FAIL: no index.html in out/')
+              sys.exit(1)
+          missing = []
+          checked = 0
+          for html_path in html_files:
+              text = html_path.read_text(encoding='utf-8', errors='replace')
+              for rel in sorted(set(re.findall(r'/_next/static/chunks/[^"\']+\.js', text))):
+                  checked += 1
+                  local = root / rel.lstrip('/')
+                  if not local.is_file():
+                      missing.append(f'{html_path}: {rel}')
+          print(f'Checked {checked} chunk refs across {len(html_files)} HTML files')
+          if missing:
+              print('FAIL missing local chunks:')
+              for m in missing:
+                  print(' ', m)
+              sys.exit(1)
+          print('PASS local out/ chunk references')
+          PY
+
       # FTP-Deploy-Action v4.4.0 (latest, Stand 2026-06).
       # Quelle: https://github.com/SamKirkland/FTP-Deploy-Action/releases/latest
+      #
+      # state-name v3: alter State (.ftp-deploy-sync-state.json) kann Dateien als
+      # "unchanged" markieren, obwohl sie auf dem Server fehlen (404). Neuer State
+      # erzwingt vollständigen Re-Upload der out/-Dateien.
       - name: Sync out/ to Hostinger via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.4.0
         with:
@@ -56,6 +88,8 @@ jobs:
           # Als Secret FTP_SERVER_DIR setzen (mit führendem und abschließendem /),
           # z.B. /public_html/ . Falls nicht gesetzt, hier fix anpassen.
           server-dir: ${{ secrets.FTP_SERVER_DIR }}
+
+          state-name: .ftp-deploy-sync-state-v3.json
 
           # SICHERHEIT: dangerous-clean-slate bleibt AUS (Default false).
           # Wäre es true, würde die Action ALLES im server-dir löschen,
@@ -78,3 +112,51 @@ jobs:
             **/.git*
             **/.git*/**
             **/node_modules/**
+            **/.ftp-deploy-sync-state.json
+            .ftp-deploy-sync-state.json
+
+      # Live-Konsistenz: HTML und alle referenzierten JS-Chunks müssen 200 liefern.
+      - name: Live chunk smoke check
+        run: |
+          set -euo pipefail
+          BASE_URL='https://casabellucci.de'
+          # Kurze Wartezeit für FTP/CDN-Propagierung
+          sleep 5
+          curl -fsSL -H 'Cache-Control: no-cache' "$BASE_URL/" -o /tmp/live-index.html
+          python3 - <<'PY'
+          import re, sys, urllib.request, ssl
+          from concurrent.futures import ThreadPoolExecutor, as_completed
+          base = 'https://casabellucci.de'
+          html = open('/tmp/live-index.html', encoding='utf-8', errors='replace').read()
+          chunks = sorted(set(re.findall(r'/_next/static/chunks/[^"\']+\.js', html)))
+          if not chunks:
+              print('FAIL: no chunk refs in live index.html')
+              sys.exit(1)
+          ctx = ssl.create_default_context()
+          fails = []
+          def check(path: str):
+              req = urllib.request.Request(
+                  base + path,
+                  method='GET',
+                  headers={'User-Agent': 'casa-deploy-smoke/1.0', 'Cache-Control': 'no-cache'},
+              )
+              try:
+                  with urllib.request.urlopen(req, context=ctx, timeout=30) as r:
+                      return path, r.status, len(r.read())
+              except urllib.error.HTTPError as e:
+                  return path, e.code, 0
+              except Exception as e:
+                  return path, str(e), 0
+          print(f'Checking {len(chunks)} live chunk URLs...')
+          with ThreadPoolExecutor(max_workers=8) as ex:
+              for fut in as_completed([ex.submit(check, c) for c in chunks]):
+                  path, code, size = fut.result()
+                  ok = code == 200 and size > 0
+                  print(f'{"PASS" if ok else "FAIL"} {code} size={size} {path}')
+                  if not ok:
+                      fails.append(path)
+          if fails:
+              print(f'FAIL: {len(fails)} chunk(s) missing after deploy')
+              sys.exit(1)
+          print('PASS live chunk smoke check')
+          PY

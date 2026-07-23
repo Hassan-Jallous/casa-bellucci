@@ -79,7 +79,32 @@ else
   failures=$((failures + 1))
 fi
 
-rm -f /tmp/casa-smoke-body
+# Chunk-Konsistenz: jede von index.html referenzierte JS-Datei muss 200 + Body > 0 liefern.
+# Verhindert ChunkLoadError durch stale FTP-State / partiellen Deploy.
+curl -L -sS -H 'Cache-Control: no-cache' -o /tmp/casa-smoke-index "${BASE_URL}/" || true
+mapfile -t chunk_paths < <(grep -oE '/_next/static/chunks/[^"'\'' ]+\.js' /tmp/casa-smoke-index 2>/dev/null | sort -u || true)
+if ((${#chunk_paths[@]} == 0)); then
+  printf 'FAIL %-28s no chunk refs found in homepage HTML\n' "JS chunks"
+  failures=$((failures + 1))
+else
+  chunk_fail=0
+  for path in "${chunk_paths[@]}"; do
+    status="$(curl -L -sS -o /tmp/casa-smoke-chunk -w '%{http_code}' "${BASE_URL}${path}" || true)"
+    size="$(wc -c < /tmp/casa-smoke-chunk | tr -d ' ')"
+    if [[ "$status" == "200" && "$size" -gt 0 ]]; then
+      printf 'PASS %-28s %s %s\n' "chunk" "$status" "${BASE_URL}${path}"
+    else
+      printf 'FAIL %-28s got %s size=%s %s\n' "chunk" "$status" "$size" "${BASE_URL}${path}"
+      chunk_fail=$((chunk_fail + 1))
+      failures=$((failures + 1))
+    fi
+  done
+  if (( chunk_fail == 0 )); then
+    printf 'PASS %-28s %s files OK\n' "JS chunk set" "${#chunk_paths[@]}"
+  fi
+fi
+
+rm -f /tmp/casa-smoke-body /tmp/casa-smoke-index /tmp/casa-smoke-chunk
 
 if (( failures > 0 )); then
   printf '\n%d automated smoke check(s) failed.\n' "$failures"
